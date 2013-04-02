@@ -8,6 +8,11 @@
 
 $yellow: #ffb602;
 
+$fontnormal: TradeGothicLT;
+$fontcond: TradeGothicLT-CondEighteen;
+$fontbold: TradeGothicLTCom-BdCn20;
+
+
 #bigheader {
 	background-color: #f6f5f1;
 	.row {
@@ -24,26 +29,29 @@ $yellow: #ffb602;
 	}
 	
 	p, h2, h3 {
-		font-family: TradeGothicLT-CondEighteen !important;
 		margin: 0;
 		padding: 0;
 	}
 	h2, h2 a {
-		font-size: 56px;
-		line-height: 56px;
+		font-family: $fontbold;
+		font-weight: normal;
+		font-size: 55.6px;
+		line-height: 55.6px;
 		color: $yellow;
 	}
 	h2 a:hover {
-		color: darken($yellow,5);
+		color: lighten($yellow,15);
 	}
 	p {
+		font-family: $fontcond !important;
 		font-size: 18px;
 		line-height: 21px;
 	}
 	h3 {
+		font-family: $fontcond;
+		font-weight: normal;
 		font-size: 27px;
 		line-height: 30px;
-		font-weight: bold;
 	}
 	p, h3, p a, h3 a {
 		color: #5a7464;
@@ -59,7 +67,43 @@ $yellow: #ffb602;
 	}
 }
 
+#bignav {
+	background-color: $yellow;
+	padding: 45px 0;
+	a {
+		height: 70px;
+		overflow: visible;
+		display: block;
+		padding-top: 50px;
+		text-align: center;
+		font-family: $fontbold;
+		text-transform: uppercase;
+		font-size: 32px;
+		color: #5a7464;
+	}
+	#menu-item-28 {
+		background: url(../img/icons/green/location.png) no-repeat top center;
+	}
+	#menu-item-25 {
+		background: url(../img/icons/green/doctors.png) no-repeat top center;
+	}
+	#menu-item-23 {
+		background: url(../img/icons/green/physio.png) no-repeat top center;
+	}
+	#menu-item-22 {
+		background: url(../img/icons/green/yourhealth.png) no-repeat top center;
+	}
+	#menu-item-24 {
+		background: url(../img/icons/green/employers.png) no-repeat top center;
+	}
+	#menu-item-27 {
+		background: url(../img/icons/green/japanese.png) no-repeat top center;
+	}
+	#menu-item-26 {
+		background: url(../img/icons/green/contactus.png) no-repeat top center;
+	}
 
+}
 
 // Global Foundation Settings
 @import "settings";

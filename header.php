@@ -46,10 +46,10 @@
 
 <div id="bigheader">
 <header class="row show-for-medium-up" >
-	<div class="small-7 columns" id="logo_otmc">
+	<div class="small-8 columns" id="logo_otmc">
 		<img src="<?php echo get_template_directory_uri(); ?>/img/logo_otmc.png"/>
 	</div>
-	<div class="small-10 columns" id="bigheaderinfo">
+	<div class="small-11 columns" id="bigheaderinfo">
 		<h2>PHONE <a href="tel:0292527500">02 9252 7500</a></h2>
 		<h3>Suite 5, 168 Kent Street, Sydney NSW 2000</h3>
 		<h3><a href="mailto:observatory@executivehealthgroup.com.au">observatory@executivehealthgroup.com.au</a></h3>
@@ -57,19 +57,30 @@
 		<p><strong>日本人</strong> <a href="tel:0292528888">02 9252 8888</a>  |  <a href="mailto:japanese@executivehealthgroup.com.au">japanese@executivehealthgroup.com.au</a></p>
 		<p><strong>Monteith Physio</strong> <a href="tel:0292527566">02 9252 7566</a>  |  <a href="mailto:adam@monteithphysio.com.au">adam@monteithphysio.com.au</a></p>
 	</div>
-	<div class="small-7 columns" id="logo_ehg">
+	<div class="small-5 columns" id="logo_ehg">
 		<img src="<?php echo get_template_directory_uri(); ?>/img/logo_ehg.png"/>
 	</div>
 
 </header></div>
+<div id="bignav">
+<div class="row">
+		<?php
+	        wp_nav_menu( array(
+	            'theme_location' => 'primary',
+	            'container' => false,
+	            'depth' => 0,
+	            'items_wrap' => '<ul class="small-block-grid-7">%3$s</ul>'
+	             )
+	         );
+	    ?>
+</div></div>
+<!--
 <div class="contain-to-grid sticky">
-	<!-- Starting the Top-Bar -->
 	<nav class="top-bar">
 	    <ul class="title-area">
 	        <li class="name">
 	        
 	        </li>
-			<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
 			<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
 	    </ul>
 	    <section class="top-bar-section ">
@@ -88,9 +99,8 @@
 	    ?>
 	    </section>
 	</nav>
-	<!-- End of Top-Bar -->
 </div>
-
+-->
 
 <!-- Start the main container -->
 <section class="container row" role="document">

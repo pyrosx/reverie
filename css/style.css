@@ -387,26 +387,29 @@ table {
   margin: 0 auto;
 }
 #bigheader p, #bigheader h2, #bigheader h3 {
-  font-family: TradeGothicLT-CondEighteen !important;
   margin: 0;
   padding: 0;
 }
 #bigheader h2, #bigheader h2 a {
-  font-size: 56px;
-  line-height: 56px;
+  font-family: TradeGothicLTCom-BdCn20;
+  font-weight: normal;
+  font-size: 55.6px;
+  line-height: 55.6px;
   color: #ffb602;
 }
 #bigheader h2 a:hover {
-  color: #e8a500;
+  color: #ffcc4f;
 }
 #bigheader p {
+  font-family: TradeGothicLT-CondEighteen !important;
   font-size: 18px;
   line-height: 21px;
 }
 #bigheader h3 {
+  font-family: TradeGothicLT-CondEighteen;
+  font-weight: normal;
   font-size: 27px;
   line-height: 30px;
-  font-weight: bold;
 }
 #bigheader p, #bigheader h3, #bigheader p a, #bigheader h3 a {
   color: #5a7464;
@@ -421,11 +424,43 @@ table {
   padding-bottom: 60px;
 }
 
-/*
-.TradeGothicLT { font-family: TradeGothicLT; }
-.TradeGothicLT-CondEighteen { font-family: TradeGothicLT-CondEighteen; }
-.TradeGothicLTCom-BdCn20 { font-family: TradeGothicLTCom-BdCn20; }
-*/
+#bignav {
+  background-color: #ffb602;
+  padding: 45px 0;
+}
+#bignav a {
+  height: 70px;
+  overflow: visible;
+  display: block;
+  padding-top: 50px;
+  text-align: center;
+  font-family: TradeGothicLTCom-BdCn20;
+  text-transform: uppercase;
+  font-size: 32px;
+  color: #5a7464;
+}
+#bignav #menu-item-28 {
+  background: url(../img/icons/green/location.png) no-repeat top center;
+}
+#bignav #menu-item-25 {
+  background: url(../img/icons/green/doctors.png) no-repeat top center;
+}
+#bignav #menu-item-23 {
+  background: url(../img/icons/green/physio.png) no-repeat top center;
+}
+#bignav #menu-item-22 {
+  background: url(../img/icons/green/yourhealth.png) no-repeat top center;
+}
+#bignav #menu-item-24 {
+  background: url(../img/icons/green/employers.png) no-repeat top center;
+}
+#bignav #menu-item-27 {
+  background: url(../img/icons/green/japanese.png) no-repeat top center;
+}
+#bignav #menu-item-26 {
+  background: url(../img/icons/green/contactus.png) no-repeat top center;
+}
+
 *,
 *:before,
 *:after {
@@ -3757,11 +3792,11 @@ form.custom .custom.disabled {
 
 .top-bar {
   overflow: hidden;
-  height: 45px;
-  line-height: 45px;
+  height: 100px;
+  line-height: 100px;
   position: relative;
   background: #111111;
-  margin-bottom: 1.875em;
+  margin-bottom: 0;
 }
 .top-bar ul {
   margin-bottom: 0;
@@ -3786,12 +3821,12 @@ form.custom .custom.disabled {
   position: relative;
 }
 .top-bar .name {
-  height: 45px;
+  height: 100px;
   margin: 0;
   font-size: 16px;
 }
 .top-bar .name h1 {
-  line-height: 45px;
+  line-height: 100px;
   font-size: 1.0625em;
   margin: 0;
 }
@@ -3800,7 +3835,7 @@ form.custom .custom.disabled {
   color: white;
   width: 50%;
   display: block;
-  padding: 0 15px;
+  padding: 0 33.33333px;
 }
 .top-bar .toggle-topbar {
   position: absolute;
@@ -3814,12 +3849,12 @@ form.custom .custom.disabled {
   font-weight: bold;
   position: relative;
   display: block;
-  padding: 0 15px;
-  height: 45px;
-  line-height: 45px;
+  padding: 0 33.33333px;
+  height: 100px;
+  line-height: 100px;
 }
 .top-bar .toggle-topbar.menu-icon {
-  right: 15px;
+  right: 33.33333px;
   top: 50%;
   margin-top: -16px;
   padding-left: 40px;
@@ -3884,7 +3919,7 @@ form.custom .custom.disabled {
   width: 100%;
   color: white;
   padding: 12px 0 12px 0;
-  padding-left: 15px;
+  padding-left: 33.33333px;
   font-size: 0.8125em;
   font-weight: bold;
   background: #333333;
@@ -3921,7 +3956,7 @@ form.custom .custom.disabled {
   background: #2b2b2b;
 }
 .top-bar-section .has-form {
-  padding: 15px;
+  padding: 33.33333px;
 }
 .top-bar-section .has-dropdown {
   position: relative;
@@ -3933,7 +3968,7 @@ form.custom .custom.disabled {
   height: 0;
   border: solid 5px;
   border-color: transparent transparent transparent rgba(255, 255, 255, 0.5);
-  margin-right: 15px;
+  margin-right: 33.33333px;
   margin-top: -4.5px;
   position: absolute;
   top: 50%;
@@ -3957,18 +3992,18 @@ form.custom .custom.disabled {
 }
 .top-bar-section .dropdown li a {
   font-weight: normal;
-  padding: 8px 15px;
+  padding: 8px 33.33333px;
 }
 .top-bar-section .dropdown li.title h5 {
   margin-bottom: 0;
 }
 .top-bar-section .dropdown li.title h5 a {
   color: white;
-  line-height: 22.5px;
+  line-height: 50px;
   display: block;
 }
 .top-bar-section .dropdown label {
-  padding: 8px 15px 2px;
+  padding: 8px 33.33333px 2px;
   margin-bottom: 0;
   text-transform: uppercase;
   color: #555555;
@@ -4043,8 +4078,8 @@ form.custom .custom.disabled {
     display: none;
   }
   .top-bar-section li a:not(.button) {
-    padding: 0 15px;
-    line-height: 45px;
+    padding: 0 33.33333px;
+    line-height: 100px;
     background: #111111;
   }
   .top-bar-section li a:not(.button):hover {
@@ -4087,7 +4122,7 @@ form.custom .custom.disabled {
     color: white;
     line-height: 1;
     white-space: nowrap;
-    padding: 7px 15px;
+    padding: 7px 33.33333px;
     background: #1e1e1e;
   }
   .top-bar-section .dropdown li label {
@@ -4104,13 +4139,13 @@ form.custom .custom.disabled {
     border-right: solid 1px #2b2b2b;
     border-left: solid 1px black;
     clear: none;
-    height: 45px;
+    height: 100px;
     width: 0px;
   }
   .top-bar-section .has-form {
     background: #111111;
-    padding: 0 15px;
-    height: 45px;
+    padding: 0 33.33333px;
+    height: 100px;
   }
   .top-bar-section ul.right li .dropdown {
     left: auto;

@@ -43,6 +43,11 @@
  
   
 @font-face {font-family: 'TradeGothicLT-CondEighteen';src: url('webfonts/2660E9_1_0.eot');src: url('webfonts/2660E9_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2660E9_1_0.woff') format('woff'),url('webfonts/2660E9_1_0.ttf') format('truetype');}
+@font-face {
+	font-family: 'TradeGothicLT-CondEighteen';
+	src: url('webfonts/2660E9_2_0.eot');
+	font-weight: bold;
+}
  
   
 @font-face {font-family: 'TradeGothicLTCom-BdCn20';src: url('webfonts/2660E9_2_0.eot');src: url('webfonts/2660E9_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2660E9_2_0.woff') format('woff'),url('webfonts/2660E9_2_0.ttf') format('truetype');}

@@ -12,8 +12,6 @@ $total-columns: 24 !default;
 $header-font-family:                   "TradeGothicLT", Arial, sans-serif;
 $paragraph-font-family:                "TradeGothicLT", Arial, sans-serif;
 
-/*
-.TradeGothicLT { font-family: TradeGothicLT; }
-.TradeGothicLT-CondEighteen { font-family: TradeGothicLT-CondEighteen; }
-.TradeGothicLTCom-BdCn20 { font-family: TradeGothicLTCom-BdCn20; }
-*/
+
+$topbar-height:100px;
+$topbar-margin-bottom: 0;
