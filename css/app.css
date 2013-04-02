@@ -110,7 +110,7 @@ select {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 79em;
+  max-width: 80em;
   *zoom: 1;
 }
 .row:before, .row:after {
@@ -3598,7 +3598,7 @@ form.custom .custom.disabled {
   }
 
   .contain-to-grid .top-bar {
-    max-width: 79em;
+    max-width: 80em;
     margin: 0 auto;
   }
 

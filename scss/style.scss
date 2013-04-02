@@ -6,6 +6,61 @@
 // import normalize, stay at top
 @import "normalize";
 
+$yellow: #ffb602;
+
+#bigheader {
+	background-color: #f6f5f1;
+	.row {
+		background-color: #f6f5f1;
+	}
+	padding-top: 24px;
+	
+	#bigheaderinfo {
+		padding: 28px 0;
+	}	
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+	
+	p, h2, h3 {
+		font-family: TradeGothicLT-CondEighteen !important;
+		margin: 0;
+		padding: 0;
+	}
+	h2, h2 a {
+		font-size: 56px;
+		line-height: 56px;
+		color: $yellow;
+	}
+	h2 a:hover {
+		color: darken($yellow,5);
+	}
+	p {
+		font-size: 18px;
+		line-height: 21px;
+	}
+	h3 {
+		font-size: 27px;
+		line-height: 30px;
+		font-weight: bold;
+	}
+	p, h3, p a, h3 a {
+		color: #5a7464;
+	}
+	p a:hover, h3 a:hover {
+		color: lighten(#5a7464,10);
+	}
+	#logo_ehg {
+		margin-top: 24px;
+		padding-top: 58px;
+		border-left: 1px solid #e0dfdc;
+		padding-bottom: 60px;
+	}
+}
+
+
+
 // Global Foundation Settings
 @import "settings";
 
@@ -14,9 +69,15 @@
 
 /* Start to customize Reverie */
 
-ello {
-}
 
+
+
+
+
+
+
+
+/* "default" reverie customizations */
 // add some extra style to row to beautify custom background image
 header.row,
 .container.row,

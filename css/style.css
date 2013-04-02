@@ -372,6 +372,55 @@ table {
   border-spacing: 0;
 }
 
+#bigheader {
+  background-color: #f6f5f1;
+  padding-top: 24px;
+}
+#bigheader .row {
+  background-color: #f6f5f1;
+}
+#bigheader #bigheaderinfo {
+  padding: 28px 0;
+}
+#bigheader img {
+  display: block;
+  margin: 0 auto;
+}
+#bigheader p, #bigheader h2, #bigheader h3 {
+  font-family: TradeGothicLT-CondEighteen !important;
+  margin: 0;
+  padding: 0;
+}
+#bigheader h2, #bigheader h2 a {
+  font-size: 56px;
+  line-height: 56px;
+  color: #ffb602;
+}
+#bigheader h2 a:hover {
+  color: #e8a500;
+}
+#bigheader p {
+  font-size: 18px;
+  line-height: 21px;
+}
+#bigheader h3 {
+  font-size: 27px;
+  line-height: 30px;
+  font-weight: bold;
+}
+#bigheader p, #bigheader h3, #bigheader p a, #bigheader h3 a {
+  color: #5a7464;
+}
+#bigheader p a:hover, #bigheader h3 a:hover {
+  color: #71907d;
+}
+#bigheader #logo_ehg {
+  margin-top: 24px;
+  padding-top: 58px;
+  border-left: 1px solid #e0dfdc;
+  padding-bottom: 60px;
+}
+
 /*
 .TradeGothicLT { font-family: TradeGothicLT; }
 .TradeGothicLT-CondEighteen { font-family: TradeGothicLT-CondEighteen; }
@@ -483,7 +532,7 @@ select {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 79em;
+  max-width: 80em;
   *zoom: 1;
 }
 .row:before, .row:after {
@@ -3972,7 +4021,7 @@ form.custom .custom.disabled {
   }
 
   .contain-to-grid .top-bar {
-    max-width: 79em;
+    max-width: 80em;
     margin: 0 auto;
   }
 
@@ -5552,6 +5601,7 @@ table tfoot tr td {
 }
 
 /* Start to customize Reverie */
+/* "default" reverie customizations */
 header.row,
 .container.row,
 .row.full-width {

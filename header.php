@@ -44,17 +44,35 @@
 
 <body <?php body_class(); ?>>
 
-<div class="contain-to-grid">
+<div id="bigheader">
+<header class="row show-for-medium-up" >
+	<div class="small-7 columns" id="logo_otmc">
+		<img src="<?php echo get_template_directory_uri(); ?>/img/logo_otmc.png"/>
+	</div>
+	<div class="small-10 columns" id="bigheaderinfo">
+		<h2>PHONE <a href="tel:0292527500">02 9252 7500</a></h2>
+		<h3>Suite 5, 168 Kent Street, Sydney NSW 2000</h3>
+		<h3><a href="mailto:observatory@executivehealthgroup.com.au">observatory@executivehealthgroup.com.au</a></h3>
+		<h3>&nbsp;</h3>
+		<p><strong>日本人</strong> <a href="tel:0292528888">02 9252 8888</a>  |  <a href="mailto:japanese@executivehealthgroup.com.au">japanese@executivehealthgroup.com.au</a></p>
+		<p><strong>Monteith Physio</strong> <a href="tel:0292527566">02 9252 7566</a>  |  <a href="mailto:adam@monteithphysio.com.au">adam@monteithphysio.com.au</a></p>
+	</div>
+	<div class="small-7 columns" id="logo_ehg">
+		<img src="<?php echo get_template_directory_uri(); ?>/img/logo_ehg.png"/>
+	</div>
+
+</header></div>
+<div class="contain-to-grid sticky">
 	<!-- Starting the Top-Bar -->
 	<nav class="top-bar">
 	    <ul class="title-area">
 	        <li class="name">
-	        	<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+	        
 	        </li>
 			<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
 			<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
 	    </ul>
-	    <section class="top-bar-section">
+	    <section class="top-bar-section ">
 	    <?php
 	        wp_nav_menu( array(
 	            'theme_location' => 'primary',
@@ -68,22 +86,11 @@
 	            ) ),
 	        ) );
 	    ?>
-	    <ul class="right">
-	    	<li class="divider hide-for-small"></li>
-	    	<li class="has-form"><?php get_search_form(); ?></li>
-	    </ul>
 	    </section>
 	</nav>
 	<!-- End of Top-Bar -->
 </div>
 
-<header class="row" role="banner">
-	<div class="small-24 columns">
-		<h1><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
-		<h4 class="subheader"><?php bloginfo('description'); ?></h4>
-		<hr/>
-	</div>
-</header>
 
 <!-- Start the main container -->
 <section class="container row" role="document">
