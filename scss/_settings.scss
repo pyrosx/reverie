@@ -4,11 +4,16 @@
 // doc page. We tried to name them to where theyd make sense just by reading them.
 // Go to http://foundation.zurb.com/docs/ to find what you need.
 
+$row-width:     79em !default;
+$column-gutter: 0.5em !default;
+$total-columns: 24 !default;
+
+
 $header-font-family:                   "TradeGothicLT", Arial, sans-serif;
-$header-font-weight:                   bold;
+$paragraph-font-family:                "TradeGothicLT", Arial, sans-serif;
 
-$paragraph-font-family:                inherit;
-
+/*
 .TradeGothicLT { font-family: TradeGothicLT; }
 .TradeGothicLT-CondEighteen { font-family: TradeGothicLT-CondEighteen; }
 .TradeGothicLTCom-BdCn20 { font-family: TradeGothicLTCom-BdCn20; }
+*/
