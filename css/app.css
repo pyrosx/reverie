@@ -1,3 +1,16 @@
+@charset "UTF-8";
+.TradeGothicLT {
+  font-family: TradeGothicLT;
+}
+
+.TradeGothicLT-CondEighteen {
+  font-family: TradeGothicLT-CondEighteen;
+}
+
+.TradeGothicLTCom-BdCn20 {
+  font-family: TradeGothicLTCom-BdCn20;
+}
+
 *,
 *:before,
 *:after {
@@ -1243,7 +1256,7 @@ p aside {
 
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "TradeGothicLT", Arial, sans-serif;
   font-weight: bold;
   font-style: normal;
   color: #222222;
@@ -1465,7 +1478,7 @@ blockquote p {
 @media print {
   * {
     background: transparent !important;
-    color: black !important;
+    color: #000 !important;
     /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
     text-shadow: none !important;
@@ -1492,7 +1505,7 @@ blockquote p {
 
   pre,
   blockquote {
-    border: 1px solid #999999;
+    border: 1px solid #999;
     page-break-inside: avoid;
   }
 
@@ -3274,7 +3287,7 @@ form.custom .custom.disabled {
   right: 0px;
   width: 11px;
   height: 14px;
-  border: solid 4px black;
+  border: solid 4px #000;
   border-top: none;
   border-bottom: none;
 }
@@ -3284,7 +3297,7 @@ form.custom .custom.disabled {
   width: 11px;
   height: 14px;
   border: solid 8px;
-  border-color: transparent transparent transparent black;
+  border-color: transparent transparent transparent #000;
 }
 .orbit-container:hover .orbit-timer > span {
   display: block;
@@ -3316,21 +3329,21 @@ form.custom .custom.disabled {
   left: 0;
 }
 .orbit-container .orbit-prev > span {
-  border-color: transparent white transparent transparent;
+  border-color: transparent #fff transparent transparent;
 }
 .orbit-container .orbit-prev:hover > span {
-  border-color: transparent #cccccc transparent transparent;
+  border-color: transparent #ccc transparent transparent;
 }
 .orbit-container .orbit-next {
   right: 0;
 }
 .orbit-container .orbit-next > span {
-  border-color: transparent transparent transparent white;
+  border-color: transparent transparent transparent #fff;
   left: 50%;
   margin-left: -8px;
 }
 .orbit-container .orbit-next:hover > span {
-  border-color: transparent transparent transparent #cccccc;
+  border-color: transparent transparent transparent #ccc;
 }
 
 .orbit-bullets {
@@ -3346,7 +3359,7 @@ form.custom .custom.disabled {
   background: #fff;
   float: left;
   margin-right: 6px;
-  border: solid 2px black;
+  border: solid 2px #000;
   -webkit-border-radius: 1000px;
   border-radius: 1000px;
 }
@@ -3563,10 +3576,10 @@ form.custom .custom.disabled {
   text-decoration: none;
   font-size: 30px;
   font-weight: normal;
-  line-height: 0.5 !important;
+  line-height: .5 !important;
 }
 .joyride-close-tip:hover, .joyride-close-tip:focus {
-  color: #eeeeee !important;
+  color: #eee !important;
 }
 
 .joyride-modal-bg {
