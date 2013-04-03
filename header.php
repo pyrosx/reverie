@@ -90,7 +90,8 @@
 </div>
 
 <div id="smallnav">
-	<div class="row hide-for-medium-up contain-to-grid sticky">
+	<div class="contain-to-grid sticky">
+	<div class="row hide-for-medium-up">
 		<nav class="top-bar">
 			<ul class="title-area small-block-grid-4">
 				<li class="toggle-topbar">
@@ -116,6 +117,7 @@
 			?>
 			</section>
 		</nav>
+	</div>
 	</div>
 </div>
 <!--
