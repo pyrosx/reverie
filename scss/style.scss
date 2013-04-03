@@ -14,8 +14,8 @@ $fontnormal: TradeGothicLT;
 $fontcond: TradeGothicLT-CondEighteen;
 $fontbold: TradeGothicLTCom-BdCn20;
 
-
 #bigheader {
+
 	background-color: #f6f5f1;
 	.row {
 		padding-top: 24px;
@@ -24,12 +24,27 @@ $fontbold: TradeGothicLTCom-BdCn20;
 	
 	#bigheaderinfo {
 		padding: 28px 0;
+		> div {
+			width: 430px;
+			margin: 0 auto;
+		}
 	}	
 	img {
 		display: block;
 		margin: 0 auto;
+		vertical-align: middle;
 	}
-	
+	// slightly smaller text at extreme small end
+	@media only screen and (min-width: 768px) { 
+		h2 { font-size: 50px; }
+		h3 { font-size: 25px; }
+		p {  font-size: 16px; }
+	}
+	@media only screen and (min-width: 870px) { 
+		h2 { font-size: 55px; }
+		h3 { font-size: 27px; }
+		p {  font-size: 18px; }
+	}
 	p, h2, h3 {
 		margin: 0;
 		padding: 0;
@@ -37,23 +52,20 @@ $fontbold: TradeGothicLTCom-BdCn20;
 	h2, h2 a {
 		font-family: $fontbold;
 		font-weight: normal;
-		font-size: 55.6px;
 		line-height: 55.6px;
 		color: $yellow;
 	}
 	h2 a:hover {
 		color: lighten($yellow,15);
 	}
-	p {
-		font-family: $fontcond !important;
-		font-size: 18px;
-		line-height: 21px;
-	}
 	h3 {
 		font-family: $fontcond;
 		font-weight: normal;
-		font-size: 27px;
 		line-height: 30px;
+	}
+	p {
+		font-family: $fontcond !important;
+		line-height: 21px;
 	}
 	p, h3, p a, h3 a {
 		color: #5a7464;
@@ -61,6 +73,7 @@ $fontbold: TradeGothicLTCom-BdCn20;
 	p a:hover, h3 a:hover {
 		color: lighten(#5a7464,10);
 	}
+	
 	#logo_ehg {
 		margin-top: 24px;
 		padding-top: 58px;
@@ -70,8 +83,8 @@ $fontbold: TradeGothicLTCom-BdCn20;
 }
 
 #smallheader {
-	
 	header.row {
+		height: 91px; // set explicitly to help out the "sticky" menu...
 		background-color: #f6f5f1;
 		padding: 6px 0;
 	}
@@ -80,20 +93,6 @@ $fontbold: TradeGothicLTCom-BdCn20;
 		margin: 0 auto;
 	}
 	
-}
-#bignav a {
-	@media only screen and (min-width: 768px) { 
-		font-size: 21px;
-	}
-	@media only screen and (min-width: 900px) { 
-		font-size: 24px;
-	}
-	@media only screen and (min-width: 1000px) { 
-		font-size: 28px;
-	}
-	@media only screen and (min-width: 1120px) { 
-		font-size: 32px;
-	}
 }
 
 #bignav {
@@ -117,6 +116,19 @@ $fontbold: TradeGothicLTCom-BdCn20;
 		font-family: $fontbold;
 		text-transform: uppercase;
 		color: #5a7464;
+		
+		@media only screen and (min-width: 768px) { 
+			font-size: 21px;
+		}
+		@media only screen and (min-width: 900px) { 
+			font-size: 24px;
+		}
+		@media only screen and (min-width: 1000px) { 
+			font-size: 28px;
+		}
+		@media only screen and (min-width: 1140px) { 
+			font-size: 32px;
+		}
 	}
 	#menu-item-28 {
 		background: url(../img/icons/green/location.png) no-repeat top center;
@@ -155,22 +167,45 @@ $fontbold: TradeGothicLTCom-BdCn20;
 			margin: 0 auto;
 			display: block;
 		}
-		
+		&.expanded {
+			height: 394px;
+		}
+		transition-property:height;
+		-moz-transition-property: height; /* Firefox 4 */
+		-webkit-transition-property:height; /* Safari and Chrome */
+		-o-transition-property:height; /* Opera */
+
+		transition-duration: 1.5s;
+		-moz-transition-duration: 1.5s; /* Firefox 4 */
+		-webkit-transition-duration: 1.5s; /* Safari and Chrome */
+		-o-transition-duration: 1.5s; /* Opera */
+
+		transition-timing-function: linear;
+		-moz-transition-timing-function: linear; /* Firefox 4 */
+		-webkit-transition-timing-function: linear; /* Safari and Chrome */
+		-o-transition-timing-function: linear; /* Opera */
+
+		transition-delay: .25s;
+		-moz-transition-delay: .25s; /* Firefox 4 */
+		-webkit-transition-delay: .25s; /* Safari and Chrome */
+		-o-transition-delay: .25s; /* Opera */
+
 	}
 	.top-bar .toggle-topbar a {
 		text-indent: 0;
 		padding: 0;
 	}
-	
 	.green {
 		background-color: $green;
 	}
 	.lgreen {
 		background-color: $lightgreen;
 	}
-
 }
 
+#contentbg, #maincontent {
+	background-color: $green;
+}
 #sidebar {
 	background-color: $lightgreen;
 }

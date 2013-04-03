@@ -382,9 +382,36 @@ table {
 #bigheader #bigheaderinfo {
   padding: 28px 0;
 }
+#bigheader #bigheaderinfo > div {
+  width: 430px;
+  margin: 0 auto;
+}
 #bigheader img {
   display: block;
   margin: 0 auto;
+  vertical-align: middle;
+}
+@media only screen and (min-width: 768px) {
+  #bigheader h2 {
+    font-size: 50px;
+  }
+  #bigheader h3 {
+    font-size: 25px;
+  }
+  #bigheader p {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 870px) {
+  #bigheader h2 {
+    font-size: 55px;
+  }
+  #bigheader h3 {
+    font-size: 27px;
+  }
+  #bigheader p {
+    font-size: 18px;
+  }
 }
 #bigheader p, #bigheader h2, #bigheader h3 {
   margin: 0;
@@ -393,23 +420,20 @@ table {
 #bigheader h2, #bigheader h2 a {
   font-family: TradeGothicLTCom-BdCn20;
   font-weight: normal;
-  font-size: 55.6px;
   line-height: 55.6px;
   color: #ffb602;
 }
 #bigheader h2 a:hover {
   color: #ffcc4f;
 }
-#bigheader p {
-  font-family: TradeGothicLT-CondEighteen !important;
-  font-size: 18px;
-  line-height: 21px;
-}
 #bigheader h3 {
   font-family: TradeGothicLT-CondEighteen;
   font-weight: normal;
-  font-size: 27px;
   line-height: 30px;
+}
+#bigheader p {
+  font-family: TradeGothicLT-CondEighteen !important;
+  line-height: 21px;
 }
 #bigheader p, #bigheader h3, #bigheader p a, #bigheader h3 a {
   color: #5a7464;
@@ -425,33 +449,13 @@ table {
 }
 
 #smallheader header.row {
+  height: 91px;
   background-color: #f6f5f1;
   padding: 6px 0;
 }
 #smallheader img {
   display: block;
   margin: 0 auto;
-}
-
-@media only screen and (min-width: 768px) {
-  #bignav a {
-    font-size: 21px;
-  }
-}
-@media only screen and (min-width: 900px) {
-  #bignav a {
-    font-size: 24px;
-  }
-}
-@media only screen and (min-width: 1000px) {
-  #bignav a {
-    font-size: 28px;
-  }
-}
-@media only screen and (min-width: 1120px) {
-  #bignav a {
-    font-size: 32px;
-  }
 }
 
 #bignav {
@@ -477,6 +481,26 @@ table {
   text-transform: uppercase;
   color: #5a7464;
 }
+@media only screen and (min-width: 768px) {
+  #bignav a {
+    font-size: 21px;
+  }
+}
+@media only screen and (min-width: 900px) {
+  #bignav a {
+    font-size: 24px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  #bignav a {
+    font-size: 28px;
+  }
+}
+@media only screen and (min-width: 1140px) {
+  #bignav a {
+    font-size: 32px;
+  }
+}
 #bignav #menu-item-28 {
   background: url(../img/icons/green/location.png) no-repeat top center;
 }
@@ -499,6 +523,36 @@ table {
   background: url(../img/icons/green/contactus.png) no-repeat top center;
 }
 
+#smallnav .top-bar {
+  transition-property: height;
+  -moz-transition-property: height;
+  /* Firefox 4 */
+  -webkit-transition-property: height;
+  /* Safari and Chrome */
+  -o-transition-property: height;
+  /* Opera */
+  transition-duration: 1.5s;
+  -moz-transition-duration: 1.5s;
+  /* Firefox 4 */
+  -webkit-transition-duration: 1.5s;
+  /* Safari and Chrome */
+  -o-transition-duration: 1.5s;
+  /* Opera */
+  transition-timing-function: linear;
+  -moz-transition-timing-function: linear;
+  /* Firefox 4 */
+  -webkit-transition-timing-function: linear;
+  /* Safari and Chrome */
+  -o-transition-timing-function: linear;
+  /* Opera */
+  transition-delay: .25s;
+  -moz-transition-delay: .25s;
+  /* Firefox 4 */
+  -webkit-transition-delay: .25s;
+  /* Safari and Chrome */
+  -o-transition-delay: .25s;
+  /* Opera */
+}
 #smallnav .top-bar .toggle-topbar {
   position: relative;
 }
@@ -511,6 +565,9 @@ table {
   margin: 0 auto;
   display: block;
 }
+#smallnav .top-bar.expanded {
+  height: 394px;
+}
 #smallnav .top-bar .toggle-topbar a {
   text-indent: 0;
   padding: 0;
@@ -520,6 +577,10 @@ table {
 }
 #smallnav .lgreen {
   background-color: #587363;
+}
+
+#contentbg, #maincontent {
+  background-color: #4f6657;
 }
 
 #sidebar {
@@ -3964,9 +4025,9 @@ form.custom .custom.disabled {
   left: 0;
   position: relative;
   width: auto;
-  -webkit-transition: left 300ms ease-out;
-  -moz-transition: left 300ms ease-out;
-  transition: left 300ms ease-out;
+  -webkit-transition: left 2000ms ease-out;
+  -moz-transition: left 2000ms ease-out;
+  transition: left 2000ms ease-out;
 }
 .top-bar-section ul {
   width: 100%;

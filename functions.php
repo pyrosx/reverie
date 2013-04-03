@@ -27,11 +27,6 @@ require_once('lib/enqueue-sass.php'); // do all the cleaning and enqueue if you 
 	- custom walker for top-bar and related
 */
 require_once('lib/foundation.php'); // load Foundation specific functions like top-bar
-/*
-4. lib/presstrends.php
-    - add PressTrends, tracks how many people are using Reverie
-*/
-require_once('lib/presstrends.php'); // load PressTrends to track the usage of Reverie across the web, comment this line if you don't want to be tracked
 
 /**********************
 Add theme supports
@@ -53,20 +48,9 @@ function reverie_theme_support() {
 	// Add menu supports. http://codex.wordpress.org/Function_Reference/register_nav_menus
 	add_theme_support('menus');
 	register_nav_menus(array(
-		'primary' => __('Primary Navigation', 'reverie'),
-		'utility' => __('Utility Navigation', 'reverie')
+		'primary' => __('Primary Navigation', 'reverie')
 	));
 	
-	// Add custom background support
-	add_theme_support( 'custom-background',
-	    array(
-	    'default-image' => '',  // background image default
-	    'default-color' => '', // background color default (dont add the #)
-	    'wp-head-callback' => '_custom_background_cb',
-	    'admin-head-callback' => '',
-	    'admin-preview-callback' => ''
-	    )
-	);
 }
 add_action('after_setup_theme', 'reverie_theme_support'); /* end Reverie theme support */
 
@@ -83,7 +67,7 @@ foreach ($sidebars as $sidebar) {
 $sidebars = array('Footer');
 foreach ($sidebars as $sidebar) {
 	register_sidebar(array('name'=> $sidebar,
-		'before_widget' => '<article id="%1$s" class="large-9 columns widget %2$s">',
+		'before_widget' => '<article id="%1$s" class="large-18 columns widget %2$s">',
 		'after_widget' => '</article>',
 		'before_title' => '<h6><strong>',
 		'after_title' => '</strong></h6>'

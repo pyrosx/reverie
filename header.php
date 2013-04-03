@@ -44,23 +44,25 @@
 
 <body <?php body_class(); ?>>
 
-<div>
-	<header class="row show-for-medium-up"  id="bigheader">
-		<div class="small-8 columns" id="logo_otmc">
+<div id="bigheader">
+	<header class="row show-for-medium-up" >
+<!--		<div class="small-1 columns">&nbsp;</div> -->
+		<div class="small-6 columns" id="logo_otmc">
 			<img src="<?php echo get_template_directory_uri(); ?>/img/logo_otmc.png"/>
 		</div>
-		<div class="small-11 columns" id="bigheaderinfo">
-			<h2>PHONE <a href="tel:0292527500">02 9252 7500</a></h2>
-			<h3>Suite 5, 168 Kent Street, Sydney NSW 2000</h3>
-			<h3><a href="mailto:observatory@executivehealthgroup.com.au">observatory@executivehealthgroup.com.au</a></h3>
-			<h3>&nbsp;</h3>
-			<p><strong>日本人</strong> <a href="tel:0292528888">02 9252 8888</a>  |  <a href="mailto:japanese@executivehealthgroup.com.au">japanese@executivehealthgroup.com.au</a></p>
-			<p><strong>Monteith Physio</strong> <a href="tel:0292527566">02 9252 7566</a>  |  <a href="mailto:adam@monteithphysio.com.au">adam@monteithphysio.com.au</a></p>
+		<div class="small-12 columns" id="bigheaderinfo">
+			<div>
+				<h2>PHONE <a href="tel:0292527500">02 9252 7500</a></h2>
+				<h3>Suite 5, 168 Kent Street, Sydney NSW 2000</h3>
+				<h3><a href="mailto:observatory@executivehealthgroup.com.au">observatory@executivehealthgroup.com.au</a></h3>
+				<h3>&nbsp;</h3>
+				<p><strong>日本人</strong> <a href="tel:0292528888">02 9252 8888</a>  |  <a href="mailto:japanese@executivehealthgroup.com.au">japanese@executivehealthgroup.com.au</a></p>
+				<p><strong>Monteith Physio</strong> <a href="tel:0292527566">02 9252 7566</a>  |  <a href="mailto:adam@monteithphysio.com.au">adam@monteithphysio.com.au</a></p>
+			</div>
 		</div>
-		<div class="small-5 columns" id="logo_ehg">
+		<div class="small-6 columns" id="logo_ehg">
 			<img src="<?php echo get_template_directory_uri(); ?>/img/logo_ehg.png"/>
 		</div>
-
 	</header>
 </div>
 
@@ -75,14 +77,14 @@
 	</header>
 </div>
 
-<div>
-	<div class="row show-for-medium-up" id="bignav">
+<div id="bignav">
+	<div class="row show-for-medium-up">
 			<?php
 				wp_nav_menu( array(
 					'theme_location' => 'primary',
 					'container' => false,
 					'depth' => 0,
-					'items_wrap' => '<ul id="bignavlist" class="small-block-grid-7">%3$s</ul>'
+					'items_wrap' => '<ul class="small-block-grid-7">%3$s</ul>'
 					 )
 				 );
 			?>
@@ -90,9 +92,8 @@
 </div>
 
 <div id="smallnav">
-	<div class="contain-to-grid sticky">
-	<div class="row hide-for-medium-up">
-		<nav class="top-bar">
+		<div class="contain-to-grid sticky hide-for-medium-up">
+		<nav class="top-bar ">
 			<ul class="title-area small-block-grid-4">
 				<li class="toggle-topbar">
 					<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/buttons/menu.png"/></a>
@@ -118,35 +119,8 @@
 			</section>
 		</nav>
 	</div>
-	</div>
 </div>
-<!--
-<div class="contain-to-grid sticky">
-	<nav class="top-bar">
-	    <ul class="title-area">
-	        <li class="name">
-	        
-	        </li>
-			<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-	    </ul>
-	    <section class="top-bar-section ">
-	    <?php
-	        wp_nav_menu( array(
-	            'theme_location' => 'primary',
-	            'container' => false,
-	            'depth' => 0,
-	            'items_wrap' => '<ul class="left">%3$s</ul>',
-	            'fallback_cb' => 'reverie_menu_fallback', // workaround to show a message to set up a menu
-	            'walker' => new reverie_walker( array(
-	                'in_top_bar' => true,
-	                'item_type' => 'li'
-	            ) ),
-	        ) );
-	    ?>
-	    </section>
-	</nav>
-</div>
--->
 
 <!-- Start the main container -->
+<div id="contentbg">
 <section class="container row" role="document">
