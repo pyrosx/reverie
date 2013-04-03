@@ -433,14 +433,39 @@ table {
   margin: 0 auto;
 }
 
+@media only screen and (min-width: 768px) {
+  #bignav a {
+    font-size: 21px;
+  }
+}
+@media only screen and (min-width: 900px) {
+  #bignav a {
+    font-size: 24px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  #bignav a {
+    font-size: 28px;
+  }
+}
+@media only screen and (min-width: 1120px) {
+  #bignav a {
+    font-size: 32px;
+  }
+}
+
 #bignav {
   background-color: #ffb602;
 }
 #bignav row {
   padding: 45px 0;
 }
+#bignav ul {
+  margin: 0 2%;
+}
 #bignav li {
   margin: 50px 0;
+  padding: 0;
 }
 #bignav a {
   height: 80px;
@@ -450,7 +475,6 @@ table {
   text-align: center;
   font-family: TradeGothicLTCom-BdCn20;
   text-transform: uppercase;
-  font-size: 32px;
   color: #5a7464;
 }
 #bignav #menu-item-28 {
@@ -495,6 +519,10 @@ table {
   background-color: #4f6657;
 }
 #smallnav .lgreen {
+  background-color: #587363;
+}
+
+#sidebar {
   background-color: #587363;
 }
 

@@ -7,6 +7,8 @@
 @import "normalize";
 
 $yellow: #ffb602;
+$lightgreen: #587363;
+$green: #4f6657;
 
 $fontnormal: TradeGothicLT;
 $fontcond: TradeGothicLT-CondEighteen;
@@ -66,6 +68,7 @@ $fontbold: TradeGothicLTCom-BdCn20;
 		padding-bottom: 60px;
 	}
 }
+
 #smallheader {
 	
 	header.row {
@@ -78,13 +81,32 @@ $fontbold: TradeGothicLTCom-BdCn20;
 	}
 	
 }
+#bignav a {
+	@media only screen and (min-width: 768px) { 
+		font-size: 21px;
+	}
+	@media only screen and (min-width: 900px) { 
+		font-size: 24px;
+	}
+	@media only screen and (min-width: 1000px) { 
+		font-size: 28px;
+	}
+	@media only screen and (min-width: 1120px) { 
+		font-size: 32px;
+	}
+}
+
 #bignav {
 	background-color: $yellow;
 	row {
 		padding: 45px 0;
 	}
+	ul {
+		margin: 0 2%;
+	}
 	li {
 		margin: 50px 0;
+		padding: 0;
 	}
 	a {
 		height: 80px;
@@ -94,7 +116,6 @@ $fontbold: TradeGothicLTCom-BdCn20;
 		text-align: center;
 		font-family: $fontbold;
 		text-transform: uppercase;
-		font-size: 32px;
 		color: #5a7464;
 	}
 	#menu-item-28 {
@@ -119,6 +140,7 @@ $fontbold: TradeGothicLTCom-BdCn20;
 		background: url(../img/icons/green/contactus.png) no-repeat top center;
 	}
 }
+
 #smallnav {
 	.top-bar {
 		.toggle-topbar {
@@ -141,14 +163,17 @@ $fontbold: TradeGothicLTCom-BdCn20;
 	}
 	
 	.green {
-		background-color: #4f6657;
+		background-color: $green;
 	}
 	.lgreen {
-		background-color: #587363;
+		background-color: $lightgreen;
 	}
 
 }
 
+#sidebar {
+	background-color: $lightgreen;
+}
 
 // Global Foundation Settings
 @import "settings";

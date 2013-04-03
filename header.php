@@ -44,8 +44,8 @@
 
 <body <?php body_class(); ?>>
 
-<div id="bigheader">
-	<header class="row show-for-medium-up" >
+<div>
+	<header class="row show-for-medium-up"  id="bigheader">
 		<div class="small-8 columns" id="logo_otmc">
 			<img src="<?php echo get_template_directory_uri(); ?>/img/logo_otmc.png"/>
 		</div>
@@ -75,14 +75,14 @@
 	</header>
 </div>
 
-<div id="bignav">
-	<div class="row show-for-medium-up">
+<div>
+	<div class="row show-for-medium-up" id="bignav">
 			<?php
 				wp_nav_menu( array(
 					'theme_location' => 'primary',
 					'container' => false,
 					'depth' => 0,
-					'items_wrap' => '<ul class="small-block-grid-7">%3$s</ul>'
+					'items_wrap' => '<ul id="bignavlist" class="small-block-grid-7">%3$s</ul>'
 					 )
 				 );
 			?>

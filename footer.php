@@ -16,11 +16,29 @@
 
 <?php wp_footer(); ?>
 
+  <script>
+
+</script>
+
+
 <script>
+
+	
+
 	(function($) {
 		$(document).foundation();
+		
+		$(document).ready(function () {
+			$('#sidebar').css('height',$('#maincontent').height());	
+		});
+
+
 	})(jQuery);
+	  /* quick hack to set the sidebar height to that of the main content area */
+
 </script>
+
+
 	
 </body>
 </html>
