@@ -13,5 +13,22 @@ $header-font-family:                   "TradeGothicLT", Arial, sans-serif;
 $paragraph-font-family:                "TradeGothicLT", Arial, sans-serif;
 
 
-$topbar-height:100px;
+
+/* Background color for the top bar */
+$topbar-bg: #ffb602;
+
+/* Height and margin */
+$topbar-height:72px;
 $topbar-margin-bottom: 0;
+
+/* Control Input height for top bar */
+$topbar-input-height: 2.45em;
+
+
+/* Style the top bar dropdown elements */
+$topbar-dropdown-bg: #ffb602;
+$topbar-dropdown-link-color: red; //#4f6657;
+$topbar-dropdown-toggle-size: 5px;
+$topbar-dropdown-toggle-color: #fff;
+$topbar-dropdown-toggle-alpha: 0.5;
+$dropdown-label-color: #555;

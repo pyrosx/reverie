@@ -45,35 +45,79 @@
 <body <?php body_class(); ?>>
 
 <div id="bigheader">
-<header class="row show-for-medium-up" >
-	<div class="small-8 columns" id="logo_otmc">
-		<img src="<?php echo get_template_directory_uri(); ?>/img/logo_otmc.png"/>
-	</div>
-	<div class="small-11 columns" id="bigheaderinfo">
-		<h2>PHONE <a href="tel:0292527500">02 9252 7500</a></h2>
-		<h3>Suite 5, 168 Kent Street, Sydney NSW 2000</h3>
-		<h3><a href="mailto:observatory@executivehealthgroup.com.au">observatory@executivehealthgroup.com.au</a></h3>
-		<h3>&nbsp;</h3>
-		<p><strong>日本人</strong> <a href="tel:0292528888">02 9252 8888</a>  |  <a href="mailto:japanese@executivehealthgroup.com.au">japanese@executivehealthgroup.com.au</a></p>
-		<p><strong>Monteith Physio</strong> <a href="tel:0292527566">02 9252 7566</a>  |  <a href="mailto:adam@monteithphysio.com.au">adam@monteithphysio.com.au</a></p>
-	</div>
-	<div class="small-5 columns" id="logo_ehg">
-		<img src="<?php echo get_template_directory_uri(); ?>/img/logo_ehg.png"/>
-	</div>
+	<header class="row show-for-medium-up" >
+		<div class="small-8 columns" id="logo_otmc">
+			<img src="<?php echo get_template_directory_uri(); ?>/img/logo_otmc.png"/>
+		</div>
+		<div class="small-11 columns" id="bigheaderinfo">
+			<h2>PHONE <a href="tel:0292527500">02 9252 7500</a></h2>
+			<h3>Suite 5, 168 Kent Street, Sydney NSW 2000</h3>
+			<h3><a href="mailto:observatory@executivehealthgroup.com.au">observatory@executivehealthgroup.com.au</a></h3>
+			<h3>&nbsp;</h3>
+			<p><strong>日本人</strong> <a href="tel:0292528888">02 9252 8888</a>  |  <a href="mailto:japanese@executivehealthgroup.com.au">japanese@executivehealthgroup.com.au</a></p>
+			<p><strong>Monteith Physio</strong> <a href="tel:0292527566">02 9252 7566</a>  |  <a href="mailto:adam@monteithphysio.com.au">adam@monteithphysio.com.au</a></p>
+		</div>
+		<div class="small-5 columns" id="logo_ehg">
+			<img src="<?php echo get_template_directory_uri(); ?>/img/logo_ehg.png"/>
+		</div>
 
-</header></div>
+	</header>
+</div>
+
+<div id="smallheader">
+	<header class="row hide-for-medium-up">
+		<div id="logo_otmc_small" class="small-14 columns">
+			<img src="<?php echo get_template_directory_uri(); ?>/img/logo_otmc_small.png"/>
+		</div>
+		<div id="logo_ehg_small" class="small-10 columns">
+			<img src="<?php echo get_template_directory_uri(); ?>/img/logo_ehg_small.png"/>
+		</div>
+	</header>
+</div>
+
 <div id="bignav">
-<div class="row">
-		<?php
-	        wp_nav_menu( array(
-	            'theme_location' => 'primary',
-	            'container' => false,
-	            'depth' => 0,
-	            'items_wrap' => '<ul class="small-block-grid-7">%3$s</ul>'
-	             )
-	         );
-	    ?>
-</div></div>
+	<div class="row show-for-medium-up">
+			<?php
+				wp_nav_menu( array(
+					'theme_location' => 'primary',
+					'container' => false,
+					'depth' => 0,
+					'items_wrap' => '<ul class="small-block-grid-7">%3$s</ul>'
+					 )
+				 );
+			?>
+	</div>
+</div>
+
+<div id="smallnav">
+	<div class="row hide-for-medium-up contain-to-grid sticky">
+		<nav class="top-bar">
+			<ul class="title-area small-block-grid-4">
+				<li class="toggle-topbar">
+					<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/buttons/menu.png"/></a>
+				</li>
+				<li class="name green"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/buttons/call.png"/></a></li>
+				<li class="name lgreen"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/buttons/email.png"/></a></li>
+				<li class="name green"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/buttons/find.png"/></a></li>
+			</ul>
+			<section class="top-bar-section ">
+			<?php
+				wp_nav_menu( array(
+					'theme_location' => 'primary',
+					'container' => false,
+					'depth' => 0,
+					'items_wrap' => '<ul class="left">%3$s</ul>',
+					'fallback_cb' => 'reverie_menu_fallback', // workaround to show a message to set up a menu
+					'walker' => new reverie_walker( array(
+						'in_top_bar' => true,
+						'item_type' => 'li'
+					) ),
+				) );
+			?>
+			</section>
+		</nav>
+	</div>
+</div>
 <!--
 <div class="contain-to-grid sticky">
 	<nav class="top-bar">

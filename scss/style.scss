@@ -16,9 +16,9 @@ $fontbold: TradeGothicLTCom-BdCn20;
 #bigheader {
 	background-color: #f6f5f1;
 	.row {
+		padding-top: 24px;
 		background-color: #f6f5f1;
 	}
-	padding-top: 24px;
 	
 	#bigheaderinfo {
 		padding: 28px 0;
@@ -66,12 +66,28 @@ $fontbold: TradeGothicLTCom-BdCn20;
 		padding-bottom: 60px;
 	}
 }
-
+#smallheader {
+	
+	header.row {
+		background-color: #f6f5f1;
+		padding: 6px 0;
+	}
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+	
+}
 #bignav {
 	background-color: $yellow;
-	padding: 45px 0;
+	row {
+		padding: 45px 0;
+	}
+	li {
+		margin: 50px 0;
+	}
 	a {
-		height: 70px;
+		height: 80px;
 		overflow: visible;
 		display: block;
 		padding-top: 50px;
@@ -102,8 +118,37 @@ $fontbold: TradeGothicLTCom-BdCn20;
 	#menu-item-26 {
 		background: url(../img/icons/green/contactus.png) no-repeat top center;
 	}
+}
+#smallnav {
+	.top-bar {
+		.toggle-topbar {
+			position: relative; // undoes the absolute position sticking right for the menu button....
+		}
+		li {
+			padding: 0;
+		}
+		img {
+			width: 85px;
+			height: 72px;
+			margin: 0 auto;
+			display: block;
+		}
+		
+	}
+	.top-bar .toggle-topbar a {
+		text-indent: 0;
+		padding: 0;
+	}
+	
+	.green {
+		background-color: #4f6657;
+	}
+	.lgreen {
+		background-color: #587363;
+	}
 
 }
+
 
 // Global Foundation Settings
 @import "settings";

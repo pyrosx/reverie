@@ -374,9 +374,9 @@ table {
 
 #bigheader {
   background-color: #f6f5f1;
-  padding-top: 24px;
 }
 #bigheader .row {
+  padding-top: 24px;
   background-color: #f6f5f1;
 }
 #bigheader #bigheaderinfo {
@@ -424,12 +424,26 @@ table {
   padding-bottom: 60px;
 }
 
+#smallheader header.row {
+  background-color: #f6f5f1;
+  padding: 6px 0;
+}
+#smallheader img {
+  display: block;
+  margin: 0 auto;
+}
+
 #bignav {
   background-color: #ffb602;
+}
+#bignav row {
   padding: 45px 0;
 }
+#bignav li {
+  margin: 50px 0;
+}
 #bignav a {
-  height: 70px;
+  height: 80px;
   overflow: visible;
   display: block;
   padding-top: 50px;
@@ -461,6 +475,33 @@ table {
   background: url(../img/icons/green/contactus.png) no-repeat top center;
 }
 
+#smallnav .top-bar .toggle-topbar {
+  position: relative;
+}
+#smallnav .top-bar li {
+  padding: 0;
+}
+#smallnav .top-bar img {
+  width: 85px;
+  height: 72px;
+  margin: 0 auto;
+  display: block;
+}
+#smallnav .top-bar .toggle-topbar a {
+  text-indent: 0;
+  padding: 0;
+}
+#smallnav .green {
+  background-color: #4f6657;
+}
+#smallnav .lgreen {
+  background-color: #587363;
+}
+
+/* Background color for the top bar */
+/* Height and margin */
+/* Control Input height for top bar */
+/* Style the top bar dropdown elements */
 *,
 *:before,
 *:after {
@@ -3779,7 +3820,7 @@ form.custom .custom.disabled {
 /* Wrapped around .top-bar to contain to grid width */
 .contain-to-grid {
   width: 100%;
-  background: #111111;
+  background: #ffb602;
 }
 
 .fixed {
@@ -3792,10 +3833,10 @@ form.custom .custom.disabled {
 
 .top-bar {
   overflow: hidden;
-  height: 100px;
-  line-height: 100px;
+  height: 72px;
+  line-height: 72px;
   position: relative;
-  background: #111111;
+  background: #ffb602;
   margin-bottom: 0;
 }
 .top-bar ul {
@@ -3821,12 +3862,12 @@ form.custom .custom.disabled {
   position: relative;
 }
 .top-bar .name {
-  height: 100px;
+  height: 72px;
   margin: 0;
   font-size: 16px;
 }
 .top-bar .name h1 {
-  line-height: 100px;
+  line-height: 72px;
   font-size: 1.0625em;
   margin: 0;
 }
@@ -3835,7 +3876,7 @@ form.custom .custom.disabled {
   color: white;
   width: 50%;
   display: block;
-  padding: 0 33.33333px;
+  padding: 0 24px;
 }
 .top-bar .toggle-topbar {
   position: absolute;
@@ -3849,12 +3890,12 @@ form.custom .custom.disabled {
   font-weight: bold;
   position: relative;
   display: block;
-  padding: 0 33.33333px;
-  height: 100px;
-  line-height: 100px;
+  padding: 0 24px;
+  height: 72px;
+  line-height: 72px;
 }
 .top-bar .toggle-topbar.menu-icon {
-  right: 33.33333px;
+  right: 24px;
   top: 50%;
   margin-top: -16px;
   padding-left: 40px;
@@ -3881,7 +3922,7 @@ form.custom .custom.disabled {
   background: transparent;
 }
 .top-bar.expanded .title-area {
-  background: #111111;
+  background: #ffb602;
 }
 .top-bar.expanded .toggle-topbar a {
   color: #888888;
@@ -3903,13 +3944,13 @@ form.custom .custom.disabled {
   width: 100%;
   height: auto;
   display: block;
-  background: #333333;
+  background: #ffb602;
   font-size: 16px;
   margin: 0;
 }
 .top-bar-section .divider {
-  border-bottom: solid 1px #4d4d4d;
-  border-top: solid 1px #1a1a1a;
+  border-bottom: solid 1px #ffc535;
+  border-top: solid 1px #ce9300;
   clear: both;
   height: 1px;
   width: 100%;
@@ -3919,13 +3960,13 @@ form.custom .custom.disabled {
   width: 100%;
   color: white;
   padding: 12px 0 12px 0;
-  padding-left: 33.33333px;
+  padding-left: 24px;
   font-size: 0.8125em;
   font-weight: bold;
-  background: #333333;
+  background: #ffb602;
 }
 .top-bar-section ul li > a:hover {
-  background: #2b2b2b;
+  background: #f2ac00;
 }
 .top-bar-section ul li > a.button {
   background: #2ba6cb;
@@ -3953,10 +3994,10 @@ form.custom .custom.disabled {
   background: #970b0e;
 }
 .top-bar-section ul li.active a {
-  background: #2b2b2b;
+  background: #f2ac00;
 }
 .top-bar-section .has-form {
-  padding: 33.33333px;
+  padding: 24px;
 }
 .top-bar-section .has-dropdown {
   position: relative;
@@ -3968,7 +4009,7 @@ form.custom .custom.disabled {
   height: 0;
   border: solid 5px;
   border-color: transparent transparent transparent rgba(255, 255, 255, 0.5);
-  margin-right: 33.33333px;
+  margin-right: 24px;
   margin-top: -4.5px;
   position: absolute;
   top: 50%;
@@ -3992,18 +4033,18 @@ form.custom .custom.disabled {
 }
 .top-bar-section .dropdown li a {
   font-weight: normal;
-  padding: 8px 33.33333px;
+  padding: 8px 24px;
 }
 .top-bar-section .dropdown li.title h5 {
   margin-bottom: 0;
 }
 .top-bar-section .dropdown li.title h5 a {
   color: white;
-  line-height: 50px;
+  line-height: 36px;
   display: block;
 }
 .top-bar-section .dropdown label {
-  padding: 8px 33.33333px 2px;
+  padding: 8px 24px 2px;
   margin-bottom: 0;
   text-transform: uppercase;
   color: #555555;
@@ -4022,7 +4063,7 @@ form.custom .custom.disabled {
 
 @media only screen and (min-width: 58.75em) {
   .top-bar {
-    background: #111111;
+    background: #ffb602;
     *zoom: 1;
     overflow: visible;
   }
@@ -4052,7 +4093,7 @@ form.custom .custom.disabled {
     top: 8px;
   }
   .top-bar.expanded {
-    background: #111111;
+    background: #ffb602;
   }
 
   .contain-to-grid .top-bar {
@@ -4078,12 +4119,12 @@ form.custom .custom.disabled {
     display: none;
   }
   .top-bar-section li a:not(.button) {
-    padding: 0 33.33333px;
-    line-height: 100px;
-    background: #111111;
+    padding: 0 24px;
+    line-height: 72px;
+    background: #ffb602;
   }
   .top-bar-section li a:not(.button):hover {
-    background: black;
+    background: #684a00;
   }
   .top-bar-section .has-dropdown > a {
     padding-right: 35px !important;
@@ -4119,15 +4160,15 @@ form.custom .custom.disabled {
     min-width: 100%;
   }
   .top-bar-section .dropdown li a {
-    color: white;
+    color: red;
     line-height: 1;
     white-space: nowrap;
-    padding: 7px 33.33333px;
-    background: #1e1e1e;
+    padding: 7px 24px;
+    background: #ffbd1c;
   }
   .top-bar-section .dropdown li label {
     white-space: nowrap;
-    background: #1e1e1e;
+    background: #ffbd1c;
   }
   .top-bar-section .dropdown li .dropdown {
     left: 100%;
@@ -4136,16 +4177,16 @@ form.custom .custom.disabled {
   .top-bar-section > ul > .divider {
     border-bottom: none;
     border-top: none;
-    border-right: solid 1px #2b2b2b;
-    border-left: solid 1px black;
+    border-right: solid 1px #ffc535;
+    border-left: solid 1px #ce9300;
     clear: none;
-    height: 100px;
+    height: 72px;
     width: 0px;
   }
   .top-bar-section .has-form {
-    background: #111111;
-    padding: 0 33.33333px;
-    height: 100px;
+    background: #ffb602;
+    padding: 0 24px;
+    height: 72px;
   }
   .top-bar-section ul.right li .dropdown {
     left: auto;
