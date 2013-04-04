@@ -6,6 +6,14 @@
 // import normalize, stay at top
 @import "normalize";
 
+// Global Foundation Settings
+@import "settings";
+
+// Comment out this import if you are customizing you imports below
+@import "foundation";
+
+/* Start to customize Reverie */
+
 $yellow: #ffb602;
 $lightgreen: #587363;
 $green: #4f6657;
@@ -14,6 +22,69 @@ $fontnormal: TradeGothicLT;
 $fontcond: TradeGothicLT-CondEighteen;
 $fontbold: TradeGothicLTCom-BdCn20;
 
+section[role="document"] {
+	
+	h1, h2, h3, h4 {
+		font-family: $fontbold;
+	}
+	h1 {
+		
+		color: white;
+		text-transform: uppercase;
+	}
+	h2 {
+		color: $yellow;
+	}
+	@media only screen and (max-width: 768px) { 
+		h1, h2 {
+			font-size: 21px;
+		}
+	}
+	@media only screen and (min-width: 768px) { 
+		h1, h2 {
+			font-size: 36px;
+		}
+	}
+
+	h3 {
+		color: white;
+	}
+	h4 {
+		color: $yellow;
+	}
+	@media only screen and (max-width: 768px) { 
+		h3, h4 {
+			font-size: 18px;
+		}
+	}
+	@media only screen and (min-width: 768px) { 
+		h3, h4 {
+			font-size: 26px;
+		}
+	}
+	
+	h5 {
+		font-size: 16px;
+		font-weight: normal;
+		color: $yellow;
+	}
+	p, li {
+		font-size: 16px;
+		color: white;
+		line-height: 21px;
+	}
+	a {
+		color: $yellow;
+		
+	}
+	.yellow {
+		color: $yellow;
+	}
+
+	ul.tick {
+		list-style-image: url('../img/tick.png');
+	}
+}
 #bigheader {
 
 	background-color: #f6f5f1;
@@ -81,20 +152,6 @@ $fontbold: TradeGothicLTCom-BdCn20;
 		padding-bottom: 60px;
 	}
 }
-
-#smallheader {
-	header.row {
-		height: 91px; // set explicitly to help out the "sticky" menu...
-		background-color: #f6f5f1;
-		padding: 6px 0;
-	}
-	img {
-		display: block;
-		margin: 0 auto;
-	}
-	
-}
-
 #bignav {
 	background-color: $yellow;
 	row {
@@ -152,11 +209,36 @@ $fontbold: TradeGothicLTCom-BdCn20;
 		background: url(../img/icons/green/contactus.png) no-repeat top center;
 	}
 }
-
+#contentbg, #maincontent {
+	background-color: $green;
+}
+#maincontent, #sidebarcontent {
+	@media only screen and (max-width: 768px) { 
+		padding: 20px;
+	}
+	@media only screen and (min-width: 768px) { 
+		padding: 50px;
+	}
+	margin: 0;
+	
+}
+#smallheader {
+	header.row {
+		height: 91px; // set explicitly to help out the "sticky" menu...
+		background-color: #f6f5f1;
+		padding: 6px 0;
+	}
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+	
+}
 #smallnav {
 	.top-bar {
 		.toggle-topbar {
 			position: relative; // undoes the absolute position sticking right for the menu button....
+			background-color: $yellow;
 		}
 		li {
 			padding: 0;
@@ -202,29 +284,22 @@ $fontbold: TradeGothicLTCom-BdCn20;
 		background-color: $lightgreen;
 	}
 }
-
-#contentbg, #maincontent {
-	background-color: $green;
-}
 #sidebar {
+	padding: 0;
 	background-color: $lightgreen;
+	overflow: hidden;
+	article {
+		margin-bottom: 20px;
+	}	
+	p, h5 {
+		margin-bottom: 0;
+	}
+	#tower {
+		bottom: 0;
+		margin: 0;
+		width: 100%;
+	}
 }
-
-// Global Foundation Settings
-@import "settings";
-
-// Comment out this import if you are customizing you imports below
-@import "foundation";
-
-/* Start to customize Reverie */
-
-
-
-
-
-
-
-
 
 /* "default" reverie customizations */
 // add some extra style to row to beautify custom background image
