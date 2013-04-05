@@ -46,9 +46,8 @@
 
 <div id="bigheader">
 	<header class="row show-for-medium-up" >
-<!--		<div class="small-1 columns">&nbsp;</div> -->
 		<div class="small-6 columns" id="logo_otmc">
-			<img src="<?php echo get_template_directory_uri(); ?>/img/logo_otmc.png"/>
+			<a href="/dev/otmc"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_otmc.png"/></a>
 		</div>
 		<div class="small-12 columns" id="bigheaderinfo">
 			<div>
@@ -57,7 +56,6 @@
 				<h3><a href="mailto:observatory@executivehealthgroup.com.au">observatory@executivehealthgroup.com.au</a></h3>
 				<h3>&nbsp;</h3>
 				<p><strong>日本人</strong> <a href="tel:0292528888">02 9252 8888</a>  |  <a href="mailto:japanese@executivehealthgroup.com.au">japanese@executivehealthgroup.com.au</a></p>
-				<p><strong>Monteith Physio</strong> <a href="tel:0292527566">02 9252 7566</a>  |  <a href="mailto:adam@monteithphysio.com.au">adam@monteithphysio.com.au</a></p>
 			</div>
 		</div>
 		<div class="small-6 columns" id="logo_ehg">
@@ -80,11 +78,12 @@
 <div id="bignav">
 	<div class="row show-for-medium-up">
 			<?php
+			// todo do this properly! using wp_get_nav_menu etc.
 				wp_nav_menu( array(
 					'theme_location' => 'primary',
 					'container' => false,
 					'depth' => 0,
-					'items_wrap' => '<ul class="small-block-grid-7">%3$s</ul>'
+					'items_wrap' => '<ul class="small-block-grid-6">%3$s</ul>'
 					 )
 				 );
 			?>

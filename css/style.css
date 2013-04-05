@@ -5549,59 +5549,62 @@ table tfoot tr td {
 }
 
 /* Start to customize Reverie */
-section[role="document"] h1, section[role="document"] h2, section[role="document"] h3, section[role="document"] h4, section[role="document"] ol.commentlist cite.fn, ol.commentlist section[role="document"] cite.fn {
-  font-family: TradeGothicLTCom-BdCn20;
+body {
+  background-color: #4f6657 !important;
 }
-section[role="document"] h1 {
+body h1 {
   color: white;
   text-transform: uppercase;
 }
-section[role="document"] h2 {
-  color: #ffb602;
+body h2 {
+  color: #ffb50b;
 }
 @media only screen and (max-width: 768px) {
-  section[role="document"] h1, section[role="document"] h2 {
+  body h1, body h2 {
     font-size: 21px;
   }
 }
 @media only screen and (min-width: 768px) {
-  section[role="document"] h1, section[role="document"] h2 {
+  body h1, body h2 {
     font-size: 36px;
   }
 }
-section[role="document"] h3 {
+body h3 {
   color: white;
 }
-section[role="document"] h4, section[role="document"] ol.commentlist cite.fn, ol.commentlist section[role="document"] cite.fn {
-  color: #ffb602;
+body h4, body ol.commentlist cite.fn, ol.commentlist body cite.fn {
+  color: #ffb50b;
 }
 @media only screen and (max-width: 768px) {
-  section[role="document"] h3, section[role="document"] h4, section[role="document"] ol.commentlist cite.fn, ol.commentlist section[role="document"] cite.fn {
+  body h3, body h4, body ol.commentlist cite.fn, ol.commentlist body cite.fn {
     font-size: 18px;
   }
 }
 @media only screen and (min-width: 768px) {
-  section[role="document"] h3, section[role="document"] h4, section[role="document"] ol.commentlist cite.fn, ol.commentlist section[role="document"] cite.fn {
+  body h3, body h4, body ol.commentlist cite.fn, ol.commentlist body cite.fn {
     font-size: 26px;
   }
 }
-section[role="document"] h5 {
+body h5 {
   font-size: 16px;
   font-weight: normal;
-  color: #ffb602;
+  color: #ffb50b;
 }
-section[role="document"] p, section[role="document"] li {
+body p, body li {
   font-size: 16px;
   color: white;
   line-height: 21px;
 }
-section[role="document"] a {
-  color: #ffb602;
+body a {
+  color: #ffb50b;
 }
-section[role="document"] .yellow {
-  color: #ffb602;
+body a:hover {
+  color: light(#ffb50b, 15);
 }
-section[role="document"] ul.tick {
+body .yellow {
+  color: #ffb50b;
+}
+body ul.tick {
   list-style-image: url("../img/tick.png");
 }
 
@@ -5654,10 +5657,10 @@ section[role="document"] ul.tick {
   font-family: TradeGothicLTCom-BdCn20;
   font-weight: normal;
   line-height: 55.6px;
-  color: #ffb602;
+  color: #ffb50b;
 }
 #bigheader h2 a:hover {
-  color: #ffcc4f;
+  color: #ffcc58;
 }
 #bigheader h3 {
   font-family: TradeGothicLT-CondEighteen;
@@ -5682,7 +5685,7 @@ section[role="document"] ul.tick {
 }
 
 #bignav {
-  background-color: #ffb602;
+  background-color: #ffb50b;
 }
 #bignav row {
   padding: 45px 0;
@@ -5703,6 +5706,7 @@ section[role="document"] ul.tick {
   font-family: TradeGothicLTCom-BdCn20;
   text-transform: uppercase;
   color: #5a7464;
+  line-height: 51px;
 }
 @media only screen and (min-width: 768px) {
   #bignav a {
@@ -5746,7 +5750,57 @@ section[role="document"] ul.tick {
   background: url(../img/icons/green/contactus.png) no-repeat top center;
 }
 
-#contentbg, #maincontent {
+body {
+  background-color: #4f6657;
+}
+
+#footerbg {
+  background-color: #f6f5f1;
+}
+#footerbg footer.row {
+  background-color: #f6f5f1;
+  padding: 50px;
+  padding-right: 0px;
+}
+#footerbg footer #footerinfo p, #footerbg footer #footerinfo a {
+  font-family: TradeGothicLT-CondEighteen;
+  color: grey;
+  margin: 0;
+}
+#footerbg footer img {
+  text-align: center;
+}
+#footerbg footer .row > .columns {
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+}
+
+#locationbg #locationlabel {
+  background-color: #ffb50b;
+}
+#locationbg #locationlabel h1 {
+  text-align: center;
+  color: #4f6657;
+}
+#locationbg #locationlabel img {
+  margin-top: 10px;
+  margin-bottom: -15px;
+}
+#locationbg #locationdetails {
+  background-color: #587363;
+  padding: 30px 50px;
+}
+@media only screen and (min-width: 48em) {
+  #locationbg #locationlabel, #locationbg #locationdetails {
+    height: 225px;
+  }
+  #locationbg #locationlabel img {
+    margin-top: 50px;
+  }
+}
+
+#maincontent {
   background-color: #4f6657;
 }
 
@@ -5782,12 +5836,12 @@ section[role="document"] ul.tick {
   /* Safari and Chrome */
   -o-transition-property: height;
   /* Opera */
-  transition-duration: 1.5s;
-  -moz-transition-duration: 1.5s;
+  transition-duration: 1s;
+  -moz-transition-duration: 1s;
   /* Firefox 4 */
-  -webkit-transition-duration: 1.5s;
+  -webkit-transition-duration: 1s;
   /* Safari and Chrome */
-  -o-transition-duration: 1.5s;
+  -o-transition-duration: 1s;
   /* Opera */
   transition-timing-function: linear;
   -moz-transition-timing-function: linear;
@@ -5796,17 +5850,10 @@ section[role="document"] ul.tick {
   /* Safari and Chrome */
   -o-transition-timing-function: linear;
   /* Opera */
-  transition-delay: .25s;
-  -moz-transition-delay: .25s;
-  /* Firefox 4 */
-  -webkit-transition-delay: .25s;
-  /* Safari and Chrome */
-  -o-transition-delay: .25s;
-  /* Opera */
 }
 #smallnav .top-bar .toggle-topbar {
   position: relative;
-  background-color: #ffb602;
+  background-color: #ffb50b;
 }
 #smallnav .top-bar li {
   padding: 0;
@@ -5819,6 +5866,15 @@ section[role="document"] ul.tick {
 }
 #smallnav .top-bar.expanded {
   height: 394px;
+}
+#smallnav notused {
+  transition-delay: .25s;
+  -moz-transition-delay: .25s;
+  /* Firefox 4 */
+  -webkit-transition-delay: .25s;
+  /* Safari and Chrome */
+  -o-transition-delay: .25s;
+  /* Opera */
 }
 #smallnav .top-bar .toggle-topbar a {
   text-indent: 0;
@@ -5848,6 +5904,9 @@ section[role="document"] ul.tick {
   width: 100%;
 }
 
+/**********************************************************************************************************************************
+**********************************************************************************************************************************
+**********************************************************************************************************************************/
 /* "default" reverie customizations */
 header.row,
 .container.row,

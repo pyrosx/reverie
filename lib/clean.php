@@ -128,20 +128,20 @@ function reverie_scripts_and_styles() {
 	wp_register_script( 'jquery-migrate', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://code.jquery.com/jquery-migrate-1.1.1.min.js", array('jquery'), '1.1.1', true );
     
     // adding Foundation scripts file in the footer
+    wp_register_script( 'reverie-js', get_template_directory_uri() . '/js/foundation/foundation.js', array( 'jquery' ), '', true );
     wp_register_script( 'reverie-js1', get_template_directory_uri() . '/js/foundation/foundation.alerts.js', array( 'jquery' ), '', true );
     wp_register_script( 'reverie-js2', get_template_directory_uri() . '/js/foundation/foundation.clearing.js', array( 'jquery' ), '', true );
     wp_register_script( 'reverie-js3', get_template_directory_uri() . '/js/foundation/foundation.cookie.js', array( 'jquery' ), '', true );
     wp_register_script( 'reverie-js4', get_template_directory_uri() . '/js/foundation/foundation.dropdown.js', array( 'jquery' ), '', true );
     wp_register_script( 'reverie-js5', get_template_directory_uri() . '/js/foundation/foundation.forms.js', array( 'jquery' ), '', true );
     wp_register_script( 'reverie-js6', get_template_directory_uri() . '/js/foundation/foundation.joyride.js', array( 'jquery' ), '', true );
-    wp_register_script( 'reverie-js7', get_template_directory_uri() . '/js/foundation/foundation.js', array( 'jquery' ), '', true );
-    wp_register_script( 'reverie-js8', get_template_directory_uri() . '/js/foundation/foundation.magellan.js', array( 'jquery' ), '', true );
-    wp_register_script( 'reverie-js9', get_template_directory_uri() . '/js/foundation/foundation.orbit.js', array( 'jquery' ), '', true );
-    wp_register_script( 'reverie-js10', get_template_directory_uri() . '/js/foundation/foundation.placeholder.js', array( 'jquery' ), '', true );
-    wp_register_script( 'reverie-js11', get_template_directory_uri() . '/js/foundation/foundation.reveal.js', array( 'jquery' ), '', true );
-    wp_register_script( 'reverie-js12', get_template_directory_uri() . '/js/foundation/foundation.section.js', array( 'jquery' ), '', true );
-    wp_register_script( 'reverie-js13', get_template_directory_uri() . '/js/foundation/foundation.tooltips.js', array( 'jquery' ), '', true );
-    wp_register_script( 'reverie-js14', get_template_directory_uri() . '/js/foundation/foundation.topbar.js', array( 'jquery' ), '', true );
+    wp_register_script( 'reverie-js7', get_template_directory_uri() . '/js/foundation/foundation.magellan.js', array( 'jquery' ), '', true );
+    wp_register_script( 'reverie-js8', get_template_directory_uri() . '/js/foundation/foundation.orbit.js', array( 'jquery' ), '', true );
+    wp_register_script( 'reverie-js9', get_template_directory_uri() . '/js/foundation/foundation.placeholder.js', array( 'jquery' ), '', true );
+    wp_register_script( 'reverie-js10', get_template_directory_uri() . '/js/foundation/foundation.reveal.js', array( 'jquery' ), '', true );
+    wp_register_script( 'reverie-js11', get_template_directory_uri() . '/js/foundation/foundation.section.js', array( 'jquery' ), '', true );
+    wp_register_script( 'reverie-js12', get_template_directory_uri() . '/js/foundation/foundation.tooltips.js', array( 'jquery' ), '', true );
+    wp_register_script( 'reverie-js13', get_template_directory_uri() . '/js/foundation/foundation.topbar.js', array( 'jquery' ), '', true );
     
 	//  min version, not being used
     //wp_register_script( 'reverie-js', get_template_directory_uri() . '/js/foundation.min.js', array( 'jquery' ), '', true );
@@ -166,6 +166,7 @@ function reverie_scripts_and_styles() {
 	wp_enqueue_script ('jquery-noconflict');
 	wp_enqueue_script ('jquery-migrate');
 	
+    wp_enqueue_script( 'reverie-js' );
     wp_enqueue_script( 'reverie-js1' );
     wp_enqueue_script( 'reverie-js2' );
     wp_enqueue_script( 'reverie-js3' );
@@ -179,7 +180,6 @@ function reverie_scripts_and_styles() {
     wp_enqueue_script( 'reverie-js11' );
     wp_enqueue_script( 'reverie-js12' );
     wp_enqueue_script( 'reverie-js13' );
-    wp_enqueue_script( 'reverie-js14' );
     
     wp_enqueue_script( 'html5shiv' );
 

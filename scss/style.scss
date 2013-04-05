@@ -12,23 +12,23 @@
 // Comment out this import if you are customizing you imports below
 @import "foundation";
 
+
 /* Start to customize Reverie */
 
-$yellow: #ffb602;
+$yellow: #ffb50b;
 $lightgreen: #587363;
 $green: #4f6657;
+$verylightgrey: #f6f5f1;
 
 $fontnormal: TradeGothicLT;
 $fontcond: TradeGothicLT-CondEighteen;
 $fontbold: TradeGothicLTCom-BdCn20;
 
-section[role="document"] {
+body {
 	
-	h1, h2, h3, h4 {
-		font-family: $fontbold;
-	}
-	h1 {
-		
+	background-color: $green !important;
+	
+	h1 {		
 		color: white;
 		text-transform: uppercase;
 	}
@@ -75,8 +75,11 @@ section[role="document"] {
 	}
 	a {
 		color: $yellow;
-		
 	}
+	a:hover {
+		color: light($yellow,15);
+	}
+	
 	.yellow {
 		color: $yellow;
 	}
@@ -87,10 +90,10 @@ section[role="document"] {
 }
 #bigheader {
 
-	background-color: #f6f5f1;
+	background-color: $verylightgrey;
 	.row {
 		padding-top: 24px;
-		background-color: #f6f5f1;
+		background-color: $verylightgrey;
 	}
 	
 	#bigheaderinfo {
@@ -173,6 +176,7 @@ section[role="document"] {
 		font-family: $fontbold;
 		text-transform: uppercase;
 		color: #5a7464;
+		line-height: 51px;
 		
 		@media only screen and (min-width: 768px) { 
 			font-size: 21px;
@@ -209,7 +213,62 @@ section[role="document"] {
 		background: url(../img/icons/green/contactus.png) no-repeat top center;
 	}
 }
-#contentbg, #maincontent {
+body {
+	background-color: $green;
+}
+
+#footerbg {
+	background-color: $verylightgrey;
+	footer {
+		&.row {
+			background-color: $verylightgrey;
+			padding: 50px;
+			padding-right: 0px;
+		}
+		#footerinfo {
+			p, a {
+				font-family: $fontcond;
+				color: grey;
+				margin: 0;
+			}
+		}
+		img {
+			text-align: center;
+		}
+		.row > .columns {
+			display:table-cell;
+   			vertical-align:middle;
+   			height: 100%;
+		}
+	}
+	
+}
+#locationbg {
+	#locationlabel {
+		background-color: $yellow;
+		h1 {
+			text-align: center;
+			color: $green;
+		}
+		img {
+			margin-top: 10px;
+			margin-bottom: -15px;
+		}
+	}
+	#locationdetails {
+		background-color: $lightgreen;	
+		padding: 30px 50px;
+	}
+	@media #{$small} { 
+		#locationlabel, #locationdetails {
+			height: 225px;
+		}
+		#locationlabel img {
+			margin-top: 50px;
+		}
+	}
+}
+#maincontent {
 	background-color: $green;
 }
 #maincontent, #sidebarcontent {
@@ -225,7 +284,7 @@ section[role="document"] {
 #smallheader {
 	header.row {
 		height: 91px; // set explicitly to help out the "sticky" menu...
-		background-color: #f6f5f1;
+		background-color: $verylightgrey;
 		padding: 6px 0;
 	}
 	img {
@@ -250,6 +309,7 @@ section[role="document"] {
 			display: block;
 		}
 		&.expanded {
+			// hardcoded so that animation works properly... height:auto animates back to nothing, then pops fully open.
 			height: 394px;
 		}
 		transition-property:height;
@@ -257,21 +317,23 @@ section[role="document"] {
 		-webkit-transition-property:height; /* Safari and Chrome */
 		-o-transition-property:height; /* Opera */
 
-		transition-duration: 1.5s;
-		-moz-transition-duration: 1.5s; /* Firefox 4 */
-		-webkit-transition-duration: 1.5s; /* Safari and Chrome */
-		-o-transition-duration: 1.5s; /* Opera */
+		transition-duration: 1s;
+		-moz-transition-duration: 1s; /* Firefox 4 */
+		-webkit-transition-duration: 1s; /* Safari and Chrome */
+		-o-transition-duration: 1s; /* Opera */
 
 		transition-timing-function: linear;
 		-moz-transition-timing-function: linear; /* Firefox 4 */
 		-webkit-transition-timing-function: linear; /* Safari and Chrome */
 		-o-transition-timing-function: linear; /* Opera */
 
-		transition-delay: .25s;
+
+	}
+	notused {
+			transition-delay: .25s;
 		-moz-transition-delay: .25s; /* Firefox 4 */
 		-webkit-transition-delay: .25s; /* Safari and Chrome */
 		-o-transition-delay: .25s; /* Opera */
-
 	}
 	.top-bar .toggle-topbar a {
 		text-indent: 0;
@@ -300,6 +362,11 @@ section[role="document"] {
 		width: 100%;
 	}
 }
+
+/**********************************************************************************************************************************
+**********************************************************************************************************************************
+**********************************************************************************************************************************/
+
 
 /* "default" reverie customizations */
 // add some extra style to row to beautify custom background image
