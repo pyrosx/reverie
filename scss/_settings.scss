@@ -8,11 +8,13 @@ $row-width:     80em !default;
 $column-gutter: 0.5em !default;
 $total-columns: 24 !default;
 
+//$header-font-family:                   "TradeGothicLT-CondEighteen", Arial, sans-serif;
+$header-font-family:                   "TradeGothicLT-CondEighteen", serif;
+$header-font-weight:                   bold;
 
-$header-font-family:                   "TradeGothicLT", Arial, sans-serif;
-$paragraph-font-family:                "TradeGothicLT", Arial, sans-serif;
-
-
+//$paragraph-font-family:                "TradeGothicLT", Arial, sans-serif;
+$paragraph-font-family:                "TradeGothicLT", serif;
+$header-font-weight:                   normal;
 
 /* Height and margin */
 $topbar-height:72px;

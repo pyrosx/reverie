@@ -10,7 +10,7 @@
 
     settings: {
       timer_speed: 10000,
-      animation_speed: 500,
+      animation_speed: 1000,
       bullets: true,
       stack_on_small: true,
       container_class: 'orbit-container',
@@ -354,7 +354,7 @@
       } else {
         $slides_container.animate({
           'marginLeft' : new_margin_left
-        }, self.settings.animation_speed, 'linear', function() {
+        }, self.settings.animation_speed, 'easeInOutBack', function() {
           $container.removeClass(self.settings.orbit_transition_class);
           $slides_container.trigger('orbit:after-slide-change', [{slide_number: active_index, total_slides: $slides_container.children().length - 2}]);
           callback();

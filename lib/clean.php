@@ -127,6 +127,10 @@ function reverie_scripts_and_styles() {
 	// register jQuery Migrate plugin (from code.jquery.com – "The minified production file is compressed and does not generate console warnings.")
 	wp_register_script( 'jquery-migrate', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://code.jquery.com/jquery-migrate-1.1.1.min.js", array('jquery'), '1.1.1', true );
     
+    wp_register_script( 'jquery-easing', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js", array('jquery'), '1.3', true );
+    
+    
+    
     // adding Foundation scripts file in the footer
     wp_register_script( 'reverie-js', get_template_directory_uri() . '/js/foundation/foundation.js', array( 'jquery' ), '', true );
     wp_register_script( 'reverie-js1', get_template_directory_uri() . '/js/foundation/foundation.alerts.js', array( 'jquery' ), '', true );
@@ -165,6 +169,8 @@ function reverie_scripts_and_styles() {
 	// enqueue jQuery noConflict mode script and Migrate plugin
 	wp_enqueue_script ('jquery-noconflict');
 	wp_enqueue_script ('jquery-migrate');
+	wp_enqueue_script ('jquery-easing');
+	
 	
     wp_enqueue_script( 'reverie-js' );
     wp_enqueue_script( 'reverie-js1' );

@@ -13,8 +13,16 @@
 		</div>
 	</div>
 	<div class="row full-width">
-		<div class="flex-video widescreen vimeo">
-			<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.au/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=observatory+tower+medical+centre&amp;aq=&amp;sll=-33.732335,151.00708&amp;sspn=0.375746,0.726471&amp;ie=UTF8&amp;hq=observatory+tower+medical+centre&amp;hnear=&amp;ll=-33.862295,151.204024&amp;spn=0.046897,0.090809&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=16984422068066950848&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com.au/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=observatory+tower+medical+centre&amp;aq=&amp;sll=-33.732335,151.00708&amp;sspn=0.375746,0.726471&amp;ie=UTF8&amp;hq=observatory+tower+medical+centre&amp;hnear=&amp;ll=-33.862295,151.204024&amp;spn=0.046897,0.090809&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=16984422068066950848" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+		<div class="flex-video fvcustom">
+
+
+<!-- google maps copy/paste -->
+
+			<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.au/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Observatory+Tower+Medical+Centre,+5%2F168+Kent+Street,+Sydney+NSW&amp;aq=0&amp;oq=obs&amp;sll=-32.830735,147.451465&amp;sspn=12.136287,23.225098&amp;ie=UTF8&amp;hq=Observatory+Tower+Medical+Centre,&amp;hnear=5%2F168+Kent+St,+Millers+Point+New+South+Wales+2000&amp;ll=-33.862295,151.204024&amp;spn=0.006295,0.006295&amp;t=m&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com.au/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Observatory+Tower+Medical+Centre,+5%2F168+Kent+Street,+Sydney+NSW&amp;aq=0&amp;oq=obs&amp;sll=-32.830735,147.451465&amp;sspn=12.136287,23.225098&amp;ie=UTF8&amp;hq=Observatory+Tower+Medical+Centre,&amp;hnear=5%2F168+Kent+St,+Millers+Point+New+South+Wales+2000&amp;ll=-33.862295,151.204024&amp;spn=0.006295,0.006295&amp;t=m" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+
+<!-- end google maps -->
+
+
 		</div>
 	</div>
 </div>
@@ -25,17 +33,19 @@
 
 <div id="footerbg">
 <footer class="row full-width" role="contentinfo">
-	<div class="large-10 columns" id="footercontactform">
-		<p> Want to receive Health Alerts and reminders from us? Sign up here </p>
+	<div class="large-9 columns" id="footercontactform">
+		<p><strong> Want to receive Health Alerts and reminders from us? <span class="yellow">Sign up here</span> </strong></p>
 		<form>
 			<input type="text" name="Name" id="name"/>
 			<input type="email" name="email" id="email"/>
-			<input type="submit" value="Sign Me Up!"/>
+			<button type="submit">
+				<img src="<?php echo get_template_directory_uri(); ?>/img/buttons/submit.png"/>
+			</button>
 		</form>
 	</div>
 	
 	
-	<div class="large-5 columns" id="footerinfo">
+	<div class="large-5 large-offset-1 columns" id="footerinfo">
 		<p><a href="privacy">Privacy Policy</a> </p>   
 		<p>&copy; Copyright 2013 Salutay Pty Ltd </p>
 		<p>ABN 75 083 634 217</p>
@@ -44,10 +54,10 @@
 	<div class="large-9 columns">
 		<div class="row">
 			<div class="large-12 columns" id="footer_otmc">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/logo_otmc.png"/>
+				<img src="<?php echo get_template_directory_uri(); ?>/img/logo_otmc_med.png"/>
 			</div>
 			<div class="large-12 columns" id="footer_ehg">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/logo_ehg.png"/>
+				<img src="<?php echo get_template_directory_uri(); ?>/img/logo_ehg_med.png"/>
 			</div>
 		</div>
 	</div>
@@ -60,12 +70,10 @@
 	(function($) {
 		$(document).foundation();
 	 	
-	
 		// set the maincontent and sidebar heights to that of the main content bg height
-		$(document).ready(function () {
+
+		$(window).load(function () {
 			/* if in non-mobile mode */
-			$('#sidebar').css('height','auto');
-			$('#maincontent').css('height','auto');			
 			if ($('body').width() >= 768) {
 				//var $height = $('#maincontent').height() > $('#sidebar').height() ? $('#maincontent').height() : $('#sidebar').height();
 				var $height = $('#contentbg').outerHeight();
@@ -90,10 +98,7 @@
 		});
 		
 		// click handling for location link
-		$('#menu-item-28').click(function (e) {
-			e.preventDefault();
-			
-			
+		var shrinkToLocation = function() { 
 			if ($('#locationdetails').hasClass('large-19')) {
 				$('#locationdetails').removeClass('large-19').addClass('large-24');
 			} else {
@@ -101,7 +106,14 @@
 			}
 			$('#locationlabel').toggle();			
 			$('#contentbg').toggle("slow");
+		};
+		
+		$('#menu-item-28').click(function (e) {
+			e.preventDefault();
+			shrinkToLocation();
 		});
+		
+		
 	
 	})(jQuery);
 </script>

@@ -34,9 +34,9 @@
 	<link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/img/devices/reverie-load.png" media="screen and (max-device-width: 320px)" />
 
 
-	<!-- webfonts -->
+	<!-- webfonts 
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/MyFontsWebfontsKit.css">
-
+-->
 
 <?php wp_head(); ?>
 
@@ -77,17 +77,31 @@
 
 <div id="bignav">
 	<div class="row show-for-medium-up">
-			<?php
-			// todo do this properly! using wp_get_nav_menu etc.
-				wp_nav_menu( array(
-					'theme_location' => 'primary',
-					'container' => false,
-					'depth' => 0,
-					'items_wrap' => '<ul class="small-block-grid-6">%3$s</ul>'
-					 )
-				 );
-			?>
+	<?php
+	// Get the nav menu based on $menu_name (same as 'theme_location' or 'menu' arg to wp_nav_menu)
+    // This code based on wp_nav_menu's code to get Menu ID from menu slug
+
+    $menu_name = 'primary';
+
+    if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
+		$menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
+
+		$menu_items = wp_get_nav_menu_items($menu->term_id);
+
+		$menu_list = '<ul class="small-block-grid-' . count($menu_items) . '" id="menu-' . $menu_name . '">';
+
+		foreach ( (array) $menu_items as $key => $menu_item ) {
+			$menu_list .= '<li><h1><a href="' . $menu_item->url . '"><div id="'.str_replace(' ', '', $menu_item->title).'" class="buttonicon"></div> ' . $menu_item->title . '</a></h1></li>';
+		}
+		$menu_list .= '</ul>';
+    } else {
+		$menu_list = '<ul><li>Menu "' . $menu_name . '" not defined.</li></ul>';
+    }
+    // $menu_list now ready to output		
+    echo $menu_list;
+	?>
 	</div>
+
 </div>
 
 <div id="smallnav">
@@ -97,9 +111,9 @@
 				<li class="toggle-topbar">
 					<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/buttons/menu.png"/></a>
 				</li>
-				<li class="name green"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/buttons/call.png"/></a></li>
-				<li class="name lgreen"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/buttons/email.png"/></a></li>
-				<li class="name green"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/buttons/find.png"/></a></li>
+				<li class="name green"><a href="tel:0292527500"><img src="<?php echo get_template_directory_uri(); ?>/img/buttons/call.png"/></a></li>
+				<li class="name lgreen"><a href="mailto:observatory@executivehealthgroup.com.au"><img src="<?php echo get_template_directory_uri(); ?>/img/buttons/email.png"/></a></li>
+				<li class="name green"><a href="#locationbg"><img src="<?php echo get_template_directory_uri(); ?>/img/buttons/find.png"/></a></li>
 			</ul>
 			<section class="top-bar-section ">
 			<?php

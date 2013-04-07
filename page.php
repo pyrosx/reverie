@@ -6,20 +6,9 @@
 	<?php /* Start loop */ ?>
 	<?php while (have_posts()) : the_post(); ?>
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
-<!--			<header>
-				<h1 class="entry-title"><?php the_title(); ?></h1>
-				<?php reverie_entry_meta(); ?>
-			</header>
--->
 			<div class="entry-content">
 				<?php the_content(); ?>
 			</div>
-			<!--
-			<footer>
-				<?php wp_link_pages(array('before' => '<nav id="page-nav"><p>' . __('Pages:', 'reverie'), 'after' => '</p></nav>' )); ?>
-				<p><?php the_tags(); ?></p>
-			</footer>
-			-->
 		</article>
 	<?php endwhile; // End the loop ?>
 
@@ -36,7 +25,11 @@
 			</article>
 		<?php endwhile; ?>
 		</div>
-		<img id="tower" class="hide-for-small" src="<?php echo get_template_directory_uri(); ?>/img/tower.jpg"/>
+		<ul data-orbit id="tower" data-options="timer_speed:5000; bullets:false;">
+  			<li><img src="<?php echo get_template_directory_uri(); ?>/img/tower.jpg"/></li>
+			<li><img src="<?php echo get_template_directory_uri(); ?>/img/tower2.jpg"/></li>
+			<li><img src="<?php echo get_template_directory_uri(); ?>/img/tower3.jpg"/></li>
+		</ul>
 	</div><!-- /#sidebar -->
 		
 <?php get_footer(); ?>

@@ -1711,7 +1711,7 @@ a img {
 
 /* Default paragraph styles */
 p {
-  font-family: "TradeGothicLT", Arial, sans-serif;
+  font-family: "TradeGothicLT", serif;
   font-weight: normal;
   font-size: 1em;
   line-height: 1.6;
@@ -1726,8 +1726,8 @@ p aside {
 
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "TradeGothicLT", Arial, sans-serif;
-  font-weight: bold;
+  font-family: "TradeGothicLT-CondEighteen", serif;
+  font-weight: normal;
   font-style: normal;
   color: #222222;
   text-rendering: optimizeLegibility;
@@ -1805,7 +1805,7 @@ dl {
   line-height: 1.6;
   margin-bottom: 1.25em;
   list-style-position: outside;
-  font-family: "TradeGothicLT", Arial, sans-serif;
+  font-family: "TradeGothicLT", serif;
 }
 
 /* Unordered Lists */

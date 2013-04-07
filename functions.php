@@ -28,6 +28,7 @@ require_once('lib/enqueue-sass.php'); // do all the cleaning and enqueue if you 
 */
 require_once('lib/foundation.php'); // load Foundation specific functions like top-bar
 
+
 /**********************
 Add theme supports
 **********************/
@@ -50,6 +51,18 @@ function reverie_theme_support() {
 	register_nav_menus(array(
 		'primary' => __('Primary Navigation', 'reverie')
 	));
+	
+
+
+	add_editor_style('css/style.css');
+
+	add_filter( 'tiny_mce_before_init', 'my_custom_tinymce' );
+
+	function my_custom_tinymce( $init ) {
+		$init['theme_advanced_buttons2_add_before'] = 'styleselect';
+		$init['theme_advanced_styles'] = 'Yellow=yellow';
+		return $init;
+	}
 	
 }
 add_action('after_setup_theme', 'reverie_theme_support'); /* end Reverie theme support */

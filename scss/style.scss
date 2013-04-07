@@ -12,7 +12,35 @@
 // Comment out this import if you are customizing you imports below
 @import "foundation";
 
+/* Webfonts */
+$fontnormal: TradeGothicLT;
+$fontcond: TradeGothicLT-CondEighteen;
 
+
+@font-face {
+	font-family: $fontnormal;
+	src: url('../webfonts/2660E9_0_0.eot?') format('eot'),url('../webfonts/2660E9_0_0.woff') format('woff'),url('../webfonts/2660E9_0_0.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: $fontnormal;
+	src: url('../webfonts/2680FB_0_0.eot?') format('eot'),url('../webfonts/2680FB_0_0.woff') format('woff'),url('../webfonts/2680FB_0_0.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: $fontcond;
+	src: url('../webfonts/2660E9_1_0.eot?') format('eot'),url('../webfonts/2660E9_1_0.woff') format('woff'),url('../webfonts/2660E9_1_0.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: $fontcond;
+	src: url('../webfonts/2660E9_2_0.eot?') format('eot'),url('../webfonts/2660E9_2_0.woff') format('woff'),url('../webfonts/2660E9_2_0.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
 /* Start to customize Reverie */
 
 $yellow: #ffb50b;
@@ -20,14 +48,25 @@ $lightgreen: #587363;
 $green: #4f6657;
 $verylightgrey: #f6f5f1;
 
-$fontnormal: TradeGothicLT;
-$fontcond: TradeGothicLT-CondEighteen;
-$fontbold: TradeGothicLTCom-BdCn20;
 
-body {
-	
+
+body {	
 	background-color: $green !important;
-	
+	a {
+		color: $yellow;
+		-o-transition:.5s;
+		-ms-transition:.5s;
+		-moz-transition:.5s;
+		-webkit-transition:.5s;
+		/* ...and now for the proper property */
+		transition:.5s;
+	}
+	a:hover {
+		color: white;
+	}
+	h1, h2 {
+		font-weight: bold;
+	}
 	h1 {		
 		color: white;
 		text-transform: uppercase;
@@ -45,7 +84,6 @@ body {
 			font-size: 36px;
 		}
 	}
-
 	h3 {
 		color: white;
 	}
@@ -72,21 +110,21 @@ body {
 		font-size: 16px;
 		color: white;
 		line-height: 21px;
+		img {
+			vertical-align: middle;
+		}
 	}
-	a {
-		color: $yellow;
+	table, tr, td {
+		background: transparent;
+		border: none;
 	}
-	a:hover {
-		color: light($yellow,15);
+	ul.tick {
+		list-style-image: url('../img/tick.png');
 	}
-	
 	.yellow {
 		color: $yellow;
 	}
 
-	ul.tick {
-		list-style-image: url('../img/tick.png');
-	}
 }
 #bigheader {
 
@@ -123,9 +161,8 @@ body {
 		margin: 0;
 		padding: 0;
 	}
-	h2, h2 a {
-		font-family: $fontbold;
-		font-weight: normal;
+	h2 {
+		font-weight: bold;
 		line-height: 55.6px;
 		color: $yellow;
 	}
@@ -133,12 +170,11 @@ body {
 		color: lighten($yellow,15);
 	}
 	h3 {
-		font-family: $fontcond;
 		font-weight: normal;
 		line-height: 30px;
 	}
 	p {
-		font-family: $fontcond !important;
+		font-family: $fontcond;
 		line-height: 21px;
 	}
 	p, h3, p a, h3 a {
@@ -147,103 +183,179 @@ body {
 	p a:hover, h3 a:hover {
 		color: lighten(#5a7464,10);
 	}
-	
 	#logo_ehg {
 		margin-top: 24px;
+		margin-bottom: 20px;
 		padding-top: 58px;
-		border-left: 1px solid #e0dfdc;
 		padding-bottom: 60px;
+		border-left: 1px solid #e0dfdc;
 	}
 }
 #bignav {
 	background-color: $yellow;
-	row {
-		padding: 45px 0;
+	.row {
+		padding: 45px 0 35px 0;
 	}
 	ul {
 		margin: 0 2%;
 	}
 	li {
-		margin: 50px 0;
+		margin: 0;
 		padding: 0;
+		h1 {
+			margin: 0;
+		}
 	}
 	a {
-		height: 80px;
 		overflow: visible;
 		display: block;
-		padding-top: 50px;
 		text-align: center;
-		font-family: $fontbold;
 		text-transform: uppercase;
+		font-weight: bold;
 		color: #5a7464;
-		line-height: 51px;
-		
+
 		@media only screen and (min-width: 768px) { 
-			font-size: 21px;
-		}
-		@media only screen and (min-width: 900px) { 
 			font-size: 24px;
 		}
-		@media only screen and (min-width: 1000px) { 
+		@media only screen and (min-width: 900px) { 
 			font-size: 28px;
 		}
-		@media only screen and (min-width: 1140px) { 
+		@media only screen and (min-width: 1000px) { 
 			font-size: 32px;
 		}
+		
+		&:hover {
+			color: white;
+			.buttonicon {
+				background-position: -56px 0px !important; 
+			}
+		}
 	}
-	#menu-item-28 {
-		background: url(../img/icons/green/location.png) no-repeat top center;
+	.buttonicon {
+		width: 56px;
+		height: 50px;
+		margin: 0 auto;
+			
 	}
-	#menu-item-25 {
-		background: url(../img/icons/green/doctors.png) no-repeat top center;
+	#Location {
+		background: url(../img/icons/bignav/location.png) no-repeat;
 	}
-	#menu-item-23 {
-		background: url(../img/icons/green/physio.png) no-repeat top center;
+	#Doctors {
+		background: url(../img/icons/bignav/doctors.png) no-repeat;
 	}
-	#menu-item-22 {
-		background: url(../img/icons/green/yourhealth.png) no-repeat top center;
+	#YourHealth {
+		background: url(../img/icons/bignav/yourhealth.png) no-repeat;
 	}
-	#menu-item-24 {
-		background: url(../img/icons/green/employers.png) no-repeat top center;
+	#Employers {
+		background: url(../img/icons/bignav/employers.png) no-repeat;
 	}
-	#menu-item-27 {
-		background: url(../img/icons/green/japanese.png) no-repeat top center;
+	#Japanese {
+		background: url(../img/icons/bignav/japanese.png) no-repeat;
 	}
-	#menu-item-26 {
-		background: url(../img/icons/green/contactus.png) no-repeat top center;
+	#ContactUs {
+		background: url(../img/icons/bignav/contactus.png) no-repeat;
 	}
 }
+
 body {
 	background-color: $green;
 }
-
+#contentbg {
+	.row {
+		background: transparent;
+	}
+}
 #footerbg {
 	background-color: $verylightgrey;
 	footer {
-		&.row {
-			background-color: $verylightgrey;
-			padding: 50px;
-			padding-right: 0px;
+		p, a {
+			font-family: $fontcond;
+			color: grey;
+			margin: 0;
+			text-align: center;
 		}
-		#footerinfo {
-			p, a {
-				font-family: $fontcond;
-				color: grey;
-				margin: 0;
+		#footercontactform {
+			p {
+				margin-bottom: 1em;
+			}
+			button {
+				border: none;
+				background: transparent;
+				width: 114px;
+				text-align: center;
+				display: block;
+				margin: 0 auto;
+				@media #{$small} {
+					margin: 0;
+					float: right;
+				}
+				
+				padding: 0;
+			}
+			input {
+				color: #878787;
+				background-color: #e6e6e6;
+			}
+		}
+		#footer_otmc, #footer_ehg {
+			text-align: center;
+		}
+		#footer_ehg img {
+			padding: 30px;
+		}
+		#footer_otmc img {
+			border-bottom: 1px solid lightgrey;
+			padding: 50px;
+		}
+		@media #{$small} { 
+			p, a{
+				text-align: left;
+			}
+			#footer_otmc {
+				border-right: 1px solid lightgrey;
+				img {
+					border-bottom: none;
+					padding: 0;
+				}
 			}
 		}
 		img {
 			text-align: center;
+		}
+		&.row {
+			background-color: $verylightgrey;
 		}
 		.row > .columns {
 			display:table-cell;
    			vertical-align:middle;
    			height: 100%;
 		}
+		
 	}
 	
 }
+
+$smallnavheight: 72px;
+
 #locationbg {
+	// bit of a hack to make the small nav "find" button hit the right spot;
+	margin-top: -$smallnavheight;
+	padding-top: $smallnavheight;
+	
+	.fvcustom {
+		padding-bottom: 60%;
+		margin: 0;
+	}
+	@media only screen and (min-width: 768px) {
+		.fvcustom {
+			padding-bottom: 50%;
+		}
+	}
+	@media only screen and (min-width: 1000px) {
+		.fvcustom {
+			padding-bottom: 35%;
+		}
+	}
 	#locationlabel {
 		background-color: $yellow;
 		h1 {
@@ -271,12 +383,12 @@ body {
 #maincontent {
 	background-color: $green;
 }
-#maincontent, #sidebarcontent {
+#maincontent, #sidebarcontent, footer {
 	@media only screen and (max-width: 768px) { 
 		padding: 20px;
 	}
 	@media only screen and (min-width: 768px) { 
-		padding: 50px;
+		padding: 40px;		
 	}
 	margin: 0;
 	
@@ -304,14 +416,25 @@ body {
 		}
 		img {
 			width: 85px;
-			height: 72px;
+			height: $smallnavheight;
 			margin: 0 auto;
 			display: block;
 		}
 		&.expanded {
 			// hardcoded so that animation works properly... height:auto animates back to nothing, then pops fully open.
-			height: 394px;
+			height: 354px;
 		}
+		
+		.toggle-topbar a {
+			text-indent: 0;
+			padding: 0;
+		}
+		
+		.top-bar-section ul li a {
+			font-size: 21px;
+			text-transform: uppercase;
+		}
+	
 		transition-property:height;
 		-moz-transition-property: height; /* Firefox 4 */
 		-webkit-transition-property:height; /* Safari and Chrome */
@@ -335,10 +458,7 @@ body {
 		-webkit-transition-delay: .25s; /* Safari and Chrome */
 		-o-transition-delay: .25s; /* Opera */
 	}
-	.top-bar .toggle-topbar a {
-		text-indent: 0;
-		padding: 0;
-	}
+	.top-bar 
 	.green {
 		background-color: $green;
 	}
@@ -347,20 +467,30 @@ body {
 	}
 }
 #sidebar {
+
 	padding: 0;
 	background-color: $lightgreen;
 	overflow: hidden;
 	article {
 		margin-bottom: 20px;
+	}
+	h5 {
+		font-family: $fontnormal;
 	}	
 	p, h5 {
 		margin-bottom: 0;
 	}
 	#tower {
-		bottom: 0;
 		margin: 0;
-		width: 100%;
+		
+		img {
+			width: 100%;
+		}
 	}
+	.orbit-prev, .orbit-next {
+		display: none;
+	}
+	
 }
 
 /**********************************************************************************************************************************
