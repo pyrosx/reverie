@@ -41,6 +41,14 @@ $fontcond: TradeGothicLT-CondEighteen;
 	font-weight: bold;
 	font-style: normal;
 }
+
+.norm {
+	font-family: $fontnormal;
+}
+.cond {
+	font-family: $fontcond;
+}
+
 /* Start to customize Reverie */
 
 $yellow: #ffb50b;
@@ -115,7 +123,7 @@ body {
 		}
 	}
 	table, tr, td {
-		background: transparent;
+		background: transparent !important;
 		border: none;
 	}
 	ul.tick {
@@ -268,7 +276,7 @@ body {
 #footerbg {
 	background-color: $verylightgrey;
 	footer {
-		p, a {
+		p, a, #mc-indicates-required {
 			font-family: $fontcond;
 			color: grey;
 			margin: 0;
@@ -285,16 +293,30 @@ body {
 				text-align: center;
 				display: block;
 				margin: 0 auto;
-				@media #{$small} {
-					margin: 0;
-					float: right;
-				}
 				
 				padding: 0;
 			}
 			input {
 				color: #878787;
 				background-color: #e6e6e6;
+			}
+			label {
+				display: none;
+			}
+			li {
+				list-style-type: none;
+				//list-style-position: outside;
+			}
+			input[type="submit"] {
+				background: url(../img/buttons/submit.png) no-repeat;
+				width: 114px;
+				height: 50px;
+				text-indent: -9999px;
+				border: none;
+				@media #{$small} {
+					margin: 0;
+					float: right;
+				}
 			}
 		}
 		#footer_otmc, #footer_ehg {
@@ -307,9 +329,16 @@ body {
 			border-bottom: 1px solid lightgrey;
 			padding: 50px;
 		}
+		img {
+			text-align: center;
+		}
 		@media #{$small} { 
-			p, a{
+			p, a, #mc-indicates-required {
 				text-align: left;
+			}
+			#mc-indicates-required {
+				width: auto;
+				float: left;
 			}
 			#footer_otmc {
 				border-right: 1px solid lightgrey;
@@ -319,9 +348,8 @@ body {
 				}
 			}
 		}
-		img {
-			text-align: center;
-		}
+		
+		
 		&.row {
 			background-color: $verylightgrey;
 		}
@@ -422,7 +450,7 @@ $smallnavheight: 72px;
 		}
 		&.expanded {
 			// hardcoded so that animation works properly... height:auto animates back to nothing, then pops fully open.
-			height: 354px;
+			height: 401px;
 		}
 		
 		.toggle-topbar a {

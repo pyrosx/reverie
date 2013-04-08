@@ -10,8 +10,7 @@
 
 	<title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
 
-	<!-- Mobile viewport optimized: j.mp/bplateviewport -->
-	<meta name="viewport" content="width=device-width" />
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no";">
 
 	<!-- Favicon and Feed -->
 	<link rel="shortcut icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
@@ -59,7 +58,7 @@
 			</div>
 		</div>
 		<div class="small-6 columns" id="logo_ehg">
-			<img src="<?php echo get_template_directory_uri(); ?>/img/logo_ehg.png"/>
+			<a href="http://www.executivehealthgroup.com.au"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_ehg.png"/></a>
 		</div>
 	</header>
 </div>
@@ -81,12 +80,15 @@
 	// Get the nav menu based on $menu_name (same as 'theme_location' or 'menu' arg to wp_nav_menu)
     // This code based on wp_nav_menu's code to get Menu ID from menu slug
 
-    $menu_name = 'primary';
+    $menu_name = 'nav';
 
     if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
 		$menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
 
 		$menu_items = wp_get_nav_menu_items($menu->term_id);
+
+		// first entry, "Home", is unnecessary, so we're going to remove it.
+		array_shift($menu_items);
 
 		$menu_list = '<ul class="small-block-grid-' . count($menu_items) . '" id="menu-' . $menu_name . '">';
 
@@ -118,7 +120,7 @@
 			<section class="top-bar-section ">
 			<?php
 				wp_nav_menu( array(
-					'theme_location' => 'primary',
+					'theme_location' => 'nav',
 					'container' => false,
 					'depth' => 0,
 					'items_wrap' => '<ul class="left">%3$s</ul>',

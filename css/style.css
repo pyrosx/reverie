@@ -5577,6 +5577,14 @@ table tfoot tr td {
   font-style: normal;
 }
 
+.norm {
+  font-family: TradeGothicLT;
+}
+
+.cond {
+  font-family: TradeGothicLT-CondEighteen;
+}
+
 /* Start to customize Reverie */
 body {
   background-color: #4f6657 !important;
@@ -5643,7 +5651,7 @@ body p img, body li img {
   vertical-align: middle;
 }
 body table, body tr, body td {
-  background: transparent;
+  background: transparent !important;
   border: none;
 }
 body ul.tick {
@@ -5808,7 +5816,7 @@ body {
 #footerbg {
   background-color: #f6f5f1;
 }
-#footerbg footer p, #footerbg footer a {
+#footerbg footer p, #footerbg footer a, #footerbg footer #mc-indicates-required {
   font-family: TradeGothicLT-CondEighteen;
   color: grey;
   margin: 0;
@@ -5826,15 +5834,28 @@ body {
   margin: 0 auto;
   padding: 0;
 }
-@media only screen and (min-width: 48em) {
-  #footerbg footer #footercontactform button {
-    margin: 0;
-    float: right;
-  }
-}
 #footerbg footer #footercontactform input {
   color: #878787;
   background-color: #e6e6e6;
+}
+#footerbg footer #footercontactform label {
+  display: none;
+}
+#footerbg footer #footercontactform li {
+  list-style-type: none;
+}
+#footerbg footer #footercontactform input[type="submit"] {
+  background: url(../img/buttons/submit.png) no-repeat;
+  width: 114px;
+  height: 50px;
+  text-indent: -9999px;
+  border: none;
+}
+@media only screen and (min-width: 48em) {
+  #footerbg footer #footercontactform input[type="submit"] {
+    margin: 0;
+    float: right;
+  }
 }
 #footerbg footer #footer_otmc, #footerbg footer #footer_ehg {
   text-align: center;
@@ -5846,9 +5867,16 @@ body {
   border-bottom: 1px solid lightgrey;
   padding: 50px;
 }
+#footerbg footer img {
+  text-align: center;
+}
 @media only screen and (min-width: 48em) {
-  #footerbg footer p, #footerbg footer a {
+  #footerbg footer p, #footerbg footer a, #footerbg footer #mc-indicates-required {
     text-align: left;
+  }
+  #footerbg footer #mc-indicates-required {
+    width: auto;
+    float: left;
   }
   #footerbg footer #footer_otmc {
     border-right: 1px solid lightgrey;
@@ -5857,9 +5885,6 @@ body {
     border-bottom: none;
     padding: 0;
   }
-}
-#footerbg footer img {
-  text-align: center;
 }
 #footerbg footer.row {
   background-color: #f6f5f1;
@@ -5977,7 +6002,7 @@ body {
   display: block;
 }
 #smallnav .top-bar.expanded {
-  height: 354px;
+  height: 401px;
 }
 #smallnav .top-bar .toggle-topbar a {
   text-indent: 0;

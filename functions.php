@@ -49,10 +49,22 @@ function reverie_theme_support() {
 	// Add menu supports. http://codex.wordpress.org/Function_Reference/register_nav_menus
 	add_theme_support('menus');
 	register_nav_menus(array(
-		'primary' => __('Primary Navigation', 'reverie')
+		'nav' => __('Navigation Menu', 'reverie')
 	));
 	
 
+	// alter login logo image
+	add_action("login_head", "my_login_head");
+	function my_login_head() {
+		echo "
+		<style>
+		body.login #login h1 a {
+			background: url(".get_bloginfo('template_url')."/img/logo_otmc.png) no-repeat center top;
+			height: 250px;
+		}
+		</style>
+		";
+	}
 
 	add_editor_style('css/style.css');
 
@@ -78,6 +90,10 @@ foreach ($sidebars as $sidebar) {
 	));
 }
 
+$sidebars = array('Footer');
+foreach ($sidebars as $sidebar) {
+	register_sidebar(array('name'=> $sidebar));
+}
 // return entry meta information for posts, used by multiple loops.
 function reverie_entry_meta() {
 	echo '<time class="updated" datetime="'. get_the_time('c') .'" pubdate>'. sprintf(__('Posted on %s at %s.', 'reverie'), get_the_time('l, F jS, Y'), get_the_time()) .'</time>';
