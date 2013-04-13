@@ -27,9 +27,19 @@
 		</div>
 		<div id="towercontainer">
 			<ul data-orbit id="tower" data-options="timer_speed:5000; bullets:false;">
+<!--
 				<li><img src="<?php echo get_template_directory_uri(); ?>/img/tower.jpg"/></li>
 				<li><img src="<?php echo get_template_directory_uri(); ?>/img/tower2.jpg"/></li>
 				<li><img src="<?php echo get_template_directory_uri(); ?>/img/tower3.jpg"/></li>
+-->
+			<?php $my_query = new WP_Query('category_name=imageslider'); ?>
+
+			<?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
+			
+				<li> <?php the_post_thumbnail('full'); ?></li>
+
+			<?php endwhile; ?>
+
 			</ul>
 		</div>
 	</div><!-- /#sidebar -->

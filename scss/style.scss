@@ -114,13 +114,14 @@ body {
 		font-weight: normal;
 		color: $yellow;
 	}
+	img {
+		vertical-align: middle;
+	}
 	p, li {
 		font-size: 16px;
 		color: white;
 		line-height: 21px;
-		img {
-			vertical-align: middle;
-		}
+		
 	}
 	table, tr, td {
 		background: transparent !important;
@@ -305,7 +306,8 @@ body {
 			}
 			li {
 				list-style-type: none;
-				//list-style-position: outside;
+				// stupid mailchip form is wrapped in a <li>. why?
+				
 			}
 			input[type="submit"] {
 				background: url(../img/buttons/submit.png) no-repeat;
@@ -332,13 +334,13 @@ body {
 		img {
 			text-align: center;
 		}
+		#mc-indicates-required {
+			display: none;
+		}
+
 		@media #{$small} { 
 			p, a, #mc-indicates-required {
 				text-align: left;
-			}
-			#mc-indicates-required {
-				width: auto;
-				float: left;
 			}
 			#footer_otmc {
 				border-right: 1px solid lightgrey;
@@ -392,7 +394,10 @@ $smallnavheight: 72px;
 		}
 		img {
 			margin-top: 10px;
-			margin-bottom: -15px;
+
+			@media only screen and (min-width: 768px) {
+				margin-bottom: -15px;
+			}
 		}
 	}
 	#locationdetails {
@@ -421,6 +426,32 @@ $smallnavheight: 72px;
 	margin: 0;
 	
 }
+#sidebar {
+	margin-right: auto;
+	padding: 0;
+	background-color: $lightgreen;
+	overflow: hidden;
+	article {
+		margin-bottom: 20px;
+	}
+	h5 {
+		font-family: $fontnormal;
+	}	
+	p, h5 {
+		margin-bottom: 0;
+	}
+	#tower {
+		margin: 0;
+		
+		img {
+			width: 100%;
+		}
+	}
+	.orbit-prev, .orbit-next {
+		display: none;
+	}
+	
+}
 #smallheader {
 	header.row {
 		height: 91px; // set explicitly to help out the "sticky" menu...
@@ -435,29 +466,36 @@ $smallnavheight: 72px;
 }
 #smallnav {
 	.top-bar {
-		.toggle-topbar {
-			position: relative; // undoes the absolute position sticking right for the menu button....
-			background-color: $yellow;
-		}
-		li {
-			padding: 0;
-		}
-		img {
-			width: 85px;
+		> a {
+			width: 100%;
 			height: $smallnavheight;
-			margin: 0 auto;
 			display: block;
 		}
 		&.expanded {
 			// hardcoded so that animation works properly... height:auto animates back to nothing, then pops fully open.
 			height: 401px;
 		}
-		
-		.toggle-topbar a {
-			text-indent: 0;
+		img {
+			padding-top: 10px;
+			width: 42px;			
+			margin: 0 auto;
+			display: block;
+		}
+		li {
 			padding: 0;
 		}
-		
+		.title-area {
+			margin: 0;
+		}
+		.toggle-topbar {
+			position: relative; // undoes the absolute position sticking right for the menu button....
+			background-color: $yellow;
+			a {
+				text-indent: 0;
+				padding: 0;
+			}
+		}
+				
 		.top-bar-section ul li a {
 			font-size: 21px;
 			text-transform: uppercase;
@@ -494,31 +532,10 @@ $smallnavheight: 72px;
 		background-color: $lightgreen;
 	}
 }
-#sidebar {
-
-	padding: 0;
-	background-color: $lightgreen;
-	overflow: hidden;
-	article {
-		margin-bottom: 20px;
-	}
-	h5 {
-		font-family: $fontnormal;
-	}	
-	p, h5 {
-		margin-bottom: 0;
-	}
-	#tower {
-		margin: 0;
-		
-		img {
-			width: 100%;
-		}
-	}
-	.orbit-prev, .orbit-next {
-		display: none;
-	}
-	
+.socialfix {
+	float: left;
+	padding-bottom: 20px;
+	padding-right: 20px;
 }
 
 /**********************************************************************************************************************************

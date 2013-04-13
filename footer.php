@@ -84,23 +84,24 @@
 			}	
 		};
 		
-		var internalLabels = function() {
+		var internalLabels = function(target) {
 			var defaultlabel = "data-deftext";
-			$(':text').each(function(i, o) {
+			$(target).each(function(i, o) {
 				//alert($(o).attr('id'));
 				var label = $("label[for='"+$(o).attr('id')+"']");
 				//alert(label.text());
-				$(o).attr(defaultlabel,label.text());
+				// replace removes any pesky *'s
+				$(o).attr(defaultlabel,label.text().replace(/\*/g, ''));
 				
 			});
 			
-			$(':text').change(function() {
+			$(target).change(function() {
 				if ($(this).val() == "") {
 					$(this).val($(this).attr(defaultlabel));
 				}
 			});			
-			$(':text').change(); // trigger manually		
-			$(":text").click(function(){
+			$(target).change(); // trigger manually		
+			$(target).click(function(){
 				// Select field contents
 				this.select();
 			});	
@@ -109,7 +110,7 @@
 		// on first load
 		$(window).load(function () {
 			setDivHeights();
-			internalLabels();
+			internalLabels(":text");
 		});
 		// and when the window resizes
 		$(window).resize(function() {
