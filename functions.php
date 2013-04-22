@@ -66,10 +66,11 @@ function reverie_theme_support() {
 		";
 	}
 
+	// make style available to editor
 	add_editor_style('css/style.css');
 
+	// add "yellow text" option to dropdown in editor
 	add_filter( 'tiny_mce_before_init', 'my_custom_tinymce' );
-
 	function my_custom_tinymce( $init ) {
 		$init['theme_advanced_buttons2_add_before'] = 'styleselect';
 		$init['theme_advanced_styles'] = 'Yellow=yellow';

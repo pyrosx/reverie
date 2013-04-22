@@ -8,9 +8,9 @@
 			<h1>Location</h1>
 		</div>
 		<div class="large-19 columns" id="locationdetails">
-			<h1>SUITE 5, 168 KENTSTREET, SYDNEY NSW 2000</h1>
+			<h1>SUITE 5, 168 KENT STREET, SYDNEY NSW 2000</h1>
 			<p>Observatory Tower Ground Floor Retail Courtyard</p> 
-			<a href="location/">Click here for more information on how to find to us</a>
+			<h3><a href="location/">Click here for more detailed information on how to find to us</a></h3>
 		</div>
 	</div>
 	<div class="row full-width">
@@ -50,7 +50,7 @@
 				<a href="/dev/otmc"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_otmc_med.png"/></a>
 			</div>
 			<div class="large-12 columns" id="footer_ehg">
-				<a href="http://www.executivehealthgroup.com.au"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_ehg_med.png"/></a>
+				<a href="/dev/otmc/under-construction/"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_ehg_med.png"/></a>
 			</div>
 		</div>
 	</div>
@@ -77,10 +77,12 @@
 				$('#sidebar').css('height',height);	
 				$('#maincontent').css('height',height);
 				
-				// move #tower to the bottom
-				var towerpad = $('#sidebar').outerHeight() - $('#sidebarcontent').outerHeight() - $('#towercontainer').outerHeight();
+				if ($('#towercontainer').hasClass("bottom")) {
+					// move #towercontainer to the bottom
+					var towerpad = $('#sidebar').outerHeight() - $('#sidebarcontent').outerHeight() - $('#towercontainer').outerHeight();
 				
-				$('#towercontainer').css('padding-top',towerpad);
+					$('#towercontainer').css('padding-top',towerpad);
+				}
 			}	
 		};
 		
@@ -129,7 +131,7 @@
 			$('#contentbg').toggle("slow");
 		};
 		
-		$('#menu-item-28').click(function (e) {
+		$('#li-Location').click(function (e) {
 			e.preventDefault();
 			shrinkToLocation();
 		});

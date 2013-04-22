@@ -123,6 +123,7 @@ body {
 		line-height: 21px;
 		
 	}
+	p {word-wrap:break-word;}
 	table, tr, td {
 		background: transparent !important;
 		border: none;
@@ -268,6 +269,21 @@ body {
 
 body {
 	background-color: $green;
+}
+
+body #contentbg #maincontent .break-large-12 {
+	
+	@include grid-row;
+	// above 1100, large-12
+	@media only screen and (min-width: 1241px) { 
+		@include grid-column(12);
+	}
+	
+	// below 1100, large-24
+	@media only screen and (max-width: 1240px) { 
+		@include grid-column(24);
+	}
+	
 }
 #contentbg {
 	.row {

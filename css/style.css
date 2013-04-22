@@ -5650,6 +5650,9 @@ body p, body li {
   color: white;
   line-height: 21px;
 }
+body p {
+  word-wrap: break-word;
+}
 body table, body tr, body td {
   background: transparent !important;
   border: none;
@@ -5807,6 +5810,41 @@ body .yellow {
 
 body {
   background-color: #4f6657;
+}
+
+body #contentbg #maincontent .break-large-12 {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 80em;
+  *zoom: 1;
+}
+body #contentbg #maincontent .break-large-12:before, body #contentbg #maincontent .break-large-12:after {
+  content: " ";
+  display: table;
+}
+body #contentbg #maincontent .break-large-12:after {
+  clear: both;
+}
+@media only screen and (min-width: 1241px) {
+  body #contentbg #maincontent .break-large-12 {
+    position: relative;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+    width: 50%;
+    float: left;
+  }
+}
+@media only screen and (max-width: 1240px) {
+  body #contentbg #maincontent .break-large-12 {
+    position: relative;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+    width: 100%;
+    float: left;
+  }
 }
 
 #contentbg .row {

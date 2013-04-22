@@ -25,7 +25,7 @@
 				</article>
 			<?php endwhile; ?>
 		</div>
-		<div id="towercontainer">
+		<div id="towercontainer" class="bottom">
 			<ul data-orbit id="tower" data-options="timer_speed:5000; bullets:false;">
 <!--
 				<li><img src="<?php echo get_template_directory_uri(); ?>/img/tower.jpg"/></li>

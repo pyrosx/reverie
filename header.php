@@ -58,7 +58,7 @@
 			</div>
 		</div>
 		<div class="small-6 columns" id="logo_ehg">
-			<a href="http://www.executivehealthgroup.com.au"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_ehg.png"/></a>
+			<a href="/dev/otmc/under-construction/"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_ehg.png"/></a>
 		</div>
 	</header>
 </div>
@@ -93,7 +93,8 @@
 		$menu_list = '<ul class="small-block-grid-' . count($menu_items) . '" id="menu-' . $menu_name . '">';
 
 		foreach ( (array) $menu_items as $key => $menu_item ) {
-			$menu_list .= '<li><h1><a href="' . $menu_item->url . '"><div id="'.str_replace(' ', '', $menu_item->title).'" class="buttonicon"></div> ' . $menu_item->title . '</a></h1></li>';
+			$name = str_replace(' ', '', $menu_item->title);
+			$menu_list .= '<li id="li-'.$name.'"><h1><a href="' . $menu_item->url . '"><div id="'.$name.'" class="buttonicon"></div> ' . $menu_item->title . '</a></h1></li>';
 		}
 		$menu_list .= '</ul>';
     } else {
