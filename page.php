@@ -16,7 +16,7 @@
 	<div id="sidebar" class="small-24 large-9 columns">
 		<div id="sidebarcontent">
 			<h1>Health <span class="yellow">Focus</span></h1>
-			<?php $my_query = new WP_Query('category_name=frontpage&posts_per_page=10'); ?>
+			<?php $my_query = new WP_Query('category_name=healthfocus&posts_per_page=10'); ?>
 
 			<?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
 				<article <?php post_class() ?> id="post-<?php the_ID(); ?>">

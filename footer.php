@@ -131,11 +131,16 @@
 			$('#contentbg').toggle("slow");
 		};
 		
+		// big nav
 		$('#li-Location').click(function (e) {
 			e.preventDefault();
 			shrinkToLocation();
 		});
-		
+		//small nav
+		$('#menu-item-185').click(function (e) {
+			e.preventDefault();
+			shrinkToLocation();
+		});
 		
 	
 	})(jQuery);

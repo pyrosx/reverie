@@ -66,10 +66,10 @@
 <div id="smallheader">
 	<header class="row hide-for-medium-up">
 		<div id="logo_otmc_small" class="small-14 columns">
-			<img src="<?php echo get_template_directory_uri(); ?>/img/logo_otmc_small.png"/>
+			<a href="/dev/otmc"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_otmc_small.png"/></a>
 		</div>
 		<div id="logo_ehg_small" class="small-10 columns">
-			<img src="<?php echo get_template_directory_uri(); ?>/img/logo_ehg_small.png"/>
+			<a href="/dev/otmc/under-construction/"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_ehg_small.png"/></a>
 		</div>
 	</header>
 </div>
