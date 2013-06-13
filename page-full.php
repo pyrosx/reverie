@@ -1,11 +1,11 @@
 <?php
 /*
-Temp late Name: Full Width
+Template Name: Full Width
 */
 get_header(); ?>
 
 <!-- Row for main content area -->
-	<div class="small-24 large-24 columns" role="main">
+	<div class="small-12 large-12 columns" role="main">
 	
 	<?php /* Start loop */ ?>
 	<?php while (have_posts()) : the_post(); ?>

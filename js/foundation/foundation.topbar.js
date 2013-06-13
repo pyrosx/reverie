@@ -201,23 +201,19 @@
       if ($(klass).length > 0) {
         var distance = $(klass).length ? $(klass).offset().top: 0,
             $window = $(window);
-            
             var offst = this.outerHeight($('.top-bar'));
-            
-            if (distance != 0) {
-			// this is only even necessary if there's anything to move about.... if distance is zero, the menu is hidden
-			  $window.scroll(function() {
-				if ($window.scrollTop() >= (distance)) {
-				  $(klass).addClass("fixed");
-				  $('body').css('padding-top',offst);
-				}
 
-				else if ($window.scrollTop() < distance) {
-				  $(klass).removeClass("fixed");
-				  $('body').css('padding-top','0');
-				}
-			});
-        }
+          $window.scroll(function() {
+            if ($window.scrollTop() >= (distance)) {
+              $(klass).addClass("fixed");
+              $('body').css('padding-top',offst);
+            }
+
+            else if ($window.scrollTop() < distance) {
+              $(klass).removeClass("fixed");
+              $('body').css('padding-top','0');
+            }
+        });
       }
     },
 

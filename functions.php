@@ -27,7 +27,11 @@ require_once('lib/enqueue-sass.php'); // do all the cleaning and enqueue if you 
 	- custom walker for top-bar and related
 */
 require_once('lib/foundation.php'); // load Foundation specific functions like top-bar
-
+/*
+4. lib/presstrends.php
+    - add PressTrends, tracks how many people are using Reverie
+*/
+require_once('lib/presstrends.php'); // load PressTrends to track the usage of Reverie across the web, comment this line if you don't want to be tracked
 
 /**********************
 Add theme supports
@@ -49,34 +53,20 @@ function reverie_theme_support() {
 	// Add menu supports. http://codex.wordpress.org/Function_Reference/register_nav_menus
 	add_theme_support('menus');
 	register_nav_menus(array(
-		'nav' => __('Navigation Menu', 'reverie')
+		'primary' => __('Primary Navigation', 'reverie'),
+		'utility' => __('Utility Navigation', 'reverie')
 	));
 	
-
-	// alter login logo image
-	add_action("login_head", "my_login_head");
-	function my_login_head() {
-		echo "
-		<style>
-		body.login #login h1 a {
-			background: url(".get_bloginfo('template_url')."/img/logo_otmc.png) no-repeat center top;
-			height: 250px;
-		}
-		</style>
-		";
-	}
-
-	// make style available to editor
-	add_editor_style('css/style.css');
-
-	// add "yellow text" option to dropdown in editor
-	add_filter( 'tiny_mce_before_init', 'my_custom_tinymce' );
-	function my_custom_tinymce( $init ) {
-		$init['theme_advanced_buttons2_add_before'] = 'styleselect';
-		$init['theme_advanced_styles'] = 'Yellow=yellow';
-		return $init;
-	}
-	
+	// Add custom background support
+	add_theme_support( 'custom-background',
+	    array(
+	    'default-image' => '',  // background image default
+	    'default-color' => '', // background color default (dont add the #)
+	    'wp-head-callback' => '_custom_background_cb',
+	    'admin-head-callback' => '',
+	    'admin-preview-callback' => ''
+	    )
+	);
 }
 add_action('after_setup_theme', 'reverie_theme_support'); /* end Reverie theme support */
 
@@ -84,17 +74,22 @@ add_action('after_setup_theme', 'reverie_theme_support'); /* end Reverie theme s
 $sidebars = array('Sidebar');
 foreach ($sidebars as $sidebar) {
 	register_sidebar(array('name'=> $sidebar,
-		'before_widget' => '<article id="%1$s" class="row widget %2$s"><div class="small-24 columns">',
+		'before_widget' => '<article id="%1$s" class="row widget %2$s"><div class="small-12 columns">',
 		'after_widget' => '</div></article>',
-		'before_title' => '<h1>',
-		'after_title' => '</h1>'
+		'before_title' => '<h6><strong>',
+		'after_title' => '</strong></h6>'
+	));
+}
+$sidebars = array('Footer');
+foreach ($sidebars as $sidebar) {
+	register_sidebar(array('name'=> $sidebar,
+		'before_widget' => '<article id="%1$s" class="large-4 columns widget %2$s">',
+		'after_widget' => '</article>',
+		'before_title' => '<h6><strong>',
+		'after_title' => '</strong></h6>'
 	));
 }
 
-$sidebars = array('Footer');
-foreach ($sidebars as $sidebar) {
-	register_sidebar(array('name'=> $sidebar));
-}
 // return entry meta information for posts, used by multiple loops.
 function reverie_entry_meta() {
 	echo '<time class="updated" datetime="'. get_the_time('c') .'" pubdate>'. sprintf(__('Posted on %s at %s.', 'reverie'), get_the_time('l, F jS, Y'), get_the_time()) .'</time>';

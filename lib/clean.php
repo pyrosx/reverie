@@ -127,31 +127,10 @@ function reverie_scripts_and_styles() {
 	// register jQuery Migrate plugin (from code.jquery.com – "The minified production file is compressed and does not generate console warnings.")
 	wp_register_script( 'jquery-migrate', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://code.jquery.com/jquery-migrate-1.1.1.min.js", array('jquery'), '1.1.1', true );
     
-    wp_register_script( 'jquery-easing', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js", array('jquery'), '1.3', true );
-    
-    
-    
     // adding Foundation scripts file in the footer
-    wp_register_script( 'reverie-js', get_template_directory_uri() . '/js/foundation/foundation.js', array( 'jquery' ), '', true );
-    wp_register_script( 'reverie-js1', get_template_directory_uri() . '/js/foundation/foundation.alerts.js', array( 'jquery' ), '', true );
-    wp_register_script( 'reverie-js2', get_template_directory_uri() . '/js/foundation/foundation.clearing.js', array( 'jquery' ), '', true );
-    wp_register_script( 'reverie-js3', get_template_directory_uri() . '/js/foundation/foundation.cookie.js', array( 'jquery' ), '', true );
-    wp_register_script( 'reverie-js4', get_template_directory_uri() . '/js/foundation/foundation.dropdown.js', array( 'jquery' ), '', true );
-    wp_register_script( 'reverie-js5', get_template_directory_uri() . '/js/foundation/foundation.forms.js', array( 'jquery' ), '', true );
-    wp_register_script( 'reverie-js6', get_template_directory_uri() . '/js/foundation/foundation.joyride.js', array( 'jquery' ), '', true );
-    wp_register_script( 'reverie-js7', get_template_directory_uri() . '/js/foundation/foundation.magellan.js', array( 'jquery' ), '', true );
-    wp_register_script( 'reverie-js8', get_template_directory_uri() . '/js/foundation/foundation.orbit.js', array( 'jquery' ), '', true );
-    wp_register_script( 'reverie-js9', get_template_directory_uri() . '/js/foundation/foundation.placeholder.js', array( 'jquery' ), '', true );
-    wp_register_script( 'reverie-js10', get_template_directory_uri() . '/js/foundation/foundation.reveal.js', array( 'jquery' ), '', true );
-    wp_register_script( 'reverie-js11', get_template_directory_uri() . '/js/foundation/foundation.section.js', array( 'jquery' ), '', true );
-    wp_register_script( 'reverie-js12', get_template_directory_uri() . '/js/foundation/foundation.tooltips.js', array( 'jquery' ), '', true );
-    wp_register_script( 'reverie-js13', get_template_directory_uri() . '/js/foundation/foundation.topbar.js', array( 'jquery' ), '', true );
+    wp_register_script( 'reverie-js', get_template_directory_uri() . '/js/foundation.min.js', array( 'jquery' ), '', true );
     
-	//  min version, not being used
-    //wp_register_script( 'reverie-js', get_template_directory_uri() . '/js/foundation.min.js', array( 'jquery' ), '', true );
-
-
-	global $is_IE;
+    global $is_IE;
     if ($is_IE) {
        wp_register_script ( 'html5shiv', "http://html5shiv.googlecode.com/svn/trunk/html5.js" , false, true);
     }
@@ -169,24 +148,8 @@ function reverie_scripts_and_styles() {
 	// enqueue jQuery noConflict mode script and Migrate plugin
 	wp_enqueue_script ('jquery-noconflict');
 	wp_enqueue_script ('jquery-migrate');
-	wp_enqueue_script ('jquery-easing');
-	
 	
     wp_enqueue_script( 'reverie-js' );
-    wp_enqueue_script( 'reverie-js1' );
-    wp_enqueue_script( 'reverie-js2' );
-    wp_enqueue_script( 'reverie-js3' );
-    wp_enqueue_script( 'reverie-js4' );
-    wp_enqueue_script( 'reverie-js5' );
-    wp_enqueue_script( 'reverie-js6' );
-    wp_enqueue_script( 'reverie-js7' );
-    wp_enqueue_script( 'reverie-js8' );
-    wp_enqueue_script( 'reverie-js9' );
-    wp_enqueue_script( 'reverie-js10' );
-    wp_enqueue_script( 'reverie-js11' );
-    wp_enqueue_script( 'reverie-js12' );
-    wp_enqueue_script( 'reverie-js13' );
-    
     wp_enqueue_script( 'html5shiv' );
 
   }

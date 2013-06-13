@@ -1,31 +1,6 @@
 // Settings file to override Foundation variables
 
 // You can find the variables for each component at the bottom of their
-// doc page. We tried to name them to where theyd make sense just by reading them.
+// doc page. We tried to name them to where they'd make sense just by reading them.
 // Go to http://foundation.zurb.com/docs/ to find what you need.
 
-$row-width:     80em !default;
-$column-gutter: 0.5em !default;
-$total-columns: 24 !default;
-
-//$header-font-family:                   "TradeGothicLT-CondEighteen", Arial, sans-serif;
-$header-font-family:                   "TradeGothicLT-CondEighteen", serif;
-$header-font-weight:                   bold;
-
-//$paragraph-font-family:                "TradeGothicLT", Arial, sans-serif;
-$paragraph-font-family:                "TradeGothicLT", serif;
-$header-font-weight:                   normal;
-
-/* Height and margin */
-$topbar-height:72px;
-$topbar-margin-bottom: 0;
-
-
-/* Style the top bar dropdown elements */
-$topbar-dropdown-bg: #ffb602;
-$topbar-dropdown-link-color: red; //#4f6657;
-$topbar-dropdown-toggle-size: 5px;
-$topbar-dropdown-toggle-color: #fff;
-$topbar-dropdown-toggle-alpha: 0.5;
-$dropdown-label-color: #555;
-$topbar-transition-speed: 2000ms;

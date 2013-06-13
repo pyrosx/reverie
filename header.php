@@ -10,7 +10,8 @@
 
 	<title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
 
-	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no";">
+	<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="viewport" content="width=device-width" />
 
 	<!-- Favicon and Feed -->
 	<link rel="shortcut icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
@@ -32,111 +33,52 @@
 	<!-- Startup Image iPhone (320x460) -->
 	<link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/img/devices/reverie-load.png" media="screen and (max-device-width: 320px)" />
 
-
-	<!-- webfonts 
-	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/MyFontsWebfontsKit.css">
--->
-
 <?php wp_head(); ?>
 
 </head>
 
 <body <?php body_class(); ?>>
 
-<div id="bigheader">
-	<header class="row show-for-medium-up" >
-		<div class="small-6 columns" id="logo_otmc">
-			<a href="/dev/otmc"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_otmc.png"/></a>
-		</div>
-		<div class="small-12 columns" id="bigheaderinfo">
-			<div>
-				<h2>PHONE <a href="tel:0292527500">02 9252 7500</a></h2>
-				<h3>Suite 5, 168 Kent Street, Sydney NSW 2000</h3>
-				<h3><a href="mailto:observatory@executivehealthgroup.com.au">observatory@executivehealthgroup.com.au</a></h3>
-				<h3>&nbsp;</h3>
-				<p><strong>日本人</strong> <a href="tel:0292528888">02 9252 8888</a>  |  <a href="mailto:japanese@executivehealthgroup.com.au">japanese@executivehealthgroup.com.au</a></p>
-			</div>
-		</div>
-		<div class="small-6 columns" id="logo_ehg">
-			<a href="/dev/otmc/under-construction/"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_ehg.png"/></a>
-		</div>
-	</header>
+<div class="contain-to-grid">
+	<!-- Starting the Top-Bar -->
+	<nav class="top-bar">
+	    <ul class="title-area">
+	        <li class="name">
+	        	<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+	        </li>
+			<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+			<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+	    </ul>
+	    <section class="top-bar-section">
+	    <?php
+	        wp_nav_menu( array(
+	            'theme_location' => 'primary',
+	            'container' => false,
+	            'depth' => 0,
+	            'items_wrap' => '<ul class="left">%3$s</ul>',
+	            'fallback_cb' => 'reverie_menu_fallback', // workaround to show a message to set up a menu
+	            'walker' => new reverie_walker( array(
+	                'in_top_bar' => true,
+	                'item_type' => 'li'
+	            ) ),
+	        ) );
+	    ?>
+	    <ul class="right">
+	    	<li class="divider hide-for-small"></li>
+	    	<li class="has-form"><?php get_search_form(); ?></li>
+	    </ul>
+	    </section>
+	</nav>
+	<!-- End of Top-Bar -->
 </div>
 
-<div id="smallheader">
-	<header class="row hide-for-medium-up">
-		<div id="logo_otmc_small" class="small-14 columns">
-			<a href="/dev/otmc"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_otmc_small.png"/></a>
-		</div>
-		<div id="logo_ehg_small" class="small-10 columns">
-			<a href="/dev/otmc/under-construction/"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_ehg_small.png"/></a>
-		</div>
-	</header>
-</div>
-
-<div id="bignav">
-	<div class="row show-for-medium-up">
-	<?php
-	// Get the nav menu based on $menu_name (same as 'theme_location' or 'menu' arg to wp_nav_menu)
-    // This code based on wp_nav_menu's code to get Menu ID from menu slug
-
-    $menu_name = 'nav';
-
-    if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
-		$menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
-
-		$menu_items = wp_get_nav_menu_items($menu->term_id);
-
-		// first entry, "Home", is unnecessary, so we're going to remove it.
-		array_shift($menu_items);
-
-		$menu_list = '<ul class="small-block-grid-' . count($menu_items) . '" id="menu-' . $menu_name . '">';
-
-		foreach ( (array) $menu_items as $key => $menu_item ) {
-			$name = str_replace(' ', '', $menu_item->title);
-			$menu_list .= '<li id="li-'.$name.'"><h1><a href="' . $menu_item->url . '"><div id="'.$name.'" class="buttonicon"></div> ' . $menu_item->title . '</a></h1></li>';
-		}
-		$menu_list .= '</ul>';
-    } else {
-		$menu_list = '<ul><li>Menu "' . $menu_name . '" not defined.</li></ul>';
-    }
-    // $menu_list now ready to output		
-    echo $menu_list;
-	?>
+<header class="row" role="banner">
+	<div class="small-12 columns">
+		<h1><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
+		<h4 class="subheader"><?php bloginfo('description'); ?></h4>
+		<hr/>
 	</div>
-
-</div>
-
-<div id="smallnav">
-		<div class="contain-to-grid sticky hide-for-medium-up">
-		<nav class="top-bar ">
-			<ul class="title-area small-block-grid-4">
-				<li class="toggle-topbar">
-					<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/buttons/menu.png"/></a>
-				</li>
-				<li class="name green"><a href="tel:0292527500"><img src="<?php echo get_template_directory_uri(); ?>/img/buttons/call.png"/></a></li>
-				<li class="name lgreen"><a href="mailto:observatory@executivehealthgroup.com.au"><img src="<?php echo get_template_directory_uri(); ?>/img/buttons/email.png"/></a></li>
-				<li class="name green"><a href="#locationbg"><img src="<?php echo get_template_directory_uri(); ?>/img/buttons/find.png"/></a></li>
-			</ul>
-			<section class="top-bar-section ">
-			<?php
-				wp_nav_menu( array(
-					'theme_location' => 'nav',
-					'container' => false,
-					'depth' => 0,
-					'items_wrap' => '<ul class="left">%3$s</ul>',
-					'fallback_cb' => 'reverie_menu_fallback', // workaround to show a message to set up a menu
-					'walker' => new reverie_walker( array(
-						'in_top_bar' => true,
-						'item_type' => 'li'
-					) ),
-				) );
-			?>
-			</section>
-		</nav>
-	</div>
-</div>
+</header>
 
 <!-- Start the main container -->
-<div id="contentbg">
 <section class="container row" role="document">
