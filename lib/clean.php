@@ -129,6 +129,21 @@ function reverie_scripts_and_styles() {
     
     // adding Foundation scripts file in the footer
     wp_register_script( 'reverie-js', get_template_directory_uri() . '/js/foundation.min.js', array( 'jquery' ), '', true );
+/*
+	wp_register_script( 'reverie-js1', get_template_directory_uri() . '/js/foundation.alerts.js', array( 'jquery' ), '', true );
+	wp_register_script( 'reverie-js2', get_template_directory_uri() . '/js/foundation.clearing.js', array( 'jquery' ), '', true );
+	wp_register_script( 'reverie-js3', get_template_directory_uri() . '/js/foundation.cookie.js', array( 'jquery' ), '', true );
+//	wp_register_script( 'reverie-js4', get_template_directory_uri() . '/js/foundation.dropdown.js', array( 'jquery' ), '', true );
+//  wp_register_script( 'reverie-js5', get_template_directory_uri() . '/js/foundation.forms.js', array( 'jquery' ), '', true );
+//	wp_register_script( 'reverie-js6', get_template_directory_uri() . '/js/foundation.joyride.js', array( 'jquery' ), '', true );
+//	wp_register_script( 'reverie-js7', get_template_directory_uri() . '/js/foundation.magellan.js', array( 'jquery' ), '', true );
+//	wp_register_script( 'reverie-js8', get_template_directory_uri() . '/js/foundation.orbit.js', array( 'jquery' ), '', true );
+//	wp_register_script( 'reverie-js9', get_template_directory_uri() . '/js/foundation.placeholder.js', array( 'jquery' ), '', true );
+//	wp_register_script( 'reverie-js10', get_template_directory_uri() . '/js/foundation.reveal.js', array( 'jquery' ), '', true );
+//	wp_register_script( 'reverie-js11', get_template_directory_uri() . '/js/foundation.section.js', array( 'jquery' ), '', true );
+//	wp_register_script( 'reverie-js12', get_template_directory_uri() . '/js/foundation.tooltips.js', array( 'jquery' ), '', true );
+//	wp_register_script( 'reverie-js13', get_template_directory_uri() . '/js/foundation.topbar.js', array( 'jquery' ), '', true );
+*/
     
     global $is_IE;
     if ($is_IE) {
@@ -148,8 +163,23 @@ function reverie_scripts_and_styles() {
 	// enqueue jQuery noConflict mode script and Migrate plugin
 	wp_enqueue_script ('jquery-noconflict');
 	wp_enqueue_script ('jquery-migrate');
-	
-    wp_enqueue_script( 'reverie-js' );
+
+	wp_enqueue_script( 'reverie-js' );
+/*	
+    wp_enqueue_script( 'reverie-js1' );
+    wp_enqueue_script( 'reverie-js2' );
+    wp_enqueue_script( 'reverie-js3' );
+//    wp_enqueue_script( 'reverie-js4' );
+//    wp_enqueue_script( 'reverie-js5' );
+//    wp_enqueue_script( 'reverie-js6' );
+//    wp_enqueue_script( 'reverie-js7' );
+//    wp_enqueue_script( 'reverie-js8' );
+//    wp_enqueue_script( 'reverie-js9' );
+//    wp_enqueue_script( 'reverie-js10' );
+//    wp_enqueue_script( 'reverie-js11' );
+//    wp_enqueue_script( 'reverie-js12' );
+//    wp_enqueue_script( 'reverie-js13' );
+*/
     wp_enqueue_script( 'html5shiv' );
 
   }

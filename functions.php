@@ -28,10 +28,6 @@ require_once('lib/enqueue-sass.php'); // do all the cleaning and enqueue if you 
 */
 require_once('lib/foundation.php'); // load Foundation specific functions like top-bar
 /*
-4. lib/presstrends.php
-    - add PressTrends, tracks how many people are using Reverie
-*/
-require_once('lib/presstrends.php'); // load PressTrends to track the usage of Reverie across the web, comment this line if you don't want to be tracked
 
 /**********************
 Add theme supports
@@ -53,8 +49,8 @@ function reverie_theme_support() {
 	// Add menu supports. http://codex.wordpress.org/Function_Reference/register_nav_menus
 	add_theme_support('menus');
 	register_nav_menus(array(
-		'primary' => __('Primary Navigation', 'reverie'),
-		'utility' => __('Utility Navigation', 'reverie')
+		'primary' => __('Primary Navigation', 'reverie')
+//		'utility' => __('Utility Navigation', 'reverie')
 	));
 	
 	// Add custom background support

@@ -12,6 +12,73 @@
 // Comment out this import if you are customizing you imports below
 @import "foundation";
 
+
+
+
+.wpsqt_multiple_question {
+	list-style-type: none;
+	label {
+		display: inline !important; 
+	}
+}
+
+body {
+	header.row, #left_side_bar, footer.row.full-width {
+		background-color: $red;
+	}
+
+	.container.row, .row.full-width {
+		background-color: white;
+	}
+}
+
+body header.row p {
+	vertical-align: bottom;
+	margin:0;
+	img {
+		padding: 0 20px;
+	}
+}
+
+footer {
+	padding-top: 15px; 
+	a {
+		color: $lightyellow;
+		&:hover {
+			color: white;
+		}
+	}
+}
+
+#left_side_bar {
+	.logo {
+		margin: 0 auto 20px auto;
+	}
+	h6 {
+		color: $lightyellow;
+		font-weight: bold;
+	}
+	label {
+		color: $lightyellow;
+		margin: 0 0 5px 0;
+	}
+	input {
+		margin: 0 0 10px 0;
+	}
+}
+#main_wrap {
+	@media #{$small} { margin-top: 20px; }
+}
+#right_content {
+	background-color: white;
+}
+.side-nav a:hover {
+	color: white;
+}
+.sidebar_login_links a {
+	color: $lightyellow;
+}
+
 /* Start to customize Reverie */
 
 // add some extra style to row to beautify custom background image
