@@ -36,7 +36,7 @@ body header.row p {
 	vertical-align: bottom;
 	margin:0;
 	img {
-		padding: 0 20px;
+		padding: 10px 20px 10px 20px;
 	}
 }
 
@@ -48,11 +48,17 @@ footer {
 			color: white;
 		}
 	}
+	p {
+		text-align: center;
+		@media only screen and (min-width:1000px)  {
+			
+		}
+	}
 }
 
 #left_side_bar {
 	.logo {
-		margin: 0 auto 20px auto;
+		margin: 10px auto 20px auto;
 	}
 	h6 {
 		color: $lightyellow;
@@ -67,7 +73,7 @@ footer {
 	}
 }
 #main_wrap {
-	@media #{$small} { margin-top: 20px; }
+	@media only screen and (min-width:1000px) { margin-top: 20px; }
 }
 #right_content {
 	background-color: white;
