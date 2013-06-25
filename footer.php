@@ -42,30 +42,6 @@
 <script>
 	(function($) {
 		$(document).foundation();
-			 	
-		// set the maincontent and sidebar heights to that of the main content bg height
-		var setDivHeights = function() {
-			minheight = 600;
-			// reset stuff that we might have already fiddled with...
-			$('#left_side_bar').css('height','auto');
-			$('#right_content').css('height','auto');				
-			if ($('body').width() >= 768) {				
-				var height = $('#main_wrap').outerHeight();
-				if (height < minheight) height = minheight;
-				$('#left_side_bar').css('height',height);	
-				$('#right_content').css('height',height);
-			}	
-		};
-		
-		// on first load
-		$(window).load(function () {
-			setDivHeights();
-		});
-		// and when the window resizes
-		$(window).resize(function() {					
-			setDivHeights();
-		});
-		
 	})(jQuery);
 </script>
 

@@ -1561,7 +1561,7 @@ p.lead {
 
 .subheader {
   line-height: 1.4;
-  color: #303131;
+  color: #313030;
   font-weight: 300;
   margin-top: 0.2em;
   margin-bottom: 0.5em;
@@ -1663,7 +1663,7 @@ h6 {
 }
 
 hr {
-  border: solid #303131;
+  border: solid #313030;
   border-width: 1px 0 0;
   clear: both;
   margin: 1.25em 0 1.1875em;
@@ -5071,13 +5071,9 @@ table tfoot tr td {
   max-width: 800px;
 }
 
-.wpsqt_multiple_question {
-  list-style-type: none;
+body {
+  background-color: #313030;
 }
-.wpsqt_multiple_question label {
-  display: inline !important;
-}
-
 body header.row, body #left_side_bar, body footer.row.full-width {
   background-color: #cd231f;
 }
@@ -5121,6 +5117,9 @@ footer p {
   margin: 0 0 10px 0;
 }
 
+#main_wrap {
+  background-color: #cd231f;
+}
 @media only screen and (min-width: 1000px) {
   #main_wrap {
     margin-top: 20px;
@@ -5137,6 +5136,30 @@ footer p {
 
 .sidebar_login_links a {
   color: #f3ecc9;
+}
+
+.entry-content table {
+  width: 100%;
+}
+.entry-content table th {
+  text-align: left;
+}
+.entry-content table tr td form {
+  margin: 0;
+  display: inline;
+}
+.entry-content table tr.franchise_users {
+  display: none;
+}
+.entry-content table tr.franchise_users_extra {
+  display: none;
+}
+
+.wpsqt_multiple_question {
+  list-style-type: none;
+}
+.wpsqt_multiple_question label {
+  display: inline !important;
 }
 
 /* Start to customize Reverie */

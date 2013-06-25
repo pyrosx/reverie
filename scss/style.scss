@@ -15,14 +15,9 @@
 
 
 
-.wpsqt_multiple_question {
-	list-style-type: none;
-	label {
-		display: inline !important; 
-	}
-}
 
 body {
+	background-color: $darkgrey;
 	header.row, #left_side_bar, footer.row.full-width {
 		background-color: $red;
 	}
@@ -73,6 +68,7 @@ footer {
 	}
 }
 #main_wrap {
+	background-color: $red;
 	@media only screen and (min-width:1000px) { margin-top: 20px; }
 }
 #right_content {
@@ -84,6 +80,37 @@ footer {
 .sidebar_login_links a {
 	color: $lightyellow;
 }
+
+.entry-content table {
+	width: 100%;
+	th {
+		text-align: left;
+	}
+	tr td form {
+		margin: 0;
+		display:inline;
+	}
+	tr.franchise_users {
+		display: none;
+	}
+	tr.franchise_users_extra { 
+		display: none;
+	}
+}
+
+.wpsqt_multiple_question {
+	list-style-type: none;
+	label {
+		display: inline !important; 
+	}
+}
+
+
+
+
+
+
+
 
 /* Start to customize Reverie */
 

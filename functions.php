@@ -42,27 +42,14 @@ function reverie_theme_support() {
 	
 	// rss thingy
 	add_theme_support('automatic-feed-links');
-	
-	// Add post formarts supports. http://codex.wordpress.org/Post_Formats
-	add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat'));
-	
+		
 	// Add menu supports. http://codex.wordpress.org/Function_Reference/register_nav_menus
 	add_theme_support('menus');
 	register_nav_menus(array(
 		'primary' => __('Primary Navigation', 'reverie')
-//		'utility' => __('Utility Navigation', 'reverie')
 	));
 	
-	// Add custom background support
-	add_theme_support( 'custom-background',
-	    array(
-	    'default-image' => '',  // background image default
-	    'default-color' => '', // background color default (dont add the #)
-	    'wp-head-callback' => '_custom_background_cb',
-	    'admin-head-callback' => '',
-	    'admin-preview-callback' => ''
-	    )
-	);
+
 }
 add_action('after_setup_theme', 'reverie_theme_support'); /* end Reverie theme support */
 
@@ -72,15 +59,6 @@ foreach ($sidebars as $sidebar) {
 	register_sidebar(array('name'=> $sidebar,
 		'before_widget' => '<article id="%1$s" class="row widget %2$s"><div class="small-12 columns">',
 		'after_widget' => '</div></article>',
-		'before_title' => '<h6><strong>',
-		'after_title' => '</strong></h6>'
-	));
-}
-$sidebars = array('Footer');
-foreach ($sidebars as $sidebar) {
-	register_sidebar(array('name'=> $sidebar,
-		'before_widget' => '<article id="%1$s" class="large-4 columns widget %2$s">',
-		'after_widget' => '</article>',
 		'before_title' => '<h6><strong>',
 		'after_title' => '</strong></h6>'
 	));
