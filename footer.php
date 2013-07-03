@@ -28,13 +28,10 @@
 	<div class="large-3 columns">
 		<p>&copy; <?php echo date('Y'); ?> <a href="http://sushiizu.com.au/">AFC Australia</a></p>
 	</div>
-	<div class="large-6 columns">
+	<div class="large-9 columns">
 		<p>Content and Training by <a href="http://elevatingfoodsafety.com/">Elevating Food Safety</a></p>
 	</div>
-	<div class="large-3 columns">
-		<p>Created by <a href="mailto:pyrosx+afc@gmail.com">pyrosx</a></p>
-	</div>
-		
+	<!-- Code and design by pyrosx@gmail.com -->		
 </footer>
 
 <?php wp_footer(); ?>	

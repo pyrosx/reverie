@@ -3,6 +3,7 @@
 /* We use these to control link styles. */
 /* We use these to control border styles */
 /* Forms */
+/* Tables */
 /* Grid HTML Classes */
 .row {
   width: 100%;
@@ -3833,7 +3834,7 @@ table {
 }
 table thead,
 table tfoot {
-  background: whitesmoke;
+  background: #f3ecc9;
   font-weight: bold;
 }
 table thead tr th,
@@ -3852,7 +3853,7 @@ table tr td {
   color: #222222;
 }
 table tr.even, table tr.alt, table tr:nth-of-type(even) {
-  background: #f9f9f9;
+  background: #faf7e8;
 }
 table thead tr th,
 table tfoot tr th,

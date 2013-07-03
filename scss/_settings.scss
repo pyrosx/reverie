@@ -9,6 +9,7 @@ $paragraph-font-family: Lato, "Helvetica Neue", "Helvetica", Helvetica, Arial, s
 $red: #cd231f;
 $darkgrey: #313030;
 $lightyellow: #f3ecc9;
+$extralightyellow: #faf7e8;
 
 $header-font-weight: normal;
 $header-font-style: normal;
@@ -46,3 +47,7 @@ $side-nav-divider-color: $lightyellow;
 
 /* Forms */
 $input-bg-color: $lightyellow;
+
+/* Tables */
+$table-even-row-bg: $extralightyellow;
+$table-head-bg: $lightyellow;
