@@ -1089,7 +1089,7 @@ p.lead {
 
 .subheader {
   line-height: 1.4;
-  color: #313030;
+  color: #272020;
   font-weight: 300;
   margin-top: 0.2em;
   margin-bottom: 0.5em;
@@ -1190,7 +1190,7 @@ h6 {
 }
 
 hr {
-  border: solid #313030;
+  border: solid #272020;
   border-width: 1px 0 0;
   clear: both;
   margin: 1.25em 0 1.1875em;
@@ -3572,7 +3572,7 @@ kbd {
   color: #f3ecc9;
 }
 .side-nav li.active a {
-  color: black;
+  color: #272020;
   font-weight: bold;
 }
 .side-nav li.divider {

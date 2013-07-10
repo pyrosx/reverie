@@ -1562,7 +1562,7 @@ p.lead {
 
 .subheader {
   line-height: 1.4;
-  color: #313030;
+  color: #272020;
   font-weight: 300;
   margin-top: 0.2em;
   margin-bottom: 0.5em;
@@ -1664,7 +1664,7 @@ h6 {
 }
 
 hr {
-  border: solid #313030;
+  border: solid #272020;
   border-width: 1px 0 0;
   clear: both;
   margin: 1.25em 0 1.1875em;
@@ -4574,7 +4574,7 @@ kbd {
   color: #f3ecc9;
 }
 .side-nav li.active a {
-  color: black;
+  color: #272020;
   font-weight: bold;
 }
 .side-nav li.divider {
@@ -5073,7 +5073,7 @@ table tfoot tr td {
 }
 
 body {
-  background-color: #313030;
+  background-color: #272020;
 }
 body header.row, body #left_side_bar, body footer.row.full-width {
   background-color: #cd231f;
@@ -5095,11 +5095,14 @@ footer {
 }
 footer a {
   color: #f3ecc9;
+  font-weight: normal;
 }
 footer a:hover {
   color: white;
 }
 footer p {
+  color: #272020;
+  font-weight: bold;
   text-align: center;
 }
 

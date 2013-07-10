@@ -39,11 +39,14 @@ footer {
 	padding-top: 15px; 
 	a {
 		color: $lightyellow;
+		font-weight: normal;
 		&:hover {
 			color: white;
 		}
 	}
 	p {
+		color: $darkgrey;
+		font-weight: bold;
 		text-align: center;
 		@media only screen and (min-width:1000px)  {
 			

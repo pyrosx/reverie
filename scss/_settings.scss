@@ -7,7 +7,8 @@ $header-font-family: Lato, "Helvetica Neue", "Helvetica", Helvetica, Arial, sans
 $paragraph-font-family: Lato, "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 
 $red: #cd231f;
-$darkgrey: #313030;
+//$darkgrey: #313030;
+$darkgrey: #272020;
 $lightyellow: #f3ecc9;
 $extralightyellow: #faf7e8;
 
@@ -35,7 +36,7 @@ $side-nav-padding: emCalc(20px) 0;
 
 /* We use these to control link styles. */
 $side-nav-link-color: $lightyellow;
-$side-nav-link-color-active: black;
+$side-nav-link-color-active: $darkgrey;
 $side-nav-font-size: emCalc(18px);
 $side-nav-font-weight: bold;
 
