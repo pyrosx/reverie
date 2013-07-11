@@ -5133,6 +5133,11 @@ footer p {
 #right_content {
   background-color: white;
 }
+@media only screen and (min-width: 1000px) {
+  #right_content {
+    min-height: 600px;
+  }
+}
 
 .side-nav a:hover {
   color: white;
