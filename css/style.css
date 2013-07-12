@@ -5143,7 +5143,11 @@ footer p {
   color: white;
 }
 
-.sidebar_login_links a {
+.sidebar_login_links, .manage_link {
+  margin: 0;
+  list-style-type: none;
+}
+.sidebar_login_links a, .manage_link a {
   color: #f3ecc9;
 }
 

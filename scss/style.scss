@@ -81,10 +81,13 @@ footer {
 .side-nav a:hover {
 	color: white;
 }
-.sidebar_login_links a {
-	color: $lightyellow;
+.sidebar_login_links, .manage_link {
+	a {
+		color: $lightyellow;
+	}
+	margin: 0;
+	list-style-type: none;
 }
-
 .entry-content table {
 	width: 100%;
 	th {

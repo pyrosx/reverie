@@ -7,6 +7,10 @@
 		<?php 
 		dynamic_sidebar("Sidebar");
 	
+		if ( current_user_can('wpsqt-manage') ) {
+			echo '<ul class="manage_link"><li>&nbsp;</li><li><a href="'.WPSQT_URL_DASHBOARD.'">Manage</a></li></ul>';
+		}
+	
 		if ( is_user_logged_in() ) {
 			wp_nav_menu( array(
 				'theme_location' => 'primary',
