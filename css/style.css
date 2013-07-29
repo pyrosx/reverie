@@ -1930,7 +1930,7 @@ button, .button {
   font-family: inherit;
   font-weight: bold;
   line-height: 1;
-  margin: 0 0 1.25em;
+  margin: 0 0 0;
   position: relative;
   text-decoration: none;
   text-align: center;
@@ -5105,6 +5105,11 @@ footer p {
   font-weight: bold;
   text-align: center;
 }
+@media only screen and (min-width: 1000px) {
+  footer {
+    margin-bottom: 20px !important;
+  }
+}
 
 #left_side_bar .logo {
   margin: 10px auto 20px auto;
@@ -5119,6 +5124,10 @@ footer p {
 }
 #left_side_bar input {
   margin: 0 0 10px 0;
+}
+
+#main {
+  padding-top: 20px;
 }
 
 #main_wrap {
@@ -5143,12 +5152,22 @@ footer p {
   color: white;
 }
 
-.sidebar_login_links, .manage_link {
+.sidebar_login_links, .manage_link, .widget_wp_sidebarlogin {
+  font-size: 18px;
   margin: 0;
   list-style-type: none;
 }
-.sidebar_login_links a, .manage_link a {
+.sidebar_login_links a, .manage_link a, .widget_wp_sidebarlogin a {
   color: #f3ecc9;
+}
+.sidebar_login_links a:hover, .manage_link a:hover, .widget_wp_sidebarlogin a:hover {
+  color: white;
+}
+.sidebar_login_links strong, .manage_link strong, .widget_wp_sidebarlogin strong {
+  font-weight: normal !important;
+}
+.sidebar_login_links li, .manage_link li, .widget_wp_sidebarlogin li {
+  margin-left: 30px;
 }
 
 .entry-content table {

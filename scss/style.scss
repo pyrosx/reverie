@@ -52,6 +52,7 @@ footer {
 			
 		}
 	}
+	@media only screen and (min-width:1000px) { margin-bottom: 20px !important;}
 }
 
 #left_side_bar {
@@ -70,6 +71,9 @@ footer {
 		margin: 0 0 10px 0;
 	}
 }
+#main {
+	padding-top: 20px;
+}
 #main_wrap {
 	background-color: $red;
 	@media only screen and (min-width:1000px) { margin-top: 20px; }
@@ -81,12 +85,23 @@ footer {
 .side-nav a:hover {
 	color: white;
 }
-.sidebar_login_links, .manage_link {
+.sidebar_login_links, .manage_link, .widget_wp_sidebarlogin  {
+	font-size: 18px;
 	a {
 		color: $lightyellow;
+		&:hover {
+			color: white;
+		}
+	}
+	strong {
+		font-weight: normal !important;		
 	}
 	margin: 0;
 	list-style-type: none;
+	
+	li {
+		margin-left: 30px;
+	}	
 }
 .entry-content table {
 	width: 100%;
