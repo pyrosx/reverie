@@ -73,6 +73,9 @@ footer {
 }
 #main {
 	padding-top: 20px;
+	a {
+		text-decoration: underline;
+	}
 }
 #main_wrap {
 	background-color: $red;

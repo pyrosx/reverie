@@ -20,7 +20,13 @@
 		} 
 
 		if ( current_user_can('wpsqt-manage') ) {
-			echo '<ul class="side-nav"><li><a href="'.WPSQT_URL_DASHBOARD.'">Control Panel</a></li></ul>';
+		
+			echo '<ul class="side-nav"><li>';
+				// edit page link
+				edit_post_link( 'Edit Page');
+				// control panel link						
+				echo '<a href="'.WPSQT_URL_DASHBOARD.'">Control Panel</a></li>';
+			echo '</ul>';
 		}
 
 		?>

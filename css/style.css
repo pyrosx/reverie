@@ -5129,6 +5129,9 @@ footer p {
 #main {
   padding-top: 20px;
 }
+#main a {
+  text-decoration: underline;
+}
 
 #main_wrap {
   background-color: #cd231f;
