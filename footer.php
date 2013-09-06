@@ -21,11 +21,16 @@
 
 		if ( current_user_can('wpsqt-manage') ) {
 		
-			echo '<ul class="side-nav"><li>';
+			echo '<ul class="side-nav">';
 				// edit page link
-				edit_post_link( 'Edit Page');
+				echo '<li>';
+					edit_post_link( 'Edit Page');
+				echo '</li>';
+				
 				// control panel link						
-				echo '<a href="'.WPSQT_URL_DASHBOARD.'">Control Panel</a></li>';
+				echo '<li>
+					<a href="'.WPSQT_URL_DASHBOARD.'">Control Panel</a>
+				</li>';
 			echo '</ul>';
 		}
 
