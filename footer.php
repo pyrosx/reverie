@@ -4,9 +4,7 @@
 
 		<div class="logo hide-for-small" ><a href="<?php echo esc_url( home_url( '/' ) );?>"><img src="<?php echo get_template_directory_uri();?>/img/Sushi_Izu_Logo.png" alt="Sushi Izu Logo"/></a></div>
 
-		<?php 
-		dynamic_sidebar("Sidebar");
-	
+		<?php 	
 	
 		if ( is_user_logged_in() ) {
 			wp_nav_menu( array(
@@ -18,6 +16,9 @@
 			
 			) );
 		} 
+		
+		dynamic_sidebar("Sidebar");
+
 
 		if ( current_user_can('wpsqt-manage') ) {
 		

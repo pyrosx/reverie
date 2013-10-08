@@ -35,6 +35,17 @@ body header.row p {
 	}
 }
 
+.button {
+	-moz-box-shadow: 3px 3px 8px $darkgrey;
+	-webkit-box-shadow: 3px 3px 8px $darkgrey;
+	box-shadow: 3px 3px 8px $darkgrey;
+}
+.tiny {
+	-moz-box-shadow: 2px 2px 4px $darkgrey;
+	-webkit-box-shadow: 2px 2px 4px $darkgrey;
+	box-shadow: 2px 2px 4px $darkgrey;
+}
+
 footer {
 	padding-top: 15px; 
 	a {
@@ -76,7 +87,7 @@ footer {
 		margin: 0 0 10px 0;
 	}
 	
-	@media only screen and (max-width:768px) { 
+	
 		li {		
 			/*border: 1px solid $darkgrey;*/
 			
@@ -93,7 +104,7 @@ footer {
 			text-align: center;
 		}
 		
-		
+	@media only screen and (max-width:768px) { 	
 	}
 }
 
@@ -114,6 +125,9 @@ footer {
 	@media only screen and (min-width:768px) { min-height: 520px; } /* ipad specific */
 	@media only screen and (min-width:1000px) { min-height: 600px; }
 
+}
+.side-nav {
+	padding-top: 0;
 }
 .side-nav a:hover {
 	color: white;
