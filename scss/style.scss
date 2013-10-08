@@ -54,6 +54,11 @@ footer {
 	}
 	@media only screen and (min-width:1000px) { margin-bottom: 20px !important;}
 }
+#franchises  {
+	@media only screen and (max-width:768px) { 
+		font-size: 0.75em !important;	
+	}
+}
 
 #left_side_bar {
 	.logo {
@@ -70,7 +75,29 @@ footer {
 	input {
 		margin: 0 0 10px 0;
 	}
+	
+	@media only screen and (max-width:768px) { 
+		li {		
+			border: 1px solid $darkgrey;
+			background-color: $red;
+			
+			-moz-box-shadow: 3px 3px 5px $darkgrey;
+			-webkit-box-shadow: 3px 3px 5px $darkgrey;
+			box-shadow: 3px 3px 5px $darkgrey;
+		}
+		h6, li {
+			
+			padding: 5px;
+			margin: 10px;
+			text-align: center;
+		}
+		
+		
+	}
 }
+
+	
+
 #main {
 	padding-top: 20px;
 	a {
@@ -83,7 +110,9 @@ footer {
 }
 #right_content {
 	background-color: white;
+	@media only screen and (min-width:768px) { min-height: 520px; } /* ipad specific */
 	@media only screen and (min-width:1000px) { min-height: 600px; }
+
 }
 .side-nav a:hover {
 	color: white;
