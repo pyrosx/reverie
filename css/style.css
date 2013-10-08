@@ -5091,15 +5091,15 @@ body header.row p img {
 }
 
 .button {
-  -moz-box-shadow: 3px 3px 8px #272020;
-  -webkit-box-shadow: 3px 3px 8px #272020;
-  box-shadow: 3px 3px 8px #272020;
+  -moz-box-shadow: 3px 3px 8px #aaa;
+  -webkit-box-shadow: 3px 3px 8px #aaa;
+  box-shadow: 3px 3px 8px #aaa;
 }
 
 .tiny {
-  -moz-box-shadow: 2px 2px 4px #272020;
-  -webkit-box-shadow: 2px 2px 4px #272020;
-  box-shadow: 2px 2px 4px #272020;
+  -moz-box-shadow: 2px 2px 4px #aaa;
+  -webkit-box-shadow: 2px 2px 4px #aaa;
+  box-shadow: 2px 2px 4px #aaa;
 }
 
 footer {
@@ -5146,9 +5146,9 @@ footer p {
 #left_side_bar li {
   /*border: 1px solid $darkgrey;*/
   background-color: #cd231f;
-  -moz-box-shadow: 3px 3px 8px #272020;
-  -webkit-box-shadow: 3px 3px 8px #272020;
-  box-shadow: 3px 3px 8px #272020;
+  -moz-box-shadow: -3px 3px 8px #272020;
+  -webkit-box-shadow: -3px 3px 8px #272020;
+  box-shadow: -3px 3px 8px #272020;
 }
 #left_side_bar h6, #left_side_bar li {
   padding: 5px;

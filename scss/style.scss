@@ -36,14 +36,15 @@ body header.row p {
 }
 
 .button {
-	-moz-box-shadow: 3px 3px 8px $darkgrey;
-	-webkit-box-shadow: 3px 3px 8px $darkgrey;
-	box-shadow: 3px 3px 8px $darkgrey;
+	-moz-box-shadow: 3px 3px 8px #aaa;
+	-webkit-box-shadow: 3px 3px 8px #aaa;
+	box-shadow: 3px 3px 8px #aaa;
+	
 }
 .tiny {
-	-moz-box-shadow: 2px 2px 4px $darkgrey;
-	-webkit-box-shadow: 2px 2px 4px $darkgrey;
-	box-shadow: 2px 2px 4px $darkgrey;
+	-moz-box-shadow: 2px 2px 4px #aaa;
+	-webkit-box-shadow: 2px 2px 4px #aaa;
+	box-shadow: 2px 2px 4px #aaa;
 }
 
 footer {
@@ -93,9 +94,9 @@ footer {
 			
 			background-color: $red;
 			
-			-moz-box-shadow: 3px 3px 8px $darkgrey;
-			-webkit-box-shadow: 3px 3px 8px $darkgrey;
-			box-shadow: 3px 3px 8px $darkgrey;
+			-moz-box-shadow: -3px 3px 8px $darkgrey;
+			-webkit-box-shadow: -3px 3px 8px $darkgrey;
+			box-shadow: -3px 3px 8px $darkgrey;
 		}
 		h6, li {
 			
