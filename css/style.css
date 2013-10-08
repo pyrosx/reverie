@@ -5133,11 +5133,11 @@ footer p {
 }
 @media only screen and (max-width: 768px) {
   #left_side_bar li {
-    border: 1px solid #272020;
+    /*border: 1px solid $darkgrey;*/
     background-color: #cd231f;
-    -moz-box-shadow: 3px 3px 5px #272020;
-    -webkit-box-shadow: 3px 3px 5px #272020;
-    box-shadow: 3px 3px 5px #272020;
+    -moz-box-shadow: 3px 3px 8px #272020;
+    -webkit-box-shadow: 3px 3px 8px #272020;
+    box-shadow: 3px 3px 8px #272020;
   }
   #left_side_bar h6, #left_side_bar li {
     padding: 5px;

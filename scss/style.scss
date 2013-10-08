@@ -78,12 +78,13 @@ footer {
 	
 	@media only screen and (max-width:768px) { 
 		li {		
-			border: 1px solid $darkgrey;
+			/*border: 1px solid $darkgrey;*/
+			
 			background-color: $red;
 			
-			-moz-box-shadow: 3px 3px 5px $darkgrey;
-			-webkit-box-shadow: 3px 3px 5px $darkgrey;
-			box-shadow: 3px 3px 5px $darkgrey;
+			-moz-box-shadow: 3px 3px 8px $darkgrey;
+			-webkit-box-shadow: 3px 3px 8px $darkgrey;
+			box-shadow: 3px 3px 8px $darkgrey;
 		}
 		h6, li {
 			
