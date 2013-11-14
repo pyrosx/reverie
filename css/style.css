@@ -5102,14 +5102,21 @@ body header.row p img {
   box-shadow: 2px 2px 4px #aaa;
 }
 
+.entry-content a[href$=".pdf"] {
+  display: inline;
+  padding-left: 24px;
+  line-height: 20px;
+  background: transparent url(../img/icon_pdf_20.gif) center left no-repeat;
+}
+
 footer {
   padding-top: 15px;
 }
-footer a {
+footer a, footer a:visited {
   color: #f3ecc9;
   font-weight: normal;
 }
-footer a:hover {
+footer a:hover, footer a:visited:hover {
   color: white;
 }
 footer p {
@@ -5143,7 +5150,17 @@ footer p {
 #left_side_bar input {
   margin: 0 0 10px 0;
 }
-#left_side_bar li {
+#left_side_bar .login-submit {
+  margin: 10px;
+}
+#left_side_bar .button-primary {
+  border: none;
+  padding: 5px;
+  text-align: center;
+  width: 100%;
+  color: #f3ecc9;
+}
+#left_side_bar li, #left_side_bar .button-primary {
   /*border: 1px solid $darkgrey;*/
   background-color: #cd231f;
   -moz-box-shadow: -3px 3px 8px #272020;

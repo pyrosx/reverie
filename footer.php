@@ -43,10 +43,10 @@
 <footer class="row full-width" role="contentinfo">
 
 	<div class="large-3 columns">
-		<p>&copy; <?php echo date('Y'); ?> <a href="http://sushiizu.com.au/">AFC Australia</a></p>
+		<p>&copy; <?php echo date('Y'); ?> <a href="http://sushiizu.com.au/">AFCI Australia</a></p>
 	</div>
 	<div class="large-9 columns">
-		<p>Content and Training by <a href="http://elevatingfoodsafety.com/">Elevating Food Safety</a></p>
+		<p>Training content by <a href="http://elevatingfoodsafety.com/">Elevating Food Safety</a></p>
 	</div>
 	<!-- Code and design by pyrosx@gmail.com -->		
 </footer>

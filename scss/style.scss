@@ -39,7 +39,6 @@ body header.row p {
 	-moz-box-shadow: 3px 3px 8px #aaa;
 	-webkit-box-shadow: 3px 3px 8px #aaa;
 	box-shadow: 3px 3px 8px #aaa;
-	
 }
 .tiny {
 	-moz-box-shadow: 2px 2px 4px #aaa;
@@ -47,9 +46,16 @@ body header.row p {
 	box-shadow: 2px 2px 4px #aaa;
 }
 
+.entry-content a[href$=".pdf"] {
+	display: inline;
+	padding-left: 24px;
+	line-height:20px;
+	background: transparent url(../img/icon_pdf_20.gif)  center left no-repeat;
+}
+
 footer {
 	padding-top: 15px; 
-	a {
+	a, a:visited {
 		color: $lightyellow;
 		font-weight: normal;
 		&:hover {
@@ -71,7 +77,6 @@ footer {
 		font-size: 0.75em !important;	
 	}
 }
-
 #left_side_bar {
 	.logo {
 		margin: 10px auto 20px auto;
@@ -88,22 +93,31 @@ footer {
 		margin: 0 0 10px 0;
 	}
 	
-	
-		li {		
-			/*border: 1px solid $darkgrey;*/
-			
-			background-color: $red;
-			
-			-moz-box-shadow: -3px 3px 8px $darkgrey;
-			-webkit-box-shadow: -3px 3px 8px $darkgrey;
-			box-shadow: -3px 3px 8px $darkgrey;
-		}
-		h6, li {
-			
-			padding: 5px;
-			margin: 10px;
-			text-align: center;
-		}
+	.login-submit {
+		margin: 10px;
+	}
+	.button-primary {
+		border: none;
+		padding: 5px;
+		text-align: center;
+		width: 100%;
+		color: $lightyellow;
+	}
+	li, .button-primary {		
+		/*border: 1px solid $darkgrey;*/
+		
+		background-color: $red;
+		
+		-moz-box-shadow: -3px 3px 8px $darkgrey;
+		-webkit-box-shadow: -3px 3px 8px $darkgrey;
+		box-shadow: -3px 3px 8px $darkgrey;
+	}
+	h6, li {
+		
+		padding: 5px;
+		margin: 10px;
+		text-align: center;
+	}
 		
 	@media only screen and (max-width:768px) { 	
 	}
