@@ -1,0 +1,352 @@
+>>> Change detected at 21:14:04 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Compass is polling for changes. Press Ctrl-C to Stop.
+>>> Change detected at 11:51:07 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 13:25:56 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 13:27:29 to: style.scss
+[31m[0m[31m[0m[32midentical[0m css/style.css 
+>>> Change detected at 13:29:00 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 13:30:40 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 13:30:51 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 13:32:45 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 13:35:25 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 13:36:09 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 13:36:27 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 13:36:52 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 13:40:34 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 13:40:52 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 13:53:16 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 13:54:48 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 13:55:23 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 13:56:25 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 13:58:31 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 14:00:35 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 14:04:10 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 14:05:37 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 14:05:47 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 14:06:25 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 14:07:40 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 14:08:41 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 14:25:34 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 14:29:09 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 14:29:36 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 14:31:06 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 14:31:51 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 14:46:39 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 14:48:37 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 14:49:00 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 14:49:27 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 14:50:15 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 14:51:04 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 14:52:11 to: style.scss
+[31m[0m[31m[0m[31m    error[0m scss/style.scss (Line 182: Invalid CSS after "		&": expected "{", was "hover {"
+
+"hover" may only be used at the beginning of a compound selector.)
+[33moverwrite[0m css/style.css 
+>>> Change detected at 14:52:26 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 14:52:59 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 14:56:32 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 14:56:52 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 14:58:09 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:01:18 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:01:24 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:01:47 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:01:55 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:02:15 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:02:25 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:02:35 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:03:31 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:03:55 to: style.scss
+[31m[0m[31m[0m[32midentical[0m css/style.css 
+>>> Change detected at 15:04:34 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:06:15 to: style.scss
+[31m[0m[31m[0m[31m    error[0m scss/style.scss (Line 351: Undefined operation: ""only screen and (min-width:70em)" times 1.1".)
+[33moverwrite[0m css/style.css 
+>>> Change detected at 15:06:39 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:06:56 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:07:12 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:07:55 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:08:19 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:09:00 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:09:33 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:10:16 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:10:28 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:10:55 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:11:01 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:11:11 to: style.scss
+[31m[0m[31m[0m[32midentical[0m css/style.css 
+>>> Change detected at 15:17:48 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:28:21 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:28:43 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:29:39 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:29:58 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:30:38 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:31:11 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:31:39 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:32:05 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:39:24 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:40:07 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:41:49 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:42:09 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:42:19 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:43:44 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:45:30 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:46:08 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:46:52 to: style.scss
+[31m[0m[31m[0m[31m    error[0m scss/style.scss (Line 619: Invalid CSS after "}": expected "}", was "")
+[33moverwrite[0m css/style.css 
+>>> Change detected at 15:47:16 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:48:10 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:51:40 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:52:20 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:55:50 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 15:55:57 to: style.scss
+[31m[0m[31m[0m[32midentical[0m css/style.css 
+>>> Change detected at 16:38:44 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 16:39:32 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 16:39:46 to: style.scss
+[31m[0m[31m[0m[32midentical[0m css/style.css 
+>>> Change detected at 16:49:14 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 16:49:18 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 16:49:27 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:03:09 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:03:59 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:04:45 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:06:38 to: style.scss
+[31m[0m[31m[0m[31m    error[0m scss/style.scss (Line 543: Invalid CSS after "			emCalc": expected "{", was "(24px);")
+[33moverwrite[0m css/style.css 
+>>> Change detected at 17:07:37 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:08:56 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:10:07 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:10:23 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:10:41 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:11:17 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:11:36 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:11:49 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:12:15 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:13:01 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:13:31 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:13:40 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:13:53 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:14:55 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:15:03 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:16:01 to: style.scss
+[31m[0m[31m[0m[32midentical[0m css/style.css 
+>>> Change detected at 17:16:49 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:17:16 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:17:46 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:17:54 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:18:26 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:18:41 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:18:50 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:20:10 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:21:05 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:21:41 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:22:38 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:22:50 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:23:28 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:24:51 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:35:58 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:37:52 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:38:15 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:38:30 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:38:45 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:39:04 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:39:22 to: style.scss
+[31m[0m[31m[0m[31m    error[0m scss/style.scss (Line 31: Invalid CSS after "	a.": expected class name, was "&:hover {")
+[33moverwrite[0m css/style.css 
+>>> Change detected at 17:39:43 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:40:25 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:43:09 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:43:25 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:43:29 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:43:43 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:44:47 to: style.scss
+[31m[0m[31m[0m[32midentical[0m css/style.css 
+>>> Change detected at 17:45:02 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:46:12 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:46:32 to: style.scss
+[31m[0m[31m[0m[32midentical[0m css/style.css 
+>>> Change detected at 17:46:41 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:46:53 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:47:02 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:48:30 to: style.scss
+[31m[0m[31m[0m[32midentical[0m css/style.css 
+>>> Change detected at 17:49:32 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:51:26 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:55:48 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:56:02 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:57:45 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:58:01 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 17:59:51 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 18:00:34 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 18:00:46 to: style.scss
+[31m[0m[31m[0m[32midentical[0m css/style.css 
+>>> Change detected at 18:02:19 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 18:03:00 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 18:04:28 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 18:04:52 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 18:05:15 to: style.scss
+[31m[0m[31m[0m[32midentical[0m css/style.css 
+>>> Change detected at 18:08:09 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 18:09:07 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 18:09:25 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 18:09:36 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 18:10:17 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 20:48:59 to: style.scss
+[31m[0m[31m[0m[33moverwrite[0m css/style.css 
+>>> Change detected at 20:53:56 to: style.scss
+[31m[0m

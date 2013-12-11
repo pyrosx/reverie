@@ -12,121 +12,663 @@
 // Comment out this import if you are customizing you imports below
 @import "foundation";
 
-/* Start to customize Reverie */
+$corner-radius: 15px;
 
-// add some extra style to row to beautify custom background image
-header.row,
-.container.row,
-.row.full-width {
-	background-color: rgba(255,255,255,0.9);
+$blue: #0078be;
+$orange: #e67929;
+$grey: #ccc;
+$vlgrey: #f2f2f2;
+$lgrey: #e6e6e6;
+$dgrey: #333;
+
+.bg {
+	width: 100%;
+	height: auto;
+}
+.bgblue {
+	background-color: $blue;
+	color: white;
+}
+.bgorange {
+	background-color: $orange;
+	color: white;
+}
+.bgvlgrey {
+	background-color: $vlgrey;
+	color: #333;
 }
 
-// adjusting header
-h4.subheader {
-	margin-top: -1em;
+
+.blue {
+	color: $blue;
+	
+}
+.orange {
+	color: $orange;
 }
 
-// add new pagination class for WordPress, Sass is amazingly fast
-.page-numbers { @include pagination; }
-
-// customizing pagination for WordPress using Foundation mixins, this is not beautiful I know
-.page-numbers li {
-	span:hover a,
-	span a:focus {
-		background: $pagination-link-active-bg;
+ul {
+	list-style-position:outside;
+	// matches p styling...
+	padding-left: 10%;
+	padding-right: 10%;
+}
+li { 
+	list-style-image: url(../img/bullet-arrow.png); 
+	p {
+		margin: 0;
+		padding: 0;
 	}
-	span.current {
-		background: $pagination-link-current-background;
-		padding: $pagination-link-pad;
-		color: $pagination-link-current-font-color;
-		font-weight: $pagination-link-current-font-weight;
-		cursor: $pagination-link-current-cursor;
+	
+}
+
+
+h1 {
+	font-size: emCalc(30px);
+}
+h2 {
+	font-size: emCalc(24px);
+}
+h3 {
+	font-size: emCalc(21px);
+}
+h4 {
+	font-size: emCalc(17px);
+}
+h1,h2,h3,h4,h5 {
+	text-align: center;
+	@media #{$small} {
+		text-align: left;
 	}
 }
 
-// add some basic comment styles
-ol.commentlist {
-	margin-left: 0;
-	margin-top: 2em;
-	li {
-		list-style: none;
-		margin-bottom: 2em;
+p.larger {
+	@media #{$large} {
+		font-size: emCalc(21px);
 	}
-		.comment-author img {
-			border-radius: 50%;
-			float: left;
-			margin: 0 1em 0 0;
-		}
-		.author-meta {
+}
+p.smaller {
+	font-size: emCalc(12px);
+}
+p.title {
+	font-size: emCalc(21px);
+	color: $blue;
+}
+p {
+	font-size: emCalc(16px);
+}
+a {
+	color: $orange;
+	&:hover {
+		color: $blue;
+	}
+	
+	$a-trans: all 0.5s linear;
+	-o-transition:$a-trans;
+	-ms-transition:$a-trans;
+	-moz-transition:$a-trans;
+	-webkit-transition:$a-trans;
+	/* ...and now for the proper property */
+	transition: $a-trans;
+}
+
+
+
+#bluefooter {
+	padding-bottom: 50px;
+	.conn {
+		@media #{$small} {
 			display: inline-block;
 		}
-			cite.fn {
-				@extend h4;
-				margin-right: 0.5em;
-			}
-		section.comment {
-			@include panel(white, 20px);
+		vertical-align: middle;
+	}
+	div.conn {
+		text-align: center;
+		img {
+			margin: 0 5px;
 		}
-			a.comment-reply-link {
-				float: right;
-				position: relative;
-				bottom: 1em;
-			}
-}
-
-// add some extra margin to ul
-ul {
-	margin-#{$default-float}: $list-side-margin;
-}
-
-// add some margin for embeds in post
-figure {
-	margin-bottom: $paragraph-margin-bottom;
-}
-
-// adjust search button on top-bar
-input.prefix.button {
-	line-height: 1;
-}
-
-// adjust search button on sideba
-#sidebar input.prefix.button {
-	line-height: 0.7;
-}
-
-// Add Class for Images
-img.alignright {
-	float: right;
-	margin: 0 0 18px 18px;
-}
+	}
+	img {
+		vertical-align: middle;
+	}
+	h2, h3, p, a {
+		color: white;
+	}
+	a:hover {
+		color: $orange;
+	}
+	p {
+		font-weight: bold;
+		font-size: emCalc(12px);
+	}
 	
-img.alignleft {
-	float: left;
-	margin: 0 18px 18px 0;
+	.buttons {
+		display: inline-block;
+	}
+	.round-button a {
+		padding: 0;
+		width: auto;
+		display: inline-block;
+		height: 40px;
+	}
+	form {
+		text-align: center;
+		@media #{$small} {
+			text-align: left;
+			height: 40px;
+			margin: 0;
+			overflow: hidden;
+		}
+		label {
+			display: none;
+		}
+		p {
+			width: auto;
+			display: inline;
+		}
+	}
+	input {
+		vertical-align: middle;
+		@media #{$small} {
+			top: 0;
+		}
+	}
+	input[type="email"] {
+		width: 80%;
+		height: 40px;
+		margin: 0 auto;
+		@media #{$small} {
+			width: 60%;
+			margin: 0;
+			display: inline-block;
+		}
+	}
+	input[type="submit"] {
+		margin: 20px 0;
+		@media #{$small} {
+			margin: 0;
+		}
+		background: url('../img/button-submit.png') no-repeat;
+		text-indent: -99999px;
+		width: 104px;
+		height: 39px;
+		border: none;
+		&:hover {
+			// hover image here
+		}
+	}
+	nav h4 {
+		display: inline-block;
+		width: 50%;
+	}
+	.section {
+		padding-bottom: 0;
+	}
+	.small-block-grid-3 {
+		width: 66%;
+		margin: 0 auto;
+	}
+	h6 {
+		display: none;
+	}
 }
+#bluetop {
+	@media #{$small} {
+		height: 10px;
+	}
+}
+body {
+	
+}
+.buttons {
+	text-align: center;
+	padding-top: 40px;
+	@media #{$small} {
+		padding-top: 0px;
+		text-align: left;
+		.round-button {
+			margin-right: 20px;
+		}
+		.round-button:last-child {
+			margin-right: 0;
+		}
+	}
+}
+.columns {
+	@media #{$small} {
+		&.left {
+			padding-right: 2%;
+		}
+		&.right {
+			padding-left: 5%;
+			border-left: 1px solid $lgrey;
+		}
+	}
+}
+.content {
 
-img.aligncenter {
-	display: block;
-	margin: 18px auto;
+	// correct for sticky header
+	padding-top: 70px;
+	
+	@media #{$small} {
+		padding-top: 0px;
 	}
 
-// Add HTML5 Caption Class for Images
-figure.figure {
-	margin: 0 auto;
+	.row {
+		p, h1, h2, h3 {
+			padding-left: 10%;
+			padding-right: 10%;
+			width: auto;
+			@media #{$small} {
+				padding: 0;
+				
+			}
+		}
+	}
+}
+.front-page-content, .footer-content {
+	p {
+		text-align: center;
+		@media #{$small} {
+			text-align: left;
+		}
+	}
+}
+#greyfooter {
+	@media #{$small} {
+		.columns {
+			padding-right: 2%;
+		}
+	}
+	h3 {
+		color: $blue;
+	}
+}
+#header {
+
+	letter-spacing: 0em;
+	clear: none;
+	
+	// sticky
+	position: fixed;
+	z-index: 999;
+	@media #{$small} {
+		position: relative;
+	}
+
+	.headerlink {
+		float: right;
+		clear: none;
+		text-transform: uppercase;
+		
+		font-family: HelveticaRoundedLTPro-Bd;
+		font-weight: normal;
+		font-size: 17px;
+		
+		height: 70px;
+		display: block;
+		padding: 30px 18px;	
+		text-align: center;
+		width: 35%;
+	
+		@media #{$small} { 
+
+			border-bottom-right-radius: $corner-radius;
+			-moz-bottom-right-border-radius: $corner-radius;
+			-webkit-bottom-right-border-radius: $corner-radius;
+			border-bottom-left-radius: $corner-radius;
+			-moz-bottom-left-border-radius: $corner-radius;
+			-webkit-bottom-left-border-radius: $corner-radius;
+	
+			margin-left: 20px;		
+			font-size: 21px;
+			width: auto;
+		
+			&:hover {
+				background-color: $dgrey;
+				color: $orange;	
+			}
+		}
+		
+	}
+	#menu-primary {
+		a {
+			color: #333;
+			
+			font-family: HelveticaRoundedLTPro-Bd, Arial, sans-serif;
+			text-transform: uppercase;
+			width: 100%;
+			border-bottom: $lgrey 1px solid;
+			display: block;
+			padding: 5px 40px;
+			
+			&:hover {
+				color: $blue;
+			}
+		}	
+		li:nth-child(odd) {
+			background-color: white;
+		}
+		@media #{$small} { 
+			margin-top: 30px;
+			margin-bottom: 30px;
+			a {
+				color: #666;
+				padding: 0;
+				border: none;
+			}
+			li {
+				background-color: none;
+				width: auto;
+				display: inline-block;
+				
+				&:last-child {
+					margin-right: 0;
+				}
+				
+				
+				// nav spacing break points 
+				margin-right: 1.5%;
+				font-size: 13px;
+				
+				@media only screen and (min-width: 900px) {
+					margin-right: 2%;
+					font-size: 15px;
+				}
+				@media only screen and (min-width: 1000px) {
+					margin-right: 2%;
+					font-size: 17px;
+				}
+				@media #{$large} {
+					margin-right: 3%;
+				}
+				
+				@media only screen and (min-width:$large-screen*1.05) {
+					margin-right: 4%;
+				}
+				
+			}
+		}
+	}
+	
+	.nav {
+		background-color: $vlgrey;
+		@media #{$small} {
+			background-color: white;
+		}
+	}
+	
+}
+.hr {
+	height: 1px;
+	background-color: $lgrey;
+	clear: both;
+}
+#logo {
+	float: left;
+	margin-top: 45px;
+	margin-bottom: 35px;
+}
+#logo-mobile {
+	text-align: center;
+}
+
+#lungs {
+	text-align: center;
+	padding-top: 50px;
+}
+#main-slider-wrapper {
+	
+	.ls-nav-left-arrow, .ls-nav-right-arrow {
+		margin-top: 25px;
+	}
+}
+#main-slider {
+	.sponsor-img {
+		width: 33%;
+	}
+}
+
+#menubutton {
+	padding: 21px 26px;
+}
+
+.nav-collapse {
+	width: 100%;	
+}
+.nav-toggle {
+	float: left;
+	width: 30%;
+	height: 70px;
+	text-align: center;
+	background: $vlgrey;
+}
+.page-content.columns {
+	@media #{$small} {
+		padding: 40px 40px 40px 0;
+	}
+}
+.rotate {
+	$rotate-time: 1.5s;
+    -webkit-transition-duration: $rotate-time;
+    -moz-transition-duration: $rotate-time;
+    -o-transition-duration: $rotate-time;
+    transition-duration: $rotate-time;
+     
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+     
+    overflow:hidden;
+ }   
+ 
+.rotate:hover { 
+    -webkit-transform:rotate(360deg);
+    -moz-transform:rotate(360deg); 
+    -o-transform:rotate(360deg);
+}   
+.round-button {
+	text-align: center;
 	display: inline-block;
-	figcaption {
-		padding: 8px 10px;
-		color: gray;
-		margin-bottom: $paragraph-margin-bottom;
+	
+	margin: 0 auto 16px auto;
+
+	a {
+		display: block;
+		font-family: HelveticaRoundedLTPro-Bd, Arial, sans-serif;
+		font-size: 16px;
+		padding: 24px 0;
+		width: 180px;
+		text-align: center;
+		text-transform: uppercase;
+			
+		border-radius: $corner-radius;
+		-moz-border-radius: $corner-radius;
+		-webkit-border-radius: $corner-radius;
+	}
+	a:hover {
+		background-color: $dgrey;
+		color: $orange;
 	}
 }
 
-figure.alignright.figure {
-	float: right;
-	margin: 0 0 18px 18px;
+.row {
+	@media #{$small} {
+		width: 90%;
+	}
+	@media only screen and (min-width: $row-width*1.05) {
+		width: 100%;
+	}
+	// second .row needs no extra padding
+	.row {
+		width: 100%;
+	}
+}
+.section {
+	padding-top: 45px;
+	padding-bottom: 45px;
+	&.no-bottom-pad {
+		padding-bottom: 0;
+	}
+}
+.small-block-grid-3 {
+	width: 100%;
+}
+.small-pad-bottom {
+	padding-bottom: 55px;
+	@media #{$small} {
+		padding-bottom: 0;
+	}
+}
+/*
+.scroll-box {
+	height: 90px;
+	width: 100%;
+	text-align: center;
+	border: 1px solid $lgrey;
+	.small-slider-pane {
+		
+		display: block;
+		margin: 0 auto;
+	}
+	overflow-y: scroll;
+}
+*/
+.small-slider-pane {
+	text-align: center;
+	width: 250px;
+	margin: 0 auto;
+}
+@media only screen and (min-width: 550px) {
+	.scroll-box {
+		width: 550px;
+		margin: 0 auto;
+		.small-slider-pane {
+			display: inline-block;
+			&:nth-child(odd) {
+				margin-right: 50px;
+			}
+		}
+	}
+}
+.side-box {
+	text-align: center;
+	@media #{$small} {
+		padding-left: 30px;
+		padding-right: 30px;
+		text-align: left;
+	}
+}
+#social {
+	.buttons {
+		margin: 0;
+		padding: 0 15%;
+	}
+	h2 {
+		margin-bottom: 40px;
+		font-size: 22px;
+		
+	}
+	@media only screen and (min-width: 854px) {
+		h2 {
+			font-size: 24px;
+			margin-right: 0;
+		}
+	}
+	@media #{$small} {
+		
+		h2 {
+			margin-top: 5px;
+			margin-bottom: 0;
+			margin-right: -10px;
+		}
+		li {
+			padding-bottom: 0;
+		}
+	}
+	.small-block-grid-3 li {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+#sponsors {
+	h3 {
+		text-align: center;
+	}
+	@media #{$small} {
+		h3 {
+			text-align: left;
+		}
+	}
+	.columns, .column {
+		overflow:visible;
+	}
 }
 
-figure.alignleft.figure {
-	float: left;
-	margin: 0 18px 18px 0;
+
+#story {
+	@media #{$small} {
+		.section {
+			padding-top: 30px;
+			padding-bottom: 0;
+		}
+		.buttons {
+			padding-top: 0;
+			text-align: center;
+		}
+		
+		.large-6 {
+			width: 100%;
+		}
+		h1 {
+			margin-bottom: 5px;
+		}
+	}	
+	@media #{$medium} {
+		.buttons {
+			text-align: left;
+		}
+		.large-6 {
+			width: 50%;
+		}
+	}
+	img {
+		width: 100%;
+	}
+}
+.team-content {
+	font-size: emCalc(14px);
+
+	overflow: hidden;
+	max-height: 0;
+	
+	@media #{$small} {
+		max-height: none;
+	}
+	
+	h5 {
+		color: $orange;
+		
+	}
+	p {
+		margin: 0;
+	}
+	.columns {
+		padding-right: 1%;
+		padding-top: 30px;
+		@media #{$small} {
+			padding-top: 0;
+		}
+	}
+	
+	
+	$team-trans: all 2s linear;
+	
+	-o-transition:$team-trans;
+	-ms-transition:$team-trans;
+	-moz-transition:$team-trans;
+	-webkit-transition:$team-trans;
+	/* ...and now for the proper property */
+	transition: $team-trans;
 }

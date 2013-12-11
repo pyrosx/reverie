@@ -10,8 +10,7 @@
 
 	<title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
 
-	<!-- Mobile viewport optimized: j.mp/bplateviewport -->
-	<meta name="viewport" content="width=device-width" />
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
 
 	<!-- Favicon and Feed -->
 	<link rel="shortcut icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
@@ -33,52 +32,71 @@
 	<!-- Startup Image iPhone (320x460) -->
 	<link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/img/devices/reverie-load.png" media="screen and (max-device-width: 320px)" />
 
-<?php wp_head(); ?>
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/responsive-nav.css">
+	<script src="<?php echo get_template_directory_uri(); ?>/js/responsive-nav.min.js"></script>
+
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/css/animate.css"/> 
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/css/liquid-slider.css"/>
+
+	<?php wp_head(); ?>
 
 </head>
 
 <body <?php body_class(); ?>>
 
-<div class="contain-to-grid">
-	<!-- Starting the Top-Bar -->
-	<nav class="top-bar">
-	    <ul class="title-area">
-	        <li class="name">
-	        	<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-	        </li>
-			<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-			<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-	    </ul>
-	    <section class="top-bar-section">
-	    <?php
-	        wp_nav_menu( array(
-	            'theme_location' => 'primary',
-	            'container' => false,
-	            'depth' => 0,
-	            'items_wrap' => '<ul class="left">%3$s</ul>',
-	            'fallback_cb' => 'reverie_menu_fallback', // workaround to show a message to set up a menu
-	            'walker' => new reverie_walker( array(
-	                'in_top_bar' => true,
-	                'item_type' => 'li'
-	            ) ),
-	        ) );
-	    ?>
-	    <ul class="right">
-	    	<li class="divider hide-for-small"></li>
-	    	<li class="has-form"><?php get_search_form(); ?></li>
-	    </ul>
-	    </section>
-	</nav>
-	<!-- End of Top-Bar -->
+<div class="bg bgblue" id="bluetop"></div>
+
+<div class="bg bgwhite" id="header">
+	<div class="row hide-for-small">
+		<a href="<?php echo get_site_url(); ?>"><img id="logo" src="<?php echo get_template_directory_uri(); ?>/img/lara-header.png"/></a>
+		<a class="headerlink bgorange" href="<?php echo get_site_url(); ?>/join-us/">Join Us</a>
+		<a class="headerlink bgblue" href="<?php echo get_site_url(); ?>/donate-now/">Donate Today</a>
+	</div>
+
+	<div class="hr hide-for-small"></div>
+
+	<div class="row nav">
+		<a class="headerlink bgorange hide-for-medium-up" href="<?php echo get_site_url(); ?>/join-us/">Join Us</a>
+		<a class="headerlink bgblue hide-for-medium-up" href="<?php echo get_site_url(); ?>/donate-now/">Donate</a>
+
+		<nav class="nav-collapse">
+		<?php
+			// Get the nav menu based on $menu_name (same as 'theme_location' or 'menu' arg to wp_nav_menu)
+			// This code based on wp_nav_menu's code to get Menu ID from menu slug
+
+			$menu_name = 'primary';
+
+			if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
+				$menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
+
+				$menu_items = wp_get_nav_menu_items($menu->term_id);
+
+				// last entry, "Donate Now", is unnecessary, so we're going to remove it.
+				array_pop($menu_items);
+
+				$menu_list = '<ul id="menu-' . $menu_name . '">';
+
+				foreach ( (array) $menu_items as $key => $menu_item ) {
+					$name = str_replace(' ', '', $menu_item->title);
+					$menu_list .= '<li id="li-'.$name.'"><a href="' . $menu_item->url . '">' . $menu_item->title . '</a></li>';
+				}
+				$menu_list .= '</ul>';
+			} else {
+				$menu_list = '<ul><li>Menu "' . $menu_name . '" not defined.</li></ul>';
+			}
+			// $menu_list now ready to output		
+			echo $menu_list;
+		?>	
+		</nav>
+	</div>
 </div>
 
-<header class="row" role="banner">
-	<div class="small-12 columns">
-		<h1><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
-		<h4 class="subheader"><?php bloginfo('description'); ?></h4>
-		<hr/>
-	</div>
-</header>
 
-<!-- Start the main container -->
-<section class="container row" role="document">
+<div class="hr hide-for-small"></div>
+
+<div class="content">
+
+
+
+	
+

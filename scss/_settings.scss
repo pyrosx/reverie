@@ -1,6 +1,61 @@
 // Settings file to override Foundation variables
+@import "foundation/foundation-global";
 
 // You can find the variables for each component at the bottom of their
-// doc page. We tried to name them to where they'd make sense just by reading them.
+// doc page. We tried to name them to where theyd make sense just by reading them.
 // Go to http://foundation.zurb.com/docs/ to find what you need.
 
+$content-width: 1120px;
+
+$row-width: emCalc($content-width);
+$column-gutter: 0;
+$total-columns: 12;
+
+$large-screen: emCalc($content-width);
+$medium-screen: emCalc(900px);
+
+$include-html-type-classes: $include-html-classes;
+
+// redefining these...
+$medium: "only screen and (min-width:"#{$medium-screen}")";
+$large: "only screen and (min-width:"#{$large-screen}")";
+
+.row, .bg, .content {
+	min-width: 310px;
+}
+
+// Font - Helvetica Rounded Bold 
+@font-face {
+	font-family: 'HelveticaRoundedLTPro-Bd';
+	src: url('../webfonts/2908CF_0_0.eot?') format('eot'),url('../webfonts/2908CF_0_0.woff') format('woff'),url('../webfonts/2908CF_0_0.ttf') format('truetype');
+}
+$header-font-family: HelveticaRoundedLTPro-Bd, Arial, sans-serif;
+$header-font-weight: normal;
+$header-font-color: #333;
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+$paragraph-font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+$paragraph-font-color: #333;
+
+
+
+// Ugh - .panel clashes with slider!
+
+/* We use these to control the background and border styles */
+$panel-bg: white;
+$panel-border-style: none;
+$panel-border-size: 0;
+
+/* We use this % to control how much we darken things on hover */
+$panel-function-factor: 0;
+$panel-border-color: darken($panel-bg, $panel-function-factor);
+
+/* We use these to set default inner padding and bottom margin */
+$panel-margin-bottom: 0;
+$panel-padding: 0;
+
+/* We use these to set default font colors */
+$panel-font-color: #333;
+$panel-font-color-alt: #fff;
+
+$panel-header-adjust: false;

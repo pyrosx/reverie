@@ -1,3 +1,5 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
 /* Welcome and glad you are using Reverie.
  * This is the main stylesheet loaded by default.
  * Edit the file and have fun.
@@ -227,7 +229,7 @@ figure {
  * Define consistent border, margin, and padding.
  */
 fieldset {
-  border: 1px solid silver;
+  border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
@@ -371,6 +373,19 @@ table {
   border-spacing: 0;
 }
 
+.row, .bg, .content {
+  min-width: 310px;
+}
+
+@font-face {
+  font-family: 'HelveticaRoundedLTPro-Bd';
+  src: url("../webfonts/2908CF_0_0.eot?") format("eot"), url("../webfonts/2908CF_0_0.woff") format("woff"), url("../webfonts/2908CF_0_0.ttf") format("truetype");
+}
+
+/* We use these to control the background and border styles */
+/* We use this % to control how much we darken things on hover */
+/* We use these to set default inner padding and bottom margin */
+/* We use these to set default font colors */
 *,
 *:before,
 *:after {
@@ -477,7 +492,7 @@ select {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 62.5em;
+  max-width: 70em;
   *zoom: 1;
 }
 .row:before, .row:after {
@@ -490,8 +505,8 @@ select {
 .row .column,
 .row .columns {
   position: relative;
-  padding-left: 0.9375em;
-  padding-right: 0.9375em;
+  padding-left: 0;
+  padding-right: 0;
   width: 100%;
   float: left;
 }
@@ -504,8 +519,8 @@ select {
 }
 .row .row {
   width: auto;
-  margin-left: -0.9375em;
-  margin-right: -0.9375em;
+  margin-left: 0;
+  margin-right: 0;
   margin-top: 0;
   margin-bottom: 0;
   max-width: none;
@@ -536,8 +551,8 @@ select {
   .row .column,
   .row .columns {
     position: relative;
-    padding-left: 0.9375em;
-    padding-right: 0.9375em;
+    padding-left: 0;
+    padding-right: 0;
     float: left;
   }
 
@@ -1070,7 +1085,7 @@ th.hide-for-xlarge {
   }
 }
 /* Large Displays: 1280px - 1440px */
-@media only screen and (min-width: 80em) {
+@media only screen and (min-width: 56.25em) {
   .show-for-large,
   .show-for-large-up {
     display: inherit !important;
@@ -1117,7 +1132,7 @@ th.hide-for-xlarge {
   }
 }
 /* X-Large Displays: 1400px and up */
-@media only screen and (min-width: 90em) {
+@media only screen and (min-width: 70em) {
   .show-for-xlarge {
     display: inherit !important;
   }
@@ -1555,7 +1570,7 @@ p.lead {
 
 .subheader {
   line-height: 1.4;
-  color: #6f6f6f;
+  color: gray;
   font-weight: 300;
   margin-top: 0.2em;
   margin-bottom: 0.5em;
@@ -1573,7 +1588,6 @@ h1,
 h2,
 h3,
 h4,
-ol.commentlist cite.fn,
 h5,
 h6,
 pre,
@@ -1602,7 +1616,7 @@ a img {
 
 /* Default paragraph styles */
 p {
-  font-family: inherit;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-size: 1em;
   line-height: 1.6;
@@ -1616,19 +1630,19 @@ p aside {
 }
 
 /* Default header styles */
-h1, h2, h3, h4, ol.commentlist cite.fn, h5, h6 {
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-weight: bold;
+h1, h2, h3, h4, h5, h6 {
+  font-family: HelveticaRoundedLTPro-Bd, Arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
-  color: #222222;
+  color: #333333;
   text-rendering: optimizeLegibility;
   margin-top: 0.2em;
   margin-bottom: 0.5em;
   line-height: 1.2125em;
 }
-h1 small, h2 small, h3 small, h4 small, ol.commentlist cite.fn small, h5 small, h6 small {
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   font-size: 60%;
-  color: #6f6f6f;
+  color: gray;
   line-height: 0;
 }
 
@@ -1644,7 +1658,7 @@ h3 {
   font-size: 1.375em;
 }
 
-h4, ol.commentlist cite.fn {
+h4 {
   font-size: 1.125em;
 }
 
@@ -1696,7 +1710,7 @@ dl {
   line-height: 1.6;
   margin-bottom: 1.25em;
   list-style-position: outside;
-  font-family: inherit;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 
 /* Unordered Lists */
@@ -1762,20 +1776,20 @@ blockquote {
 blockquote cite {
   display: block;
   font-size: 0.8125em;
-  color: #555555;
+  color: #666666;
 }
 blockquote cite:before {
   content: "\2014 \0020";
 }
 blockquote cite a,
 blockquote cite a:visited {
-  color: #555555;
+  color: #666666;
 }
 
 blockquote,
 blockquote p {
   line-height: 1.6;
-  color: #6f6f6f;
+  color: gray;
 }
 
 /* Microformats */
@@ -1806,7 +1820,7 @@ blockquote p {
 }
 
 @media only screen and (min-width: 48em) {
-  h1, h2, h3, h4, ol.commentlist cite.fn, h5, h6 {
+  h1, h2, h3, h4, h5, h6 {
     line-height: 1.4;
   }
 
@@ -1822,7 +1836,7 @@ blockquote p {
     font-size: 1.6875em;
   }
 
-  h4, ol.commentlist cite.fn {
+  h4 {
     font-size: 1.4375em;
   }
 }
@@ -1839,7 +1853,7 @@ blockquote p {
 @media print {
   * {
     background: transparent !important;
-    color: black !important;
+    color: #000 !important;
     /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
     text-shadow: none !important;
@@ -1866,7 +1880,7 @@ blockquote p {
 
   pre,
   blockquote {
-    border: 1px solid #999999;
+    border: 1px solid #999;
     page-break-inside: avoid;
   }
 
@@ -3486,7 +3500,7 @@ form.custom .custom.disabled {
   }
 
   .contain-to-grid .top-bar {
-    max-width: 62.5em;
+    max-width: 70em;
     margin: 0 auto;
   }
 
@@ -3648,7 +3662,7 @@ form.custom .custom.disabled {
   right: 0px;
   width: 11px;
   height: 14px;
-  border: solid 4px black;
+  border: solid 4px #000;
   border-top: none;
   border-bottom: none;
 }
@@ -3658,7 +3672,7 @@ form.custom .custom.disabled {
   width: 11px;
   height: 14px;
   border: solid 8px;
-  border-color: transparent transparent transparent black;
+  border-color: transparent transparent transparent #000;
 }
 .orbit-container:hover .orbit-timer > span {
   display: block;
@@ -3690,21 +3704,21 @@ form.custom .custom.disabled {
   left: 0;
 }
 .orbit-container .orbit-prev > span {
-  border-color: transparent white transparent transparent;
+  border-color: transparent #fff transparent transparent;
 }
 .orbit-container .orbit-prev:hover > span {
-  border-color: transparent #cccccc transparent transparent;
+  border-color: transparent #ccc transparent transparent;
 }
 .orbit-container .orbit-next {
   right: 0;
 }
 .orbit-container .orbit-next > span {
-  border-color: transparent transparent transparent white;
+  border-color: transparent transparent transparent #fff;
   left: 50%;
   margin-left: -8px;
 }
 .orbit-container .orbit-next:hover > span {
-  border-color: transparent transparent transparent #cccccc;
+  border-color: transparent transparent transparent #ccc;
 }
 
 .orbit-bullets {
@@ -3720,7 +3734,7 @@ form.custom .custom.disabled {
   background: #fff;
   float: left;
   margin-right: 6px;
-  border: solid 2px black;
+  border: solid 2px #000;
   -webkit-border-radius: 1000px;
   border-radius: 1000px;
 }
@@ -3899,8 +3913,6 @@ form.custom .custom.disabled {
 .joyride-tip-guide h2,
 .joyride-tip-guide h3,
 .joyride-tip-guide h4,
-.joyride-tip-guide ol.commentlist cite.fn,
-ol.commentlist .joyride-tip-guide cite.fn,
 .joyride-tip-guide h5,
 .joyride-tip-guide h6 {
   line-height: 1.25;
@@ -3939,10 +3951,10 @@ ol.commentlist .joyride-tip-guide cite.fn,
   text-decoration: none;
   font-size: 30px;
   font-weight: normal;
-  line-height: 0.5 !important;
+  line-height: .5 !important;
 }
 .joyride-close-tip:hover, .joyride-close-tip:focus {
-  color: #eeeeee !important;
+  color: #eee !important;
 }
 
 .joyride-modal-bg {
@@ -4400,14 +4412,14 @@ kbd {
 
 /* Panels */
 .panel {
-  border-style: solid;
-  border-width: 1px;
-  border-color: #d9d9d9;
-  margin-bottom: 1.25em;
-  padding: 1.25em;
-  background: #f2f2f2;
+  border-style: none;
+  border-width: 0;
+  border-color: white;
+  margin-bottom: 0;
+  padding: 0;
+  background: white;
 }
-.panel h1, .panel h2, .panel h3, .panel h4, .panel ol.commentlist cite.fn, ol.commentlist .panel cite.fn, .panel h5, .panel h6, .panel p {
+.panel h1, .panel h2, .panel h3, .panel h4, .panel h5, .panel h6, .panel p {
   color: #333333;
 }
 .panel > :first-child {
@@ -4416,24 +4428,24 @@ kbd {
 .panel > :last-child {
   margin-bottom: 0;
 }
-.panel h1, .panel h2, .panel h3, .panel h4, .panel ol.commentlist cite.fn, ol.commentlist .panel cite.fn, .panel h5, .panel h6 {
+.panel h1, .panel h2, .panel h3, .panel h4, .panel h5, .panel h6 {
   line-height: 1;
   margin-bottom: 0.625em;
 }
-.panel h1.subheader, .panel h2.subheader, .panel h3.subheader, .panel h4.subheader, .panel ol.commentlist cite.subheader.fn, ol.commentlist .panel cite.subheader.fn, .panel h5.subheader, .panel h6.subheader {
+.panel h1.subheader, .panel h2.subheader, .panel h3.subheader, .panel h4.subheader, .panel h5.subheader, .panel h6.subheader {
   line-height: 1.4;
 }
 .panel.callout {
-  border-style: solid;
-  border-width: 1px;
-  border-color: #2284a1;
-  margin-bottom: 1.25em;
-  padding: 1.25em;
+  border-style: none;
+  border-width: 0;
+  border-color: #2ba6cb;
+  margin-bottom: 0;
+  padding: 0;
   background: #2ba6cb;
   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 }
-.panel.callout h1, .panel.callout h2, .panel.callout h3, .panel.callout h4, .panel.callout ol.commentlist cite.fn, ol.commentlist .panel.callout cite.fn, .panel.callout h5, .panel.callout h6, .panel.callout p {
+.panel.callout h1, .panel.callout h2, .panel.callout h3, .panel.callout h4, .panel.callout h5, .panel.callout h6, .panel.callout p {
   color: white;
 }
 .panel.callout > :first-child {
@@ -4442,11 +4454,11 @@ kbd {
 .panel.callout > :last-child {
   margin-bottom: 0;
 }
-.panel.callout h1, .panel.callout h2, .panel.callout h3, .panel.callout h4, .panel.callout ol.commentlist cite.fn, ol.commentlist .panel.callout cite.fn, .panel.callout h5, .panel.callout h6 {
+.panel.callout h1, .panel.callout h2, .panel.callout h3, .panel.callout h4, .panel.callout h5, .panel.callout h6 {
   line-height: 1;
   margin-bottom: 0.625em;
 }
-.panel.callout h1.subheader, .panel.callout h2.subheader, .panel.callout h3.subheader, .panel.callout h4.subheader, .panel.callout ol.commentlist cite.subheader.fn, ol.commentlist .panel.callout cite.subheader.fn, .panel.callout h5.subheader, .panel.callout h6.subheader {
+.panel.callout h1.subheader, .panel.callout h2.subheader, .panel.callout h3.subheader, .panel.callout h4.subheader, .panel.callout h5.subheader, .panel.callout h6.subheader {
   line-height: 1.4;
 }
 .panel.radius {
@@ -5065,164 +5077,654 @@ table tfoot tr td {
   max-width: 800px;
 }
 
-/* Start to customize Reverie */
-header.row,
-.container.row,
-.row.full-width {
-  background-color: rgba(255, 255, 255, 0.9);
+.bg {
+  width: 100%;
+  height: auto;
 }
 
-h4.subheader, ol.commentlist cite.subheader.fn {
-  margin-top: -1em;
-}
-
-.page-numbers {
-  display: block;
-  height: 1.5em;
-  margin-left: -0.3125em;
-}
-.page-numbers li {
-  display: block;
-  float: left;
-  height: 1.5em;
-  color: #222222;
-  font-size: 0.875em;
-  margin-left: 0.3125em;
-}
-.page-numbers li a {
-  display: block;
-  padding: 0.0625em 0.4375em 0.0625em;
-  color: #999999;
-}
-.page-numbers li:hover a,
-.page-numbers li a:focus {
-  background: #e6e6e6;
-}
-.page-numbers li.unavailable a {
-  cursor: default;
-  color: #999999;
-}
-.page-numbers li.unavailable:hover a, .page-numbers li.unavailable a:focus {
-  background: transparent;
-}
-.page-numbers li.current a {
-  background: #2ba6cb;
+.bgblue {
+  background-color: #0078be;
   color: white;
-  font-weight: bold;
-  cursor: default;
-}
-.page-numbers li.current a:hover, .page-numbers li.current a:focus {
-  background: #2ba6cb;
 }
 
-.page-numbers li span:hover a,
-.page-numbers li span a:focus {
-  background: #e6e6e6;
-}
-.page-numbers li span.current {
-  background: #2ba6cb;
-  padding: 0.0625em 0.4375em 0.0625em;
+.bgorange {
+  background-color: #e67929;
   color: white;
-  font-weight: bold;
-  cursor: default;
 }
 
-ol.commentlist {
-  margin-left: 0;
-  margin-top: 2em;
+.bgvlgrey {
+  background-color: #f2f2f2;
+  color: #333;
 }
-ol.commentlist li {
-  list-style: none;
-  margin-bottom: 2em;
+
+.blue {
+  color: #0078be;
 }
-ol.commentlist .comment-author img {
-  border-radius: 50%;
-  float: left;
-  margin: 0 1em 0 0;
-}
-ol.commentlist .author-meta {
-  display: inline-block;
-}
-ol.commentlist cite.fn {
-  margin-right: 0.5em;
-}
-ol.commentlist section.comment {
-  border-style: solid;
-  border-width: 1px;
-  border-color: #e6e6e6;
-  margin-bottom: 1.25em;
-  padding: 20px;
-  background: white;
-}
-ol.commentlist section.comment h1, ol.commentlist section.comment h2, ol.commentlist section.comment h3, ol.commentlist section.comment h4, ol.commentlist section.comment cite.fn, ol.commentlist section.comment h5, ol.commentlist section.comment h6, ol.commentlist section.comment p {
-  color: #333333;
-}
-ol.commentlist section.comment > :first-child {
-  margin-top: 0;
-}
-ol.commentlist section.comment > :last-child {
-  margin-bottom: 0;
-}
-ol.commentlist section.comment h1, ol.commentlist section.comment h2, ol.commentlist section.comment h3, ol.commentlist section.comment h4, ol.commentlist section.comment cite.fn, ol.commentlist section.comment h5, ol.commentlist section.comment h6 {
-  line-height: 1;
-  margin-bottom: 0.625em;
-}
-ol.commentlist section.comment h1.subheader, ol.commentlist section.comment h2.subheader, ol.commentlist section.comment h3.subheader, ol.commentlist section.comment h4.subheader, ol.commentlist section.comment cite.subheader.fn, ol.commentlist section.comment h5.subheader, ol.commentlist section.comment h6.subheader {
-  line-height: 1.4;
-}
-ol.commentlist a.comment-reply-link {
-  float: right;
-  position: relative;
-  bottom: 1em;
+
+.orange {
+  color: #e67929;
 }
 
 ul {
-  margin-left: 1.25em;
+  list-style-position: outside;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
-figure {
-  margin-bottom: 1.25em;
+li {
+  list-style-image: url(../img/bullet-arrow.png);
+}
+li p {
+  margin: 0;
+  padding: 0;
 }
 
-input.prefix.button {
-  line-height: 1;
+h1 {
+  font-size: 1.875em;
 }
 
-#sidebar input.prefix.button {
-  line-height: 0.7;
+h2 {
+  font-size: 1.5em;
 }
 
-img.alignright {
-  float: right;
-  margin: 0 0 18px 18px;
+h3 {
+  font-size: 1.3125em;
 }
 
-img.alignleft {
-  float: left;
-  margin: 0 18px 18px 0;
+h4 {
+  font-size: 1.0625em;
 }
 
-img.aligncenter {
-  display: block;
-  margin: 18px auto;
+h1, h2, h3, h4, h5 {
+  text-align: center;
+}
+@media only screen and (min-width: 48em) {
+  h1, h2, h3, h4, h5 {
+    text-align: left;
+  }
 }
 
-figure.figure {
-  margin: 0 auto;
+@media only screen and (min-width: 70em) {
+  p.larger {
+    font-size: 1.3125em;
+  }
+}
+
+p.smaller {
+  font-size: 0.75em;
+}
+
+p.title {
+  font-size: 1.3125em;
+  color: #0078be;
+}
+
+p {
+  font-size: 1em;
+}
+
+a {
+  color: #e67929;
+  -o-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  /* ...and now for the proper property */
+  transition: all 0.5s linear;
+}
+a:hover {
+  color: #0078be;
+}
+
+#bluefooter {
+  padding-bottom: 50px;
+}
+#bluefooter .conn {
+  vertical-align: middle;
+}
+@media only screen and (min-width: 48em) {
+  #bluefooter .conn {
+    display: inline-block;
+  }
+}
+#bluefooter div.conn {
+  text-align: center;
+}
+#bluefooter div.conn img {
+  margin: 0 5px;
+}
+#bluefooter img {
+  vertical-align: middle;
+}
+#bluefooter h2, #bluefooter h3, #bluefooter p, #bluefooter a {
+  color: white;
+}
+#bluefooter a:hover {
+  color: #e67929;
+}
+#bluefooter p {
+  font-weight: bold;
+  font-size: 0.75em;
+}
+#bluefooter .buttons {
   display: inline-block;
 }
-figure.figure figcaption {
-  padding: 8px 10px;
-  color: gray;
-  margin-bottom: 1.25em;
+#bluefooter .round-button a {
+  padding: 0;
+  width: auto;
+  display: inline-block;
+  height: 40px;
+}
+#bluefooter form {
+  text-align: center;
+}
+@media only screen and (min-width: 48em) {
+  #bluefooter form {
+    text-align: left;
+    height: 40px;
+    margin: 0;
+    overflow: hidden;
+  }
+}
+#bluefooter form label {
+  display: none;
+}
+#bluefooter form p {
+  width: auto;
+  display: inline;
+}
+#bluefooter input {
+  vertical-align: middle;
+}
+@media only screen and (min-width: 48em) {
+  #bluefooter input {
+    top: 0;
+  }
+}
+#bluefooter input[type="email"] {
+  width: 80%;
+  height: 40px;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 48em) {
+  #bluefooter input[type="email"] {
+    width: 60%;
+    margin: 0;
+    display: inline-block;
+  }
+}
+#bluefooter input[type="submit"] {
+  margin: 20px 0;
+  background: url("../img/button-submit.png") no-repeat;
+  text-indent: -99999px;
+  width: 104px;
+  height: 39px;
+  border: none;
+}
+@media only screen and (min-width: 48em) {
+  #bluefooter input[type="submit"] {
+    margin: 0;
+  }
+}
+#bluefooter nav h4 {
+  display: inline-block;
+  width: 50%;
+}
+#bluefooter .section {
+  padding-bottom: 0;
+}
+#bluefooter .small-block-grid-3 {
+  width: 66%;
+  margin: 0 auto;
+}
+#bluefooter h6 {
+  display: none;
 }
 
-figure.alignright.figure {
+@media only screen and (min-width: 48em) {
+  #bluetop {
+    height: 10px;
+  }
+}
+
+.buttons {
+  text-align: center;
+  padding-top: 40px;
+}
+@media only screen and (min-width: 48em) {
+  .buttons {
+    padding-top: 0px;
+    text-align: left;
+  }
+  .buttons .round-button {
+    margin-right: 20px;
+  }
+  .buttons .round-button:last-child {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  .columns.left {
+    padding-right: 2%;
+  }
+  .columns.right {
+    padding-left: 5%;
+    border-left: 1px solid #e6e6e6;
+  }
+}
+
+.content {
+  padding-top: 70px;
+}
+@media only screen and (min-width: 48em) {
+  .content {
+    padding-top: 0px;
+  }
+}
+.content .row p, .content .row h1, .content .row h2, .content .row h3 {
+  padding-left: 10%;
+  padding-right: 10%;
+  width: auto;
+}
+@media only screen and (min-width: 48em) {
+  .content .row p, .content .row h1, .content .row h2, .content .row h3 {
+    padding: 0;
+  }
+}
+
+.front-page-content p, .footer-content p {
+  text-align: center;
+}
+@media only screen and (min-width: 48em) {
+  .front-page-content p, .footer-content p {
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  #greyfooter .columns {
+    padding-right: 2%;
+  }
+}
+#greyfooter h3 {
+  color: #0078be;
+}
+
+#header {
+  letter-spacing: 0em;
+  clear: none;
+  position: fixed;
+  z-index: 999;
+}
+@media only screen and (min-width: 48em) {
+  #header {
+    position: relative;
+  }
+}
+#header .headerlink {
   float: right;
-  margin: 0 0 18px 18px;
+  clear: none;
+  text-transform: uppercase;
+  font-family: HelveticaRoundedLTPro-Bd;
+  font-weight: normal;
+  font-size: 17px;
+  height: 70px;
+  display: block;
+  padding: 30px 18px;
+  text-align: center;
+  width: 35%;
+}
+@media only screen and (min-width: 48em) {
+  #header .headerlink {
+    border-bottom-right-radius: 15px;
+    -moz-bottom-right-border-radius: 15px;
+    -webkit-bottom-right-border-radius: 15px;
+    border-bottom-left-radius: 15px;
+    -moz-bottom-left-border-radius: 15px;
+    -webkit-bottom-left-border-radius: 15px;
+    margin-left: 20px;
+    font-size: 21px;
+    width: auto;
+  }
+  #header .headerlink:hover {
+    background-color: #333333;
+    color: #e67929;
+  }
+}
+#header #menu-primary a {
+  color: #333;
+  font-family: HelveticaRoundedLTPro-Bd, Arial, sans-serif;
+  text-transform: uppercase;
+  width: 100%;
+  border-bottom: #e6e6e6 1px solid;
+  display: block;
+  padding: 5px 40px;
+}
+#header #menu-primary a:hover {
+  color: #0078be;
+}
+#header #menu-primary li:nth-child(odd) {
+  background-color: white;
+}
+@media only screen and (min-width: 48em) {
+  #header #menu-primary {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  #header #menu-primary a {
+    color: #666;
+    padding: 0;
+    border: none;
+  }
+  #header #menu-primary li {
+    background-color: none;
+    width: auto;
+    display: inline-block;
+    margin-right: 1.5%;
+    font-size: 13px;
+  }
+  #header #menu-primary li:last-child {
+    margin-right: 0;
+  }
+}
+@media only screen and (min-width: 48em) and (min-width: 900px) {
+  #header #menu-primary li {
+    margin-right: 2%;
+    font-size: 15px;
+  }
+}
+@media only screen and (min-width: 48em) and (min-width: 1000px) {
+  #header #menu-primary li {
+    margin-right: 2%;
+    font-size: 17px;
+  }
+}
+@media only screen and (min-width: 48em) and (min-width: 70em) {
+  #header #menu-primary li {
+    margin-right: 3%;
+  }
+}
+@media only screen and (min-width: 48em) and (min-width: 73.5em) {
+  #header #menu-primary li {
+    margin-right: 4%;
+  }
+}
+#header .nav {
+  background-color: #f2f2f2;
+}
+@media only screen and (min-width: 48em) {
+  #header .nav {
+    background-color: white;
+  }
 }
 
-figure.alignleft.figure {
+.hr {
+  height: 1px;
+  background-color: #e6e6e6;
+  clear: both;
+}
+
+#logo {
   float: left;
-  margin: 0 18px 18px 0;
+  margin-top: 45px;
+  margin-bottom: 35px;
+}
+
+#logo-mobile {
+  text-align: center;
+}
+
+#lungs {
+  text-align: center;
+  padding-top: 50px;
+}
+
+#main-slider-wrapper .ls-nav-left-arrow, #main-slider-wrapper .ls-nav-right-arrow {
+  margin-top: 25px;
+}
+
+#main-slider .sponsor-img {
+  width: 33%;
+}
+
+#menubutton {
+  padding: 21px 26px;
+}
+
+.nav-collapse {
+  width: 100%;
+}
+
+.nav-toggle {
+  float: left;
+  width: 30%;
+  height: 70px;
+  text-align: center;
+  background: #f2f2f2;
+}
+
+@media only screen and (min-width: 48em) {
+  .page-content.columns {
+    padding: 40px 40px 40px 0;
+  }
+}
+
+.rotate {
+  -webkit-transition-duration: 1.5s;
+  -moz-transition-duration: 1.5s;
+  -o-transition-duration: 1.5s;
+  transition-duration: 1.5s;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  transition-property: transform;
+  overflow: hidden;
+}
+
+.rotate:hover {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+}
+
+.round-button {
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto 16px auto;
+}
+.round-button a {
+  display: block;
+  font-family: HelveticaRoundedLTPro-Bd, Arial, sans-serif;
+  font-size: 16px;
+  padding: 24px 0;
+  width: 180px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+}
+.round-button a:hover {
+  background-color: #333333;
+  color: #e67929;
+}
+
+@media only screen and (min-width: 48em) {
+  .row {
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 73.5em) {
+  .row {
+    width: 100%;
+  }
+}
+.row .row {
+  width: 100%;
+}
+
+.section {
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+.section.no-bottom-pad {
+  padding-bottom: 0;
+}
+
+.small-block-grid-3 {
+  width: 100%;
+}
+
+.small-pad-bottom {
+  padding-bottom: 55px;
+}
+@media only screen and (min-width: 48em) {
+  .small-pad-bottom {
+    padding-bottom: 0;
+  }
+}
+
+/*
+.scroll-box {
+	height: 90px;
+	width: 100%;
+	text-align: center;
+	border: 1px solid $lgrey;
+	.small-slider-pane {
+		
+		display: block;
+		margin: 0 auto;
+	}
+	overflow-y: scroll;
+}
+*/
+.small-slider-pane {
+  text-align: center;
+  width: 250px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 550px) {
+  .scroll-box {
+    width: 550px;
+    margin: 0 auto;
+  }
+  .scroll-box .small-slider-pane {
+    display: inline-block;
+  }
+  .scroll-box .small-slider-pane:nth-child(odd) {
+    margin-right: 50px;
+  }
+}
+.side-box {
+  text-align: center;
+}
+@media only screen and (min-width: 48em) {
+  .side-box {
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: left;
+  }
+}
+
+#social .buttons {
+  margin: 0;
+  padding: 0 15%;
+}
+#social h2 {
+  margin-bottom: 40px;
+  font-size: 22px;
+}
+@media only screen and (min-width: 854px) {
+  #social h2 {
+    font-size: 24px;
+    margin-right: 0;
+  }
+}
+@media only screen and (min-width: 48em) {
+  #social h2 {
+    margin-top: 5px;
+    margin-bottom: 0;
+    margin-right: -10px;
+  }
+  #social li {
+    padding-bottom: 0;
+  }
+}
+#social .small-block-grid-3 li {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#sponsors h3 {
+  text-align: center;
+}
+@media only screen and (min-width: 48em) {
+  #sponsors h3 {
+    text-align: left;
+  }
+}
+#sponsors .columns, #sponsors .column {
+  overflow: visible;
+}
+
+@media only screen and (min-width: 48em) {
+  #story .section {
+    padding-top: 30px;
+    padding-bottom: 0;
+  }
+  #story .buttons {
+    padding-top: 0;
+    text-align: center;
+  }
+  #story .large-6 {
+    width: 100%;
+  }
+  #story h1 {
+    margin-bottom: 5px;
+  }
+}
+@media only screen and (min-width: 56.25em) {
+  #story .buttons {
+    text-align: left;
+  }
+  #story .large-6 {
+    width: 50%;
+  }
+}
+#story img {
+  width: 100%;
+}
+
+.team-content {
+  font-size: 0.875em;
+  overflow: hidden;
+  max-height: 0;
+  -o-transition: all 2s linear;
+  -ms-transition: all 2s linear;
+  -moz-transition: all 2s linear;
+  -webkit-transition: all 2s linear;
+  /* ...and now for the proper property */
+  transition: all 2s linear;
+}
+@media only screen and (min-width: 48em) {
+  .team-content {
+    max-height: none;
+  }
+}
+.team-content h5 {
+  color: #e67929;
+}
+.team-content p {
+  margin: 0;
+}
+.team-content .columns {
+  padding-right: 1%;
+  padding-top: 30px;
+}
+@media only screen and (min-width: 48em) {
+  .team-content .columns {
+    padding-top: 0;
+  }
 }
