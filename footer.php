@@ -28,7 +28,7 @@
 						echo '<div class="sponsor-img-div">';
 				
 						while ($my_query->have_posts()) : $my_query->the_post();
-							if ($pcount != 0 && $pcount % 3 == 0) {echo '</div><div class="sponsor-img-div>';}
+							if ($pcount != 0 && $pcount % 3 == 0) {echo '</div><div class="sponsor-img-div">';}
 							$pcount++;
 							$img = wp_get_attachment_image_src( get_post_thumbnail_id(),'full');
 							echo '<a href="'.get_the_content().'"><img class="sponsor-img" src="'.$img[0].'"/></a>';

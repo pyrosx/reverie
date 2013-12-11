@@ -51,19 +51,9 @@ function reverie_theme_support() {
 	add_theme_support('menus');
 	register_nav_menus(array(
 		'primary' => __('Primary Navigation', 'reverie'),
-		'stories' => __('Stories List', 'reverie'),
+//		'stories' => __('Stories List', 'reverie'),
 	));
 	
-	// Add custom background support
-	add_theme_support( 'custom-background',
-	    array(
-	    'default-image' => '',  // background image default
-	    'default-color' => '', // background color default (dont add the #)
-	    'wp-head-callback' => '_custom_background_cb',
-	    'admin-head-callback' => '',
-	    'admin-preview-callback' => ''
-	    )
-	);
 }
 add_action('after_setup_theme', 'reverie_theme_support'); /* end Reverie theme support */
 
