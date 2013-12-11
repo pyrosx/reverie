@@ -17,8 +17,8 @@
 			<h1 class="bgorange">Kate Wingrave&rsquo;s Story</h1>
 			<p>&ldquo;November 2010 is a month I will never forget. This was the month when I was rushed to hospital with severe back pain and came home diagnosed with lymphangioleiomyomatosis, a disease I'd never heard of before.&rdquo;</p>
 			<div class="buttons">
-				<div class="round-button"><a class="bgvlgrey" href="<?php echo get_site_url(); ?>/stories/kate-wingraves-story/">READ MORE</a></div>
-				<div class="round-button"><a class="bgblue" href="<?php echo get_site_url(); ?>/stories/">MORE STORIES</a></div>
+				<div class="round-button"><a class="bgvlgrey" href="<?php echo get_site_url(); ?>/kate-wingraves-story/">READ MORE</a></div>
+				<div class="round-button"><a class="bgblue" href="<?php echo get_site_url(); ?>/category/stories/">MORE STORIES</a></div>
 			</div>
 
 		</div>
