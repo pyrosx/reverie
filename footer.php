@@ -137,7 +137,7 @@
 					<li>Raising awareness of LAM</li>
 					<li>Supporting women living with LAM</li>
 				</ul>
-				<p><a href="<?php echo get_site_url(); ?>/about-lara/">More about LARA ></a></p>
+				<p><a href="<?php echo get_site_url(); ?>/about-lara/">More about LARA ›</a></p>
 			</div>
 			<div class="columns large-3">
 				<h3>DONATE </h3>
