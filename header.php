@@ -11,6 +11,9 @@
 	<title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
 
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+	
+	<meta name="keywords" content="Lymphangioleiomyomatosis, LAM, lung disease, lymph, asthma, Angiomyolipoma, Tuberous Sclerosis, cyst, AML, alveoli, dyspnea, pneumothorax, emphysema, TS, pregnancy" />
+	<meta name="description" content="LAM Australasia Research Alliance funds research into lymphangioleiomyomatosis, a rare and devastating lung disease striking women mostly in their 30s." />
 
 	<!-- Favicon and Feed -->
 	<link rel="shortcut icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/favicon.png">

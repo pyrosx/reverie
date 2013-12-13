@@ -137,7 +137,7 @@
 					<li>Raising awareness of LAM</li>
 					<li>Supporting women living with LAM</li>
 				</ul>
-				<p><a href="todo">Share this site with a friend › </a></p>
+				<p><a href="<?php echo get_site_url(); ?>/about-lara/">More about LARA ></a></p>
 			</div>
 			<div class="columns large-3">
 				<h3>DONATE </h3>
@@ -197,8 +197,7 @@
 
 			<div class="columns large-3 section pull-5">
 				<p>&copy; 2013 Copyright LARA. All rights reserved</p>
-				<p>Privacy Policy</p>
-				<p>Created by Redro Design</p>
+				<p><A href="http://www.redro.com.au/">Created by Redro Design</a></p>
 			</div>
 
 		</div>

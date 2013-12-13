@@ -18,6 +18,13 @@
 				<p><?php the_tags(); ?></p>
 			</footer>
 		</article>
+
+		<?php if( in_category( 'story')) { ?>
+			<div class="buttons">
+				<div class="round-button"><a class="bgblue" href="<?php echo get_site_url(); ?>/category/story/">MORE STORIES</a></div>
+			</div>
+		<?php } ?>
+
 	<?php endwhile; // End the loop ?>
 
 	</div>

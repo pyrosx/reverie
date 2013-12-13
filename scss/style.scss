@@ -1,7 +1,9 @@
 /* Welcome and glad you are using Reverie.
  * This is the main stylesheet loaded by default.
  * Edit the file and have fun.
- * http://themefortress.com/reverie */
+ * http://themefortress.com/reverie
+ 
+ */
 
 // import normalize, stay at top
 @import "normalize";
@@ -53,14 +55,15 @@ ul {
 	padding-left: 10%;
 	padding-right: 10%;
 }
-li { 
-	list-style-image: url(../img/bullet-arrow.png); 
-	p {
-		margin: 0;
-		padding: 0;
-	}
-	
+ul li { 
+	list-style-image: url(../img/bullet-arrow.png); 	
 }
+
+li p {
+	margin: 0;
+	padding: 0;
+}
+	
 
 
 h1 {
@@ -255,7 +258,7 @@ body {
 	}
 
 	.row {
-		p, h1, h2, h3 {
+		p, h1, h2, h3, form {
 			padding-left: 10%;
 			padding-right: 10%;
 			width: auto;
@@ -671,4 +674,20 @@ body {
 	-webkit-transition:$team-trans;
 	/* ...and now for the proper property */
 	transition: $team-trans;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+ 
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
