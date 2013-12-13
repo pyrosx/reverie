@@ -10,7 +10,7 @@
 		<div class="bgvlgrey side-box section">
 			<h1>News & Events</h1>
 			<p>LARA's new Patron, Dr Linda Friedland, is a highly-accomplished doctor, widely-read author, and dynamic public speaker. Dr Friedland travels the world speaking about health and well being.</p>
-			<div class="buttons"><div class="round-button"><a class="bgblue" href="<?php echo get_site_url(); ?>/news/">READ MORE</a></div></div>
+			<div class="buttons"><div class="round-button"><a class="bgblue" href="<?php echo get_site_url(); ?>/category/news/">READ MORE</a></div></div>
 
 		</div>
 		<div class="bgorange side-box section">
