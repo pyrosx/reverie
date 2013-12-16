@@ -84,12 +84,13 @@ h1,h2,h3,h4,h5 {
 		text-align: left;
 	}
 }
-
+/*
 p.larger {
 	@media #{$large} {
-		font-size: emCalc(21px);
+		font-size: emCalc(19px);
 	}
 }
+*/
 p.smaller {
 	font-size: emCalc(12px);
 }
@@ -617,7 +618,8 @@ body {
 			padding-bottom: 0;
 		}
 		.buttons {
-			padding-top: 0;
+			padding-top: 20px;
+			padding-bottom: 20px;
 			text-align: center;
 		}
 		
@@ -625,7 +627,7 @@ body {
 			width: 100%;
 		}
 		h1 {
-			margin-bottom: 5px;
+//			margin-bottom: 5px;
 		}
 	}	
 	@media #{$medium} {
