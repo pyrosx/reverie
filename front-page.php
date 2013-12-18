@@ -9,7 +9,7 @@
 		<div class="row section" >
 			<div class="columns large-7">
 				<h1>LAM Australasia Research Alliance (LARA) is a not-for-profit organisation run wholly by volunteers. </h1>
-				<p class="larger">Our mission is to improve the health prospects of women living with lymphangioleiomyomatosis (LAM). A fatal disease, LAM is unique to women.</p>
+				<p class="larger">Our mission is to improve the health prospects of women living with lymphangioleiomyomatosis (LAM).</p>
 				<div class="buttons">
 					<div class="round-button"><a class="bgblue" href="<?php echo get_site_url(); ?>/about-lara/">Read More</a></div>
 					<div class="round-button"><a class="bgorange" href="<?php echo get_site_url(); ?>/contact-us/">Contact Us</a></div>
