@@ -30,9 +30,9 @@ $rem-base: 16px;
 
 // $include-html-grid-classes: $include-html-classes;
 
-$row-width: rem-calc(1140);
-$column-gutter: rem-calc(30);
-// $total-columns: 12;
+$row-width: rem-calc(1024);
+$column-gutter: rem-calc(0);
+$total-columns: 24;
 
 // We use these to control various global styles
 $body-bg: #f7f7f7;
@@ -98,7 +98,7 @@ $body-font-family: 'Open Sans', "Helvetica Neue", "Helvetica", Helvetica, Arial,
 // $medium: $medium-up;
 // $large: $large-up;
 
-//We use this as cursors values for enabling the option of having custom cursors in the whole site's stylesheet
+//We use this as cursors values for enabling the option of having custom cursors in the whole sites stylesheet
 // $cursor-crosshair-value: crosshair;
 // $cursor-default-value: default;
 // $cursor-pointer-value: pointer;
@@ -415,7 +415,7 @@ $inline-list-default-float-margin: rem-calc(-22);
 // $joyride-tip-radius: 4px;
 // $joyride-tip-position-offset: 22px;
 
-// Here, we're setting the tip dont styles
+// Here, were setting the tip dont styles
 // $joyride-tip-font-color: #fff;
 // $joyride-tip-font-size: rem-calc(14);
 // $joyride-tip-header-weight: bold;
@@ -930,11 +930,11 @@ $panel-margin-bottom: rem-calc(20);
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-// $topbar-bg-color: #333;
+// $topbar-bg-color: #191919;
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
-// $topbar-height: 45px;
+// $topbar-height: 130px;
 // $topbar-margin-bottom: 0;
 
 // Control Input height for top bar

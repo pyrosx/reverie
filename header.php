@@ -1,91 +1,99 @@
-<!doctype html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" <?php language_attributes(); ?> > <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" <?php language_attributes(); ?> > <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" <?php language_attributes(); ?> "> <![endif]-->
-<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
-<!--[if gt IE 8]><!--> <html class="no-js" <?php language_attributes(); ?> > <!--<![endif]-->
-<head>
-	<meta charset="<?php bloginfo('charset'); ?>">
+<?php get_template_part('head'); ?>
 
-	<title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
-
-	<!-- Mobile viewport optimized: j.mp/bplateviewport -->
-	<meta name="viewport" content="width=device-width" />
-
-	<!-- Favicon and Feed -->
-	<link rel="shortcut icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
-	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> Feed" href="<?php echo home_url(); ?>/feed/">
-
-	<!--  iPhone Web App Home Screen Icon -->
-	<link rel="apple-touch-icon" sizes="72x72" href="<?php echo get_template_directory_uri(); ?>/img/devices/reverie-icon-ipad.png" />
-	<link rel="apple-touch-icon" sizes="114x114" href="<?php echo get_template_directory_uri(); ?>/img/devices/reverie-icon-retina.png" />
-	<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/img/devices/reverie-icon.png" />
-
-	<!-- Enable Startup Image for iOS Home Screen Web App -->
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/mobile-load.png" />
-
-	<!-- Startup Image iPad Landscape (748x1024) -->
-	<link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/img/devices/reverie-load-ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)" />
-	<!-- Startup Image iPad Portrait (768x1004) -->
-	<link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/img/devices/reverie-load-ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)" />
-	<!-- Startup Image iPhone (320x460) -->
-	<link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/img/devices/reverie-load.png" media="screen and (max-device-width: 320px)" />
-
-<?php wp_head(); ?>
-
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/responsive-nav.css">
+	<script src="<?php echo get_template_directory_uri(); ?>/js/responsive-nav.min.js"></script>
+	
 </head>
 
-<body <?php body_class('antialiased'); ?>>
+<?php 
+	global $bar;
+	global $barDisplay;
+	global $currentPageURL;
+	
+	global $post;         // load details about this page
+	if (is_page()) {
 
-<header class="contain-to-grid">
-	<!-- Starting the Top-Bar -->
-	<nav class="top-bar" data-topbar>
-	    <ul class="title-area">
-	        <li class="name">
-	        	<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-	        </li>
-			<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-			<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-	    </ul>
-	    <section class="top-bar-section">
-	    <?php
-	        wp_nav_menu( array(
-	            'theme_location' => 'primary',
-	            'container' => false,
-	            'depth' => 0,
-	            'items_wrap' => '<ul class="left">%3$s</ul>',
-	            'fallback_cb' => 'reverie_menu_fallback', // workaround to show a message to set up a menu
-	            'walker' => new reverie_walker( array(
-	                'in_top_bar' => true,
-	                'item_type' => 'li',
-	                'menu_type' => 'main-menu'
-	            ) ),
-	        ) );
-	    ?>
-	    <?php
-	    	// Uncomment the following to enable the right menu (additional menu)
+		$barDisplay = get_the_title($post->post_parent);
+		$bar = strtolower(str_replace(" ", "-", $barDisplay));
+		$currentPageURL = get_site_url().'/'.$bar;
+		if ($post->post_parent) {
+			$currentPageURL .= '/'.get_post( $post )->post_name;
+		}
+	} else if (is_category()) {
+	
+		$disp = explode("&#8211;",single_cat_title('',false));
+		$barDisplay = $disp[0];
+		
+		$slug = explode("_",get_category(get_query_var('cat'))->slug);
+		$bar = $slug[0];
+		
+		$currentPageURL = get_site_url().'/category/'.$bar.'_'.$slug[1];		
+	}
+	
+	global $url, $cat;
+	$url = get_site_url().'/'.$bar;
+	$cat = get_site_url().'/category/'.$bar.'_';
+
+	// echo's the <a> tag, checks it against the current url, replaces with <p class="selected"> class where necessary
+	function print_link($page) {
+		
+		global $currentPageURL;
+		
+		if (!strcmp($page,$currentPageURL)) {
+			echo'<p class="selected" >';
+		} else {
+			echo '<a href="'.$page.'">';
+		}
+	}
+	
+
+?>
+<body 
+	<?php body_class('antialiased'); ?> 
+	id="<?php echo $bar;?>" 
+	style="background-image: url('<?php 
+		if (($bg_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID))) == false) 
+			$bg_url = get_template_directory_uri().'/img/bg-red.png';
 			
-	    	/*
-	        wp_nav_menu( array(
-	            'theme_location' => 'additional',
-	            'container' => false,
-	            'depth' => 0,
-	            'items_wrap' => '<ul class="right">%3$s</ul>',
-	            'walker' => new reverie_walker( array(
-	                'in_top_bar' => true,
-	                'item_type' => 'li',
-	                'menu_type' => 'main-menu'
-	            ) ),
-	        ) );
-	        */
-	    ?>
-	    </section>
-	</nav>
-	<!-- End of Top-Bar -->
+		echo $bg_url;
+	?>')"
+>
+
+<div id="wrapper">
+<div id="content_wrapper"> 
+
+<header class="contain-to-grid" id="top">
+
+	<div class="row">	       
+		<div class="small-8 medium-5 large-3 columns" id="logo">
+			<a href="<?php echo get_site_url();?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png"/></a>
+		</div>
+
+		<div class="small-10 medium-5 large-3 columns" id="ident">
+			<p class="primary-color"><?php echo $barDisplay;?></p>
+			<p class="sub"><a href="<?php echo get_site_url();?>">Choose a small bar</a></p>
+			<?php get_template_part('socialicons');?>
+		</div>
+
+		<div class="show-for-large-up medium-14 large-18 columns primary-color" id="bignav">
+			<ul class="small-block-grid-10">
+				<?php get_template_part("menu"); ?>
+			</ul>
+		</div>
+
+		<!--- Mobile Nav --->
+		<div class="small-6 columns hide-for-large-up" id="smallnavtoggle">
+			<a id="toggle"><i class="fa fa-bars primary-color"></i></a>
+		</div>
+		
+		<nav class=" hide-for-large-up nav-collapse columns primary-color" id="smallnav">
+			<ul>
+				<?php get_template_part("menu"); ?>
+			</ul>
+		</nav>
+	</div>
+	
+
 </header>
 
-<!-- Start the main container -->
-<div class="container" role="document">
-	<div class="row">
+<div class="container">

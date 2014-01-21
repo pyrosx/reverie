@@ -1,7 +1,7 @@
 <?php
 /*
-Author: Zhen Huang
-URL: http://themefortress.com/
+Author: Daniel Beach
+URL: http://pyrosx.com/
 
 This place is much cleaner. Put your theme specific codes here,
 anything else you may wan to use plugins to keep things tidy.
@@ -32,10 +32,6 @@ require_once('lib/foundation.php'); // load Foundation specific functions like t
 */
 require_once('lib/nav.php'); // filter default wordpress menu classes and clean wp_nav_menu markup
 /*
-5. lib/presstrends.php
-    - add PressTrends, tracks how many people are using Reverie
-*/
-require_once('lib/presstrends.php'); // load PressTrends to track the usage of Reverie across the web, comment this line if you don't want to be tracked
 
 /**********************
 Add theme supports
@@ -60,11 +56,10 @@ function reverie_theme_support() {
     // Add menu support. http://codex.wordpress.org/Function_Reference/register_nav_menus
     add_theme_support('menus');
     register_nav_menus(array(
-        'primary' => __('Primary Navigation', 'reverie'),
-        'additional' => __('Additional Navigation', 'reverie'),
-        'utility' => __('Utility Navigation', 'reverie')
+        'primary' => __('Primary Navigation', 'reverie')
     ));
 
+/*
     // Add custom background support
     add_theme_support( 'custom-background',
         array(
@@ -75,9 +70,11 @@ function reverie_theme_support() {
             'admin-preview-callback' => ''
         )
     );
+*/
 }
 add_action('after_setup_theme', 'reverie_theme_support'); /* end Reverie theme support */
 
+/*
 // create widget areas: sidebar, footer
 $sidebars = array('Sidebar');
 foreach ($sidebars as $sidebar) {
@@ -99,7 +96,7 @@ foreach ($sidebars as $sidebar) {
         'after_title' => '</h4>'
     ));
 }
-
+*/
 // return entry meta information for posts, used by multiple loops.
 if(!function_exists('reverie_entry_meta')) :
     function reverie_entry_meta() {
@@ -107,4 +104,7 @@ if(!function_exists('reverie_entry_meta')) :
         echo '<time class="updated" datetime="'. get_the_time('c') .'" pubdate>'. get_the_time('F jS, Y') .'</time>';
     }
 endif;
+
+
 ?>
+
