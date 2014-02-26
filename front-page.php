@@ -1,41 +1,47 @@
 <?php get_template_part('head'); ?>
 
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/responsive-nav.css">
-	<script src="<?php echo get_template_directory_uri(); ?>/js/responsive-nav.min.js"></script>
-	
 </head>
 
 <body <?php body_class('antialiased'); ?> id="frontpage">
 
-<div id="title">
+<div id="title" class="snap">
 	<h1>CHOOSE YOUR SMALL BAR</h1>
 </div>
 
-
-<ul class="medium-block-grid-3 hide-for-small-only" id="coastergrid">
-	<?php get_template_part('coasters');?>
-</ul>
+<ul id="coastergrid">
+	<li><div class="bar erskine-street snap">
+		<a href="<?php echo get_site_url();?>/erskine-street" class="hover">
+		<img src="<?php echo get_template_directory_uri(); ?>/img/coaster-red.png" alt=""/>
+		<p class="color">ERSKINE STREET (CBD)</p></a>
+		<p>48 ERSKINE STREET, </p>
+		<p>SYDNEY, 2000</p>
+		<?php get_template_part('socialicons');?>
+	</div></li>
+	<li><div class="bar crows-nest snap">
+		<a href="<?php echo get_site_url();?>/crows-nest" class="hover">
+		<img src="<?php echo get_template_directory_uri(); ?>/img/coaster-purple.png" alt=""/>
+		<p class="color">CROWS NEST</p></a>
+		<p>85 WILLOUGHBY ROAD, </p>
+		<p>CROWS NEST, 2065</p>
+		<?php get_template_part('socialicons');?>
+	</div></li>
+	<li><div class="bar kirribilli snap">
+		<a href="<?php echo get_site_url();?>/kirribilli" class="hover">
+		<img src="<?php echo get_template_directory_uri(); ?>/img/coaster-blue.png" alt=""/>
+		<p class="color">KIRRIBILLI</p></a>
+		<p>1-3 BROUGHTON STREET, </p>
+		<p>KIRRIBILLI, 2061</p>
 	
-<ul class="hide-for-medium-up" id="coasterslider" data-orbit data-options="
-	
-	timer_speed: 1500;
-	animation_speed: 500;
-	navigation_arrows: true;
-	slide_number: false;
-	timer: true;
-	bullets: false;
-	resume_on_mouseout: true;
-	
-">
-	<?php get_template_part('coasters');?>
+		<?php get_template_part('socialicons');?>
+	</div></li>
 </ul>
 	
 <?php wp_footer(); ?>
 
 <script>
-	(function($) {
-		jQuery(document).foundation();
-	})(jQuery);
+(function($) {
+	jQuery(document).foundation();
+})(jQuery);
 </script>
 
 </body>

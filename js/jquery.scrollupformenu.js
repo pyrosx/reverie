@@ -14,8 +14,8 @@
 
 	var pluginName = "scrollUpMenu";
 	var defaults = {
-			waitTime: 200,
-			transitionTime: 150,
+			waitTime: 20,
+			transitionTime: 250,
 			menuCss: { 'position': 'fixed', 'top': '0'}
 	};
 

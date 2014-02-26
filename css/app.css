@@ -7992,3 +7992,35 @@ th.hide-for-touch {
 .touch th.show-for-touch {
   display: table-cell !important;
 }
+
+@media only screen and (min-width: 40.063em) {
+  #coastergrid {
+    display: block;
+    padding: 0;
+    margin: 0 -0.625rem;
+    *zoom: 1;
+  }
+  #coastergrid:before, #coastergrid:after {
+    content: " ";
+    display: table;
+  }
+  #coastergrid:after {
+    clear: both;
+  }
+  #coastergrid > li {
+    display: inline;
+    height: auto;
+    float: left;
+    padding: 0 0.625rem 1.25rem;
+  }
+  #coastergrid > li {
+    width: 33.33333%;
+    padding: 0 0.625rem 1.25rem;
+  }
+  #coastergrid > li:nth-of-type(n) {
+    clear: none;
+  }
+  #coastergrid > li:nth-of-type(3n+1) {
+    clear: both;
+  }
+}

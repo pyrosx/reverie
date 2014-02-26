@@ -1,7 +1,4 @@
 <?php get_template_part('head'); ?>
-
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/responsive-nav.css">
-	<script src="<?php echo get_template_directory_uri(); ?>/js/responsive-nav.min.js"></script>
 	
 </head>
 
@@ -46,27 +43,33 @@
 		}
 	}
 	
-
 ?>
 <body 
 	<?php body_class('antialiased'); ?> 
 	id="<?php echo $bar;?>" 
+	
+	
+>
+
+<!-- 
 	style="background-image: url('<?php 
 		if (($bg_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID))) == false) 
 			$bg_url = get_template_directory_uri().'/img/bg-red.png';
 			
 		echo $bg_url;
 	?>')"
->
+ -->
 
+<!-- 
 <div id="wrapper">
 <div id="content_wrapper"> 
+ -->
 
 <header class="contain-to-grid" id="top">
 
 	<div class="row">	       
 		<div class="small-8 medium-5 large-3 columns" id="logo">
-			<a href="<?php echo get_site_url();?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png"/></a>
+			<a href="<?php echo get_site_url();?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logo2.png" width="89" height="91"/></a>
 		</div>
 
 		<div class="small-10 medium-5 large-3 columns" id="ident">
@@ -76,7 +79,7 @@
 		</div>
 
 		<div class="show-for-large-up medium-14 large-18 columns primary-color" id="bignav">
-			<ul class="small-block-grid-10">
+			<ul id="bignavul">
 				<?php get_template_part("menu"); ?>
 			</ul>
 		</div>
@@ -86,14 +89,22 @@
 			<a id="toggle"><i class="fa fa-bars primary-color"></i></a>
 		</div>
 		
-		<nav class=" hide-for-large-up nav-collapse columns primary-color" id="smallnav">
-			<ul>
-				<?php get_template_part("menu"); ?>
-			</ul>
-		</nav>
 	</div>
-	
 
+	<div class="row hide-for-medium-up" id="whatsontoclose">
+		<div class="columns whatson">
+			<div id="whatsonclose"><a href="#"><i class="fa fa-times"></i></a></div>
+			<?php get_template_part("whatson"); ?>
+		</div>
+	</div>
+
+	<nav class=" hide-for-large-up nav-collapse row primary-color" id="smallnav">
+		<ul>
+			<?php get_template_part("menu"); ?>
+		</ul>
+	</nav>
 </header>
 
+
+		
 <div class="container">

@@ -110,14 +110,12 @@ function reverie_scripts_and_styles() {
     // modernizr (without media query polyfill)
     wp_register_script( 'reverie-modernizr', get_template_directory_uri() . '/js/modernizr.js', array(), '2.6.2', false );
 
-    // register Google font
-    wp_register_style('google-font', 'http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Lora:400,700|Droid+Sans+Mono');
 
     // ie-only style sheet
     wp_register_style( 'reverie-ie-only', get_template_directory_uri() . '/css/ie.css', array(), '' );
 
     // comment reply script for threaded comments
-    if( get_option( 'thread_comments' ) )  { wp_enqueue_script( 'comment-reply' ); }
+//    if( get_option( 'thread_comments' ) )  { wp_enqueue_script( 'comment-reply' ); }
     
     // adding Foundation scripts file in the footer
     wp_register_script( 'reverie-js', get_template_directory_uri() . '/js/foundation.min.js', array( 'jquery' ), '', true );
@@ -130,7 +128,6 @@ function reverie_scripts_and_styles() {
 
     // enqueue styles and scripts
     wp_enqueue_script( 'reverie-modernizr' );
-    wp_enqueue_style( 'google-font' );
     wp_enqueue_style('reverie-ie-only');
     /*
     I recommend using a plugin to call jQuery
@@ -142,11 +139,16 @@ function reverie_scripts_and_styles() {
     wp_enqueue_script( 'reverie-js' );
     wp_enqueue_script( 'html5shiv' );
 
+	wp_register_style( 'customnav-css', get_template_directory_uri() . '/css/responsive-nav.css', array(), '' );
+	wp_enqueue_style( 'customnav-css' );
+    wp_register_script( 'customnav', get_template_directory_uri() . '/js/jquery.customnav.js', array( ), '', false );
+    wp_enqueue_script( 'customnav' );
 
-    wp_enqueue_script( 'scrollupformenu' );
-    wp_register_script( 'scrollupformenu', get_template_directory_uri() . '/js/jquery.scrollupformenu.js', array( 'jquery' ), '', false );
-    wp_enqueue_script( 'panelsnap' );
-    wp_register_script( 'panelsnap', get_template_directory_uri() . '/js/jquery.panelSnap.js', array( 'jquery' ), '', false );
+    wp_register_script( 'parallax', get_template_directory_uri() . '/js/jquery.parallax-1.1.3.js', array( ), '', false );
+    wp_enqueue_script( 'parallax' );
+
+    wp_register_script( 'lazyload', get_template_directory_uri() . '/js/jquery.review-1.0.0.min.js', array( ), '', false );
+    wp_enqueue_script( 'lazyload' );
 
   }
 }
