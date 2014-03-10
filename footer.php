@@ -1,11 +1,5 @@
 </div><!-- Container End -->
 
-<!-- 
-</div>
-</div> <!~~ wrapper ~~>
- -->
-
-<!-- <div id="footer_wrapper"> -->
 <footer class="row" id="bottom">
 	<div class="medium-16 large-18 columns show-for-medium-up whatson">
 		<?php get_template_part('whatson'); ?>		
@@ -19,7 +13,7 @@
 	</div>
 
 </footer>
-<!-- </div> -->
+
 
 <?php wp_footer(); ?>
 
@@ -33,11 +27,6 @@ resrc = {
 </script>
 <script src="//use.resrc.it"></script>
 <script>
-
-	jQuery(window).load(function(){
-		jQuery('.preloaderer').delay(200).fadeOut(500);
-	});	
-
 
 	(function($) {
 	
@@ -70,11 +59,7 @@ resrc = {
 					linksWidth += $(this).width();
 					menuItems++;
 				});
-
 				var padding = (total-linksWidth)/(menuItems+1);
-
-				console.log(total);
-				console.log(padding);
 			
 				$('#bignav li').css('padding-left',padding);
 			}			
@@ -85,8 +70,8 @@ resrc = {
 			}
 		});
 		
-		// and manually call, just to make sure
 		$(window).resize();
+		
 		
 		$(document).foundation();
 		
@@ -133,6 +118,12 @@ resrc = {
 		
 	})(jQuery);
 	
+
+	jQuery(window).load(function(){
+		// fully loaded (we've got snacks and supplies)
+		jQuery(window).resize();
+		
+	});
 
 </script>
 

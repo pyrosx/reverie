@@ -71,6 +71,8 @@ $bottomheight: 70px;
 $navborder: 1px solid #4d4d4d;
 $offwhite: #b3b3b3;
 $textshadow: 4px 4px 5px #1d1d1d;
+$woodbg: #e8e1d8 url($resrcpath+'s=w360/o=20(80)/'+$imgpath+'bg-lightwood.jpg') 50% 0 repeat;
+$wood2bg: #e8e1d8 url($resrcpath+'s=w360/o=20(80)/'+$imgpath+'bg-wood2.jpg') 50% 0 repeat;
 
 .row, .top-bar {
 	min-width:100% !important; 
@@ -117,37 +119,6 @@ body, html {
 	margin: 0;
 	padding: 0;
 }
-@media #{$medium-up} {
-	div#wrapper {
-		width: 100%;
-		min-height: 100%;
-		//height: auto !important;
-		height: 100%;
-		margin: 0px 0px (0-$bottomheight) 0px;
-		overflow: scroll;
-	}
-	div#footer_wrapper {
-		width: 100%;
-		height: $bottomheight;
-	}
-	div#content_wrapper {
-		width: 100%;
-		padding: 0px 0px $bottomheight 0px;
-	
-	}
-	div#footer_inner_wrapper, div#content_inner_wrapper {
-		margin: 0px auto;
-	}
-
-	header#top {
-		position: fixed;
-	}
-	footer#bottom {
-		position: fixed;
-		bottom: 0;
-	}
-
-}
 
 body#frontpage {
 
@@ -157,7 +128,6 @@ body#frontpage {
 	background-attachment: fixed;
 	
 	font-family: $fontnormal;
-	
 	
 	#coastergrid {	
 		list-style: none;	
@@ -219,9 +189,6 @@ body#frontpage {
 	}
 	
 }
-.container {
-	padding-bottom: $bottomheight;
-}
 #content {
 	p, h1, h2, h3, h4, h5, h6 {
 		width: 90%;
@@ -281,13 +248,7 @@ footer#bottom {
 	margin: 0;
 	text-align: center;
 	z-index: 101;
-	
-	@media #{$medium-up} {
-		box-shadow: 0px 20px 40px 30px rgba(0,0,0,0.8);
-		-moz-box-shadow: 0px 20px 40px 30px rgba(0,0,0,0.8);
-		-webkit-box-shadow: 0px 20px 40px 30px rgba(0,0,0,0.8);
-	}
-	
+		
 	a  {
 		@extend .pop;
 	}
@@ -354,8 +315,17 @@ footer#bottom {
 
 	
 	@media #{$medium-up} {
+	
 		padding: 0 3%;
 		text-align: left;
+		
+		position: fixed;
+		bottom: 0;
+
+		box-shadow: 0px 20px 40px 30px rgba(0,0,0,0.8);
+		-moz-box-shadow: 0px 20px 40px 30px rgba(0,0,0,0.8);
+		-webkit-box-shadow: 0px 20px 40px 30px rgba(0,0,0,0.8);
+
 		.whatson {
 			padding-bottom: 0px;
 			border: none;
@@ -368,7 +338,14 @@ footer#bottom {
 		}
 	}
 }
-	
+
+// tied to fixed footer set just above 
+@media #{$medium-up} {
+	.container {
+		margin-bottom: $bottomheight;
+	}
+}	
+
 header#top {
 	z-index: 100;
 	background: transparent;	
@@ -386,14 +363,14 @@ header#top {
 	#bignav {
 		border: none;
 		ul {
-			width:auto;
+/* 			width:auto; */
 			list-style: none;
 			padding-top: 52px;
 			margin: 0;
 			li {
 				float: left;
-				width: auto;
-				// temp only - jquery fixes this
+/* 				width: auto; */
+				// temp only - jquery adjusts padding
 				padding-left: 0px;
 				padding-right: 0px;
 
@@ -405,13 +382,6 @@ header#top {
 					font-size: 17px;
 					font-weight: bold;					 
 				}
-
-/* 
-				letter-spacing: -0.5px;
-				@media only screen and (min-width: 1100px) {	
-					letter-spacing: 0px;
-				}
- */
 			}
 		}
 		 
@@ -494,7 +464,8 @@ header#top {
 	.socialicons {
 		padding-top: 10px;
 		.circle {
-			background-color: transparent;
+/* 			background-color: transparent !important; */
+			background: none !important;
 			width: 24px;
 			border: none;
 			text-align: center;
@@ -511,21 +482,332 @@ header#top {
 		}
 	}
 }
-
-#menupageinitial {
-
-	$img: 'tmp/food1.jpg';
-//	background-image:url($resrcpath+'s=w320,pd2/o=20(80)/'+$imgpath+$img);
-	background-image:url('../img/'+$img);
+.food1bg, .food2bg {
 	background-position: 50% 0;
 	background-attachment: fixed;
 	background-repeat: no-repeat no-repeat;
-	background-size: 100%;
+	background-size: cover;
+}
+.food1bg {
+	$img: 'tmp/food1.jpg';
+	background-image:url($resrcpath+'o=100/'+$imgpath+$img);
+}
+.food2bg {
+	$img: 'tmp/food2.jpg';
+	background-image:url($resrcpath+'o=100/'+$imgpath+$img);	 	
+}
+.woodbg {
+	background: $woodbg;
+}
+.wood2bg {
+	background: $wood2bg;
+}
+#menupage {
+	background: $headfootbackground;
+
+	.menucontent {
+		width: 90%;
+		max-width: 1000px;
+		margin: 0 auto;
+		position: relative;
+		padding-top: 20px;	
+
+		#legend {
+			float: left;
+			color: white;
+			font-family: $fontcond;
+			font-size: 14px;
+			font-weight: bold;
+			text-align: center;
+			padding-top: 30px;
+			
+			@media #{$medium-up} {
+				padding-top: 0;
+				position: absolute;
+				top: 35px !important;
+				left: 52.5%;
+			}
+		}
+		
+		.glutenfree, .vegetarian {
+			border-radius: 50%;
+			display: inline-block;
+			text-align: center;
+			vertical-align: middle;
+			width: 22px;
+			height: 22px;
+			line-height: 22px;
+			
+			font-family: $fontnormal;
+			font-size: 14px;
+			color: white;
+			font-weight: bold;
+		}		
+		.vegetarian {
+			background-color: #80874f !important;
+		}
+		
+		h1, h2 {
+			font-family: $fontcardenio;
+			font-weight: normal;
+			clear: both;
+			margin-bottom: 20px;
+			
+			@media #{$medium-up} {
+				text-align: left;
+			}			
+		}
+		h1 {
+			font-size: 36px;
+			line-height: 46px;
+		}
+		h2 {
+			font-size: 24px;
+		}
+		
+		.menucolumn {
+			float: left;			
+			overflow: hidden;
+			width: 100%;
+			margin-left: 0;
+			margin-right: 0;
+			position: relative;
+			
+			@media #{$medium-up} {
+				float: left;
+				width: 47.5%;
+				margin-left: 0;
+				margin-right: 2.5%;
+			}
+			@media #{$large-up} {
+				width: 475px;
+				margin-right: 50px;
+				margin-left: 0;
+				&:nth-child(odd) {
+					margin-right: 0;
+				}
+			}
+		}
+		.menuitem {
+			overflow: hidden;
+			width: 100%;
+			padding-bottom: 20px;			
+			
+			
+			.item {
+				padding-top: 3px;
+				padding-bottom: 6px;
+				font-family: $fontcond;
+				font-weight: bold;
+				color: white;
+				font-size: 21px;
+				line-height: 24px;
+				margin-left: 54px;
+				vertical-align: middle;
+			}
+			.desc {
+				color: white;
+				font-family: $fontbook;
+				font-size: 18px;
+				line-height: 21px;
+				margin-left: 54px;
+			}
+			.glutenfree, .vegetarian {
+				margin-right: 5px;
+			}
+			
+		}
+		
+		&.lunch .menuitem {
+			.item, .desc {
+				margin-left: 0;
+			}
+			.price {
+				display: none;
+			}
+		}
+		
+		&.smalls, &.functions {
+			.menuitem {
+				.price {
+					display: block;
+					float: left;
+					color: white;
+					font-family: $fontcond;
+					font-size: 16px;
+					font-weight: bold;
+					line-height: 44px;
+					text-align: center;
+					vertical-align: middle;
+					margin-right: 10px;
+				
+					border-radius: 50%;
+					width: 44px;
+					height: 44px;
+				}
+			}
+		}
+		&.functions {
+			max-width: 700px;
+			#legend {
+				right: 0;
+				left: inherit;
+			}
+
+			.menuitem {
+				.item {
+					display: none;
+				}
+				.desc {
+					margin-left: 0;
+					margin-right: 60px;
+				}
+				.price {
+					float: right;
+				}
+			}
+		}
+		&.wine {	
+			table {
+				width: 500px;
+				margin: 0 auto;
+			
+				background: transparent;
+				border: none;
+				tr {
+					background: transparent;
+					td {
+						color: white;
+						text-align: left;
+						padding: 0;
+						font-family: $fontbook;
+						line-height: 24px;	
+						font-size: 14px;
+					}
+					th {
+						color: inherit;
+						font-weight: normal;
+						font-size: 36px;
+						font-family: $fontcardenio;
+				
+						text-align: left;
+				
+						padding: 30px 0 10px 0;
+					}
+				}
+			
+			}
+
+			overflow: scroll;
+			-webkit-overflow-scrolling: touch;
+
+			@media #{$medium-up} {
+				overflow: visible;		
+				table {
+					width: 700px;	
+					tr td {
+						font-size: 18px;
+					}
+				}
+				
+			}
+		}
+	}
 	
+	.gallerytitle {
+		margin-top: 100px;
+		height: 120px;
+		h1 {
+			font-family: $fontcardenio;
+			color: white;
+			font-size: 48px;
+			line-height: 120px;
+			text-shadow: none;
+		}
+	 }
+	 .gallery {
+		max-width: 768px;
+		margin: 0 auto;
+		padding-top: 90px;
+
+		.galleryitem {
+			overflow: hidden;
+			padding-bottom: 30px;
+			
+			color: black;
+			
+			text-align: center;
+			margin: 0 auto;
+			width: 90%;
+			max-width: 350px;
+			
+			@media only screen and (min-width: 768px) {	
+				float: left;
+				&:nth-child(odd) {
+					margin-right: 68px;
+				}
+			}
+						
+			.item {
+				line-height: 40px;
+				font-family: $fontcond;
+				font-weight: bold;
+				font-size: 21px;
+			}
+			.desc {
+				line-height: 24px;
+				font-size: 18px;
+				font-family: $fontbook;
+			}
+		}
+	 }
+	 .food2bg {
+	 	height: 315px;
+	 }
+	.toppanel {
+		height: $topheight+200px;
+		margin-top: 0-$topheight;
+		background-position: 50% 200%;
+	}
+	ul#menuselection {
+		margin: 0;
+		list-style-type: none;
+		text-align: center;
+		border-bottom: $navborder;
+	
+		li {
+			font-size: 24px;
+			font-family: $fontcond;
+			font-weight: bold;
+			text-align: center;
+			text-transform: uppercase;
+			color: white;
+			padding-right: 3%;
+			a {
+				color: inherit;
+				@extend .pop;
+			}
+		}
+		
+		@media #{$medium-up} {
+			height: 120px;
+			li {
+				font-size: 32px;
+				display: inline;
+				line-height: 100px;
+			}
+		}
+		@media #{$large-up} {
+			li {
+				font-size: 38px;
+				line-height: 120px;
+			}
+		}
+	}
+}
+#menupageinitial {
 	
 	text-align: center;
-
-
 
 	h2 {
 		font-weight: bold;
@@ -539,56 +821,58 @@ header#top {
 			text-shadow: none;
 		}
 		
-		&:first-child {
-			padding-top: 110px;
-		}
 	}
 	ul {
-		height: 100px;
+		min-height: 100px;
+		margin: 0;
 		li {
 			a {
 				text-transform: uppercase;
 				font-weight: bold;
-				font-family: $fontnormal;
+				font-family: $fontcond;
 				color: white;
-				font-size: 65px;
+				font-size: 30px;
 				text-shadow: $textshadow;
+				@extend .pop;
 			}
 
 			vertical-align: middle;
-			font-size: 65px;
-
-			line-height: 100px;
-
+			font-size: 30px;
 			list-style-type: none;
-			display: inline;
-			padding-left: 2%;
-			padding-right: 2%;
 			
-			border-right: 1px solid white;
+		
 			&:last-child {
 				border-right: none;
 			}
 		}
-		
+	}
+
+	@media #{$medium-up} {	
+		h2:first-child {
+			padding-top: 110px;
+		}
+		ul li {
+			font-size: 40px;
+			display: inline;
+			line-height: 100px;
+			border-right: 1px solid white;
+			padding-left: 2%;
+			padding-right: 2%;
+
+			a {
+				font-size: 40px;
+			}
+		}
+	}
+	@media #{$large-up} {
+		ul li {
+			font-size: 65px;
+			a {		
+				font-size: 65px;
+			}
+		}
 	}
 }
-.preloaderer {
-	position:fixed;
-	top: 0;
-	bottom: 0;
-	background: $headfootbackground;
-	z-index: 9999999;
-	h1 {
-		color: white;
-		size: 90px;
-		text-align: center;	
-	}
-	@extend .centerbox;
-}
-
-
-
 
 #sliderpage {
 	div {
@@ -639,7 +923,7 @@ header#top {
 	}
 
 	.pagecontent {
-		background: #e8e1d8 url($resrcpath+'s=w360/o=20(80)/'+$imgpath+'bg-lightwood.jpg') 50% 0 repeat;
+		background: $woodbg;
 		padding: 20px 0;
 
 		h1 {
@@ -706,7 +990,9 @@ ul.socialicons {
 	 
 	padding: 0;
 	margin: 0;
-	
+	li {
+		text-align: center;
+	}
 	div.circle {
 		border-radius: 50%;
 		width: 36px;
@@ -743,10 +1029,11 @@ ul.socialicons {
 	border-right: none;
 	display: block;
 	#whatsonclose {
+		font-size: 24px;
 		position: absolute;
 		top:0;
 		right: 0;
-		padding-right: 5px;
+		padding-right: 10px;
 		color: white;
 	}
 }
@@ -1107,44 +1394,44 @@ $kirribilli-color: #87cfde;
 	}
 }
 body#erskine-street {
-	.primary-color, .primary-color .selected {
+	.primary-color, 
+	.primary-color .selected, 
+	#menuselection .current_page_item, 
+	.menucontent h1, .menucontent h2,
+	#top .socialicons .circle i, {
 		color: $erskine-street-color !important;
 	}
-	.primary-background {
-		background-color: $erskine-street-color;
-	}
-	#top .socialicons .circle i {
-		color: $erskine-street-color !important;
-	}
-	.orbit-bullets li {
-		background-color: $erskine-street-color;
+	.primary-background, 
+	.glutenfree,
+	.menucontent .price, {
+		background-color: $erskine-street-color !important;
 	}
 }
 body#crows-nest {
-	.primary-color, .primary-color .selected {
-		color: $crows-nest-color !important;
-	}
-	.primary-background {
-		background-color: $crows-nest-color;
-	}
+	.primary-color, 
+	.primary-color .selected, 
+	#menuselection .current_page_item, 
+	.menucontent h1, .menucontent h2,
 	#top .socialicons .circle i {
 		color: $crows-nest-color !important;
 	}
-	.orbit-bullets li {
-		background-color: $crows-nest-color;
+	.primary-background, 
+	.glutenfree,
+	.menucontent .price, {
+		background-color: $crows-nest-color !important;
 	}
 }
 body#kirribilli {
-	.primary-color, .primary-color .selected {
-		color: $kirribilli-color !important;
-	}
-	.primary-background {
-		background-color: $kirribilli-color;
-	}
+	.primary-color, 
+	.primary-color .selected, 
+	#menuselection .current_page_item, 
+	.menucontent h1, .menucontent h2,
 	#top .socialicons .circle i {
 		color: $kirribilli-color !important;
 	}
-	.orbit-bullets li {
-		background-color: $kirribilli-color;
+	.primary-background, 
+	.glutenfree,
+	.menucontent .price, {
+		background-color: $kirribilli-color !important;
 	}
 }

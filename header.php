@@ -10,21 +10,33 @@
 	global $post;         // load details about this page
 	if (is_page()) {
 
-		$barDisplay = get_the_title($post->post_parent);
+		$parent = array_reverse(get_post_ancestors($post->ID));
+		$first_parent = get_page($parent[0]);
+
+		$barDisplay = get_the_title($first_parent);
+		
 		$bar = strtolower(str_replace(" ", "-", $barDisplay));
-		$currentPageURL = get_site_url().'/'.$bar;
-		if ($post->post_parent) {
-			$currentPageURL .= '/'.get_post( $post )->post_name;
-		}
+
+// 		$currentPageURL = get_site_url();
+// 		foreach (array_reverse(get_post_ancestors($post)) as $ancestor) {
+// 			$currentPageURL .= '/'.get_page($ancestor)->post_name;
+// 		}
+// 		$currentPageURL .= '/'.$post->post_name;
+
+
+ 		$currentPageURL = get_permalink($post->ID);
+		
 	} else if (is_category()) {
-	
+		
+		// there doesn't seem to be a solid way to get the url of the category archive page... safer to build it ourselves here.
+		
 		$disp = explode("&#8211;",single_cat_title('',false));
 		$barDisplay = $disp[0];
 		
 		$slug = explode("_",get_category(get_query_var('cat'))->slug);
 		$bar = $slug[0];
 		
-		$currentPageURL = get_site_url().'/category/'.$bar.'_'.$slug[1];		
+		$currentPageURL = get_site_url().'/category/'.$bar.'_'.$slug[1].'/';	
 	}
 	
 	global $url, $cat;
@@ -51,19 +63,6 @@
 	
 >
 
-<!-- 
-	style="background-image: url('<?php 
-		if (($bg_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID))) == false) 
-			$bg_url = get_template_directory_uri().'/img/bg-red.png';
-			
-		echo $bg_url;
-	?>')"
- -->
-
-<!-- 
-<div id="wrapper">
-<div id="content_wrapper"> 
- -->
 
 <header class="contain-to-grid" id="top">
 

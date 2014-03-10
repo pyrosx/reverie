@@ -658,38 +658,6 @@ body, html {
   padding: 0;
 }
 
-@media only screen and (min-width: 40.063em) {
-  div#wrapper {
-    width: 100%;
-    min-height: 100%;
-    height: 100%;
-    margin: 0px 0px -70px 0px;
-    overflow: scroll;
-  }
-
-  div#footer_wrapper {
-    width: 100%;
-    height: 70px;
-  }
-
-  div#content_wrapper {
-    width: 100%;
-    padding: 0px 0px 70px 0px;
-  }
-
-  div#footer_inner_wrapper, div#content_inner_wrapper {
-    margin: 0px auto;
-  }
-
-  header#top {
-    position: fixed;
-  }
-
-  footer#bottom {
-    position: fixed;
-    bottom: 0;
-  }
-}
 body#frontpage {
   height: auto;
   background: url(../img/bg-front.jpg);
@@ -757,10 +725,6 @@ body#frontpage ul.socialicons {
   }
 }
 
-.container {
-  padding-bottom: 70px;
-}
-
 #content p, #content h1, #content h2, #content h3, #content h4, #content h5, #content h6 {
   width: 90%;
   margin: 0 auto;
@@ -815,13 +779,6 @@ footer#bottom {
   margin: 0;
   text-align: center;
   z-index: 101;
-}
-@media only screen and (min-width: 40.063em) {
-  footer#bottom {
-    box-shadow: 0px 20px 40px 30px rgba(0, 0, 0, 0.8);
-    -moz-box-shadow: 0px 20px 40px 30px rgba(0, 0, 0, 0.8);
-    -webkit-box-shadow: 0px 20px 40px 30px rgba(0, 0, 0, 0.8);
-  }
 }
 footer#bottom #legal {
   padding-top: 17px;
@@ -885,6 +842,11 @@ footer#bottom .whatsoncontainer div {
   footer#bottom {
     padding: 0 3%;
     text-align: left;
+    position: fixed;
+    bottom: 0;
+    box-shadow: 0px 20px 40px 30px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0px 20px 40px 30px rgba(0, 0, 0, 0.8);
+    -webkit-box-shadow: 0px 20px 40px 30px rgba(0, 0, 0, 0.8);
   }
   footer#bottom .whatson {
     padding-bottom: 0px;
@@ -898,6 +860,11 @@ footer#bottom .whatsoncontainer div {
   }
 }
 
+@media only screen and (min-width: 40.063em) {
+  .container {
+    margin-bottom: 70px;
+  }
+}
 header#top {
   z-index: 100;
   background: transparent;
@@ -913,23 +880,17 @@ header#top #bignav {
   border: none;
 }
 header#top #bignav ul {
-  width: auto;
+  /* 			width:auto; */
   list-style: none;
   padding-top: 52px;
   margin: 0;
 }
 header#top #bignav ul li {
   float: left;
-  width: auto;
+  /* 				width: auto; */
   padding-left: 0px;
   padding-right: 0px;
   text-align: center;
-  /* 
-  				letter-spacing: -0.5px;
-  				@media only screen and (min-width: 1100px) {	
-  					letter-spacing: 0px;
-  				}
-   */
 }
 header#top #bignav ul li a, header#top #bignav ul li p {
   color: white;
@@ -1013,7 +974,8 @@ header#top .socialicons {
   padding-top: 10px;
 }
 header#top .socialicons .circle {
-  background-color: transparent;
+  /* 			background-color: transparent !important; */
+  background: none !important;
   width: 24px;
   border: none;
   text-align: center;
@@ -1029,12 +991,308 @@ header#top #toggle .fa {
   font-size: 40px;
 }
 
-#menupageinitial {
-  background-image: url("../img/tmp/food1.jpg");
+.food1bg, .food2bg {
   background-position: 50% 0;
   background-attachment: fixed;
   background-repeat: no-repeat no-repeat;
-  background-size: 100%;
+  background-size: cover;
+}
+
+.food1bg {
+  background-image: url("http://trial.resrc.it/o=100/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/food1.jpg");
+}
+
+.food2bg {
+  background-image: url("http://trial.resrc.it/o=100/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/food2.jpg");
+}
+
+.woodbg {
+  background: #e8e1d8 url("http://trial.resrc.it/s=w360/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/bg-lightwood.jpg") 50% 0 repeat;
+}
+
+.wood2bg {
+  background: #e8e1d8 url("http://trial.resrc.it/s=w360/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/bg-wood2.jpg") 50% 0 repeat;
+}
+
+#menupage {
+  background: url(../img/bg-grey.png);
+}
+#menupage .menucontent {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 20px;
+}
+#menupage .menucontent #legend {
+  float: left;
+  color: white;
+  font-family: TradeGothicLT-CondEighteen;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 30px;
+}
+@media only screen and (min-width: 40.063em) {
+  #menupage .menucontent #legend {
+    padding-top: 0;
+    position: absolute;
+    top: 35px !important;
+    left: 52.5%;
+  }
+}
+#menupage .menucontent .glutenfree, #menupage .menucontent .vegetarian {
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  font-family: TradeGothicLT;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+}
+#menupage .menucontent .vegetarian {
+  background-color: #80874f !important;
+}
+#menupage .menucontent h1, #menupage .menucontent h2 {
+  font-family: CardenioModern;
+  font-weight: normal;
+  clear: both;
+  margin-bottom: 20px;
+}
+@media only screen and (min-width: 40.063em) {
+  #menupage .menucontent h1, #menupage .menucontent h2 {
+    text-align: left;
+  }
+}
+#menupage .menucontent h1 {
+  font-size: 36px;
+  line-height: 46px;
+}
+#menupage .menucontent h2 {
+  font-size: 24px;
+}
+#menupage .menucontent .menucolumn {
+  float: left;
+  overflow: hidden;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  position: relative;
+}
+@media only screen and (min-width: 40.063em) {
+  #menupage .menucontent .menucolumn {
+    float: left;
+    width: 47.5%;
+    margin-left: 0;
+    margin-right: 2.5%;
+  }
+}
+@media only screen and (min-width: 64.063em) {
+  #menupage .menucontent .menucolumn {
+    width: 475px;
+    margin-right: 50px;
+    margin-left: 0;
+  }
+  #menupage .menucontent .menucolumn:nth-child(odd) {
+    margin-right: 0;
+  }
+}
+#menupage .menucontent .menuitem {
+  overflow: hidden;
+  width: 100%;
+  padding-bottom: 20px;
+}
+#menupage .menucontent .menuitem .item {
+  padding-top: 3px;
+  padding-bottom: 6px;
+  font-family: TradeGothicLT-CondEighteen;
+  font-weight: bold;
+  color: white;
+  font-size: 21px;
+  line-height: 24px;
+  margin-left: 54px;
+  vertical-align: middle;
+}
+#menupage .menucontent .menuitem .desc {
+  color: white;
+  font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+  font-size: 18px;
+  line-height: 21px;
+  margin-left: 54px;
+}
+#menupage .menucontent .menuitem .glutenfree, #menupage .menucontent .menuitem .vegetarian {
+  margin-right: 5px;
+}
+#menupage .menucontent.lunch .menuitem .item, #menupage .menucontent.lunch .menuitem .desc {
+  margin-left: 0;
+}
+#menupage .menucontent.lunch .menuitem .price {
+  display: none;
+}
+#menupage .menucontent.smalls .menuitem .price, #menupage .menucontent.functions .menuitem .price {
+  display: block;
+  float: left;
+  color: white;
+  font-family: TradeGothicLT-CondEighteen;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 44px;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: 10px;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+}
+#menupage .menucontent.functions {
+  max-width: 700px;
+}
+#menupage .menucontent.functions #legend {
+  right: 0;
+  left: inherit;
+}
+#menupage .menucontent.functions .menuitem .item {
+  display: none;
+}
+#menupage .menucontent.functions .menuitem .desc {
+  margin-left: 0;
+  margin-right: 60px;
+}
+#menupage .menucontent.functions .menuitem .price {
+  float: right;
+}
+#menupage .menucontent.wine {
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+#menupage .menucontent.wine table {
+  width: 500px;
+  margin: 0 auto;
+  background: transparent;
+  border: none;
+}
+#menupage .menucontent.wine table tr {
+  background: transparent;
+}
+#menupage .menucontent.wine table tr td {
+  color: white;
+  text-align: left;
+  padding: 0;
+  font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+  line-height: 24px;
+  font-size: 14px;
+}
+#menupage .menucontent.wine table tr th {
+  color: inherit;
+  font-weight: normal;
+  font-size: 36px;
+  font-family: CardenioModern;
+  text-align: left;
+  padding: 30px 0 10px 0;
+}
+@media only screen and (min-width: 40.063em) {
+  #menupage .menucontent.wine {
+    overflow: visible;
+  }
+  #menupage .menucontent.wine table {
+    width: 700px;
+  }
+  #menupage .menucontent.wine table tr td {
+    font-size: 18px;
+  }
+}
+#menupage .gallerytitle {
+  margin-top: 100px;
+  height: 120px;
+}
+#menupage .gallerytitle h1 {
+  font-family: CardenioModern;
+  color: white;
+  font-size: 48px;
+  line-height: 120px;
+  text-shadow: none;
+}
+#menupage .gallery {
+  max-width: 768px;
+  margin: 0 auto;
+  padding-top: 90px;
+}
+#menupage .gallery .galleryitem {
+  overflow: hidden;
+  padding-bottom: 30px;
+  color: black;
+  text-align: center;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 350px;
+}
+@media only screen and (min-width: 768px) {
+  #menupage .gallery .galleryitem {
+    float: left;
+  }
+  #menupage .gallery .galleryitem:nth-child(odd) {
+    margin-right: 68px;
+  }
+}
+#menupage .gallery .galleryitem .item {
+  line-height: 40px;
+  font-family: TradeGothicLT-CondEighteen;
+  font-weight: bold;
+  font-size: 21px;
+}
+#menupage .gallery .galleryitem .desc {
+  line-height: 24px;
+  font-size: 18px;
+  font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+}
+#menupage .food2bg {
+  height: 315px;
+}
+#menupage .toppanel {
+  height: 330px;
+  margin-top: -130px;
+  background-position: 50% 200%;
+}
+#menupage ul#menuselection {
+  margin: 0;
+  list-style-type: none;
+  text-align: center;
+  border-bottom: 1px solid #4d4d4d;
+}
+#menupage ul#menuselection li {
+  font-size: 24px;
+  font-family: TradeGothicLT-CondEighteen;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  padding-right: 3%;
+}
+#menupage ul#menuselection li a {
+  color: inherit;
+}
+@media only screen and (min-width: 40.063em) {
+  #menupage ul#menuselection {
+    height: 120px;
+  }
+  #menupage ul#menuselection li {
+    font-size: 32px;
+    display: inline;
+    line-height: 100px;
+  }
+}
+@media only screen and (min-width: 64.063em) {
+  #menupage ul#menuselection li {
+    font-size: 38px;
+    line-height: 120px;
+  }
+}
+
+#menupageinitial {
   text-align: center;
 }
 #menupageinitial h2 {
@@ -1048,45 +1306,49 @@ header#top #toggle .fa {
   font-size: 40px;
   text-shadow: none;
 }
-#menupageinitial h2:first-child {
-  padding-top: 110px;
-}
 #menupageinitial ul {
-  height: 100px;
+  min-height: 100px;
+  margin: 0;
 }
 #menupageinitial ul li {
   vertical-align: middle;
-  font-size: 65px;
-  line-height: 100px;
+  font-size: 30px;
   list-style-type: none;
-  display: inline;
-  padding-left: 2%;
-  padding-right: 2%;
-  border-right: 1px solid white;
 }
 #menupageinitial ul li a {
   text-transform: uppercase;
   font-weight: bold;
-  font-family: TradeGothicLT;
+  font-family: TradeGothicLT-CondEighteen;
   color: white;
-  font-size: 65px;
+  font-size: 30px;
   text-shadow: 4px 4px 5px #1d1d1d;
 }
 #menupageinitial ul li:last-child {
   border-right: none;
 }
-
-.preloaderer {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  background: url(../img/bg-grey.png);
-  z-index: 9999999;
+@media only screen and (min-width: 40.063em) {
+  #menupageinitial h2:first-child {
+    padding-top: 110px;
+  }
+  #menupageinitial ul li {
+    font-size: 40px;
+    display: inline;
+    line-height: 100px;
+    border-right: 1px solid white;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  #menupageinitial ul li a {
+    font-size: 40px;
+  }
 }
-.preloaderer h1 {
-  color: white;
-  size: 90px;
-  text-align: center;
+@media only screen and (min-width: 64.063em) {
+  #menupageinitial ul li {
+    font-size: 65px;
+  }
+  #menupageinitial ul li a {
+    font-size: 65px;
+  }
 }
 
 #sliderpage div {
@@ -1205,6 +1467,9 @@ ul.socialicons {
   padding: 0;
   margin: 0;
 }
+ul.socialicons li {
+  text-align: center;
+}
 ul.socialicons div.circle {
   border-radius: 50%;
   width: 36px;
@@ -1241,10 +1506,11 @@ ul.socialicons i {
   display: block;
 }
 #whatsontoclose .whatson #whatsonclose {
+  font-size: 24px;
   position: absolute;
   top: 0;
   right: 0;
-  padding-right: 5px;
+  padding-right: 10px;
   color: white;
 }
 
@@ -1419,7 +1685,7 @@ ul.socialicons i {
   }
 }
 
-.pop, footer#bottom a, header#top a {
+.pop, footer#bottom a, header#top a, #menupage ul#menuselection li a, #menupageinitial ul li a {
   display: inline-block;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
@@ -1427,7 +1693,7 @@ ul.socialicons i {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 }
 
-.pop:hover, footer#bottom a:hover, header#top a:hover {
+.pop:hover, footer#bottom a:hover, header#top a:hover, #menupage ul#menuselection li a:hover, #menupageinitial ul li a:hover {
   -webkit-animation-name: pop;
   animation-name: pop;
   -webkit-animation-duration: 0.3s;
@@ -1540,7 +1806,7 @@ ul.socialicons i {
   animation-direction: alternate;
 }
 
-.centerbox, .preloaderer, #sliderpage .topcontent {
+.centerbox, #sliderpage .topcontent {
   display: -webkit-box;
   -webkit-box-orient: horizontal;
   -webkit-box-pack: center;
@@ -1577,41 +1843,41 @@ ul.socialicons i {
   background-color: #87cfde;
 }
 
-body#erskine-street .primary-color, body#erskine-street .primary-color .selected {
-  color: #ba4533 !important;
-}
-body#erskine-street .primary-background {
-  background-color: #ba4533;
-}
+body#erskine-street .primary-color,
+body#erskine-street .primary-color .selected,
+body#erskine-street #menuselection .current_page_item,
+body#erskine-street .menucontent h1, body#erskine-street .menucontent h2,
 body#erskine-street #top .socialicons .circle i {
   color: #ba4533 !important;
 }
-body#erskine-street .orbit-bullets li {
-  background-color: #ba4533;
+body#erskine-street .primary-background,
+body#erskine-street .glutenfree,
+body#erskine-street .menucontent .price {
+  background-color: #ba4533 !important;
 }
 
-body#crows-nest .primary-color, body#crows-nest .primary-color .selected {
-  color: #857aa3 !important;
-}
-body#crows-nest .primary-background {
-  background-color: #857aa3;
-}
+body#crows-nest .primary-color,
+body#crows-nest .primary-color .selected,
+body#crows-nest #menuselection .current_page_item,
+body#crows-nest .menucontent h1, body#crows-nest .menucontent h2,
 body#crows-nest #top .socialicons .circle i {
   color: #857aa3 !important;
 }
-body#crows-nest .orbit-bullets li {
-  background-color: #857aa3;
+body#crows-nest .primary-background,
+body#crows-nest .glutenfree,
+body#crows-nest .menucontent .price {
+  background-color: #857aa3 !important;
 }
 
-body#kirribilli .primary-color, body#kirribilli .primary-color .selected {
-  color: #87cfde !important;
-}
-body#kirribilli .primary-background {
-  background-color: #87cfde;
-}
+body#kirribilli .primary-color,
+body#kirribilli .primary-color .selected,
+body#kirribilli #menuselection .current_page_item,
+body#kirribilli .menucontent h1, body#kirribilli .menucontent h2,
 body#kirribilli #top .socialicons .circle i {
   color: #87cfde !important;
 }
-body#kirribilli .orbit-bullets li {
-  background-color: #87cfde;
+body#kirribilli .primary-background,
+body#kirribilli .glutenfree,
+body#kirribilli .menucontent .price {
+  background-color: #87cfde !important;
 }
