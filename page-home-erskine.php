@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Slider Page - Erskine St
+Template Name: Home Page - Erskine St
 */
 
 get_header(); 
@@ -13,12 +13,12 @@ get_header();
 </div>
  -->
 
-<div class="row" id="sliderpage">
+<div class="row" id="homepage">
 
 <!-- Row for main content area -->
 	<div class="small-24 columns" id="content" role="main">
 
-		<div class="row topcontent resrc first-bg "><div class="columns small-24">
+		<div class="row topcontent parallax-first resrc first-bg "><div class="columns small-24">
 			<h1>KEEP IT<br/> SMALL<br/> SYDNEY</h1>
 		</div></div>	
 		
@@ -37,7 +37,7 @@ get_header();
 			<iframe width='100%' height='100%' frameBorder='0' src='http://a.tiles.mapbox.com/v3/redro.h8gjcj02/mm/geocoder,share.html'></iframe>
 		</div>
 		
-		<div class="row bottom resrc "  >
+		<div class="row parallax-bottom resrc "  >
 			<p>&nbsp;</p>
 		</div>
 		
@@ -49,8 +49,8 @@ get_header();
 	(function($) {
 	
 		// PARALLAX CLASSES
-		$('.topcontent').parallax("50%",0.1);
-		$('.bottom').parallax("50%",0.1);
+		$('.parallax-first').parallax("50%",0.1);
+		$('.parallax-bottom').parallax("50%",0.1);
 
 		
 	})(jQuery);

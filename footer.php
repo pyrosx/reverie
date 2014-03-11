@@ -42,12 +42,13 @@ resrc = {
 		$(window).resize(function() {
 			// make sure first background element fills available space
 			if ($('.first-bg').is(':visible')) {
-				$('.first-bg').css('height',$(window).height()-bottomheight);			
+				$('.first-bg').css('height',$(window).height());			
 			}
-			if ($('.first-bg-nofooter').is(':visible')) {
-				$('.first-bg-nofooter').css('height',$(window).height()-bottomheight-topheight);			
-			}
+// 			if ($('.first-bg-nofooter').is(':visible')) {
+// 				$('.first-bg-nofooter').css('height',$(window).height()-bottomheight-topheight);			
+// 			}
 			
+// 			$('.screen-height').css('height',$(window).height()-bottomheight);			
 
 			if ($('#bignav').is(':visible')) {
 				// space bignav

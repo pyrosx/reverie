@@ -2,7 +2,7 @@
 global $url, $cat;	
 ?>
 
-	<li><?php print_link($url); ?>Home</a></li>
+	<li><?php print_link($url.'/'); ?>Home</a></li>
 	<li><?php print_link($url.'/about-us/'); ?>About Us</a></li>
 	<li><?php print_link($url.'/menu/'); ?>Menu</a></li>
 	<li><?php print_link($url.'/space/'); ?>Space</a></li>

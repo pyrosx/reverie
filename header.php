@@ -83,7 +83,7 @@
 			</ul>
 		</div>
 
-		<!--- Mobile Nav --->
+		<!~~- Mobile Nav ~~->
 		<div class="small-6 columns hide-for-large-up" id="smallnavtoggle">
 			<a id="toggle"><i class="fa fa-bars primary-color"></i></a>
 		</div>
@@ -103,6 +103,7 @@
 		</ul>
 	</nav>
 </header>
+
 
 
 		

@@ -618,6 +618,25 @@ ul.pagination li {
   color: #9e4555 !important;
 }
 
+#aboutpage .pagecontent {
+  padding: 50px 0;
+}
+#aboutpage .pagecontent h1 {
+  max-width: 700px;
+  text-align: center;
+  font-family: CardenioModern;
+  font-size: 44px;
+  line-height: 54px;
+}
+#aboutpage .keepitsmall h1 {
+  height: 120px;
+  line-height: 120px;
+  color: white;
+  text-align: center;
+  font-family: CardenioModern;
+  font-size: 44px;
+}
+
 #bg {
   z-index: -9;
   position: fixed;
@@ -729,47 +748,16 @@ body#frontpage ul.socialicons {
   width: 90%;
   margin: 0 auto;
 }
-#content h1 {
-  font-family: TradeGothicLT-CondEighteen;
-  font-size: 86px;
-  line-height: 86px;
-  text-align: center;
-  text-transform: uppercase;
-  color: white;
-  font-weight: bold;
-  width: auto;
-  text-shadow: 4px 4px 5px #1d1d1d;
-}
-#content h2 {
-  text-shadow: 4px 4px 5px #1d1d1d;
-}
 #content .first-bg {
   margin-top: -130px;
   padding-top: 130px;
 }
-#content #fullpageslider {
-  min-height: 100%;
-  height: 100%;
-}
-#content #fullpageslider img {
-  width: 100%;
-}
-#content .orbit-bullets-container {
-  display: none;
-}
-#content .no-class {
-  display: none;
-}
-#content .orbit-bullets li {
-  width: 22px;
-  height: 22px;
-  margin-right: 20px;
-}
-#content .orbit-bullets li:last-child {
-  margin-right: 0;
-}
-#content .orbit-bullets li.active {
-  background: url(../img/bullet-active.png);
+
+div {
+  background-position: 50% 0;
+  background-attachment: fixed;
+  background-repeat: no-repeat no-repeat;
+  background-size: cover;
 }
 
 footer#bottom {
@@ -991,27 +979,139 @@ header#top #toggle .fa {
   font-size: 40px;
 }
 
-.food1bg, .food2bg {
-  background-position: 50% 0;
-  background-attachment: fixed;
-  background-repeat: no-repeat no-repeat;
-  background-size: cover;
+#homepage img {
+  width: 100%;
+}
+#homepage .map {
+  height: 200px;
+}
+@media only screen and (min-width: 40.063em) {
+  #homepage .map {
+    height: 500px;
+  }
+}
+#homepage .maptitle {
+  background-color: #1d1d1d;
+  text-align: center;
+}
+#homepage .maptitle h1 {
+  color: white;
+  font-family: TradeGothicLT-CondEighteen;
+  font-weight: bold;
+  padding: 25px 0;
+  font-size: 26px;
+  line-height: 46px;
+}
+@media only screen and (min-width: 40.063em) {
+  #homepage .maptitle h1 {
+    padding: 45px 0;
+    font-size: 36px;
+  }
+}
+@media only screen and (min-width: 40.063em) {
+  #homepage .pagecontent {
+    padding: 100px 0;
+  }
+  #homepage .pagecontent h1 {
+    font-size: 60px;
+    line-height: 70px;
+  }
+  #homepage .pagecontent p {
+    font-size: 18px;
+  }
+}
+#homepage .topcontent {
+  min-height: 380px;
+}
+#homepage .topcontent h1 {
+  font-family: TradeGothicLT-CondEighteen;
+  font-size: 86px;
+  line-height: 86px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  width: auto;
+  text-shadow: 4px 4px 5px #1d1d1d;
+}
+#homepage .topcontent h2 {
+  text-shadow: 4px 4px 5px #1d1d1d;
+}
+@media only screen and (max-width: 40em) {
+  #homepage .topcontent h1 {
+    line-height: 58px;
+    font-size: 58px;
+  }
 }
 
-.food1bg {
-  background-image: url("http://trial.resrc.it/o=100/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/food1.jpg");
+#locationpage {
+  position: relative;
 }
-
-.food2bg {
-  background-image: url("http://trial.resrc.it/o=100/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/food2.jpg");
+#locationpage .topcontent {
+  margin-top: -130px;
+  padding-top: 130px;
+  height: 330px;
+  background-size: 100%;
+  background-attachment: normal;
 }
-
-.woodbg {
-  background: #e8e1d8 url("http://trial.resrc.it/s=w360/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/bg-lightwood.jpg") 50% 0 repeat;
+#locationpage .topcontent h1 {
+  font-family: TradeGothicLT-CondEighteen;
+  font-size: 60px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  width: auto;
+  text-shadow: 4px 4px 5px #1d1d1d;
 }
-
-.wood2bg {
-  background: #e8e1d8 url("http://trial.resrc.it/s=w360/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/bg-wood2.jpg") 50% 0 repeat;
+#locationpage .location {
+  text-align: center;
+  overflow: hidden;
+}
+#locationpage .location h1 {
+  font-family: TradeGothicLT-CondEighteen;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 60px;
+}
+#locationpage .location h2 {
+  font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+  font-size: 18px;
+  line-height: 28px;
+}
+#locationpage .location .columns.map {
+  height: 300px;
+}
+@media only screen and (min-width: 40.063em) {
+  #locationpage .location .columns.map {
+    height: 400px;
+  }
+}
+@media only screen and (min-width: 64.063em) {
+  #locationpage .location .columns.map {
+    height: 500px;
+  }
+}
+#locationpage .location .columns.address {
+  min-height: 300px;
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
+@media only screen and (min-width: 40.063em) {
+  #locationpage .location .columns.address {
+    padding-top: 90px;
+    padding-bottom: 0;
+    min-height: 400px;
+  }
+}
+@media only screen and (min-width: 64.063em) {
+  #locationpage .location .columns.address {
+    padding-top: 140px;
+    min-height: 500px;
+  }
+}
+#locationpage .parallax-bottom {
+  clear: both;
 }
 
 #menupage {
@@ -1351,116 +1451,167 @@ header#top #toggle .fa {
   }
 }
 
-#sliderpage div {
-  background-position: 50% 0;
-  background-attachment: fixed;
-  background-repeat: no-repeat no-repeat;
-  background-size: cover;
-}
-#sliderpage .bottom {
-  height: 315px;
-  background-position: 50% bottom;
-  background-image: url("http://trial.resrc.it/c=X60P,W20P,Y40P,H60P/s=320,pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp3.jpg");
-}
-@media only screen and (min-width: 600px) {
-  #sliderpage .bottom {
-    background-image: url("http://trial.resrc.it/c=X35P,W40P,Y35P,H60P/s=w600,pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp3.jpg");
-  }
-}
-@media only screen and (min-width: 900px) {
-  #sliderpage .bottom {
-    background-image: url("http://trial.resrc.it/s=w320,pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp3.jpg");
-  }
-}
-#sliderpage img {
-  width: 100%;
-}
-#sliderpage .map {
-  height: 200px;
-}
-@media only screen and (min-width: 40.063em) {
-  #sliderpage .map {
-    height: 500px;
-  }
-}
-#sliderpage .maptitle {
-  background-color: #1d1d1d;
-  text-align: center;
-}
-#sliderpage .maptitle h1 {
-  font-family: TradeGothicLT;
-  margin: 0;
-  padding: 25px 0;
-  font-size: 26px;
-  line-height: 46px;
-}
-@media only screen and (min-width: 40.063em) {
-  #sliderpage .maptitle h1 {
-    padding: 45px 0;
-    font-size: 36px;
-  }
-}
-#sliderpage .pagecontent {
+.pagecontent {
   background: #e8e1d8 url("http://trial.resrc.it/s=w360/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/bg-lightwood.jpg") 50% 0 repeat;
   padding: 20px 0;
 }
-#sliderpage .pagecontent h1 {
+.pagecontent h1 {
+  text-align: center;
   font-family: CardenioModern;
   font-size: 30px;
   line-height: 36px;
   color: black;
   text-shadow: none;
 }
-#sliderpage .pagecontent p {
+.pagecontent p {
   font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
   text-align: center;
   font-weight: normal;
   font-size: 14px;
   color: black;
 }
-@media only screen and (min-width: 40.063em) {
-  #sliderpage .pagecontent {
-    padding: 100px 0;
-  }
-  #sliderpage .pagecontent h1 {
-    font-size: 60px;
-    line-height: 70px;
-  }
-  #sliderpage .pagecontent p {
-    font-size: 18px;
-  }
-}
-#sliderpage .topcontent {
-  background-image: url("http://trial.resrc.it/c=x25p,w30p,y20p,h80p/s=w360/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp1.jpg");
-  min-height: 380px;
+
+.parallax-first {
+  background-image: url("http://trial.resrc.it/c=x25p,w30p,y20p,h80p/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp1.jpg");
 }
 @media only screen and (min-width: 600px) {
-  #sliderpage .topcontent {
-    background-image: url("http://trial.resrc.it/c=x25p,w50p,y0p,h100p/s=w360/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp1.jpg");
+  .parallax-first {
+    background-image: url("http://trial.resrc.it/c=x25p,w50p,y0p,h100p/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp1.jpg");
   }
 }
 @media only screen and (min-width: 900px) {
-  #sliderpage .topcontent {
-    background-image: url("http://trial.resrc.it/c=x15p,w70p,y0p,h100p/s=w360/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp1.jpg");
+  .parallax-first {
+    background-image: url("http://trial.resrc.it/c=x15p,w70p,y0p,h100p/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp1.jpg");
   }
 }
 @media only screen and (min-width: 1200px) {
-  #sliderpage .topcontent {
-    background-image: url("http://trial.resrc.it/s=w360/o=20(100)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp1.jpg");
-  }
-}
-@media only screen and (max-width: 40em) {
-  #sliderpage .topcontent h1 {
-    line-height: 58px;
-    font-size: 58px;
+  .parallax-first {
+    background-image: url("http://trial.resrc.it/s=pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp1.jpg");
   }
 }
 
-.sliderimg {
-  background-size: cover;
-  height: 100%;
-  padding-top: 130px;
-  padding-bottom: 70px;
+.parallax-second {
+  height: 800px;
+  background-image: url("http://trial.resrc.it/c=x55p,w30p,y20p,h80p/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp2.jpg");
+}
+@media only screen and (min-width: 600px) {
+  .parallax-second {
+    height: 400px;
+    background-image: url("http://trial.resrc.it/c=x50p,w40p,y20p,h80p/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp2.jpg");
+  }
+}
+@media only screen and (min-width: 900px) {
+  .parallax-second {
+    height: 600px;
+    background-image: url("http://trial.resrc.it/c=x15p,w70p,y0p,h100p/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp2.jpg");
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .parallax-second {
+    background-image: url("http://trial.resrc.it/s=pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp2.jpg");
+  }
+}
+
+.parallax-third {
+  height: 800px;
+  background-image: url("http://trial.resrc.it/c=x35p,w30p,y20p,h80p/s=w360/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp4.jpg");
+}
+@media only screen and (min-width: 600px) {
+  .parallax-third {
+    background-image: url("http://trial.resrc.it/c=x25p,w50p,y0p,h100p/s=w360/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp4.jpg");
+  }
+}
+@media only screen and (min-width: 900px) {
+  .parallax-third {
+    background-image: url("http://trial.resrc.it/c=x15p,w70p,y0p,h100p/s=w360/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp4.jpg");
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .parallax-third {
+    background-image: url("http://trial.resrc.it/s=pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp4.jpg");
+  }
+}
+
+.parallax-fourth {
+  height: 800px;
+  background-image: url("http://trial.resrc.it/c=x25p,w30p,y20p,h80p/s=w360/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp5.jpg");
+}
+@media only screen and (min-width: 600px) {
+  .parallax-fourth {
+    background-image: url("http://trial.resrc.it/c=x25p,w50p,y0p,h100p/s=w360/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp5.jpg");
+  }
+}
+@media only screen and (min-width: 900px) {
+  .parallax-fourth {
+    background-image: url("http://trial.resrc.it/c=x15p,w70p,y0p,h100p/s=w360/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp5.jpg");
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .parallax-fourth {
+    background-image: url("http://trial.resrc.it/s=pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp5.jpg");
+  }
+}
+
+.parallax-fifth {
+  background-image: url("http://trial.resrc.it/c=X60P,W20P,Y40P,H60P/s=320,pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp6.jpg");
+}
+@media only screen and (min-width: 600px) {
+  .parallax-fifth {
+    background-image: url("http://trial.resrc.it/c=X35P,W40P,Y35P,H60P/s=w600,pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp6.jpg");
+  }
+}
+@media only screen and (min-width: 900px) {
+  .parallax-fifth {
+    background-image: url("http://trial.resrc.it/c=W100P,Y40P,H60P/s=pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp6.jpg");
+  }
+}
+
+.parallax-bottom {
+  height: 315px;
+  background-position: 50% bottom;
+  background-image: url("http://trial.resrc.it/c=X60P,W20P,Y40P,H60P/s=320,pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp3.jpg");
+}
+@media only screen and (min-width: 600px) {
+  .parallax-bottom {
+    background-image: url("http://trial.resrc.it/c=X35P,W40P,Y35P,H60P/s=w600,pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp3.jpg");
+  }
+}
+@media only screen and (min-width: 900px) {
+  .parallax-bottom {
+    background-image: url("http://trial.resrc.it/s=w320,pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp3.jpg");
+  }
+}
+
+#spacepage .resrc {
+  position: relative;
+  height: 400px;
+}
+#spacepage .resrc h1 {
+  position: absolute;
+  bottom: 90px;
+  right: 5%;
+  font-family: CardenioModern;
+  font-size: 72px;
+  color: white;
+  text-align: center;
+}
+@media only screen and (min-width: 600px) {
+  #spacepage .resrc {
+    height: 600px;
+  }
+}
+@media only screen and (min-width: 900px) {
+  #spacepage .resrc {
+    height: 700px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #spacepage .resrc {
+    height: 900px;
+  }
+}
+#spacepage .resrc.parallax-bottom {
+  height: 315px;
 }
 
 ul.socialicons {
@@ -1512,6 +1663,29 @@ ul.socialicons i {
   right: 0;
   padding-right: 10px;
   color: white;
+}
+
+.food1bg, .food2bg {
+  background-position: 50% 0;
+  background-attachment: fixed;
+  background-repeat: no-repeat no-repeat;
+  background-size: cover;
+}
+
+.food1bg {
+  background-image: url("http://trial.resrc.it/o=100/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/food1.jpg");
+}
+
+.food2bg {
+  background-image: url("http://trial.resrc.it/o=100/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/food2.jpg");
+}
+
+.woodbg {
+  background: #e8e1d8 url("http://trial.resrc.it/s=w360/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/bg-lightwood.jpg") 50% 0 repeat;
+}
+
+.wood2bg {
+  background: #e8e1d8 url("http://trial.resrc.it/s=w360/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/bg-wood2.jpg") 50% 0 repeat;
 }
 
 @media only screen and (min-width: 40.063em) {
@@ -1806,7 +1980,7 @@ ul.socialicons i {
   animation-direction: alternate;
 }
 
-.centerbox, #sliderpage .topcontent {
+.centerbox, #homepage .topcontent, #locationpage .topcontent {
   display: -webkit-box;
   -webkit-box-orient: horizontal;
   -webkit-box-pack: center;
