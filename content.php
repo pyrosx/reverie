@@ -7,12 +7,12 @@
  */
 ?>
 
+<div class="article columns small-24 medium-12">
 <article id="post-<?php the_ID(); ?>" <?php post_class('index-card'); ?>>
-	<header>
-		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-		<?php reverie_entry_meta(); ?>
-	</header>
 	<div class="entry-content">
-		<figure><a href="<?php the_permalink(); ?>"><?php if ( has_post_thumbnail() ) {the_post_thumbnail('large'); } ?></a></figure> <?php the_excerpt(); ?>
+		<a href="<?php the_permalink(); ?>"><?php if ( has_post_thumbnail() ) {the_post_thumbnail('medium'); } ?></a>
+		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+		<?php the_excerpt();?>
 	</div>
 </article>
+</div>

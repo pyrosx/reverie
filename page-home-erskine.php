@@ -18,8 +18,10 @@ get_header();
 <!-- Row for main content area -->
 	<div class="small-24 columns" id="content" role="main">
 
-		<div class="row topcontent parallax-first resrc first-bg "><div class="columns small-24">
-			<h1>KEEP IT<br/> SMALL<br/> SYDNEY</h1>
+		<div class="row topcontent parallax-fourth resrc first-bg "><div class="columns small-24">
+			<h1>Sydney’s Original <br/>Small Bar </h1>
+			<h2>Keep it Small…</h2>
+			
 		</div></div>	
 		
 		<div class="row pagecontent resrc">

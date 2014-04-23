@@ -6,8 +6,16 @@
 	global $bar;
 	global $barDisplay;
 	global $currentPageURL;
-	
+	global $slug;
 	global $post;         // load details about this page
+	
+	$currentPageURL = get_permalink($post->ID);
+	
+// 	if (is_single()) {
+// 		$cats = get_the_category($post->ID);
+// 		$cat = $cats[0];
+// 		var_dump($cat);
+// 	} else 
 	if (is_page()) {
 
 		$parent = array_reverse(get_post_ancestors($post->ID));
@@ -23,20 +31,28 @@
 // 		}
 // 		$currentPageURL .= '/'.$post->post_name;
 
-
- 		$currentPageURL = get_permalink($post->ID);
 		
-	} else if (is_category()) {
+	} else if (is_category() || is_single()) {
 		
 		// there doesn't seem to be a solid way to get the url of the category archive page... safer to build it ourselves here.
+		if (is_category()) {
+			$disp = explode("&#8211;",single_cat_title('',false));
+			$barDisplay = $disp[0];
+
+			$slug = get_category(get_query_var('cat'))->slug;
+		} else {
+			$cats = get_the_category($post->ID);
+			$disp = explode("-",$cats[0]->cat_name);
+			$barDisplay = $disp[0];
+
+			$slug = $cats[0]->slug;
+		}
 		
-		$disp = explode("&#8211;",single_cat_title('',false));
-		$barDisplay = $disp[0];
-		
-		$slug = explode("_",get_category(get_query_var('cat'))->slug);
+		$slug = explode("_",$slug);
 		$bar = $slug[0];
 		
 		$currentPageURL = get_site_url().'/category/'.$bar.'_'.$slug[1].'/';	
+		$slug = $slug[1];
 	}
 	
 	global $url, $cat;
@@ -54,6 +70,8 @@
 			echo '<a href="'.$page.'">';
 		}
 	}
+	
+
 	
 ?>
 <body 
@@ -85,17 +103,21 @@
 
 		<!~~- Mobile Nav ~~->
 		<div class="small-6 columns hide-for-large-up" id="smallnavtoggle">
-			<a id="toggle"><i class="fa fa-bars primary-color"></i></a>
+			<a id="toggle" class="primary-color"><i class="fa fa-bars primary-color"></i>
+			<p>MENU</p></a>
+			
 		</div>
 		
 	</div>
 
-	<div class="row hide-for-medium-up" id="whatsontoclose">
-		<div class="columns whatson">
+<!-- 
+	<div class="row hide-for-medium-up">
+		<div class="columns whatson" id="whatsontoclose">
 			<div id="whatsonclose"><a href="#"><i class="fa fa-times"></i></a></div>
 			<?php get_template_part("whatson"); ?>
 		</div>
 	</div>
+ -->
 
 	<nav class=" hide-for-large-up nav-collapse row primary-color" id="smallnav">
 		<ul>

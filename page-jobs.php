@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Location/Contact Page
+Template Name: Jobs Page
 */
 
 get_header(); 
@@ -12,14 +12,16 @@ get_header();
 <!-- Row for main content area -->
 	<div class="small-24 columns" id="content" role="main">
 
-		<div class="topcontent row resrc parallax-fifth">
+		<div class="topcontent row resrc parallax-seven">
 			<h1><?php the_title();?></h1>
 		</div>
 		
-		<div class="row location wood2bg">
-		<?php while (have_posts()) : the_post();
-				the_content(); 
-		endwhile; ?>		
+		<div class="row wood2bg">
+			<div class="jobs">
+				<?php while (have_posts()) : the_post();
+					the_content(); 
+				endwhile; ?>		
+			</div>
 		</div>
 		
 		<div class="row parallax-bottom resrc"  >

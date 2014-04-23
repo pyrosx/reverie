@@ -1,29 +1,72 @@
-<?php get_header(); ?>
+<?php
+/*
+Template Name: What's On Page
+*/
+
+get_header(); 
+
+// need to remove bar name from single_cat_title()
+$title = explode("&#8211;",single_cat_title('',false));
+$title = $title[1];
+
+global $slug
+?>
+
+<div class="row categorypage">
 
 <!-- Row for main content area -->
-	<div class="small-12 large-8 columns" id="content" role="main">
-	
-	<?php if ( have_posts() ) : ?>
-	
-		<?php /* Start the Loop */ ?>
-		<?php while ( have_posts() ) : the_post(); ?>
-			<?php get_template_part( 'content', get_post_format() ); ?>
-		<?php endwhile; ?>
-		
-		<?php else : ?>
-			<?php get_template_part( 'content', 'none' ); ?>
-		
-	<?php endif; // end have_posts() check ?>
-	
-	<?php /* Display navigation to next/previous pages when applicable */ ?>
-	<?php if ( function_exists('reverie_pagination') ) { reverie_pagination(); } else if ( is_paged() ) { ?>
-		<nav id="post-nav">
-			<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'reverie' ) ); ?></div>
-			<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'reverie' ) ); ?></div>
-		</nav>
-	<?php } ?>
+	<div class="small-24 columns" id="content" role="main">
 
-	</div>
-	<?php get_sidebar(); ?>
+		<div class="topcontent row resrc parallax-sixth">
+			<h1><?php echo $title;?></h1>
+		</div>
 		
+		<div class="row wood2bg">
+			<div class="articles" >
+				<div class="row">
+			<?php 
+			if ( have_posts() ) : 
+	
+				/* Start the Loop */
+				$count=0;
+				while ( have_posts() ) : the_post();
+					get_template_part( 'content' );
+
+					$count++;
+					if ($count%2 == 0) {
+						echo '</div><div class="row">';
+					}
+
+				endwhile;
+		
+				else :
+					get_template_part( 'content', 'none' );
+		
+			endif; // end have_posts() check 
+				
+			?>
+				</div>
+			</div>
+		</div>				
+					
+		<div class="row parallax-bottom resrc"  >
+			<p>&nbsp;</p>
+		</div>
+	</div>		
+	
+</div>
+
+<script>
+	(function($) {
+	
+		// PARALLAX CLASSES
+		$('.parallax').parallax("50%",0.3);
+		$('.parallax-bottom').parallax("50%",0.1);
+
+		
+	})(jQuery);
+	
+
+</script>
+
 <?php get_footer(); ?>

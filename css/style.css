@@ -662,10 +662,10 @@ body {
   font-family: TradeGothicLT;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -742,6 +742,32 @@ body#frontpage ul.socialicons {
   body#frontpage ul.socialicons {
     padding-top: 30px;
   }
+}
+
+.categorypage .articles {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 0;
+  overflow: hidden;
+}
+.categorypage .articles .article {
+  text-align: center;
+  padding-bottom: 30px;
+}
+.categorypage .articles .article h2 {
+  padding-top: 20px;
+  max-width: 300px;
+  font-family: TradeGothicLT-CondEighteen;
+  font-size: 24px;
+  font-weight: bold;
+}
+.categorypage .articles .article h2 a {
+  color: black;
+}
+.categorypage .articles .article p {
+  max-width: 300px;
+  font-family: CardenioModern;
+  font-size: 24px;
 }
 
 #content p, #content h1, #content h2, #content h3, #content h4, #content h5, #content h6 {
@@ -946,8 +972,10 @@ header#top #smallnav li a {
   color: #b3b3b3;
   display: block;
   width: 100%;
+  z-index: 999999999;
 }
 header#top #smallnav li p, header#top #smallnav li a {
+  text-align: center;
   font-weight: bold;
   text-transform: uppercase;
   line-height: 34px;
@@ -971,12 +999,15 @@ header#top .socialicons .circle {
 header#top #toggle {
   display: block;
   margin: 0;
-  padding: 45px 0 0 0;
+  padding: 35px 0 0 0;
   height: 130px;
   text-align: center;
 }
 header#top #toggle .fa {
   font-size: 40px;
+}
+header#top #toggle p {
+  font-weight: bold;
 }
 
 #homepage img {
@@ -1020,49 +1051,119 @@ header#top #toggle .fa {
     font-size: 18px;
   }
 }
-#homepage .topcontent {
+
+#homepage .topcontent, #functionspage .topcontent {
   min-height: 380px;
 }
-#homepage .topcontent h1 {
+#homepage .topcontent h1, #homepage .topcontent h2, #functionspage .topcontent h1, #functionspage .topcontent h2 {
   font-family: TradeGothicLT-CondEighteen;
-  font-size: 86px;
-  line-height: 86px;
   text-align: center;
   text-transform: uppercase;
   color: white;
   font-weight: bold;
   width: auto;
   text-shadow: 4px 4px 5px #1d1d1d;
+  line-height: 86px;
 }
-#homepage .topcontent h2 {
-  text-shadow: 4px 4px 5px #1d1d1d;
+#homepage .topcontent h1, #functionspage .topcontent h1 {
+  font-size: 86px;
+}
+#homepage .topcontent h2, #functionspage .topcontent h2 {
+  font-size: 46px;
 }
 @media only screen and (max-width: 40em) {
-  #homepage .topcontent h1 {
+  #homepage .topcontent h1, #functionspage .topcontent h1 {
     line-height: 58px;
     font-size: 58px;
   }
+  #homepage .topcontent h2, #functionspage .topcontent h2 {
+    font-size: 38px;
+  }
+}
+
+#functionspage .topcontent h1 {
+  font-size: 60px;
+  line-height: 70px;
+}
+#functionspage .functioncontent {
+  max-width: 800px;
+  padding: 50px 0;
+  margin: 0 auto;
+}
+#functionspage .functioncontent p {
+  color: black;
+  text-align: center;
+  font-family: CardenioModern;
+  font-size: 44px;
+  line-height: 48px;
+  padding-bottom: 44px;
+}
+
+form {
+  width: 100%;
+  margin: 0 auto;
+}
+form p {
+  font-family: CardenioModern;
+  color: white;
+  font-size: 30px;
+}
+form input[type=text], form textarea {
+  color: white;
+  background-color: #363636 !important;
+  border: none;
+  color: white;
+  font-family: TradeGothicLT-CondEighteen;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+form input[type=submit] {
+  float: right;
+  width: 50%;
+  border: none;
+  color: white;
+  font-family: TradeGothicLT-CondEighteen;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 7.5px 0;
+}
+form textarea {
+  margin-bottom: 16px;
 }
 
 #locationpage {
   position: relative;
 }
-#locationpage .topcontent {
-  margin-top: -130px;
-  padding-top: 130px;
-  height: 330px;
-  background-size: 100%;
-  background-attachment: normal;
+#locationpage .contactdetails {
+  padding: 50px 0;
 }
-#locationpage .topcontent h1 {
-  font-family: TradeGothicLT-CondEighteen;
-  font-size: 60px;
-  text-align: center;
+#locationpage .contactdetails p {
+  width: 80%;
+  color: black;
+  text-align: left;
+  font-family: CardenioModern;
   text-transform: uppercase;
-  color: white;
-  font-weight: bold;
-  width: auto;
-  text-shadow: 4px 4px 5px #1d1d1d;
+  font-size: 30px;
+  line-height: 36px;
+  padding-bottom: 30px;
+}
+#locationpage .contactdetails p strong {
+  font-family: TradeGothicLT-CondEighteen;
+}
+#locationpage .contactdetails p .smaller {
+  font-size: 24px;
+}
+#locationpage .bookingform {
+  background: url(../img/bg-grey.png);
+  text-align: left;
+  padding: 50px 0;
+}
+#locationpage .bookingform p {
+  width: 80%;
+}
+#locationpage .bookingform .disclaimer {
+  font-family: TradeGothicLT-CondEighteen;
+  font-size: 12px;
 }
 #locationpage .location {
   text-align: center;
@@ -1113,6 +1214,35 @@ header#top #toggle .fa {
 #locationpage .parallax-bottom {
   clear: both;
 }
+#locationpage .jobs {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 0;
+  overflow: hidden;
+}
+#locationpage .jobs .columns p {
+  font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+  text-align: left;
+  font-size: 18px;
+}
+
+#locationpage .topcontent, .categorypage .topcontent {
+  margin-top: -130px;
+  padding-top: 130px;
+  height: 330px;
+  background-size: 100%;
+  background-attachment: normal;
+}
+#locationpage .topcontent h1, .categorypage .topcontent h1 {
+  font-family: TradeGothicLT-CondEighteen;
+  font-size: 60px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  width: auto;
+  text-shadow: 4px 4px 5px #1d1d1d;
+}
 
 #menupage {
   background: url(../img/bg-grey.png);
@@ -1161,7 +1291,7 @@ header#top #toggle .fa {
   font-family: CardenioModern;
   font-weight: normal;
   clear: both;
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
 }
 @media only screen and (min-width: 40.063em) {
   #menupage .menucontent h1, #menupage .menucontent h2 {
@@ -1305,12 +1435,27 @@ header#top #toggle .fa {
     font-size: 18px;
   }
 }
+#menupage .menuemail p {
+  color: white;
+  text-align: center;
+  font-family: TradeGothicLT-CondEighteen;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#menupage .menuemail p i {
+  padding: 0 10px;
+}
+#menupage .menuemail a {
+  color: white;
+}
 #menupage .gallerytitle {
   margin-top: 100px;
   height: 120px;
 }
 #menupage .gallerytitle h1 {
   font-family: CardenioModern;
+  text-align: center;
   color: white;
   font-size: 48px;
   line-height: 120px;
@@ -1401,6 +1546,7 @@ header#top #toggle .fa {
   color: white;
   font-size: 23px;
   line-height: 40px;
+  text-shadow: 4px 4px 5px #1d1d1d;
 }
 #menupageinitial h2 i {
   font-size: 40px;
@@ -1472,128 +1618,170 @@ header#top #toggle .fa {
 }
 
 .parallax-first {
-  background-image: url("http://trial.resrc.it/c=x25p,w30p,y20p,h80p/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp1.jpg");
+  background-image: url("http://trial.resrc.it/s=w200,pd2/c=x25p,w30p,y20p,h80p/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp1.jpg");
 }
 @media only screen and (min-width: 600px) {
   .parallax-first {
-    background-image: url("http://trial.resrc.it/c=x25p,w50p,y0p,h100p/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp1.jpg");
+    background-image: url("http://trial.resrc.it/s=w200,pd2/c=x25p,w50p,y0p,h100p/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp1.jpg");
   }
 }
 @media only screen and (min-width: 900px) {
   .parallax-first {
-    background-image: url("http://trial.resrc.it/c=x15p,w70p,y0p,h100p/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp1.jpg");
+    background-image: url("http://trial.resrc.it/s=w200,pd2/c=x15p,w70p,y0p,h100p/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp1.jpg");
   }
 }
 @media only screen and (min-width: 1200px) {
   .parallax-first {
-    background-image: url("http://trial.resrc.it/s=pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp1.jpg");
+    background-image: url("http://trial.resrc.it/s=w200,pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp1.jpg");
   }
 }
 
 .parallax-second {
   height: 800px;
-  background-image: url("http://trial.resrc.it/c=x55p,w30p,y20p,h80p/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp2.jpg");
+  background-image: url("http://trial.resrc.it/s=pd2/c=x55p,w30p,y20p,h80p/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp2.jpg");
 }
 @media only screen and (min-width: 600px) {
   .parallax-second {
     height: 400px;
-    background-image: url("http://trial.resrc.it/c=x50p,w40p,y20p,h80p/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp2.jpg");
+    background-image: url("http://trial.resrc.it/s=pd2/c=x50p,w40p,y20p,h80p/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp2.jpg");
   }
 }
 @media only screen and (min-width: 900px) {
   .parallax-second {
     height: 600px;
-    background-image: url("http://trial.resrc.it/c=x15p,w70p,y0p,h100p/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp2.jpg");
+    background-image: url("http://trial.resrc.it/s=pd2/c=x15p,w70p,y0p,h100p/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp2.jpg");
   }
 }
 @media only screen and (min-width: 1200px) {
   .parallax-second {
-    background-image: url("http://trial.resrc.it/s=pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp2.jpg");
+    background-image: url("http://trial.resrc.it/s=pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp2.jpg");
   }
 }
 
 .parallax-third {
   height: 800px;
-  background-image: url("http://trial.resrc.it/c=x35p,w30p,y20p,h80p/s=w360/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp4.jpg");
+  background-image: url("http://trial.resrc.it/s=pd2/c=x35p,w30p,y20p,h80p/s=w360/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp4.jpg");
 }
 @media only screen and (min-width: 600px) {
   .parallax-third {
-    background-image: url("http://trial.resrc.it/c=x25p,w50p,y0p,h100p/s=w360/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp4.jpg");
+    background-image: url("http://trial.resrc.it/s=pd2/c=x25p,w50p,y0p,h100p/s=w360/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp4.jpg");
   }
 }
 @media only screen and (min-width: 900px) {
   .parallax-third {
-    background-image: url("http://trial.resrc.it/c=x15p,w70p,y0p,h100p/s=w360/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp4.jpg");
+    background-image: url("http://trial.resrc.it/s=pd2/c=x15p,w70p,y0p,h100p/s=w360/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp4.jpg");
   }
 }
 @media only screen and (min-width: 1200px) {
   .parallax-third {
-    background-image: url("http://trial.resrc.it/s=pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp4.jpg");
+    background-image: url("http://trial.resrc.it/s=pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp4.jpg");
   }
 }
 
 .parallax-fourth {
   height: 800px;
-  background-image: url("http://trial.resrc.it/c=x25p,w30p,y20p,h80p/s=w360/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp5.jpg");
+  background-image: url("http://trial.resrc.it/s=pd2/c=x25p,w30p,y20p,h80p/s=w360/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp5.jpg");
 }
 @media only screen and (min-width: 600px) {
   .parallax-fourth {
-    background-image: url("http://trial.resrc.it/c=x25p,w50p,y0p,h100p/s=w360/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp5.jpg");
+    background-image: url("http://trial.resrc.it/s=pd2/c=x25p,w50p,y0p,h100p/s=w360/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp5.jpg");
   }
 }
 @media only screen and (min-width: 900px) {
   .parallax-fourth {
-    background-image: url("http://trial.resrc.it/c=x15p,w70p,y0p,h100p/s=w360/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp5.jpg");
+    background-image: url("http://trial.resrc.it/s=pd2/c=x15p,w70p,y0p,h100p/s=w360/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp5.jpg");
   }
 }
 @media only screen and (min-width: 1200px) {
   .parallax-fourth {
-    background-image: url("http://trial.resrc.it/s=pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp5.jpg");
+    background-image: url("http://trial.resrc.it/s=pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp5.jpg");
   }
 }
 
 .parallax-fifth {
-  background-image: url("http://trial.resrc.it/c=X60P,W20P,Y40P,H60P/s=320,pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp6.jpg");
+  background-image: url("http://trial.resrc.it/s=pd2/c=X60P,W20P,Y40P,H60P/s=320,pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp6.jpg");
 }
 @media only screen and (min-width: 600px) {
   .parallax-fifth {
-    background-image: url("http://trial.resrc.it/c=X35P,W40P,Y35P,H60P/s=w600,pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp6.jpg");
+    background-image: url("http://trial.resrc.it/s=pd2/c=X35P,W40P,Y35P,H60P/s=w600,pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp6.jpg");
   }
 }
 @media only screen and (min-width: 900px) {
   .parallax-fifth {
-    background-image: url("http://trial.resrc.it/c=W100P,Y40P,H60P/s=pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp6.jpg");
+    background-image: url("http://trial.resrc.it/s=pd2/c=W100P,Y40P,H60P/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp6.jpg");
+  }
+}
+
+.parallax-sixth {
+  background-image: url("http://trial.resrc.it/s=pd2/c=X60P,W20P,Y40P,H60P/s=320,pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp7.jpg");
+}
+@media only screen and (min-width: 600px) {
+  .parallax-sixth {
+    background-image: url("http://trial.resrc.it/s=pd2/c=X35P,W40P,Y35P,H60P/s=w600,pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp7.jpg");
+  }
+}
+@media only screen and (min-width: 900px) {
+  .parallax-sixth {
+    background-image: url("http://trial.resrc.it/s=pd2/c=W100P,Y60P,H40P/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp7.jpg");
+  }
+}
+
+.parallax-seven, #locationpage .jobs .parallax {
+  background-image: url("http://trial.resrc.it/s=pd2/c=X60P,W20P,Y40P,H60P/s=320,pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp8.jpg");
+}
+@media only screen and (min-width: 600px) {
+  .parallax-seven, #locationpage .jobs .parallax {
+    background-image: url("http://trial.resrc.it/s=pd2/c=X35P,W40P,Y35P,H60P/s=w600,pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp8.jpg");
+  }
+}
+@media only screen and (min-width: 900px) {
+  .parallax-seven, #locationpage .jobs .parallax {
+    background-image: url("http://trial.resrc.it/s=pd2/c=W100P,Y10P,H90P/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp8.jpg");
   }
 }
 
 .parallax-bottom {
   height: 315px;
   background-position: 50% bottom;
-  background-image: url("http://trial.resrc.it/c=X60P,W20P,Y40P,H60P/s=320,pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp3.jpg");
+  background-image: url("http://trial.resrc.it/s=pd2/c=X60P,W20P,Y40P,H60P/s=320,pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp3.jpg");
 }
 @media only screen and (min-width: 600px) {
   .parallax-bottom {
-    background-image: url("http://trial.resrc.it/c=X35P,W40P,Y35P,H60P/s=w600,pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp3.jpg");
+    background-image: url("http://trial.resrc.it/s=pd2/c=X35P,W40P,Y35P,H60P/s=w600,pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp3.jpg");
   }
 }
 @media only screen and (min-width: 900px) {
   .parallax-bottom {
-    background-image: url("http://trial.resrc.it/s=w320,pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/tmp3.jpg");
+    background-image: url("http://trial.resrc.it/s=pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp3.jpg");
   }
 }
 
+#spacepage {
+  /****** to be removed... probably */
+}
 #spacepage .resrc {
   position: relative;
   height: 400px;
 }
-#spacepage .resrc h1 {
+#spacepage .resrc h1, #spacepage .resrc h4 {
   position: absolute;
-  bottom: 90px;
   right: 5%;
-  font-family: CardenioModern;
+  font-family: TradeGothicLT-CondEighteen;
+  font-weight: bold;
   font-size: 72px;
   color: white;
   text-align: center;
+  text-shadow: 4px 4px 5px #1d1d1d;
+}
+#spacepage .resrc h1 {
+  bottom: 90px;
+  font-size: 72px;
+  line-height: 72px;
+}
+#spacepage .resrc h4 {
+  bottom: 30px;
+  font-size: 32px;
+  line-height: 50px;
 }
 @media only screen and (min-width: 600px) {
   #spacepage .resrc {
@@ -1612,6 +1800,27 @@ header#top #toggle .fa {
 }
 #spacepage .resrc.parallax-bottom {
   height: 315px;
+}
+#spacepage div.link {
+  background: url(../img/bg-grey.png);
+}
+#spacepage div.link h2 {
+  text-align: center;
+  font-family: CardenioModern;
+  font-size: 38px;
+  line-height: 60px;
+}
+#spacepage div.link h2 a {
+  color: white;
+}
+#spacepage h2 {
+  text-align: center;
+  font-family: CardenioModern;
+  font-size: 38px;
+  line-height: 60px;
+}
+#spacepage h2 a {
+  color: black;
 }
 
 ul.socialicons {
@@ -1648,7 +1857,7 @@ ul.socialicons i {
   color: white;
 }
 
-#whatsontoclose .whatson {
+.whatson#whatsontoclose {
   background: url(../img/bg-grey.png);
   text-align: center;
   height: auto !important;
@@ -1656,7 +1865,7 @@ ul.socialicons i {
   border-right: none;
   display: block;
 }
-#whatsontoclose .whatson #whatsonclose {
+.whatson#whatsontoclose #whatsonclose {
   font-size: 24px;
   position: absolute;
   top: 0;
@@ -1673,11 +1882,11 @@ ul.socialicons i {
 }
 
 .food1bg {
-  background-image: url("http://trial.resrc.it/o=100/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/food1.jpg");
+  background-image: url("http://trial.resrc.it/o=100/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/food1.jpg");
 }
 
 .food2bg {
-  background-image: url("http://trial.resrc.it/o=100/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/tmp/food2.jpg");
+  background-image: url("http://trial.resrc.it/o=100/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/food2.jpg");
 }
 
 .woodbg {
@@ -1814,7 +2023,7 @@ ul.socialicons i {
   }
 }
 
-.buzz-out {
+.buzz-out, #menupage .menuemail a {
   display: inline-block;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
@@ -1822,7 +2031,7 @@ ul.socialicons i {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 }
 
-.buzz-out:hover {
+.buzz-out:hover, #menupage .menuemail a:hover {
   -webkit-animation-name: buzz-out;
   animation-name: buzz-out;
   -webkit-animation-duration: .75s;
@@ -1859,7 +2068,7 @@ ul.socialicons i {
   }
 }
 
-.pop, footer#bottom a, header#top a, #menupage ul#menuselection li a, #menupageinitial ul li a {
+.pop, footer#bottom a, header#top a, header#top #smallnav li a, #menupage ul#menuselection li a, #menupageinitial ul li a {
   display: inline-block;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
@@ -1867,7 +2076,7 @@ ul.socialicons i {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 }
 
-.pop:hover, footer#bottom a:hover, header#top a:hover, #menupage ul#menuselection li a:hover, #menupageinitial ul li a:hover {
+.pop:hover, footer#bottom a:hover, header#top a:hover, header#top #smallnav li a:hover, #menupage ul#menuselection li a:hover, #menupageinitial ul li a:hover {
   -webkit-animation-name: pop;
   animation-name: pop;
   -webkit-animation-duration: 0.3s;
@@ -1905,7 +2114,7 @@ ul.socialicons i {
   }
 }
 
-.push, header#top #smallnav li a {
+.push {
   display: inline-block;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
@@ -1913,7 +2122,7 @@ ul.socialicons i {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 }
 
-.push:hover, header#top #smallnav li a:hover {
+.push:hover {
   -webkit-animation-name: push;
   animation-name: push;
   -webkit-animation-duration: 0.3s;
@@ -1980,7 +2189,7 @@ ul.socialicons i {
   animation-direction: alternate;
 }
 
-.centerbox, #homepage .topcontent, #locationpage .topcontent {
+.centerbox, #homepage .topcontent, #functionspage .topcontent, #locationpage .topcontent, .categorypage .topcontent {
   display: -webkit-box;
   -webkit-box-orient: horizontal;
   -webkit-box-pack: center;
@@ -2026,7 +2235,8 @@ body#erskine-street #top .socialicons .circle i {
 }
 body#erskine-street .primary-background,
 body#erskine-street .glutenfree,
-body#erskine-street .menucontent .price {
+body#erskine-street .menucontent .price,
+body#erskine-street input[type=submit] {
   background-color: #ba4533 !important;
 }
 
@@ -2039,7 +2249,8 @@ body#crows-nest #top .socialicons .circle i {
 }
 body#crows-nest .primary-background,
 body#crows-nest .glutenfree,
-body#crows-nest .menucontent .price {
+body#crows-nest .menucontent .price,
+body#crows-nest input[type=submit] {
   background-color: #857aa3 !important;
 }
 
@@ -2052,6 +2263,7 @@ body#kirribilli #top .socialicons .circle i {
 }
 body#kirribilli .primary-background,
 body#kirribilli .glutenfree,
-body#kirribilli .menucontent .price {
+body#kirribilli .menucontent .price,
+body#kirribilli input[type=submit] {
   background-color: #87cfde !important;
 }

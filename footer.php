@@ -42,11 +42,12 @@ resrc = {
 		$(window).resize(function() {
 			// make sure first background element fills available space
 			if ($('.first-bg').is(':visible')) {
-				$('.first-bg').css('height',$(window).height());			
+				$('.first-bg').css('height',$(window).height()-bottomheight);			
 			}
-// 			if ($('.first-bg-nofooter').is(':visible')) {
-// 				$('.first-bg-nofooter').css('height',$(window).height()-bottomheight-topheight);			
-// 			}
+			if ($('.first-bg-nofooter').is(':visible')) {
+				$('.first-bg-nofooter').css('height',$(window).height()-bottomheight-topheight);			
+			}
+			$('.firstbg-min').css('min-height',$(window).height()-bottomheight-topheight);
 			
 // 			$('.screen-height').css('height',$(window).height()-bottomheight);			
 
@@ -94,7 +95,7 @@ resrc = {
 
 		
 		function closeWhatsOn() {
-			$('.whatson').toggle();
+			$('#whatsontoclose').toggle();
 			$('.container').css('margin-top',$('#top').height() );
 		};
     
