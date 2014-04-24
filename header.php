@@ -86,7 +86,7 @@
 
 	<div class="row">	       
 		<div class="small-8 medium-5 large-3 columns" id="logo">
-			<a href="<?php echo get_site_url();?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logo2.png" width="89" height="91"/></a>
+			<a href="<?php echo get_site_url();?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logo-<?php echo $bar?>.png" width="89" height="91"/></a>
 		</div>
 
 		<div class="small-10 medium-5 large-3 columns" id="ident">

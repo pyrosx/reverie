@@ -36,11 +36,10 @@ $menushare =
 			the_content(); 
 		endwhile; ?>
 				
-		<?php echo $menushare; ?>
-					
 		<div class="row food2bg"></div>
-	</div>		
-	
+
+	</div>
+		
 </div>
 
 <script>
@@ -48,7 +47,7 @@ $menushare =
 	
 		// PARALLAX CLASSES
 		$('.food1bg').parallax("50%",0.3);
-		$('.food2bg').parallax("50%",0.3);
+// 		$('.food2bg').parallax("50%",0.3);
 
 		
 	})(jQuery);

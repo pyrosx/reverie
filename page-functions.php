@@ -18,7 +18,7 @@ get_header();
 <!-- Row for main content area -->
 	<div class="small-24 columns" id="content" role="main">
 
-		<div class="row topcontent parallax-first resrc first-bg "><div class="columns small-24">
+		<div class="row topcontent parallax-first resrc first-bg  centerbox"><div class="columns small-24">
 			<h1>LOOKING FOR &lsquo;THE&rsquo; VENUE
 			<br/>TO HOST YOUR EVENT OR
 			<br/>FUNCTION?</h1>

@@ -1131,13 +1131,13 @@ form textarea {
   margin-bottom: 16px;
 }
 
-#locationpage {
+#standardpage {
   position: relative;
 }
-#locationpage .contactdetails {
+#standardpage .contactdetails {
   padding: 50px 0;
 }
-#locationpage .contactdetails p {
+#standardpage .contactdetails p {
   width: 80%;
   color: black;
   text-align: left;
@@ -1147,93 +1147,129 @@ form textarea {
   line-height: 36px;
   padding-bottom: 30px;
 }
-#locationpage .contactdetails p strong {
+#standardpage .contactdetails p strong {
   font-family: TradeGothicLT-CondEighteen;
 }
-#locationpage .contactdetails p .smaller {
+#standardpage .contactdetails p .smaller {
   font-size: 24px;
 }
-#locationpage .bookingform {
+#standardpage .bookingform {
   background: url(../img/bg-grey.png);
   text-align: left;
   padding: 50px 0;
 }
-#locationpage .bookingform p {
+#standardpage .bookingform p {
   width: 80%;
 }
-#locationpage .bookingform .disclaimer {
+#standardpage .bookingform .disclaimer {
   font-family: TradeGothicLT-CondEighteen;
   font-size: 12px;
 }
-#locationpage .location {
+#standardpage .location {
   text-align: center;
   overflow: hidden;
 }
-#locationpage .location h1 {
+#standardpage .location h1 {
   font-family: TradeGothicLT-CondEighteen;
   font-weight: bold;
   font-size: 48px;
   line-height: 60px;
 }
-#locationpage .location h2 {
+#standardpage .location h2 {
   font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
   font-size: 18px;
   line-height: 28px;
 }
-#locationpage .location .columns.map {
+#standardpage .location .columns.map {
   height: 300px;
 }
 @media only screen and (min-width: 40.063em) {
-  #locationpage .location .columns.map {
+  #standardpage .location .columns.map {
     height: 400px;
   }
 }
 @media only screen and (min-width: 64.063em) {
-  #locationpage .location .columns.map {
+  #standardpage .location .columns.map {
     height: 500px;
   }
 }
-#locationpage .location .columns.address {
+#standardpage .location .columns.address {
   min-height: 300px;
   padding-bottom: 60px;
   padding-top: 60px;
 }
 @media only screen and (min-width: 40.063em) {
-  #locationpage .location .columns.address {
+  #standardpage .location .columns.address {
     padding-top: 90px;
     padding-bottom: 0;
     min-height: 400px;
   }
 }
 @media only screen and (min-width: 64.063em) {
-  #locationpage .location .columns.address {
+  #standardpage .location .columns.address {
     padding-top: 140px;
     min-height: 500px;
   }
 }
-#locationpage .parallax-bottom {
+#standardpage .parallax-bottom {
   clear: both;
 }
-#locationpage .jobs {
+#standardpage .jobs {
   max-width: 1000px;
   margin: 0 auto;
   padding: 50px 0;
   overflow: hidden;
 }
-#locationpage .jobs .columns p {
+#standardpage .jobs .columns p {
   font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
   text-align: left;
   font-size: 18px;
 }
+#standardpage .sounds {
+  border-bottom: 1px solid #4d4d4d;
+}
+#standardpage .sounds .details {
+  margin: 40px 0;
+}
+@media only screen and (min-width: 64.063em) {
+  #standardpage .sounds .details {
+    margin: 100px 0;
+  }
+}
+#standardpage .sounds h2, #standardpage .sounds h3, #standardpage .sounds p {
+  color: white;
+  text-align: left;
+  font-size: 32px;
+  line-height: 40px;
+}
+#standardpage .sounds h2 {
+  font-family: CardenioModern;
+}
+#standardpage .sounds h3 {
+  font-family: TradeGothicLT-CondEighteen;
+  font-weight: bold;
+}
+#standardpage .sounds p {
+  font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+  font-size: 18px;
+  padding-top: 20px;
+  line-height: 26px;
+}
+#standardpage .sounds img {
+  width: 100%;
+}
+#standardpage .row.sounds {
+  width: 100%;
+}
 
-#locationpage .topcontent, .categorypage .topcontent {
+#standardpage .topcontent, .categorypage .topcontent {
   margin-top: -130px;
   padding-top: 130px;
   height: 330px;
   background-size: 100%;
   background-attachment: normal;
 }
-#locationpage .topcontent h1, .categorypage .topcontent h1 {
+#standardpage .topcontent h1, .categorypage .topcontent h1 {
   font-family: TradeGothicLT-CondEighteen;
   font-size: 60px;
   text-align: center;
@@ -1252,7 +1288,8 @@ form textarea {
   max-width: 1000px;
   margin: 0 auto;
   position: relative;
-  padding-top: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 #menupage .menucontent #legend {
   float: left;
@@ -1262,12 +1299,14 @@ form textarea {
   font-weight: bold;
   text-align: center;
   padding-top: 30px;
+  padding-bottom: 40px;
 }
 @media only screen and (min-width: 40.063em) {
   #menupage .menucontent #legend {
     padding-top: 0;
+    padding-bottom: 0;
     position: absolute;
-    top: 35px !important;
+    top: 40px !important;
     left: 52.5%;
   }
 }
@@ -1465,34 +1504,41 @@ form textarea {
   max-width: 768px;
   margin: 0 auto;
   padding-top: 90px;
+  /* 
+  		.galleryitem {
+  			overflow: hidden;
+  			padding-bottom: 30px;
+  			
+  			color: black;
+  			
+  			text-align: center;
+  			margin: 0 auto;
+  			width: 90%;
+  			max-width: 350px;
+  			
+  			@media only screen and (min-width: 768px) {	
+  				float: left;
+  				&:nth-child(odd) {
+  					margin-right: 68px;
+  				}
+  			}
+  						
+  			.item {
+  				line-height: 40px;
+  				font-family: $fontcond;
+  				font-weight: bold;
+  				font-size: 21px;
+  			}
+  			.desc {
+  				line-height: 24px;
+  				font-size: 18px;
+  				font-family: $fontbook;
+  			}
+  		}
+   */
 }
-#menupage .gallery .galleryitem {
-  overflow: hidden;
-  padding-bottom: 30px;
-  color: black;
-  text-align: center;
-  margin: 0 auto;
-  width: 90%;
-  max-width: 350px;
-}
-@media only screen and (min-width: 768px) {
-  #menupage .gallery .galleryitem {
-    float: left;
-  }
-  #menupage .gallery .galleryitem:nth-child(odd) {
-    margin-right: 68px;
-  }
-}
-#menupage .gallery .galleryitem .item {
-  line-height: 40px;
-  font-family: TradeGothicLT-CondEighteen;
-  font-weight: bold;
-  font-size: 21px;
-}
-#menupage .gallery .galleryitem .desc {
-  line-height: 24px;
-  font-size: 18px;
-  font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+#menupage .galleryitem img {
+  width: 100%;
 }
 #menupage .food2bg {
   height: 315px;
@@ -1601,13 +1647,15 @@ form textarea {
   background: #e8e1d8 url("http://trial.resrc.it/s=w360/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/bg-lightwood.jpg") 50% 0 repeat;
   padding: 20px 0;
 }
-.pagecontent h1 {
+.pagecontent h1, .pagecontent h2 {
   text-align: center;
   font-family: CardenioModern;
-  font-size: 30px;
-  line-height: 36px;
   color: black;
   text-shadow: none;
+}
+.pagecontent h1 {
+  font-size: 30px;
+  line-height: 36px;
 }
 .pagecontent p {
   font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
@@ -1726,16 +1774,16 @@ form textarea {
   }
 }
 
-.parallax-seven, #locationpage .jobs .parallax {
+.parallax-seven, #standardpage .jobs .parallax {
   background-image: url("http://trial.resrc.it/s=pd2/c=X60P,W20P,Y40P,H60P/s=320,pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp8.jpg");
 }
 @media only screen and (min-width: 600px) {
-  .parallax-seven, #locationpage .jobs .parallax {
+  .parallax-seven, #standardpage .jobs .parallax {
     background-image: url("http://trial.resrc.it/s=pd2/c=X35P,W40P,Y35P,H60P/s=w600,pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp8.jpg");
   }
 }
 @media only screen and (min-width: 900px) {
-  .parallax-seven, #locationpage .jobs .parallax {
+  .parallax-seven, #standardpage .jobs .parallax {
     background-image: url("http://trial.resrc.it/s=pd2/c=W100P,Y10P,H90P/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp8.jpg");
   }
 }
@@ -1756,9 +1804,6 @@ form textarea {
   }
 }
 
-#spacepage {
-  /****** to be removed... probably */
-}
 #spacepage .resrc {
   position: relative;
   height: 400px;
@@ -1801,26 +1846,19 @@ form textarea {
 #spacepage .resrc.parallax-bottom {
   height: 315px;
 }
-#spacepage div.link {
+
+.link {
   background: url(../img/bg-grey.png);
 }
-#spacepage div.link h2 {
+.link h2 {
   text-align: center;
   font-family: CardenioModern;
   font-size: 38px;
   line-height: 60px;
-}
-#spacepage div.link h2 a {
   color: white;
 }
-#spacepage h2 {
-  text-align: center;
-  font-family: CardenioModern;
-  font-size: 38px;
-  line-height: 60px;
-}
-#spacepage h2 a {
-  color: black;
+.link h2 a {
+  color: white;
 }
 
 ul.socialicons {
@@ -1895,6 +1933,10 @@ ul.socialicons i {
 
 .wood2bg {
   background: #e8e1d8 url("http://trial.resrc.it/s=w360/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/bg-wood2.jpg") 50% 0 repeat;
+}
+
+.headfootbg {
+  background: url(../img/bg-grey.png);
 }
 
 @media only screen and (min-width: 40.063em) {
@@ -2189,7 +2231,7 @@ ul.socialicons i {
   animation-direction: alternate;
 }
 
-.centerbox, #homepage .topcontent, #functionspage .topcontent, #locationpage .topcontent, .categorypage .topcontent {
+.centerbox, #homepage .topcontent, #functionspage .topcontent, #standardpage .topcontent, .categorypage .topcontent {
   display: -webkit-box;
   -webkit-box-orient: horizontal;
   -webkit-box-pack: center;

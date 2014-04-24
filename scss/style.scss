@@ -74,6 +74,8 @@ $textshadow: 4px 4px 5px #1d1d1d;
 $woodbg: #e8e1d8 url($resrcpath+'s=w360/o=20(80)/'+$imgpath+'bg-lightwood.jpg') 50% 0 repeat;
 $wood2bg: #e8e1d8 url($resrcpath+'s=w360/o=20(80)/'+$imgpath+'bg-wood2.jpg') 50% 0 repeat;
 
+
+
 .row, .top-bar {
 	min-width:100% !important; 
 }
@@ -548,9 +550,7 @@ header#top {
 				font-size: 18px;
 			}
 		}
-	}
-
-	
+	}	
 }
 #homepage, #functionspage {
 	.topcontent {
@@ -639,7 +639,7 @@ form {
 	}
 }
 
-#locationpage {
+#standardpage {
 	
 	position: relative;
 	
@@ -739,8 +739,44 @@ form {
 			@extend .parallax-seven;
 		}	
 	}
+	
+	.sounds {
+		border-bottom: $navborder;
+
+		.details {
+			margin: 40px 0;
+			@media #{$large-up} {
+				margin: 100px 0;
+			}
+		}
+		h2, h3, p {
+			color: white;
+			text-align: left;
+			font-size: 32px;		
+			line-height: 40px;
+		}
+		h2 {
+			font-family: $fontcardenio;
+		}
+		h3 {
+			font-family: $fontcond;
+			font-weight: bold;
+		}
+		p {
+			font-family: $fontbook;
+			font-size: 18px;	
+			padding-top: 20px;	
+			line-height: 26px;
+		}
+		img {
+			width: 100%;
+		}
+	}
+	.row.sounds {
+		width: 100%;
+	}
 }
-#locationpage, .categorypage {
+#standardpage, .categorypage {
 	.topcontent {
 		margin-top: 0-$topheight;
 		padding-top: $topheight;
@@ -770,7 +806,8 @@ form {
 		max-width: 1000px;
 		margin: 0 auto;
 		position: relative;
-		padding-top: 20px;	
+		padding-top: 40px;	
+		padding-bottom: 40px;
 
 		#legend {
 			float: left;
@@ -780,11 +817,13 @@ form {
 			font-weight: bold;
 			text-align: center;
 			padding-top: 30px;
+			padding-bottom: 40px;
 			
 			@media #{$medium-up} {
 				padding-top: 0;
+				padding-bottom: 0;
 				position: absolute;
-				top: 35px !important;
+				top: 40px !important;
 				left: 52.5%;
 			}
 		}
@@ -1006,6 +1045,7 @@ form {
 		margin: 0 auto;
 		padding-top: 90px;
 
+/* 
 		.galleryitem {
 			overflow: hidden;
 			padding-bottom: 30px;
@@ -1036,10 +1076,16 @@ form {
 				font-family: $fontbook;
 			}
 		}
-	 }
-	 .food2bg {
+ */
+	}
+	.galleryitem {
+		img {
+			width: 100%;
+		}
+	}
+	.food2bg {
 	 	height: 315px;
-	 }
+	}
 	.toppanel {
 		height: $topheight+200px;
 		margin-top: 0-$topheight;
@@ -1155,15 +1201,16 @@ form {
 	background: $woodbg;
 	padding: 20px 0;
 
-	h1 {
+	h1,h2 {
 		text-align: center;
 		font-family: $fontcardenio;
-		font-size: 30px;
-		line-height: 36px;
 		color: black;
 		text-shadow: none;
 	}
-
+	h1 {
+		font-size: 30px;
+		line-height: 36px;
+	}
 	p {
 		font-family: $fontbook;
 		text-align: center;
@@ -1321,31 +1368,23 @@ form {
 	.resrc.parallax-bottom {
 		height: 315px;
 	}
-	div.link {
 
-		background: $headfootbackground;
-	
-		h2 {
-			text-align: center;
-			font-family: $fontcardenio;
-			font-size: 38px;
-			line-height: 60px;
-			a {
-			
-				color: white;
-			}
+}
+
+.link {
+
+	background: $headfootbackground;
+
+	h2 {
+		text-align: center;
+		font-family: $fontcardenio;
+		font-size: 38px;
+		line-height: 60px;
+		color: white;
+		a {		
+			color: white;
 		}
 	}
-	/****** to be removed... probably */
-	h2 {
-			text-align: center;
-			font-family: $fontcardenio;
-			font-size: 38px;
-			line-height: 60px;
-			a {
-				color: black;
-			}
-		}
 }
 
 ul.socialicons {
@@ -1421,8 +1460,9 @@ ul.socialicons {
 .wood2bg {
 	background: $wood2bg;
 }
-
-
+.headfootbg {
+	background: $headfootbackground;
+}
 
 .small-only {
 	@media #{$medium-up} {

@@ -1,13 +1,13 @@
 <?php
 /*
-Template Name: Location/Contact Page
+Template Name: Standard Page
 */
 
 get_header(); 
 
 ?>
 
-<div class="row" id="locationpage">
+<div class="row" id="standardpage">
 
 <!-- Row for main content area -->
 	<div class="small-24 columns" id="content" role="main">
@@ -16,11 +16,11 @@ get_header();
 			<h1><?php the_title();?></h1>
 		</div>
 		
-		<div class="row location wood2bg">
+		
 		<?php while (have_posts()) : the_post();
 				the_content(); 
 		endwhile; ?>		
-		</div>
+		
 		
 		<div class="row parallax-bottom resrc"  >
 			<p>&nbsp;</p>

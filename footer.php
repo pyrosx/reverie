@@ -49,7 +49,7 @@ resrc = {
 			}
 			$('.firstbg-min').css('min-height',$(window).height()-bottomheight-topheight);
 			
-// 			$('.screen-height').css('height',$(window).height()-bottomheight);			
+ 			$('.screen-height').css('height',$(window).height()-bottomheight);			
 
 			if ($('#bignav').is(':visible')) {
 				// space bignav

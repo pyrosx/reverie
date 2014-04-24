@@ -3,7 +3,7 @@ global $url, $cat, $bar;
 ?>
 
 	<li><?php print_link($url.'/'); ?>Home</a></li>
-	<li><?php print_link($url.'/about-us/'); ?>About Us</a></li>
+<!-- 	<li><?php print_link($url.'/about-us/'); ?>About Us</a></li> -->
 	<li><?php print_link($url.'/menu/'); ?>Menu</a></li>
 	<li><?php print_link($url.'/space/'); ?>Space</a></li>
 	<li><?php print_link($url.'/functions/'); ?>Functions</a></li>
@@ -14,7 +14,7 @@ global $url, $cat, $bar;
 <?php
 	if ($bar == "crows-nest") {
 ?>
-	<li><?php print_link($url.'/sounds/'); ?>Small Sounds</a></li>
+	<li><?php print_link($url.'/small-sounds/'); ?>Small Sounds</a></li>
 <?php
 	}
 ?>
