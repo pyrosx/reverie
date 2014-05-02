@@ -560,7 +560,6 @@ header#top {
 			text-transform: uppercase;
 			color: white;
 			font-weight: bold;
-			width: auto;
 			text-shadow: $textshadow;
 			line-height: 86px;		
 		}
@@ -576,11 +575,11 @@ header#top {
 		min-height: 380px;
 		@media #{$small-only} {
 			h1 {
-				line-height: 58px;
-				font-size: 58px;
+				line-height: 48px;
+				font-size: 48px;
 			}
 			h2 {
-				font-size: 38px;
+				font-size: 32px;
 			}
 		}		
 	}
@@ -589,9 +588,13 @@ header#top {
 	.topcontent h1 {
 		font-size: 60px;
 		line-height: 70px;
+		@media #{$small-only} {
+			font-size: 30px;
+			line-height: 36px;
+		}
 	}
-	.functioncontent {
-		
+	
+	.functioncontent {	
 		max-width: 800px;
 		padding: 50px 0;
 		margin: 0 auto;
@@ -603,8 +606,14 @@ header#top {
 			font-size: 44px;
 			line-height: 48px;
 			padding-bottom: 44px;
+			
+			@media #{$small-only} {
+				font-size: 32px;
+				line-height: 36px;
+			}
 		}
 	}
+	
 }
 
 form {
@@ -663,6 +672,37 @@ form {
 				font-size: 24px;
 			}
 		}
+		
+		form {
+			margin-top: -20px;
+			width: 80%;
+			div.MGLRow {
+				margin: 0;
+				width: 100%;
+			}
+			div.MGLLabel {
+				display: none;
+			}
+			div.MGLField {
+				margin: 0;
+				margin-bottom: 16px;
+				width: 100%;
+				input {
+					margin: 0;
+					padding: 0.5rem;
+				}
+			}
+			div.MGLPoweredBy {
+				font-size: 12px;
+				text-align: left;
+				a {
+					color: black;
+				}
+			}
+			br.MGLSubmitBreak {
+				display: none;
+			}
+		}
 	}
 	.bookingform {
 		p {
@@ -675,6 +715,9 @@ form {
 		.disclaimer {
 			font-family: $fontcond;
 			font-size: 12px;	
+			line-height: 18px;
+			padding-top: 20px;
+			display: block;
 		}
 	}
 	.location {	
@@ -1337,25 +1380,35 @@ form {
 			right: 5%;
 			font-family: $fontcond;
 			font-weight: bold;
-			font-size: 72px;
 			color: white;
 			text-align: center;
 			text-shadow: $textshadow;
 		}
+		
+		height: 400px;
 		h1 {
-			bottom: 90px;
-			font-size: 72px;
-			line-height: 72px;		
+			bottom: 55px;
+			font-size: 36px;
+			line-height: 36px;
 		}
 		h4 {
-			bottom: 30px;
-			font-size: 32px;
-			line-height: 50px;
+			bottom: 20px;
+			font-size: 24px;
+			line-height: 30px;
 		}
-		height: 400px;
 
 		@media only screen and (min-width: 600px) {	
 			height: 600px;
+			h1 {
+				bottom: 90px;
+				font-size: 72px;
+				line-height: 72px;		
+			}
+			h4 {
+				bottom: 30px;
+				font-size: 32px;
+				line-height: 50px;
+			}
 		}
 		@media only screen and (min-width: 900px) {	
 			height: 700px;

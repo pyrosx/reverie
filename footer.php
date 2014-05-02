@@ -45,7 +45,7 @@ resrc = {
 				$('.first-bg').css('height',$(window).height()-bottomheight);			
 			}
 			if ($('.first-bg-nofooter').is(':visible')) {
-				$('.first-bg-nofooter').css('height',$(window).height()-bottomheight-topheight);			
+				$('.first-bg-nofooter').css('height',$(window).height()-topheight);			
 			}
 			$('.firstbg-min').css('min-height',$(window).height()-bottomheight-topheight);
 			
@@ -117,6 +117,13 @@ resrc = {
 			resrc.resrc(this);
 		  }
 		});
+		
+		// custom hacking to fix myguestlist form
+		
+		$('.MGLField').each(function() {
+			$(this).children().attr("placeholder",$(this).prev().text());
+		});
+		
 		
 	})(jQuery);
 	

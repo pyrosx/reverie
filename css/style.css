@@ -1061,7 +1061,6 @@ header#top #toggle p {
   text-transform: uppercase;
   color: white;
   font-weight: bold;
-  width: auto;
   text-shadow: 4px 4px 5px #1d1d1d;
   line-height: 86px;
 }
@@ -1073,17 +1072,23 @@ header#top #toggle p {
 }
 @media only screen and (max-width: 40em) {
   #homepage .topcontent h1, #functionspage .topcontent h1 {
-    line-height: 58px;
-    font-size: 58px;
+    line-height: 48px;
+    font-size: 48px;
   }
   #homepage .topcontent h2, #functionspage .topcontent h2 {
-    font-size: 38px;
+    font-size: 32px;
   }
 }
 
 #functionspage .topcontent h1 {
   font-size: 60px;
   line-height: 70px;
+}
+@media only screen and (max-width: 40em) {
+  #functionspage .topcontent h1 {
+    font-size: 30px;
+    line-height: 36px;
+  }
 }
 #functionspage .functioncontent {
   max-width: 800px;
@@ -1097,6 +1102,12 @@ header#top #toggle p {
   font-size: 44px;
   line-height: 48px;
   padding-bottom: 44px;
+}
+@media only screen and (max-width: 40em) {
+  #functionspage .functioncontent p {
+    font-size: 32px;
+    line-height: 36px;
+  }
 }
 
 form {
@@ -1153,6 +1164,36 @@ form textarea {
 #standardpage .contactdetails p .smaller {
   font-size: 24px;
 }
+#standardpage .contactdetails form {
+  margin-top: -20px;
+  width: 80%;
+}
+#standardpage .contactdetails form div.MGLRow {
+  margin: 0;
+  width: 100%;
+}
+#standardpage .contactdetails form div.MGLLabel {
+  display: none;
+}
+#standardpage .contactdetails form div.MGLField {
+  margin: 0;
+  margin-bottom: 16px;
+  width: 100%;
+}
+#standardpage .contactdetails form div.MGLField input {
+  margin: 0;
+  padding: 0.5rem;
+}
+#standardpage .contactdetails form div.MGLPoweredBy {
+  font-size: 12px;
+  text-align: left;
+}
+#standardpage .contactdetails form div.MGLPoweredBy a {
+  color: black;
+}
+#standardpage .contactdetails form br.MGLSubmitBreak {
+  display: none;
+}
 #standardpage .bookingform {
   background: url(../img/bg-grey.png);
   text-align: left;
@@ -1164,6 +1205,9 @@ form textarea {
 #standardpage .bookingform .disclaimer {
   font-family: TradeGothicLT-CondEighteen;
   font-size: 12px;
+  line-height: 18px;
+  padding-top: 20px;
+  display: block;
 }
 #standardpage .location {
   text-align: center;
@@ -1813,24 +1857,33 @@ form textarea {
   right: 5%;
   font-family: TradeGothicLT-CondEighteen;
   font-weight: bold;
-  font-size: 72px;
   color: white;
   text-align: center;
   text-shadow: 4px 4px 5px #1d1d1d;
 }
 #spacepage .resrc h1 {
-  bottom: 90px;
-  font-size: 72px;
-  line-height: 72px;
+  bottom: 55px;
+  font-size: 36px;
+  line-height: 36px;
 }
 #spacepage .resrc h4 {
-  bottom: 30px;
-  font-size: 32px;
-  line-height: 50px;
+  bottom: 20px;
+  font-size: 24px;
+  line-height: 30px;
 }
 @media only screen and (min-width: 600px) {
   #spacepage .resrc {
     height: 600px;
+  }
+  #spacepage .resrc h1 {
+    bottom: 90px;
+    font-size: 72px;
+    line-height: 72px;
+  }
+  #spacepage .resrc h4 {
+    bottom: 30px;
+    font-size: 32px;
+    line-height: 50px;
   }
 }
 @media only screen and (min-width: 900px) {
