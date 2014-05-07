@@ -1,0 +1,114 @@
+// YUCK! Cant think of a way around needing absolute paths for resrc.it images though... 
+// Inline styles worked, up until we needed @media queries as well!!
+
+$imgpath: "http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/";
+$resrcpath: "http://trial.resrc.it/";
+
+
+
+.parallax-first {
+	$img: 'ersk/tmp1.jpg';
+	background-image: url($resrcpath+'s=w200,pd2/c=x25p,w30p,y20p,h80p/o=20(80)/'+$imgpath+$img);
+	@media only screen and (min-width: 600px) {	
+		background-image: url($resrcpath+'s=w200,pd2/c=x25p,w50p,y0p,h100p/o=20(80)/'+$imgpath+$img);
+	}
+	@media only screen and (min-width: 900px) {	
+		background-image: url($resrcpath+'s=w200,pd2/c=x15p,w70p,y0p,h100p/o=20(80)/'+$imgpath+$img);
+	}
+	@media only screen and (min-width: 1200px) {	
+		background-image: url($resrcpath+'s=w200,pd2/o=20(80)/'+$imgpath+$img);
+	}
+}
+.parallax-second {
+	height: 800px;
+	$img: 'ersk/tmp2.jpg';
+	background-image: url($resrcpath+'s=pd2/c=x55p,w30p,y20p,h80p/o=20(80)/'+$imgpath+$img);
+	@media only screen and (min-width: 600px) {	
+		height: 400px;
+		background-image: url($resrcpath+'s=pd2/c=x50p,w40p,y20p,h80p/o=20(80)/'+$imgpath+$img);
+	}
+	@media only screen and (min-width: 900px) {	
+		height: 600px;
+		background-image: url($resrcpath+'s=pd2/c=x15p,w70p,y0p,h100p/o=20(80)/'+$imgpath+$img);
+	}
+	@media only screen and (min-width: 1200px) {	
+		background-image: url($resrcpath+'s=pd2/o=20(80)/'+$imgpath+$img);
+	}
+}
+
+.parallax-third {
+	height: 800px;
+	$img: 'ersk/tmp4.jpg';
+	background-image: url($resrcpath+'s=pd2/c=x35p,w30p,y20p,h80p/s=w360/o=20(80)/'+$imgpath+$img);
+	@media only screen and (min-width: 600px) {	
+		background-image: url($resrcpath+'s=pd2/c=x25p,w50p,y0p,h100p/s=w360/o=20(80)/'+$imgpath+$img);
+	}
+	@media only screen and (min-width: 900px) {	
+		background-image: url($resrcpath+'s=pd2/c=x15p,w70p,y0p,h100p/s=w360/o=20(80)/'+$imgpath+$img);
+	}
+	@media only screen and (min-width: 1200px) {	
+		background-image: url($resrcpath+'s=pd2/o=20(80)/'+$imgpath+$img);
+	}
+}
+.parallax-fourth {
+	height: 800px;
+	$img: 'ersk/tmp5.jpg';
+	background-image: url($resrcpath+'s=pd2/c=x25p,w30p,y20p,h80p/s=w360/o=20(80)/'+$imgpath+$img);
+	@media only screen and (min-width: 600px) {	
+		background-image: url($resrcpath+'s=pd2/c=x25p,w50p,y0p,h100p/s=w360/o=20(80)/'+$imgpath+$img);
+	}
+	@media only screen and (min-width: 900px) {	
+		background-image: url($resrcpath+'s=pd2/c=x15p,w70p,y0p,h100p/s=w360/o=20(80)/'+$imgpath+$img);
+	}
+	@media only screen and (min-width: 1200px) {	
+		background-image: url($resrcpath+'s=pd2/o=20(80)/'+$imgpath+$img);
+	}
+}
+.parallax-fifth {
+
+	$img: 'ersk/tmp6.jpg';
+
+	background-image: url($resrcpath+'s=pd2/c=X60P,W20P,Y40P,H60P/s=320,pd2/o=20(80)/'+$imgpath+$img); 
+	@media only screen and (min-width: 600px) {	
+		background-image: url($resrcpath+'s=pd2/c=X35P,W40P,Y35P,H60P/s=w600,pd2/o=20(80)/'+$imgpath+$img);
+	}
+	@media only screen and (min-width: 900px) {	
+		background-image: url($resrcpath+'s=pd2/c=W100P,Y40P,H60P/o=20(80)/'+$imgpath+$img);
+	}
+}
+.parallax-sixth {
+	$img: 'ersk/tmp7.jpg';
+
+	background-image: url($resrcpath+'s=pd2/c=X60P,W20P,Y40P,H60P/s=320,pd2/o=20(80)/'+$imgpath+$img); 
+	@media only screen and (min-width: 600px) {	
+		background-image: url($resrcpath+'s=pd2/c=X35P,W40P,Y35P,H60P/s=w600,pd2/o=20(80)/'+$imgpath+$img);
+	}
+	@media only screen and (min-width: 900px) {	
+		background-image: url($resrcpath+'s=pd2/c=W100P,Y60P,H40P/o=20(80)/'+$imgpath+$img);
+	}
+}
+.parallax-seven {
+	$img: 'ersk/tmp8.jpg';
+
+	background-image: url($resrcpath+'s=pd2/c=X60P,W20P,Y40P,H60P/s=320,pd2/o=20(80)/'+$imgpath+$img); 
+	@media only screen and (min-width: 600px) {	
+		background-image: url($resrcpath+'s=pd2/c=X35P,W40P,Y35P,H60P/s=w600,pd2/o=20(80)/'+$imgpath+$img);
+	}
+	@media only screen and (min-width: 900px) {	
+		background-image: url($resrcpath+'s=pd2/c=W100P,Y10P,H90P/o=20(80)/'+$imgpath+$img);
+	}
+}
+.parallax-bottom {
+	height: 315px;
+	background-position: 50% bottom;
+	
+	$img: 'ersk/tmp3.jpg';
+	
+	background-image: url($resrcpath+'s=pd2/c=X60P,W20P,Y40P,H60P/s=320,pd2/o=20(80)/'+$imgpath+$img); 
+	@media only screen and (min-width: 600px) {	
+		background-image: url($resrcpath+'s=pd2/c=X35P,W40P,Y35P,H60P/s=w600,pd2/o=20(80)/'+$imgpath+$img);
+	}
+	@media only screen and (min-width: 900px) {	
+		background-image: url($resrcpath+'s=pd2/o=20(80)/'+$imgpath+$img);
+	}
+}

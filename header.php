@@ -36,7 +36,8 @@
 		
 		// there doesn't seem to be a solid way to get the url of the category archive page... safer to build it ourselves here.
 		if (is_category()) {
-			$disp = explode("&#8211;",single_cat_title('',false));
+// 			$disp = explode("&#8211;",single_cat_title('',false));
+			$disp = explode("–",single_cat_title('',false));
 			$barDisplay = $disp[0];
 
 			$slug = get_category(get_query_var('cat'))->slug;

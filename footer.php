@@ -20,7 +20,6 @@
 <script>
 resrc = {
   options: {
-    server: "trial.resrc.it",
 	resrcOnResize: false
   }
 };
@@ -29,29 +28,33 @@ resrc = {
 <script>
 
 	(function($) {
+		
+
+		if (Modernizr.touch) {			
+			$('.parallax').each(function() {
+				
+				// fix bg settings
+				$(this).css('background-attachment','scroll');
+				$(this).css('background-size','100%');
+				
+				// enable parallax
+				$(this).parallax("50%",0.2);
+			});
+		}
 	
-		
-		// $topheight: 130px;
-		// $bottomheight: 70px;
-		
 		// The below needs to match the above in style.scss for everything to be peachy...
-		
+		// MUCH easier to set this explicitly than waiting for things to load and checking on actual heights.
 		var topheight = 130;
 		var bottomheight = 70;
-
+	
 		$(window).resize(function() {
-			// make sure first background element fills available space
-			if ($('.first-bg').is(':visible')) {
-				$('.first-bg').css('height',$(window).height()-bottomheight);			
-			}
-			if ($('.first-bg-nofooter').is(':visible')) {
-				$('.first-bg-nofooter').css('height',$(window).height()-topheight);			
-			}
-			$('.firstbg-min').css('min-height',$(window).height()-bottomheight-topheight);
-			
+
+			// footer may disappear, changing "bottomheight" value
+			bottomheight = $('footer#bottom').visible() ? 70 : 0;
+
  			$('.screen-height').css('height',$(window).height()-bottomheight);			
 
-			if ($('#bignav').is(':visible')) {
+			if ($('#bignav').visible()) {
 				// space bignav
 				var total = $('#bignav').width();
 				var menuItems = 0;
@@ -71,10 +74,8 @@ resrc = {
 				$('#smallnav').height((window.innerHeight ? window.innerHeight : $(window).height())-topheight); 
 			}
 		});
-		
 		$(window).resize();
-		
-		
+								
 		$(document).foundation();
 		
 		nav = responsiveNav(".nav-collapse", { // Selector
@@ -92,34 +93,7 @@ resrc = {
 
 		$('#top').scrollUpMenu(nav);
 
-
-		
-		function closeWhatsOn() {
-			$('#whatsontoclose').toggle();
-			$('.container').css('margin-top',$('#top').height() );
-		};
-    
-    	var bar = $('body').attr('id');
-    	
-    
-		$('#whatsonclose').click(function() {
-			closeWhatsOn();
-			sessionStorage['whatsonclosed'+bar] = "yes";
-		});
-		
-		if (sessionStorage['whatsonclosed'+bar] == "yes") {
-			closeWhatsOn();
-		}
-
-		
-		$('.resrc').review({
-		  callback: function() {
-			resrc.resrc(this);
-		  }
-		});
-		
-		// custom hacking to fix myguestlist form
-		
+		// custom hacking to fix myguestlist form		
 		$('.MGLField').each(function() {
 			$(this).children().attr("placeholder",$(this).prev().text());
 		});

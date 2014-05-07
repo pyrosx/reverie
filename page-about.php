@@ -18,7 +18,7 @@ get_header();
 <!-- Row for main content area -->
 	<div class="small-24 columns" id="content" role="main">
 
-	<div class="row topcontent parallax-first resrc first-bg "></div>	
+	<div class="row topcontent parallax parallax-first resrc first-bg "></div>	
 
 	<?php while (have_posts()) : the_post();
 			the_content(); 
@@ -28,26 +28,10 @@ get_header();
 		<h1>-KEEP IT SMALL-</h1>
 	</div>
 	
-	<div class="row parallax-bottom resrc "  >
+	<div class="row parallax parallax-bottom resrc "  >
 		<p>&nbsp;</p>
 	</div>
 		
 </div>
-
-<script>
-	(function($) {
-	
-		// PARALLAX CLASSES
-		$('.parallax-first').parallax("50%",0.1);
-		$('.parallax-second').parallax("50%",0.1);
-		$('.parallax-third').parallax("50%",0.1);
-		
-		$('.parallax-bottom').parallax("50%",0.1);
-
-		
-	})(jQuery);
-	
-
-</script>
 
 <?php get_footer(); ?>

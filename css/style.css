@@ -241,7 +241,7 @@ figure {
  * Define consistent border, margin, and padding.
  */
 fieldset {
-  border: 1px solid #c0c0c0;
+  border: 1px solid silver;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
@@ -574,6 +574,202 @@ ul.pagination li {
   display: inline-block;
 }
 
+.parallax {
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#erskine-street #functionspage .parallax-first {
+  background-image: url("http://app.resrc.it/c=x45p,w30p,y2p,h80p/o=20(90)/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/functions1.jpg");
+}
+@media only screen and (min-width: 600px) {
+  #erskine-street #functionspage .parallax-first {
+    background-image: url("http://app.resrc.it/c=x25p,w50p,y0p,h100p/o=20(90)/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/functions1.jpg");
+  }
+}
+@media only screen and (min-width: 900px) {
+  #erskine-street #functionspage .parallax-first {
+    background-image: url("http://app.resrc.it/c=x15p,w70p,y0p,h90p/o=20(90)/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/functions1.jpg");
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #erskine-street #functionspage .parallax-first {
+    background-image: url("http://app.resrc.it/o=20(90)/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/functions1.jpg");
+  }
+}
+#erskine-street #functionspage .parallax-third {
+  height: 800px;
+  background-image: url("http://app.resrc.it/c=x55p,w30p,y10p,h80p/o=20(90)/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/functions2.jpg");
+}
+@media only screen and (min-width: 600px) {
+  #erskine-street #functionspage .parallax-third {
+    background-image: url("http://app.resrc.it/c=x25p,w50p,y0p,h100p/o=20(90)/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/functions2.jpg");
+  }
+}
+@media only screen and (min-width: 900px) {
+  #erskine-street #functionspage .parallax-third {
+    background-image: url("http://app.resrc.it/c=x15p,w70p,y0p,h100p/o=20(90)/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/functions2.jpg");
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #erskine-street #functionspage .parallax-third {
+    background-image: url("http://app.resrc.it/o=20(90)/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/functions2.jpg");
+  }
+}
+#erskine-street .categorypage .parallax-sixth {
+  background-image: url("http://app.resrc.it/c=X60P,W20P,Y40P,H60P/o=20(90)/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/glasses.jpg");
+}
+@media only screen and (min-width: 600px) {
+  #erskine-street .categorypage .parallax-sixth {
+    background-image: url("http://app.resrc.it/c=X35P,W40P,Y35P,H60P/o=20(90)/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/glasses.jpg");
+  }
+}
+@media only screen and (min-width: 900px) {
+  #erskine-street .categorypage .parallax-sixth {
+    background-image: url("http://app.resrc.it/c=W100P,YOF85,H40P/o=20(90)/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/glasses.jpg");
+  }
+}
+#erskine-street .food1bg {
+  background-image: url("http://app.resrc.it/o=100/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/food1.jpg");
+}
+#erskine-street .food2bg {
+  background-image: url("http://app.resrc.it/o=100/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/food2.jpg");
+}
+#erskine-street .parallax-first {
+  background-image: url("http://app.resrc.it/c=x25p,w30p,y20p,h80p/o=20(90)/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/ersk1.jpg");
+}
+@media only screen and (min-width: 600px) {
+  #erskine-street .parallax-first {
+    background-image: url("http://app.resrc.it/c=x25p,w50p,y0p,h100p/o=20(90)/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/ersk1.jpg");
+  }
+}
+@media only screen and (min-width: 900px) {
+  #erskine-street .parallax-first {
+    background-image: url("http://app.resrc.it/c=x15p,w70p,y0p,h100p/o=20(90)/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/ersk1.jpg");
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #erskine-street .parallax-first {
+    background-image: url("http://app.resrc.it/o=20(90)/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/ersk1.jpg");
+  }
+}
+#erskine-street .parallax-second {
+  height: 800px;
+  background-image: url("http://app.resrc.it/c=x55p,w30p,y20p,h80p/o=20(90)/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/ersk2.jpg");
+}
+@media only screen and (min-width: 600px) {
+  #erskine-street .parallax-second {
+    height: 400px;
+    background-image: url("http://app.resrc.it/c=x50p,w40p,y20p,h80p/o=20(90)/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/ersk2.jpg");
+  }
+}
+@media only screen and (min-width: 900px) {
+  #erskine-street .parallax-second {
+    height: 600px;
+    background-image: url("http://app.resrc.it/c=x15p,w70p,y0p,h100p/o=20(90)/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/ersk2.jpg");
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #erskine-street .parallax-second {
+    background-image: url("http://app.resrc.it/o=20(90)/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/ersk2.jpg");
+  }
+}
+#erskine-street .parallax-third {
+  height: 800px;
+  background-image: url("http://app.resrc.it/c=x35p,w30p,y20p,h80p/o=20(90)/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/ersk4.jpg");
+}
+@media only screen and (min-width: 600px) {
+  #erskine-street .parallax-third {
+    background-image: url("http://app.resrc.it/c=x25p,w50p,y0p,h100p/o=20(90)/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/ersk4.jpg");
+  }
+}
+@media only screen and (min-width: 900px) {
+  #erskine-street .parallax-third {
+    background-image: url("http://app.resrc.it/c=x15p,w70p,y0p,h100p/o=20(90)/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/ersk4.jpg");
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #erskine-street .parallax-third {
+    background-image: url("http://app.resrc.it/o=20(90)/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/ersk4.jpg");
+  }
+}
+#erskine-street .parallax-fourth {
+  height: 800px;
+  background-image: url("http://app.resrc.it/c=x25p,w30p,y5p,h80p/o=20(90)/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/ersk5.jpg");
+}
+@media only screen and (min-width: 600px) {
+  #erskine-street .parallax-fourth {
+    background-image: url("http://app.resrc.it/c=x25p,w50p,y0p,h100p/o=20(90)/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/ersk5.jpg");
+  }
+}
+@media only screen and (min-width: 900px) {
+  #erskine-street .parallax-fourth {
+    background-image: url("http://app.resrc.it/c=x15p,w70p,y0p,h100p/o=20(90)/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/ersk5.jpg");
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #erskine-street .parallax-fourth {
+    background-image: url("http://app.resrc.it/o=20(90)/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/ersk5.jpg");
+  }
+}
+#erskine-street .parallax-fifth {
+  background-image: url("http://app.resrc.it/c=X60P,W20P,Y40P,H60P/o=20(90)/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/tmp6.jpg");
+}
+@media only screen and (min-width: 600px) {
+  #erskine-street .parallax-fifth {
+    background-image: url("http://app.resrc.it/c=X35P,W40P,Y35P,H60P/o=20(90)/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/tmp6.jpg");
+  }
+}
+@media only screen and (min-width: 900px) {
+  #erskine-street .parallax-fifth {
+    background-image: url("http://app.resrc.it/c=W100P,Y40P,H60P/o=20(90)/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/tmp6.jpg");
+  }
+}
+#erskine-street .parallax-sixth {
+  background-image: url("http://app.resrc.it/c=X60P,W20P,Y40P,H60P/o=20(90)/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/tmp7.jpg");
+}
+@media only screen and (min-width: 600px) {
+  #erskine-street .parallax-sixth {
+    background-image: url("http://app.resrc.it/c=X35P,W40P,Y35P,H60P/o=20(90)/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/tmp7.jpg");
+  }
+}
+@media only screen and (min-width: 900px) {
+  #erskine-street .parallax-sixth {
+    background-image: url("http://app.resrc.it/c=W100P,Y60P,H40P/o=20(90)/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/tmp7.jpg");
+  }
+}
+#erskine-street .parallax-seven, #erskine-street #standardpage .jobs .parallax, #standardpage .jobs #erskine-street .parallax {
+  background-image: url("http://app.resrc.it/c=X60P,W20P,Y40P,H60P/o=20(90)/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/tmp8.jpg");
+}
+@media only screen and (min-width: 600px) {
+  #erskine-street .parallax-seven, #erskine-street #standardpage .jobs .parallax, #standardpage .jobs #erskine-street .parallax {
+    background-image: url("http://app.resrc.it/c=X35P,W40P,Y35P,H60P/o=20(90)/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/tmp8.jpg");
+  }
+}
+@media only screen and (min-width: 900px) {
+  #erskine-street .parallax-seven, #erskine-street #standardpage .jobs .parallax, #standardpage .jobs #erskine-street .parallax {
+    background-image: url("http://app.resrc.it/c=W100P,Y10P,H90P/o=20(90)/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/tmp8.jpg");
+  }
+}
+#erskine-street .parallax-bottom {
+  height: 315px;
+  background-position: 50% bottom;
+  background-image: url("http://app.resrc.it/c=X60P,W20P,Y40P,H60P/o=20(90)/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/ersk3.jpg");
+}
+@media only screen and (min-width: 600px) {
+  #erskine-street .parallax-bottom {
+    background-image: url("http://app.resrc.it/c=X35P,W40P,Y35P,H60P/o=20(90)/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/ersk3.jpg");
+  }
+}
+@media only screen and (min-width: 900px) {
+  #erskine-street .parallax-bottom {
+    background-image: url("http://app.resrc.it/o=20(90)/http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/ersk/ersk3.jpg");
+  }
+}
+
 /* Webfonts */
 @font-face {
   font-family: TradeGothicLT;
@@ -637,42 +833,14 @@ ul.pagination li {
   font-size: 44px;
 }
 
-#bg {
-  z-index: -9;
-  position: fixed;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-}
-
-#bg img {
-  position: absolute;
-  top: 130px;
-  left: 0;
-  right: 0;
-  bottom: 70px;
-  margin: auto;
-  min-width: 50%;
-  min-height: 50%;
-}
-
 body {
   background-color: #1d1d1d;
   font-family: TradeGothicLT;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-background-size: 100%;
-  -moz-background-size: 100%;
-  -o-background-size: 100%;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
 }
 
 body, html {
-  /* 	height: 100%; */
   margin: 0;
   padding: 0;
 }
@@ -680,8 +848,6 @@ body, html {
 body#frontpage {
   height: auto;
   background: url(../img/bg-front.jpg);
-  background-size: cover;
-  background-attachment: fixed;
   font-family: TradeGothicLT;
 }
 body#frontpage #coastergrid {
@@ -777,17 +943,23 @@ body#frontpage ul.socialicons {
 #content .first-bg {
   margin-top: -130px;
   padding-top: 130px;
+  background-position: center center;
 }
 
 div {
-  background-position: 50% 0;
-  background-attachment: fixed;
-  background-repeat: no-repeat no-repeat;
-  background-size: cover;
+  /* 
+  	background-position: 50% 0;
+  	background-repeat: no-repeat no-repeat;
+  
+  	background-size: cover;
+  	background-attachment: fixed;
+  	background-size: 100%;
+  	background-attachment: scroll;
+   */
 }
 
 footer#bottom {
-  background: url(../img/bg-grey.png);
+  background: #1d1d1d url(../img/bg-grey.png) 50% 50% repeat repeat;
   width: 100%;
   overflow: hidden;
   margin: 0;
@@ -917,7 +1089,7 @@ header#top .columns {
   height: 130px;
 }
 header#top div, header#top nav {
-  background: url(../img/bg-grey.png);
+  background: #1d1d1d url(../img/bg-grey.png) 50% 50% repeat repeat;
 }
 header#top #ident {
   padding-top: 25px;
@@ -990,7 +1162,6 @@ header#top .socialicons {
   padding-top: 10px;
 }
 header#top .socialicons .circle {
-  /* 			background-color: transparent !important; */
   background: none !important;
   width: 24px;
   border: none;
@@ -1022,7 +1193,7 @@ header#top #toggle p {
   }
 }
 #homepage .maptitle {
-  background-color: #1d1d1d;
+  background: #1d1d1d url(../img/bg-grey.png) 50% 50% repeat repeat;
   text-align: center;
 }
 #homepage .maptitle h1 {
@@ -1195,7 +1366,7 @@ form textarea {
   display: none;
 }
 #standardpage .bookingform {
-  background: url(../img/bg-grey.png);
+  background: #1d1d1d url(../img/bg-grey.png) 50% 50% repeat repeat;
   text-align: left;
   padding: 50px 0;
 }
@@ -1310,8 +1481,6 @@ form textarea {
   margin-top: -130px;
   padding-top: 130px;
   height: 330px;
-  background-size: 100%;
-  background-attachment: normal;
 }
 #standardpage .topcontent h1, .categorypage .topcontent h1 {
   font-family: TradeGothicLT-CondEighteen;
@@ -1325,7 +1494,7 @@ form textarea {
 }
 
 #menupage {
-  background: url(../img/bg-grey.png);
+  background: #1d1d1d url(../img/bg-grey.png) 50% 50% repeat repeat;
 }
 #menupage .menucontent {
   width: 90%;
@@ -1590,7 +1759,9 @@ form textarea {
 #menupage .toppanel {
   height: 330px;
   margin-top: -130px;
-  background-position: 50% 200%;
+  /* yyeah, dunno 
+  		background-position: 50% 200%;
+   */
 }
 #menupage ul#menuselection {
   margin: 0;
@@ -1688,7 +1859,7 @@ form textarea {
 }
 
 .pagecontent {
-  background: #e8e1d8 url("http://trial.resrc.it/s=w360/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/bg-lightwood.jpg") 50% 0 repeat;
+  background: #e8e1d8 url(../img/bg-lightwood.jpg) 50% 50% repeat repeat;
   padding: 20px 0;
 }
 .pagecontent h1, .pagecontent h2 {
@@ -1707,145 +1878,6 @@ form textarea {
   font-weight: normal;
   font-size: 14px;
   color: black;
-}
-
-.parallax-first {
-  background-image: url("http://trial.resrc.it/s=w200,pd2/c=x25p,w30p,y20p,h80p/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp1.jpg");
-}
-@media only screen and (min-width: 600px) {
-  .parallax-first {
-    background-image: url("http://trial.resrc.it/s=w200,pd2/c=x25p,w50p,y0p,h100p/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp1.jpg");
-  }
-}
-@media only screen and (min-width: 900px) {
-  .parallax-first {
-    background-image: url("http://trial.resrc.it/s=w200,pd2/c=x15p,w70p,y0p,h100p/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp1.jpg");
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .parallax-first {
-    background-image: url("http://trial.resrc.it/s=w200,pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp1.jpg");
-  }
-}
-
-.parallax-second {
-  height: 800px;
-  background-image: url("http://trial.resrc.it/s=pd2/c=x55p,w30p,y20p,h80p/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp2.jpg");
-}
-@media only screen and (min-width: 600px) {
-  .parallax-second {
-    height: 400px;
-    background-image: url("http://trial.resrc.it/s=pd2/c=x50p,w40p,y20p,h80p/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp2.jpg");
-  }
-}
-@media only screen and (min-width: 900px) {
-  .parallax-second {
-    height: 600px;
-    background-image: url("http://trial.resrc.it/s=pd2/c=x15p,w70p,y0p,h100p/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp2.jpg");
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .parallax-second {
-    background-image: url("http://trial.resrc.it/s=pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp2.jpg");
-  }
-}
-
-.parallax-third {
-  height: 800px;
-  background-image: url("http://trial.resrc.it/s=pd2/c=x35p,w30p,y20p,h80p/s=w360/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp4.jpg");
-}
-@media only screen and (min-width: 600px) {
-  .parallax-third {
-    background-image: url("http://trial.resrc.it/s=pd2/c=x25p,w50p,y0p,h100p/s=w360/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp4.jpg");
-  }
-}
-@media only screen and (min-width: 900px) {
-  .parallax-third {
-    background-image: url("http://trial.resrc.it/s=pd2/c=x15p,w70p,y0p,h100p/s=w360/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp4.jpg");
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .parallax-third {
-    background-image: url("http://trial.resrc.it/s=pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp4.jpg");
-  }
-}
-
-.parallax-fourth {
-  height: 800px;
-  background-image: url("http://trial.resrc.it/s=pd2/c=x25p,w30p,y20p,h80p/s=w360/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp5.jpg");
-}
-@media only screen and (min-width: 600px) {
-  .parallax-fourth {
-    background-image: url("http://trial.resrc.it/s=pd2/c=x25p,w50p,y0p,h100p/s=w360/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp5.jpg");
-  }
-}
-@media only screen and (min-width: 900px) {
-  .parallax-fourth {
-    background-image: url("http://trial.resrc.it/s=pd2/c=x15p,w70p,y0p,h100p/s=w360/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp5.jpg");
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .parallax-fourth {
-    background-image: url("http://trial.resrc.it/s=pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp5.jpg");
-  }
-}
-
-.parallax-fifth {
-  background-image: url("http://trial.resrc.it/s=pd2/c=X60P,W20P,Y40P,H60P/s=320,pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp6.jpg");
-}
-@media only screen and (min-width: 600px) {
-  .parallax-fifth {
-    background-image: url("http://trial.resrc.it/s=pd2/c=X35P,W40P,Y35P,H60P/s=w600,pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp6.jpg");
-  }
-}
-@media only screen and (min-width: 900px) {
-  .parallax-fifth {
-    background-image: url("http://trial.resrc.it/s=pd2/c=W100P,Y40P,H60P/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp6.jpg");
-  }
-}
-
-.parallax-sixth {
-  background-image: url("http://trial.resrc.it/s=pd2/c=X60P,W20P,Y40P,H60P/s=320,pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp7.jpg");
-}
-@media only screen and (min-width: 600px) {
-  .parallax-sixth {
-    background-image: url("http://trial.resrc.it/s=pd2/c=X35P,W40P,Y35P,H60P/s=w600,pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp7.jpg");
-  }
-}
-@media only screen and (min-width: 900px) {
-  .parallax-sixth {
-    background-image: url("http://trial.resrc.it/s=pd2/c=W100P,Y60P,H40P/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp7.jpg");
-  }
-}
-
-.parallax-seven, #standardpage .jobs .parallax {
-  background-image: url("http://trial.resrc.it/s=pd2/c=X60P,W20P,Y40P,H60P/s=320,pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp8.jpg");
-}
-@media only screen and (min-width: 600px) {
-  .parallax-seven, #standardpage .jobs .parallax {
-    background-image: url("http://trial.resrc.it/s=pd2/c=X35P,W40P,Y35P,H60P/s=w600,pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp8.jpg");
-  }
-}
-@media only screen and (min-width: 900px) {
-  .parallax-seven, #standardpage .jobs .parallax {
-    background-image: url("http://trial.resrc.it/s=pd2/c=W100P,Y10P,H90P/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp8.jpg");
-  }
-}
-
-.parallax-bottom {
-  height: 315px;
-  background-position: 50% bottom;
-  background-image: url("http://trial.resrc.it/s=pd2/c=X60P,W20P,Y40P,H60P/s=320,pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp3.jpg");
-}
-@media only screen and (min-width: 600px) {
-  .parallax-bottom {
-    background-image: url("http://trial.resrc.it/s=pd2/c=X35P,W40P,Y35P,H60P/s=w600,pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp3.jpg");
-  }
-}
-@media only screen and (min-width: 900px) {
-  .parallax-bottom {
-    background-image: url("http://trial.resrc.it/s=pd2/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/tmp3.jpg");
-  }
 }
 
 #spacepage .resrc {
@@ -1901,7 +1933,7 @@ form textarea {
 }
 
 .link {
-  background: url(../img/bg-grey.png);
+  background: #1d1d1d url(../img/bg-grey.png) 50% 50% repeat repeat;
 }
 .link h2 {
   text-align: center;
@@ -1949,7 +1981,7 @@ ul.socialicons i {
 }
 
 .whatson#whatsontoclose {
-  background: url(../img/bg-grey.png);
+  background: #1d1d1d url(../img/bg-grey.png) 50% 50% repeat repeat;
   text-align: center;
   height: auto !important;
   border-top: 1px solid #4d4d4d;
@@ -1965,31 +1997,16 @@ ul.socialicons i {
   color: white;
 }
 
-.food1bg, .food2bg {
-  background-position: 50% 0;
-  background-attachment: fixed;
-  background-repeat: no-repeat no-repeat;
-  background-size: cover;
-}
-
-.food1bg {
-  background-image: url("http://trial.resrc.it/o=100/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/food1.jpg");
-}
-
-.food2bg {
-  background-image: url("http://trial.resrc.it/o=100/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/ersk/food2.jpg");
-}
-
 .woodbg {
-  background: #e8e1d8 url("http://trial.resrc.it/s=w360/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/bg-lightwood.jpg") 50% 0 repeat;
+  background: #e8e1d8 url(../img/bg-lightwood.jpg) 50% 50% repeat repeat;
 }
 
 .wood2bg {
-  background: #e8e1d8 url("http://trial.resrc.it/s=w360/o=20(80)/http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/bg-wood2.jpg") 50% 0 repeat;
+  background: #e8e1d8 url(../img/bg-wood2.jpg) 50% 50% repeat repeat;
 }
 
 .headfootbg {
-  background: url(../img/bg-grey.png);
+  background: #1d1d1d url(../img/bg-grey.png) 50% 50% repeat repeat;
 }
 
 @media only screen and (min-width: 40.063em) {
@@ -2284,7 +2301,7 @@ ul.socialicons i {
   animation-direction: alternate;
 }
 
-.centerbox, #homepage .topcontent, #functionspage .topcontent, #standardpage .topcontent, .categorypage .topcontent {
+.centerbox, #standardpage .topcontent, .categorypage .topcontent {
   display: -webkit-box;
   -webkit-box-orient: horizontal;
   -webkit-box-pack: center;

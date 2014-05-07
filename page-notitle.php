@@ -18,22 +18,10 @@ get_header();
 		endwhile; ?>		
 		</div>
 		
-		<div class="row parallax-bottom resrc"  >
+		<div class="row parallax parallax-bottom resrc"  >
 			<p>&nbsp;</p>
 		</div>
 	</div>		
 </div>
-
-<script>
-	(function($) {
-	
-		// PARALLAX CLASSES
-		$('.parallax-bottom').parallax("50%",0.1);
-
-		
-	})(jQuery);
-	
-
-</script>
 
 <?php get_footer(); ?>

@@ -22,7 +22,7 @@ $menushare =
 <!-- Row for main content area -->
 	<div class="small-24 columns" id="content" role="main">
 
-		<div class="row food1bg toppanel"></div>
+		<div class="row parallax food1bg toppanel"></div>
 
 		<div class="row ">
 			<ul id="menuselection">
@@ -36,23 +36,10 @@ $menushare =
 			the_content(); 
 		endwhile; ?>
 				
-		<div class="row food2bg"></div>
+		<div class="row parallax food2bg"></div>
 
 	</div>
 		
 </div>
-
-<script>
-	(function($) {
-	
-		// PARALLAX CLASSES
-		$('.food1bg').parallax("50%",0.3);
-// 		$('.food2bg').parallax("50%",0.3);
-
-		
-	})(jQuery);
-	
-
-</script>
 
 <?php get_footer(); ?>

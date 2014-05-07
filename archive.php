@@ -6,7 +6,7 @@ Template Name: What's On Page
 get_header(); 
 
 // need to remove bar name from single_cat_title()
-$title = explode("&#8211;",single_cat_title('',false));
+$title = explode("–",single_cat_title('',false));
 $title = $title[1];
 
 global $slug
@@ -17,8 +17,8 @@ global $slug
 <!-- Row for main content area -->
 	<div class="small-24 columns" id="content" role="main">
 
-		<div class="topcontent row resrc parallax-sixth">
-			<h1><?php echo $title;?></h1>
+		<div class="topcontent row resrc parallax parallax-sixth">
+			<h1><?php echo $title?> </h1>
 		</div>
 		
 		<div class="row wood2bg">
@@ -49,7 +49,7 @@ global $slug
 			</div>
 		</div>				
 					
-		<div class="row parallax-bottom resrc"  >
+		<div class="row parallax parallax-bottom resrc"  >
 			<p>&nbsp;</p>
 		</div>
 	</div>		
@@ -60,7 +60,7 @@ global $slug
 	(function($) {
 	
 		// PARALLAX CLASSES
-		$('.parallax').parallax("50%",0.3);
+		$('.parallax-sixth').parallax("50%",0.3);
 		$('.parallax-bottom').parallax("50%",0.1);
 
 		

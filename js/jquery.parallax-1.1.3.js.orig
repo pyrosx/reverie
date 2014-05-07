@@ -19,16 +19,7 @@ http://www.gnu.org/licenses/gpl.html
 		windowHeight = $window.height();
 	});
 
-	$.fn.parallax = function(xpos, speedFactor, outerHeight, yoffset) {
-	
-		// only apply parallax things if "no-touch" class is present in html tag
-// 		if ($('html').hasClass('no-touch'))
-// 			return;
-
-		if(Modernizr.touch) {
-			return;
-		}			
-	
+	$.fn.parallax = function(xpos, speedFactor, outerHeight) {
 		var $this = $(this);
 		var getHeight;
 		var firstTop;
@@ -53,7 +44,6 @@ http://www.gnu.org/licenses/gpl.html
 		if (arguments.length < 1 || xpos === null) xpos = "50%";
 		if (arguments.length < 2 || speedFactor === null) speedFactor = 0.1;
 		if (arguments.length < 3 || outerHeight === null) outerHeight = true;
-		if (arguments.length < 4 || yoffset === null) yoffset = 0;
 		
 		// function to be called whenever the window is scrolled or resized
 		function update(){
@@ -68,15 +58,8 @@ http://www.gnu.org/licenses/gpl.html
 				if (top + height < pos || top > pos + windowHeight) {
 					return;
 				}
-				
-				// not sure why this is necessary, but stops the bars appearing at the top of the background image...?
-				// but only for tall divs - the thin ones work fine? Weird
-				correction = 0;
-				if (height > 500 )
-					correction = (firstTop*0.05);
-				
-				$this.css('backgroundPosition', xpos + " " + (Math.round((firstTop - pos) * speedFactor)-correction) + "px");
-				return pos;
+
+				$this.css('backgroundPosition', xpos + " " + Math.round((firstTop - pos) * speedFactor) + "px");
 			});
 		}		
 
