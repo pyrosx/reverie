@@ -20,11 +20,7 @@
 @import "compass/css3/border-radius";
 @import "compass/css3/transition";
 
-// YUCK! Cant think of a way around needing absolute paths for resrc.it images though... 
-// Inline styles worked, up until we needed @media queries as well!!
-
-$imgpath: "http://pyrosx.com/dev/sb/wp-content/themes/reverie-sb/img/";
-$resrcpath: "http://trial.resrc.it/";
+@import "parallax";
 
 
 /* Webfonts */
@@ -64,21 +60,20 @@ $fontbook: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Geo
 	font-style: normal; 
 }
 
-
-$headfootbackground: url(../img/bg-grey.png);
 $topheight: 130px;
 $bottomheight: 70px;
 $navborder: 1px solid #4d4d4d;
 $offwhite: #b3b3b3;
 $textshadow: 4px 4px 5px #1d1d1d;
-$woodbg: #e8e1d8 url($resrcpath+'s=w360/o=20(80)/'+$imgpath+'bg-lightwood.jpg') 50% 0 repeat;
-$wood2bg: #e8e1d8 url($resrcpath+'s=w360/o=20(80)/'+$imgpath+'bg-wood2.jpg') 50% 0 repeat;
 
-
+$woodbg: #e8e1d8 url(../img/bg-lightwood.jpg) 50% 50% repeat repeat;
+$wood2bg: #e8e1d8 url(../img/bg-wood2.jpg) 50% 50% repeat repeat;
+$headfootbackground: #1d1d1d url(../img/bg-grey.png) 50% 50% repeat repeat;
 
 .row, .top-bar {
 	min-width:100% !important; 
 }
+
 
 .accent a {
 	color: #9e4555 !important;
@@ -103,41 +98,14 @@ $wood2bg: #e8e1d8 url($resrcpath+'s=w360/o=20(80)/'+$imgpath+'bg-wood2.jpg') 50%
 		font-size: 44px;
 	}
 }
-#bg {
-	z-index: -9;
-	position: fixed; 
-	top: -50%; 
-	left: -50%; 
-	width: 200%; 
-	height: 200%;
-}
-#bg img {
-	position: absolute; 
-	top: $topheight; 
-	left: 0; 
-	right: 0; 
-	bottom: $bottomheight; 
-	margin: auto; 
-	min-width: 50%;
-	min-height: 50%;
-}
+
 body {
 	background-color: #1d1d1d;
 	font-family: $fontnormal;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-
-	$bg-size: 100%;
-	-webkit-background-size:$bg-size;
-	-moz-background-size: $bg-size;
-	-o-background-size: $bg-size;
-	background-size: $bg-size;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position:center;
 }
 body, html {
-/* 	height: 100%; */
 	margin: 0;
 	padding: 0;
 }
@@ -145,10 +113,7 @@ body, html {
 body#frontpage {
 
 	height: auto;
-	background: url(../img/bg-front.jpg);
-	background-size: cover;
-	background-attachment: fixed;
-	
+	background: url(../img/bg-front.jpg);	
 	font-family: $fontnormal;
 	
 	#coastergrid {	
@@ -250,13 +215,19 @@ body#frontpage {
 	.first-bg {
 		margin-top: 0-$topheight;
 		padding-top: $topheight;
+		background-position: center center;
 	}
 }
 div {
+/* 
 	background-position: 50% 0;
-	background-attachment: fixed;
 	background-repeat: no-repeat no-repeat;
+
 	background-size: cover;
+	background-attachment: fixed;
+	background-size: 100%;
+	background-attachment: scroll;
+ */
 }
 
 footer#bottom {
@@ -485,7 +456,6 @@ header#top {
 	.socialicons {
 		padding-top: 10px;
 		.circle {
-/* 			background-color: transparent !important; */
 			background: none !important;
 			width: 24px;
 			border: none;
@@ -521,8 +491,7 @@ header#top {
 		}
 	}
 	.maptitle {
-		
-		background-color: #1d1d1d;
+		background: $headfootbackground;
 		text-align: center;
 		h1 {
 			color: white;
@@ -569,8 +538,6 @@ header#top {
 		h2 {
 			font-size: 46px;
 		}
-
-		@extend .centerbox;
 			
 		min-height: 380px;
 		@media #{$small-only} {
@@ -826,8 +793,6 @@ form {
 		height: 200px+$topheight;
 		
 		@extend .centerbox;
-		background-size: 100%;
-		background-attachment: normal;
 		
 		h1 {
 			font-family: $fontcond;
@@ -1132,7 +1097,9 @@ form {
 	.toppanel {
 		height: $topheight+200px;
 		margin-top: 0-$topheight;
+/* yyeah, dunno 
 		background-position: 50% 200%;
+ */
 	}
 	ul#menuselection {
 		margin: 0;
@@ -1265,112 +1232,6 @@ form {
 
 }
 
-.parallax-first {
-	$img: 'ersk/tmp1.jpg';
-	background-image: url($resrcpath+'s=w200,pd2/c=x25p,w30p,y20p,h80p/o=20(80)/'+$imgpath+$img);
-	@media only screen and (min-width: 600px) {	
-		background-image: url($resrcpath+'s=w200,pd2/c=x25p,w50p,y0p,h100p/o=20(80)/'+$imgpath+$img);
-	}
-	@media only screen and (min-width: 900px) {	
-		background-image: url($resrcpath+'s=w200,pd2/c=x15p,w70p,y0p,h100p/o=20(80)/'+$imgpath+$img);
-	}
-	@media only screen and (min-width: 1200px) {	
-		background-image: url($resrcpath+'s=w200,pd2/o=20(80)/'+$imgpath+$img);
-	}
-}
-.parallax-second {
-	height: 800px;
-	$img: 'ersk/tmp2.jpg';
-	background-image: url($resrcpath+'s=pd2/c=x55p,w30p,y20p,h80p/o=20(80)/'+$imgpath+$img);
-	@media only screen and (min-width: 600px) {	
-		height: 400px;
-		background-image: url($resrcpath+'s=pd2/c=x50p,w40p,y20p,h80p/o=20(80)/'+$imgpath+$img);
-	}
-	@media only screen and (min-width: 900px) {	
-		height: 600px;
-		background-image: url($resrcpath+'s=pd2/c=x15p,w70p,y0p,h100p/o=20(80)/'+$imgpath+$img);
-	}
-	@media only screen and (min-width: 1200px) {	
-		background-image: url($resrcpath+'s=pd2/o=20(80)/'+$imgpath+$img);
-	}
-}
-
-.parallax-third {
-	height: 800px;
-	$img: 'ersk/tmp4.jpg';
-	background-image: url($resrcpath+'s=pd2/c=x35p,w30p,y20p,h80p/s=w360/o=20(80)/'+$imgpath+$img);
-	@media only screen and (min-width: 600px) {	
-		background-image: url($resrcpath+'s=pd2/c=x25p,w50p,y0p,h100p/s=w360/o=20(80)/'+$imgpath+$img);
-	}
-	@media only screen and (min-width: 900px) {	
-		background-image: url($resrcpath+'s=pd2/c=x15p,w70p,y0p,h100p/s=w360/o=20(80)/'+$imgpath+$img);
-	}
-	@media only screen and (min-width: 1200px) {	
-		background-image: url($resrcpath+'s=pd2/o=20(80)/'+$imgpath+$img);
-	}
-}
-.parallax-fourth {
-	height: 800px;
-	$img: 'ersk/tmp5.jpg';
-	background-image: url($resrcpath+'s=pd2/c=x25p,w30p,y20p,h80p/s=w360/o=20(80)/'+$imgpath+$img);
-	@media only screen and (min-width: 600px) {	
-		background-image: url($resrcpath+'s=pd2/c=x25p,w50p,y0p,h100p/s=w360/o=20(80)/'+$imgpath+$img);
-	}
-	@media only screen and (min-width: 900px) {	
-		background-image: url($resrcpath+'s=pd2/c=x15p,w70p,y0p,h100p/s=w360/o=20(80)/'+$imgpath+$img);
-	}
-	@media only screen and (min-width: 1200px) {	
-		background-image: url($resrcpath+'s=pd2/o=20(80)/'+$imgpath+$img);
-	}
-}
-.parallax-fifth {
-
-	$img: 'ersk/tmp6.jpg';
-
-	background-image: url($resrcpath+'s=pd2/c=X60P,W20P,Y40P,H60P/s=320,pd2/o=20(80)/'+$imgpath+$img); 
-	@media only screen and (min-width: 600px) {	
-		background-image: url($resrcpath+'s=pd2/c=X35P,W40P,Y35P,H60P/s=w600,pd2/o=20(80)/'+$imgpath+$img);
-	}
-	@media only screen and (min-width: 900px) {	
-		background-image: url($resrcpath+'s=pd2/c=W100P,Y40P,H60P/o=20(80)/'+$imgpath+$img);
-	}
-}
-.parallax-sixth {
-	$img: 'ersk/tmp7.jpg';
-
-	background-image: url($resrcpath+'s=pd2/c=X60P,W20P,Y40P,H60P/s=320,pd2/o=20(80)/'+$imgpath+$img); 
-	@media only screen and (min-width: 600px) {	
-		background-image: url($resrcpath+'s=pd2/c=X35P,W40P,Y35P,H60P/s=w600,pd2/o=20(80)/'+$imgpath+$img);
-	}
-	@media only screen and (min-width: 900px) {	
-		background-image: url($resrcpath+'s=pd2/c=W100P,Y60P,H40P/o=20(80)/'+$imgpath+$img);
-	}
-}
-.parallax-seven {
-	$img: 'ersk/tmp8.jpg';
-
-	background-image: url($resrcpath+'s=pd2/c=X60P,W20P,Y40P,H60P/s=320,pd2/o=20(80)/'+$imgpath+$img); 
-	@media only screen and (min-width: 600px) {	
-		background-image: url($resrcpath+'s=pd2/c=X35P,W40P,Y35P,H60P/s=w600,pd2/o=20(80)/'+$imgpath+$img);
-	}
-	@media only screen and (min-width: 900px) {	
-		background-image: url($resrcpath+'s=pd2/c=W100P,Y10P,H90P/o=20(80)/'+$imgpath+$img);
-	}
-}
-.parallax-bottom {
-	height: 315px;
-	background-position: 50% bottom;
-	
-	$img: 'ersk/tmp3.jpg';
-	
-	background-image: url($resrcpath+'s=pd2/c=X60P,W20P,Y40P,H60P/s=320,pd2/o=20(80)/'+$imgpath+$img); 
-	@media only screen and (min-width: 600px) {	
-		background-image: url($resrcpath+'s=pd2/c=X35P,W40P,Y35P,H60P/s=w600,pd2/o=20(80)/'+$imgpath+$img);
-	}
-	@media only screen and (min-width: 900px) {	
-		background-image: url($resrcpath+'s=pd2/o=20(80)/'+$imgpath+$img);
-	}
-}
 
 #spacepage {
 	.resrc {
@@ -1492,21 +1353,6 @@ ul.socialicons {
 	}
 }
 
-
-.food1bg, .food2bg {
-	background-position: 50% 0;
-	background-attachment: fixed;
-	background-repeat: no-repeat no-repeat;
-	background-size: cover;
-}
-.food1bg {
-	$img: 'ersk/food1.jpg';
-	background-image:url($resrcpath+'o=100/'+$imgpath+$img);
-}
-.food2bg {
-	$img: 'ersk/food2.jpg';
-	background-image:url($resrcpath+'o=100/'+$imgpath+$img);	 	
-}
 .woodbg {
 	background: $woodbg;
 }
