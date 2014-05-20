@@ -12,7 +12,8 @@ function reverie_enqueue_style()
 //	wp_register_style( 'reverie-stylesheet', get_template_directory_uri() . '/css/style.css', array(), '', 'all' );
 
 // todo remove this once in production
-	wp_register_style( 'reverie-stylesheet', get_template_directory_uri() . '/css/style.css?'.date('his'), array(), '', 'all' );
+	wp_register_style( 'reverie-stylesheet', get_template_directory_uri() . '/css/style.css', array(), '', 'all' );
+	
 	
 	wp_enqueue_style( 'reverie-foundation-stylesheet' );
 	wp_enqueue_style( 'reverie-stylesheet' );

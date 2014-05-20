@@ -36,7 +36,7 @@ get_header();
 		<div class="row parallax parallax-third resrc screen-height"></div>
 
 	
-		<div class="row parallax parallax-bottom resrc "  >
+		<div class="row parallax-bottom resrc "  >
 			<p>&nbsp;</p>
 		</div>
 	</div>		

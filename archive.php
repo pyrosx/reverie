@@ -17,7 +17,7 @@ global $slug
 <!-- Row for main content area -->
 	<div class="small-24 columns" id="content" role="main">
 
-		<div class="topcontent row resrc parallax parallax-sixth">
+		<div class="topcontent row resrc parallax parallax-sixth first-bg">
 			<h1><?php echo $title?> </h1>
 		</div>
 		
@@ -49,24 +49,11 @@ global $slug
 			</div>
 		</div>				
 					
-		<div class="row parallax parallax-bottom resrc"  >
+		<div class="row parallax-bottom resrc"  >
 			<p>&nbsp;</p>
 		</div>
 	</div>		
 	
 </div>
-
-<script>
-	(function($) {
-	
-		// PARALLAX CLASSES
-		$('.parallax-sixth').parallax("50%",0.3);
-		$('.parallax-bottom').parallax("50%",0.1);
-
-		
-	})(jQuery);
-	
-
-</script>
 
 <?php get_footer(); ?>

@@ -29,31 +29,38 @@ resrc = {
 
 	(function($) {
 		
-
-		if (Modernizr.touch) {			
-			$('.parallax').each(function() {
-				
-				// fix bg settings
-				$(this).css('background-attachment','scroll');
-				$(this).css('background-size','100%');
-				
-				// enable parallax
-				$(this).parallax("50%",0.2);
-			});
-		}
-	
 		// The below needs to match the above in style.scss for everything to be peachy...
 		// MUCH easier to set this explicitly than waiting for things to load and checking on actual heights.
 		var topheight = 130;
 		var bottomheight = 70;
+
+		$('.parallax').each(function() {
+			if (Modernizr.touch) {			
+				// fix bg settings
+				$(this).css('background-attachment','scroll');
+				$(this).css('background-size','100%');
+			} else {				
+				// enable parallax
+				$(this).parallax("50%",0.2);			
+			}
+		});	
 	
 		$(window).resize(function() {
 
 			// footer may disappear, changing "bottomheight" value
 			bottomheight = $('footer#bottom').visible() ? 70 : 0;
 
- 			$('.screen-height').css('height',$(window).height()-bottomheight);			
+			$('.screen-height').css('height',$(window).height()-bottomheight);
 
+			$('.full-height').each(function() {
+				var newheight = $(window).height()-bottomheight;
+				var screenheight = $(this).outerHeight();
+				// don't manually set to screen height if div is already larger...
+				if (newheight > screenheight) {
+						$(this).css('height',newheight);			
+				}
+			});
+ 			
 			if ($('#bignav').visible()) {
 				// space bignav
 				var total = $('#bignav').width();

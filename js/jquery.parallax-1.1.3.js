@@ -69,13 +69,13 @@ http://www.gnu.org/licenses/gpl.html
 					return;
 				}
 				
-				// not sure why this is necessary, but stops the bars appearing at the top of the background image...?
+				// not sure why this is necessary, but stops the bars appearing at the top & bottom of the background image...?
 				// but only for tall divs - the thin ones work fine? Weird
 				correction = 0;
-				if (height > 500 )
-					correction = (firstTop*0.05);
+// 				if (height > 500 )
+// 					correction = (firstTop*0.05);
 				
-				$this.css('backgroundPosition', xpos + " " + (Math.round((firstTop - pos) * speedFactor)-correction) + "px");
+				$this.css('backgroundPosition', xpos + " " + Math.round(((firstTop - pos) * speedFactor)-correction-yoffset) + "px");
 				return pos;
 			});
 		}		

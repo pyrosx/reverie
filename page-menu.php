@@ -10,19 +10,21 @@ $menushare =
 '		<div class="row menuemail primary-background">
 			<p>Share this menu: 
 			<a href="mailto:?subject='.rawurlencode("Check out this Smallbar Menu").'&body='.rawurlencode($currentPageURL).'"><i class="fa fa-envelope "></i></a>
-			<a href=""><i class="fa fa-facebook "></i></a>
-			<a href=""><i class="fa fa-twitter "></i></a>
+			<a href="http://www.facebook.com/sharer.php?s=100
+				&p[url]='.$currentPageURL.'
+				&p[summary]=Check out this Smallbar Menu" target="_blank"><i class="fa fa-facebook "></i></a>
+			<a href="https://twitter.com/home?status='.$currentPageURL.'"><i class="fa fa-twitter "></i></a>
 			</p>
 		</div>';
 
 ?>
 
-<div class="row" id="menupage">
+<div class="row <?php the_title();?>" id="menupage">
 
 <!-- Row for main content area -->
 	<div class="small-24 columns" id="content" role="main">
 
-		<div class="row parallax food1bg toppanel"></div>
+		<div class="row parallax menutop first-bg resrc"></div>
 
 		<div class="row ">
 			<ul id="menuselection">
@@ -36,7 +38,7 @@ $menushare =
 			the_content(); 
 		endwhile; ?>
 				
-		<div class="row parallax food2bg"></div>
+		<div class="row menubottom resrc"></div>
 
 	</div>
 		

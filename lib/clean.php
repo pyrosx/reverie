@@ -144,7 +144,7 @@ function reverie_scripts_and_styles() {
     wp_register_script( 'customnav', get_template_directory_uri() . '/js/jquery.customnav.js', array( ), '', false );
     wp_enqueue_script( 'customnav' );
 
-    wp_register_script( 'parallax', get_template_directory_uri() . '/js/jquery.parallax-1.1.3.js', array( ), '', false );
+    wp_register_script( 'parallax', get_template_directory_uri() . '/js/jquery.parallax-1.1.3.js?'.date('his'), array( ), '', false );
     wp_enqueue_script( 'parallax' );
 
     wp_register_script( 'jqueryvisible', get_template_directory_uri() . '/js/jquery.visible.min.js', array( ), '', false );

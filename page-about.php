@@ -28,7 +28,7 @@ get_header();
 		<h1>-KEEP IT SMALL-</h1>
 	</div>
 	
-	<div class="row parallax parallax-bottom resrc "  >
+	<div class="row parallax-bottom resrc "  >
 		<p>&nbsp;</p>
 	</div>
 		

@@ -2,7 +2,6 @@
 // Inline styles worked, up until we needed @media queries as well!!
 
 $imgpath: "http://www.smallbar.net.au/wordpress/wp-content/themes/reverie-sb/img/";
-
 $resrcpath: "http://app.resrc.it/";
 
 .parallax {
@@ -11,19 +10,46 @@ $resrcpath: "http://app.resrc.it/";
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+	background-repeat: no-repeat no-repeat;
+}
+.parallax-bottom, .menubottom {
+	background-attachment: fixed;
+	-webkit-background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100%;
+	background-size: 100%;
+	background-repeat: no-repeat no-repeat;
+	background-position: center bottom;
 }
 
 $opt :"o=20(90)/";
 
-#erskine-street {
+///////////////////////////////////////////////////////
+// COMMON
+///////////////////////////////////////////////////////
+#erskine-street, #crows-nest, #kirribilli {
+	.categorypage {
+		.parallax-sixth {
+			$img: 'ersk/glasses.jpg';
+
+			background-image: url($resrcpath+'c=X60P,W20P,Y40P,H60P/'+$opt+$imgpath+$img); 
+			@media only screen and (min-width: 600px) {	
+				background-image: url($resrcpath+'c=X35P,W40P,Y35P,H60P/'+$opt+$imgpath+$img);
+			}
+			@media only screen and (min-width: 900px) {	
+				background-image: url($resrcpath+'c=W100P,x0p,h50p,y5p/'+$opt+$imgpath+$img);
+			}
+		
+		}
+	}
+
 
 	#functionspage {
 		.parallax-first {
 			$img: 'ersk/functions1.jpg';
 
-
 			background-image: url($resrcpath+'c=x45p,w30p,y2p,h80p/'+$opt+$imgpath+$img);
-			
+		
 			@media only screen and (min-width: 600px) {	
 				background-image: url($resrcpath+'c=x25p,w50p,y0p,h100p/'+$opt+$imgpath+$img);
 			}
@@ -31,13 +57,10 @@ $opt :"o=20(90)/";
 				background-image: url($resrcpath+'c=x15p,w70p,y0p,h90p/'+$opt+$imgpath+$img);
 			}
 			@media only screen and (min-width: 1200px) {	
-				background-image: url($resrcpath+$opt+$imgpath+$img);
+				background-image: url($resrcpath+'c=x0p,w100p,y0p,h100p/'+$opt+$imgpath+$img);
 			}
-			
-
-
 		}	
-	
+
 		.parallax-third {
 			height: 800px;
 			$img: 'ersk/functions2.jpg';
@@ -50,36 +73,58 @@ $opt :"o=20(90)/";
 				background-image: url($resrcpath+'c=x15p,w70p,y0p,h100p/'+$opt+$imgpath+$img);
 			}
 			@media only screen and (min-width: 1200px) {	
-				background-image: url($resrcpath+$opt+$imgpath+$img);
+				background-image: url($resrcpath+'c=x0p,w100p,y0p,h100p/'+$opt+$imgpath+$img);
 			}		
 		}
 	}
-	
-	.categorypage {
-		.parallax-sixth {
-			$img: 'ersk/glasses.jpg';
+
+	.Location {
+		.parallax-fifth {
+
+			$img: 'ersk/location.jpg';
 
 			background-image: url($resrcpath+'c=X60P,W20P,Y40P,H60P/'+$opt+$imgpath+$img); 
 			@media only screen and (min-width: 600px) {	
 				background-image: url($resrcpath+'c=X35P,W40P,Y35P,H60P/'+$opt+$imgpath+$img);
 			}
 			@media only screen and (min-width: 900px) {	
-				background-image: url($resrcpath+'c=W100P,YOF85,H40P/'+$opt+$imgpath+$img);
+				background-image: url($resrcpath+'c=X0P,W100P,Y40P,H60P/'+$opt+$imgpath+$img);
 			}
-			
+		}	
+	}
+}
+
+
+/* 
+.menutop {
+	$img: 'ersk/food1.jpg';
+	background-image: url($resrcpath+'c=x0p,w100p,y0p,h100p/'+$opt+$imgpath+$img);
+}
+.menubottom {
+	$img: 'ersk/food2.jpg';
+	background-image: url($resrcpath+'c=x0p,w100p,y0p,h100p/'+$opt+$imgpath+$img);
+}
+ */
+
+
+///////////////////////////////////////////////////////
+// ES
+///////////////////////////////////////////////////////
+
+#erskine-street {
+	.menuinitial {
+		$img: 'ersk/food-arancini-dark.jpg';
+		background-image: url($resrcpath+'c=x25p,w30p,y20p,h80p/'+$opt+$imgpath+$img);
+		@media only screen and (min-width: 600px) {	
+			background-image: url($resrcpath+'c=x25p,w50p,y0p,h100p/'+$opt+$imgpath+$img);
+		}
+		@media only screen and (min-width: 900px) {	
+			background-image: url($resrcpath+'c=x15p,w70p,y0p,h100p/'+$opt+$imgpath+$img);
+		}
+		@media only screen and (min-width: 1200px) {	
+			background-image: url($resrcpath+'c=x0p,w100p,y0p,h100p/'+$opt+$imgpath+$img);
 		}
 	}
-
-	.food1bg {
-		$img: 'ersk/food1.jpg';
-		background-image:url($resrcpath+'o=100/'+$imgpath+$img);
-	}
-	.food2bg {
-		$img: 'ersk/food2.jpg';
-		background-image:url($resrcpath+'o=100/'+$imgpath+$img);	 	
-	}
-
-
 	.parallax-first {
 		$img: 'ersk/ersk1.jpg';
 		background-image: url($resrcpath+'c=x25p,w30p,y20p,h80p/'+$opt+$imgpath+$img);
@@ -90,13 +135,13 @@ $opt :"o=20(90)/";
 			background-image: url($resrcpath+'c=x15p,w70p,y0p,h100p/'+$opt+$imgpath+$img);
 		}
 		@media only screen and (min-width: 1200px) {	
-			background-image: url($resrcpath+$opt+$imgpath+$img);
+			background-image: url($resrcpath+'c=x0p,w100p,y0p,h100p/'+$opt+$imgpath+$img);
 		}
 	}
-	
+
 	.parallax-second {
-		height: 800px;
 		$img: 'ersk/ersk2.jpg';
+
 		background-image: url($resrcpath+'c=x55p,w30p,y20p,h80p/'+$opt+$imgpath+$img);
 		@media only screen and (min-width: 600px) {	
 			height: 400px;
@@ -107,13 +152,13 @@ $opt :"o=20(90)/";
 			background-image: url($resrcpath+'c=x15p,w70p,y0p,h100p/'+$opt+$imgpath+$img);
 		}
 		@media only screen and (min-width: 1200px) {	
-			background-image: url($resrcpath+''+$opt+$imgpath+$img);
+			background-image: url($resrcpath+'c=x0p,w100p,y0p,h100p/'+$opt+$imgpath+$img);
 		}
 	}
 
 	.parallax-third {
-		height: 800px;
 		$img: 'ersk/ersk4.jpg';
+
 		background-image: url($resrcpath+'c=x35p,w30p,y20p,h80p/'+$opt+$imgpath+$img);
 		@media only screen and (min-width: 600px) {	
 			background-image: url($resrcpath+'c=x25p,w50p,y0p,h100p/'+$opt+$imgpath+$img);
@@ -122,12 +167,12 @@ $opt :"o=20(90)/";
 			background-image: url($resrcpath+'c=x15p,w70p,y0p,h100p/'+$opt+$imgpath+$img);
 		}
 		@media only screen and (min-width: 1200px) {	
-			background-image: url($resrcpath+''+$opt+$imgpath+$img);
+			background-image: url($resrcpath+'c=x0p,w100p,y0p,h100p/'+$opt+$imgpath+$img);
 		}
 	}
 	.parallax-fourth {
-		height: 800px;
 		$img: 'ersk/ersk5.jpg';
+
 		background-image: url($resrcpath+'c=x25p,w30p,y5p,h80p/'+$opt+$imgpath+$img);
 		@media only screen and (min-width: 600px) {	
 			background-image: url($resrcpath+'c=x25p,w50p,y0p,h100p/'+$opt+$imgpath+$img);
@@ -136,11 +181,11 @@ $opt :"o=20(90)/";
 			background-image: url($resrcpath+'c=x15p,w70p,y0p,h100p/'+$opt+$imgpath+$img);
 		}
 		@media only screen and (min-width: 1200px) {	
-			background-image: url($resrcpath+''+$opt+$imgpath+$img);
+			background-image: url($resrcpath+'c=x0p,w100p,y0p,h100p/'+$opt+$imgpath+$img);
 		}
 	}
+ 
 	.parallax-fifth {
-
 		$img: 'ersk/tmp6.jpg';
 
 		background-image: url($resrcpath+'c=X60P,W20P,Y40P,H60P/'+$opt+$imgpath+$img); 
@@ -148,44 +193,536 @@ $opt :"o=20(90)/";
 			background-image: url($resrcpath+'c=X35P,W40P,Y35P,H60P/'+$opt+$imgpath+$img);
 		}
 		@media only screen and (min-width: 900px) {	
-			background-image: url($resrcpath+'c=W100P,Y40P,H60P/'+$opt+$imgpath+$img);
-		}
-	}
-	.parallax-sixth {
-		$img: 'ersk/tmp7.jpg';
-
-		background-image: url($resrcpath+'c=X60P,W20P,Y40P,H60P/'+$opt+$imgpath+$img); 
-		@media only screen and (min-width: 600px) {	
-			background-image: url($resrcpath+'c=X35P,W40P,Y35P,H60P/'+$opt+$imgpath+$img);
-		}
-		@media only screen and (min-width: 900px) {	
-			background-image: url($resrcpath+'c=W100P,Y60P,H40P/'+$opt+$imgpath+$img);
-		}
-	}
-	.parallax-seven {
-		$img: 'ersk/tmp8.jpg';
-
-		background-image: url($resrcpath+'c=X60P,W20P,Y40P,H60P/'+$opt+$imgpath+$img); 
-		@media only screen and (min-width: 600px) {	
-			background-image: url($resrcpath+'c=X35P,W40P,Y35P,H60P/'+$opt+$imgpath+$img);
-		}
-		@media only screen and (min-width: 900px) {	
-			background-image: url($resrcpath+'c=W100P,Y10P,H90P/'+$opt+$imgpath+$img);
+			background-image: url($resrcpath+'c=X0P,W100P,Y40P,H60P/'+$opt+$imgpath+$img);
 		}
 	}
 	.parallax-bottom {
 		height: 315px;
-		background-position: 50% bottom; 
 
 		$img: 'ersk/ersk3.jpg';
-	
+
 		background-image: url($resrcpath+'c=X60P,W20P,Y40P,H60P/'+$opt+$imgpath+$img); 
 		@media only screen and (min-width: 600px) {	
 			background-image: url($resrcpath+'c=X35P,W40P,Y35P,H60P/'+$opt+$imgpath+$img);
 		}
 		@media only screen and (min-width: 900px) {	
-			background-image: url($resrcpath+$opt+$imgpath+$img);
+			background-image: url($resrcpath+'c=x0p,w100p,y0p,h100p/'+$opt+$imgpath+$img);
+		}
+	}
+}
+///////////////////////////////////////////////////////
+// ES & CN common menu
+///////////////////////////////////////////////////////
+
+#erskine-street, #crows-nest {
+	.Smalls {
+		.menutop {
+			$img: 'ersk/food-arancini.jpg';
+			background-image: url($resrcpath+'c=X40P,W20P,Y10P,H60P/'+$opt+$imgpath+$img); 
+			@media only screen and (min-width: 600px) {	
+				background-image: url($resrcpath+'c=X10P,W80P,Y15P,H60P/'+$opt+$imgpath+$img);
+			}
+			@media only screen and (min-width: 900px) {	
+				background-image: url($resrcpath+'c=x0p,w100p,y13p,h70p/'+$opt+$imgpath+$img);
+			}
+		}
+		.menubottom {
+			$img: 'ersk/food-antipasto.jpg';
+			background-image: url($resrcpath+'c=X15P,W20P,Y10P,H60P/'+$opt+$imgpath+$img); 
+			@media only screen and (min-width: 600px) {	
+				background-image: url($resrcpath+'c=X10P,W50P,Y0P,H60P/'+$opt+$imgpath+$img);
+			}
+			@media only screen and (min-width: 900px) {	
+				background-image: url($resrcpath+'c=x0p,w100p,y0p,h60p/'+$opt+$imgpath+$img);
+			}
+		}	
+	}
+
+	.Lunch {
+		.menutop {
+			$img: 'ersk/food-chicken.jpg';
+			background-image: url($resrcpath+'c=X30P,W20P,Y35P,H60P/'+$opt+$imgpath+$img); 
+			@media only screen and (min-width: 600px) {	
+				background-image: url($resrcpath+'c=X35P,W40P,Y35P,H60P/'+$opt+$imgpath+$img);
+			}
+			@media only screen and (min-width: 900px) {	
+				background-image: url($resrcpath+'c=x0p,w100p,y29p,h70p/'+$opt+$imgpath+$img);
+			}
+		}
+		.menubottom {
+			$img: 'ersk/food-fishchips.jpg';
+			background-image: url($resrcpath+'c=X50P,W20P,Y10P,H60P/'+$opt+$imgpath+$img); 
+			@media only screen and (min-width: 600px) {	
+				background-image: url($resrcpath+'c=X10P,W50P,Y0P,H60P/'+$opt+$imgpath+$img);
+			}
+			@media only screen and (min-width: 900px) {	
+				background-image: url($resrcpath+'c=x0p,w100p,y0p,h70p/'+$opt+$imgpath+$img);
+			}
+		}	
+	}	
+	.Wine {
+		.menutop {
+			$img: 'ersk/glasses.jpg';
+			background-image: url($resrcpath+'c=X45P,W20P,Y5P,H60P/'+$opt+$imgpath+$img); 
+			@media only screen and (min-width: 600px) {	
+				background-image: url($resrcpath+'c=X10P,W50P,Y0P,H60P/'+$opt+$imgpath+$img);
+			}
+			@media only screen and (min-width: 900px) {	
+				background-image: url($resrcpath+'c=x0p,w100p,y0p,h100p/'+$opt+$imgpath+$img);
+			}
+		}
+		.menubottom {
+			$img: 'ersk/food-cheese.jpg';
+			background-image: url($resrcpath+'c=X15P,W20P,Y32P,H60P/'+$opt+$imgpath+$img); 
+			@media only screen and (min-width: 600px) {	
+				background-image: url($resrcpath+'c=X10P,W50P,Y0P,H60P/'+$opt+$imgpath+$img);
+			}
+			@media only screen and (min-width: 900px) {	
+				background-image: url($resrcpath+'c=x0p,w100p,y0p,h100p/'+$opt+$imgpath+$img);
+			}
+		}			
+	}
+}
+
+///////////////////////////////////////////////////////
+// Menu - Functions, common to all
+///////////////////////////////////////////////////////
+.Functions {
+	.menutop {
+		$img: 'ersk/food-sliders.jpg';
+		background-image: url($resrcpath+'c=X40P,W20P,Y18P,H60P/'+$opt+$imgpath+$img); 
+		@media only screen and (min-width: 600px) {	
+			background-image: url($resrcpath+'c=X35P,W40P,Y35P,H60P/'+$opt+$imgpath+$img);
+		}
+		@media only screen and (min-width: 900px) {	
+			background-image: url($resrcpath+'c=x0p,w100p,y0p,h100p/'+$opt+$imgpath+$img);
+		}
+	}
+	.menubottom {
+		$img: 'ersk/food-funcbot.jpg';
+		background-image: url($resrcpath+'c=X75P,W20P,Y1P,H60P/'+$opt+$imgpath+$img); 
+		@media only screen and (min-width: 600px) {	
+			background-image: url($resrcpath+'c=X10P,W50P,Y0P,H60P/'+$opt+$imgpath+$img);
+		}
+		@media only screen and (min-width: 900px) {	
+			background-image: url($resrcpath+'c=x0p,w100p,y0p,h60p/'+$opt+$imgpath+$img);
+		}
+	}	
+}
+
+///////////////////////////////////////////////////////
+// CN
+///////////////////////////////////////////////////////
+
+#crows-nest {
+	
+	.parallax-fifth {
+
+		$img: 'crows/courtyardbar2.jpg';
+
+		background-image: url($resrcpath+'c=X60P,W20P,Y40P,H60P/'+$opt+$imgpath+$img); 
+		@media only screen and (min-width: 600px) {	
+			background-image: url($resrcpath+'c=X35P,W40P,Y35P,H60P/'+$opt+$imgpath+$img);
+		}
+		@media only screen and (min-width: 900px) {	
+			background-image: url($resrcpath+'c=X0P,W100P,Y11P,H80P/'+$opt+$imgpath+$img);
+		}
+	}	
+
+	.menuinitial {
+		$img: 'crows/menuinitial.jpg';
+		background-image: url($resrcpath+'c=x25p,w30p,y20p,h80p/'+$opt+$imgpath+$img);
+		@media only screen and (min-width: 600px) {	
+			background-image: url($resrcpath+'c=x25p,w50p,y0p,h100p/'+$opt+$imgpath+$img);
+		}
+		@media only screen and (min-width: 900px) {	
+			background-image: url($resrcpath+'c=x15p,w70p,y0p,h100p/'+$opt+$imgpath+$img);
+		}
+		@media only screen and (min-width: 1200px) {	
+			background-image: url($resrcpath+'c=x0p,w100p,y0p,h100p/'+$opt+$imgpath+$img);
+		}
+	}
+
+	#spacepage {
+		.parallax-first {
+			$img: 'crows/space1.jpg';
+			background-image: url($resrcpath+'c=x25p,w30p,y20p,h80p/'+$opt+$imgpath+$img);
+			@media only screen and (min-width: 600px) {	
+				background-image: url($resrcpath+'c=x25p,w50p,y0p,h100p/'+$opt+$imgpath+$img);
+			}
+			@media only screen and (min-width: 900px) {	
+				background-image: url($resrcpath+'c=x15p,w70p,y0p,h100p/'+$opt+$imgpath+$img);
+			}
+			@media only screen and (min-width: 1200px) {	
+				background-image: url($resrcpath+'c=x0p,w100p,y0p,h100p/'+$opt+$imgpath+$img);
+			}
+		}
+
+		.parallax-second {
+			$img: 'crows/space2.jpg';
+
+			background-image: url($resrcpath+'c=x55p,w30p,y20p,h80p/'+$opt+$imgpath+$img);
+			@media only screen and (min-width: 600px) {	
+				height: 400px;
+				background-image: url($resrcpath+'c=x50p,w40p,y20p,h80p/'+$opt+$imgpath+$img);
+			}
+			@media only screen and (min-width: 900px) {	
+				height: 600px;
+				background-image: url($resrcpath+'c=x15p,w70p,y0p,h100p/'+$opt+$imgpath+$img);
+			}
+			@media only screen and (min-width: 1200px) {	
+				background-image: url($resrcpath+'c=x0p,w100p,y0p,h100p/'+$opt+$imgpath+$img);
+			}
+		}
+
+		.parallax-third {
+			$img: 'crows/space3.jpg';
+			background-image: url($resrcpath+'c=x20p,w30p,y20p,h80p/'+$opt+$imgpath+$img);
+			@media only screen and (min-width: 600px) {	
+				background-image: url($resrcpath+'c=x25p,w50p,y0p,h100p/'+$opt+$imgpath+$img);
+			}
+			@media only screen and (min-width: 900px) {	
+				background-image: url($resrcpath+'c=x15p,w70p,y0p,h100p/'+$opt+$imgpath+$img);
+			}
+			@media only screen and (min-width: 1200px) {	
+				background-image: url($resrcpath+'c=x0p,w100p,y0p,h100p/'+$opt+$imgpath+$img);
+			}
+		}
+		.parallax-fourth {
+			$img: 'crows/space4.jpg';
+
+			background-image: url($resrcpath+'c=x25p,w30p,y5p,h80p/'+$opt+$imgpath+$img);
+			@media only screen and (min-width: 600px) {	
+				background-image: url($resrcpath+'c=x25p,w50p,y0p,h100p/'+$opt+$imgpath+$img);
+			}
+			@media only screen and (min-width: 900px) {	
+				background-image: url($resrcpath+'c=x15p,w70p,y0p,h100p/'+$opt+$imgpath+$img);
+			}
+			@media only screen and (min-width: 1200px) {	
+				background-image: url($resrcpath+'c=x0p,w100p,y0p,h100p/'+$opt+$imgpath+$img);
+			}
+		}
+	}
+	.parallax-first {
+		$img: 'crows/home4.jpg';
+		background-image: url($resrcpath+'c=x35p,w30p,y15p,h80p/'+$opt+$imgpath+$img);
+		@media only screen and (min-width: 600px) {	
+			background-image: url($resrcpath+'c=x25p,w50p,y0p,h100p/'+$opt+$imgpath+$img);
+		}
+		@media only screen and (min-width: 900px) {	
+			background-image: url($resrcpath+'c=x15p,w70p,y0p,h100p/'+$opt+$imgpath+$img);
+		}
+		@media only screen and (min-width: 1200px) {	
+			background-image: url($resrcpath+'c=x0p,w100p,y0p,h100p/'+$opt+$imgpath+$img);
+		}
+	}
+
+	.parallax-second {
+		$img: 'crows/home2.jpg';
+
+		background-image: url($resrcpath+'c=x55p,w30p,y20p,h80p/'+$opt+$imgpath+$img);
+		@media only screen and (min-width: 600px) {	
+			height: 400px;
+			background-image: url($resrcpath+'c=x50p,w40p,y20p,h80p/'+$opt+$imgpath+$img);
+		}
+		@media only screen and (min-width: 900px) {	
+			height: 600px;
+			background-image: url($resrcpath+'c=x15p,w70p,y0p,h100p/'+$opt+$imgpath+$img);
+		}
+		@media only screen and (min-width: 1200px) {	
+			background-image: url($resrcpath+'c=x0p,w100p,y0p,h100p/'+$opt+$imgpath+$img);
+		}
+	}
+
+	.parallax-third {
+		$img: 'crows/home3.jpg';
+
+		background-image: url($resrcpath+'c=x35p,w30p,y20p,h80p/'+$opt+$imgpath+$img);
+		@media only screen and (min-width: 600px) {	
+			background-image: url($resrcpath+'c=x25p,w50p,y0p,h100p/'+$opt+$imgpath+$img);
+		}
+		@media only screen and (min-width: 900px) {	
+			background-image: url($resrcpath+'c=x15p,w70p,y0p,h100p/'+$opt+$imgpath+$img);
+		}
+		@media only screen and (min-width: 1200px) {	
+			background-image: url($resrcpath+'c=x0p,w100p,y0p,h100p/'+$opt+$imgpath+$img);
+		}
+	}
+	.parallax-fourth {
+		$img: 'crows/home1.jpg';
+
+		background-image: url($resrcpath+'c=x25p,w30p,y5p,h80p/'+$opt+$imgpath+$img);
+		@media only screen and (min-width: 600px) {	
+			background-image: url($resrcpath+'c=x25p,w50p,y0p,h100p/'+$opt+$imgpath+$img);
+		}
+		@media only screen and (min-width: 900px) {	
+			background-image: url($resrcpath+'c=x15p,w70p,y0p,h100p/'+$opt+$imgpath+$img);
+		}
+		@media only screen and (min-width: 1200px) {	
+			background-image: url($resrcpath+'c=x0p,w100p,y0p,h100p/'+$opt+$imgpath+$img);
+		}
+	}
+
+	.parallax-bottom {
+		height: 315px;
+
+		$img: 'crows/footer.jpg';
+
+		background-image: url($resrcpath+'c=X10P,W20P,Y1P,H80P/'+$opt+$imgpath+$img); 
+		@media only screen and (min-width: 600px) {	
+			background-image: url($resrcpath+'c=X35P,W40P,Y35P,H60P/'+$opt+$imgpath+$img);
+		}
+		@media only screen and (min-width: 900px) {	
+			background-image: url($resrcpath+'c=x0p,w100p,y0p,h100p/'+$opt+$imgpath+$img);
+		}
+	}
+}
+///////////////////////////////////////////////////////
+// Kirribilli
+///////////////////////////////////////////////////////
+
+#kirribilli {
+	.Location {
+		.parallax-fifth {
+
+			$img: 'kirr/location.jpg';
+
+			background-image: url($resrcpath+'c=X60P,W20P,Y40P,H60P/'+$opt+$imgpath+$img); 
+			@media only screen and (min-width: 600px) {	
+				background-image: url($resrcpath+'c=X35P,W40P,Y35P,H60P/'+$opt+$imgpath+$img);
+			}
+			@media only screen and (min-width: 900px) {	
+				background-image: url($resrcpath+'c=X0P,W100P,Y40P,H60P/'+$opt+$imgpath+$img);
+			}
+		}	
+	}
+
+
+	.parallax-fifth {
+
+		$img: 'kirr/space4.jpg';
+		background-image: url($resrcpath+'c=X40P,W20P,Y40P,H60P/'+$opt+$imgpath+$img); 
+		@media only screen and (min-width: 600px) {	
+			background-image: url($resrcpath+'c=X35P,W40P,Y35P,H60P/'+$opt+$imgpath+$img);
+		}
+		@media only screen and (min-width: 900px) {	
+			background-image: url($resrcpath+'c=X0P,W100P,Y11P,H80P/'+$opt+$imgpath+$img);
+		}
+	}	
+
+	
+
+	#spacepage {
+		.parallax-first {
+			$img: 'kirr/space1.jpg';
+			background-image: url($resrcpath+'c=x25p,w30p,y20p,h80p/'+$opt+$imgpath+$img);
+			@media only screen and (min-width: 600px) {	
+				background-image: url($resrcpath+'c=x25p,w50p,y0p,h100p/'+$opt+$imgpath+$img);
+			}
+			@media only screen and (min-width: 900px) {	
+				background-image: url($resrcpath+'c=x15p,w70p,y0p,h100p/'+$opt+$imgpath+$img);
+			}
+			@media only screen and (min-width: 1200px) {	
+				background-image: url($resrcpath+'c=x0p,w100p,y0p,h100p/'+$opt+$imgpath+$img);
+			}
+		}
+
+		.parallax-second {
+			$img: 'kirr/space2.jpg';
+
+			background-image: url($resrcpath+'c=x55p,w30p,y20p,h80p/'+$opt+$imgpath+$img);
+			@media only screen and (min-width: 600px) {	
+				height: 400px;
+				background-image: url($resrcpath+'c=x50p,w40p,y20p,h80p/'+$opt+$imgpath+$img);
+			}
+			@media only screen and (min-width: 900px) {	
+				height: 600px;
+				background-image: url($resrcpath+'c=x15p,w70p,y0p,h100p/'+$opt+$imgpath+$img);
+			}
+			@media only screen and (min-width: 1200px) {	
+				background-image: url($resrcpath+'c=x0p,w100p,y0p,h100p/'+$opt+$imgpath+$img);
+			}
+		}
+
+		.parallax-third {
+			$img: 'kirr/space3.jpg';
+
+			background-image: url($resrcpath+'c=x35p,w30p,y20p,h80p/'+$opt+$imgpath+$img);
+			@media only screen and (min-width: 600px) {	
+				background-image: url($resrcpath+'c=x25p,w50p,y0p,h100p/'+$opt+$imgpath+$img);
+			}
+			@media only screen and (min-width: 900px) {	
+				background-image: url($resrcpath+'c=x15p,w70p,y0p,h100p/'+$opt+$imgpath+$img);
+			}
+			@media only screen and (min-width: 1200px) {	
+				background-image: url($resrcpath+'c=x0p,w100p,y0p,h100p/'+$opt+$imgpath+$img);
+			}
+		}
+		.parallax-fourth {
+			$img: 'kirr/space4.jpg';
+
+			background-image: url($resrcpath+'c=x25p,w30p,y5p,h80p/'+$opt+$imgpath+$img);
+			@media only screen and (min-width: 600px) {	
+				background-image: url($resrcpath+'c=x25p,w50p,y0p,h100p/'+$opt+$imgpath+$img);
+			}
+			@media only screen and (min-width: 900px) {	
+				background-image: url($resrcpath+'c=x15p,w70p,y0p,h100p/'+$opt+$imgpath+$img);
+			}
+			@media only screen and (min-width: 1200px) {	
+				background-image: url($resrcpath+'c=x0p,w100p,y0p,h100p/'+$opt+$imgpath+$img);
+			}
+		}
+	}
+	.parallax-first {
+		$img: 'kirr/home4.jpg';
+		background-image: url($resrcpath+'c=x25p,w30p,y20p,h80p/'+$opt+$imgpath+$img);
+		@media only screen and (min-width: 600px) {	
+			background-image: url($resrcpath+'c=x25p,w50p,y0p,h100p/'+$opt+$imgpath+$img);
+		}
+		@media only screen and (min-width: 900px) {	
+			background-image: url($resrcpath+'c=x15p,w70p,y0p,h100p/'+$opt+$imgpath+$img);
+		}
+		@media only screen and (min-width: 1200px) {	
+			background-image: url($resrcpath+'c=x0p,w100p,y0p,h100p/'+$opt+$imgpath+$img);
+		}
+	}
+
+	.parallax-second {
+		$img: 'kirr/home2.jpg';
+		background-image: url($resrcpath+'c=x15p,w30p,y20p,h80p/'+$opt+$imgpath+$img);
+		@media only screen and (min-width: 600px) {	
+			height: 400px;
+			background-image: url($resrcpath+'c=x50p,w40p,y20p,h80p/'+$opt+$imgpath+$img);
+		}
+		@media only screen and (min-width: 900px) {	
+			height: 600px;
+			background-image: url($resrcpath+'c=x15p,w70p,y0p,h100p/'+$opt+$imgpath+$img);
+		}
+		@media only screen and (min-width: 1200px) {	
+			background-image: url($resrcpath+'c=x0p,w100p,y0p,h100p/'+$opt+$imgpath+$img);
+		}
+	}
+
+	.parallax-third {
+		$img: 'kirr/home3.jpg';
+
+		background-image: url($resrcpath+'c=x35p,w30p,y20p,h80p/'+$opt+$imgpath+$img);
+		@media only screen and (min-width: 600px) {	
+			background-image: url($resrcpath+'c=x25p,w50p,y0p,h100p/'+$opt+$imgpath+$img);
+		}
+		@media only screen and (min-width: 900px) {	
+			background-image: url($resrcpath+'c=x15p,w70p,y0p,h100p/'+$opt+$imgpath+$img);
+		}
+		@media only screen and (min-width: 1200px) {	
+			background-image: url($resrcpath+'c=x0p,w100p,y0p,h100p/'+$opt+$imgpath+$img);
+		}
+	}
+	.parallax-fourth {
+		$img: 'kirr/home1.jpg';
+
+		background-image: url($resrcpath+'c=x25p,w30p,y5p,h80p/'+$opt+$imgpath+$img);
+		@media only screen and (min-width: 600px) {	
+			background-image: url($resrcpath+'c=x25p,w50p,y0p,h100p/'+$opt+$imgpath+$img);
+		}
+		@media only screen and (min-width: 900px) {	
+			background-image: url($resrcpath+'c=x15p,w70p,y0p,h100p/'+$opt+$imgpath+$img);
+		}
+		@media only screen and (min-width: 1200px) {	
+			background-image: url($resrcpath+'c=x0p,w100p,y0p,h100p/'+$opt+$imgpath+$img);
+		}
+	}
+
+	.parallax-bottom {
+		height: 315px;
+
+		$img: 'kirr/footer.jpg';
+		background-image: url($resrcpath+'c=X40P,W20P,Y0P,H60P/'+$opt+$imgpath+$img); 
+		@media only screen and (min-width: 600px) {	
+			background-image: url($resrcpath+'c=X35P,W40P,Y35P,H60P/'+$opt+$imgpath+$img);
+		}
+		@media only screen and (min-width: 900px) {	
+			background-image: url($resrcpath+'c=x0p,w100p,y0p,h100p/'+$opt+$imgpath+$img);
 		}
 	}
 	
+	.menuinitial {
+		$img: 'kirr/menuinitial.jpg';
+		background-image: url($resrcpath+'c=x25p,w30p,y20p,h80p/'+$opt+$imgpath+$img);
+		@media only screen and (min-width: 600px) {	
+			background-image: url($resrcpath+'c=x25p,w50p,y0p,h100p/'+$opt+$imgpath+$img);
+		}
+		@media only screen and (min-width: 900px) {	
+			background-image: url($resrcpath+'c=x15p,w70p,y0p,h100p/'+$opt+$imgpath+$img);
+		}
+		@media only screen and (min-width: 1200px) {	
+			background-image: url($resrcpath+'c=x0p,w100p,y0p,h100p/'+$opt+$imgpath+$img);
+		}
+	}
+	.Breakfast {
+		.menutop {
+			$img: 'kirr/food-mushroom.jpg';
+			background-image: url($resrcpath+'c=X40P,W40P,Y10P,H70P/'+$opt+$imgpath+$img); 
+			@media only screen and (min-width: 600px) {	
+				background-image: url($resrcpath+'c=X35P,W40P,Y35P,H60P/'+$opt+$imgpath+$img);
+			}
+			@media only screen and (min-width: 900px) {	
+				background-image: url($resrcpath+'c=x0p,w100p,y13p,h70p/'+$opt+$imgpath+$img);
+			}
+		}
+		.menubottom {
+			$img: 'kirr/food-coffee.jpg';
+			background-image: url($resrcpath+'c=X15P,W40P,Y0P,H100P/'+$opt+$imgpath+$img); 
+			@media only screen and (min-width: 600px) {	
+				background-image: url($resrcpath+'c=X10P,W70P,Y0P,H100P/'+$opt+$imgpath+$img);
+			}
+			@media only screen and (min-width: 900px) {	
+				background-image: url($resrcpath+'c=x0p,w100p,y0p,h60p/'+$opt+$imgpath+$img);
+			}
+		}	
+	}
+
+	.Food {
+		.menutop {
+			$img: 'kirr/food-chips.jpg';
+			background-image: url($resrcpath+'c=X30P,W20P,Y35P,H60P/'+$opt+$imgpath+$img); 
+			@media only screen and (min-width: 600px) {	
+				background-image: url($resrcpath+'c=X35P,W40P,Y35P,H60P/'+$opt+$imgpath+$img);
+			}
+			@media only screen and (min-width: 900px) {	
+				background-image: url($resrcpath+'c=x0p,w100p,y29p,h70p/'+$opt+$imgpath+$img);
+			}
+		}
+		.menubottom {
+			$img: 'kirr/food-panna.jpg';
+			background-image: url($resrcpath+'c=X50P,W20P,Y10P,H60P/'+$opt+$imgpath+$img); 
+			@media only screen and (min-width: 600px) {	
+				background-image: url($resrcpath+'c=X10P,W50P,Y0P,H60P/'+$opt+$imgpath+$img);
+			}
+			@media only screen and (min-width: 900px) {	
+				background-image: url($resrcpath+'c=x0p,w100p,y0p,h70p/'+$opt+$imgpath+$img);
+			}
+		}	
+	}	
+	.Wine {
+		.menutop {
+			$img: 'ersk/glasses.jpg';
+			background-image: url($resrcpath+'c=X45P,W20P,Y5P,H60P/'+$opt+$imgpath+$img); 
+			@media only screen and (min-width: 600px) {	
+				background-image: url($resrcpath+'c=X35P,W40P,Y35P,H60P/'+$opt+$imgpath+$img);
+			}
+			@media only screen and (min-width: 900px) {	
+				background-image: url($resrcpath+'c=x0p,w100p,y0p,h100p/'+$opt+$imgpath+$img);
+			}
+		}
+		.menubottom {
+			$img: 'kirr/food-wine.jpg';
+			background-image: url($resrcpath+'c=X35P,W20P,Y5P,H60P/'+$opt+$imgpath+$img); 
+			@media only screen and (min-width: 600px) {	
+				background-image: url($resrcpath+'c=X10P,W50P,Y0P,H60P/'+$opt+$imgpath+$img);
+			}
+			@media only screen and (min-width: 900px) {	
+				background-image: url($resrcpath+'c=x0p,w100p,y0p,h100p/'+$opt+$imgpath+$img);
+			}
+		}			
+	}
 }

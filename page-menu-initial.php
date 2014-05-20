@@ -11,7 +11,7 @@ get_header();
 <!-- Row for main content area -->
 	<div class="small-24 columns" id="content" role="main">
 
-		<div class="row first-bg-nofooter screen-height first-bg food1bg">
+		<div class="row full-height first-bg menuinitial resrc">
 			<div class="columns small-24">			
 				<h2>CHOOSE YOUR MENU
 				<br/>

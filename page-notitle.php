@@ -18,10 +18,12 @@ get_header();
 		endwhile; ?>		
 		</div>
 		
-		<div class="row parallax parallax-bottom resrc"  >
+		<div class="row parallax-bottom resrc"  >
 			<p>&nbsp;</p>
 		</div>
 	</div>		
 </div>
+
+
 
 <?php get_footer(); ?>
