@@ -85,7 +85,7 @@
 						<p>Prof David Sonnabend (Convenor)</p>
 						<p>Prof Judith Black AO</p>
 						<p>Dr Tamera Corte</p>
-						<p>Prof Alan Glanville</p>
+						<p>Prof Allan Glanville</p>
 						<p>Dr Jeffrey Lindenmayer</p>
 						<p>A/Prof Mervyn Merrilees</p>
 						<p>Dr Helen Whitford</p>
@@ -110,18 +110,15 @@
 						<p>&nbsp;</p>
 						<p><strong>Public Officer:</strong> Peter Kelso</p>
 						<p><strong>Hon Auditor:</strong> Peter Hersh, Logicca P/L</p>
-						<p><strong>Director, NZ LAM TRUST:</strong> Bronwyn Gray</p>
-						<p><strong>Founding President:</strong> Heather Telford</p>
 					</div>
 					<div class="columns large-3">
 						<h5>ACKNOWLEDGEMENTS</h5>
 
-						<p>ARA thanks the professionals who work pro bono for this not-for-profit organisation. </p>
+						<p>LARA thanks the professionals who work pro bono for this not-for-profit organisation. </p>
 						<p>We highly recommend the services of:</p>
 						<p>&nbsp;</p>
 						<p>Karen Riethmuller, KGR Design</p>
 						<p>Peter Hersh, Loggica Pty Ltd</p>
-						<p>Peter Kelso</p>
 					</div>
 				</div>
 			</div>
@@ -137,21 +134,21 @@
 					<li>Raising awareness of LAM</li>
 					<li>Supporting women living with LAM</li>
 				</ul>
-				<p><a href="<?php echo get_site_url(); ?>/about-lara/">More about LARA ›</a></p>
+				<p><a href="<?php echo get_home_url(); ?>/about-lara/">More about LARA ›</a></p>
 			</div>
 			<div class="columns large-3">
 				<h3>DONATE </h3>
-				<p>All donations to LARA are fully tax deductible. Your contribution to LARA will go 100% to funding vital medical research to find a cure for LAM.</p>
-				<p><a href="<?php echo get_site_url(); ?>/donate-now/">Donate now › </a></p>
+				<p>All donations to LARA are fully tax deductible. 100% of your contribution to LARA will fund research to find a cure for LAM</p>
+				<p><a href="<?php echo get_home_url(); ?>/donate-now/">Donate now › </a></p>
 			</div>
 			<div class="columns large-3">
 				<h3>JOIN US</h3>
 				<p>Join LARA by completing our online membersip form</p>
-				<p><a href="<?php echo get_site_url(); ?>/join-us/">Join now ›</a></p>
+				<p><a href="<?php echo get_home_url(); ?>/join-us/">Join now ›</a></p>
 			</div>
 			<div class="columns large-3">
 				<h3>WHAT TO DO IF YOU THINK YOU MIGHT HAVE LAM</h3>
-				<p><a href="<?php echo get_site_url(); ?>/5-step-checklist/">View our 5 step checklist ›</a></p>
+				<p><a href="<?php echo get_home_url(); ?>/5-step-checklist/">View our 5 step checklist ›</a></p>
 			</div>
 		</div>
 	</div>
@@ -196,7 +193,7 @@
 			</div>
 
 			<div class="columns large-3 section pull-5">
-				<p>&copy; 2013 Copyright LARA. All rights reserved</p>
+				<p>&copy; 2014 Copyright LARA. All rights reserved</p>
 				<p><A href="http://www.redro.com.au/">Created by Redro Design</a></p>
 			</div>
 
@@ -280,7 +277,36 @@ hoverArrows: false
 			e.preventDefault();
 		});
 		
+		
+	
+		
+		var displayTime = 2000,
+			transitionTime = 2000;
+		var currIdx = 0;
+
+		var $slides = $('#slides .slide');
+
+		function animateBG() {
+			currIdx = (currIdx < $slides.length-1) ? currIdx + 1 : 0;
+			setTimeout(function() {
+				$slides.css('z-index', 1);
+				$slides.eq(currIdx).css('z-index', 2).fadeIn(transitionTime, function() {
+					$slides.not(this).hide();
+					$('#slides').height($(this).height());
+// 					alert($(this).height());
+					animateBG();
+				});
+			}, displayTime)
+
+		}
+
+		$('#slides').height($('.slide').height());
+		animateBG();
+		
+		
 		$(document).foundation();
+
+
 	})(jQuery);
 </script>
 

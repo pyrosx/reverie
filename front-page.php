@@ -8,11 +8,11 @@
 
 		<div class="row section" >
 			<div class="columns large-7">
-				<h1>LAM Australasia Research Alliance (LARA) is a not-for-profit organisation run wholly by volunteers. </h1>
-				<p class="larger">Our mission is to improve the health prospects of women living with lymphangioleiomyomatosis (LAM).</p>
+				<h1>Our mission is to improve the health prospects of women living with<br> lymphangioleio&#8203;myomatosis (LAM). </h1>
+				<p class="larger">LAM Australasia Research Alliance (LARA) is a not-for-profit organisation run wholly by volunteers. </p>
 				<div class="buttons">
-					<div class="round-button"><a class="bgblue" href="<?php echo get_site_url(); ?>/about-lara/">Read More</a></div>
-					<div class="round-button"><a class="bgorange" href="<?php echo get_site_url(); ?>/contact-us/">Contact Us</a></div>
+					<div class="round-button"><a class="bgblue" href="<?php echo get_home_url(); ?>/what-is-lam/">What is LAM</a></div>
+					<div class="round-button"><a class="bgorange" href="<?php echo get_home_url(); ?>/contact-us/">Contact Us</a></div>
 				</div>
 			</div>
 			<div class="columns large-5 hide-for-small" id="lungs" >
@@ -44,10 +44,14 @@
 			<div class="columns large-6 left">
 				<div class="">
 					<div class="section no-bottom-pad">
-						<h2 class="blue">MEMBERSHIP</h2>
-						<p>If you have LAM, be sure to register with LARA and with The LAM Foundation in the USA which maintains a registry of women living with LAM worldwide.</p>
+						<h2 class="blue">LARA'S OBJECTIVES</h2>
+						<ul>
+					<li>Funding research to find a cure for LAM</li>
+					<li>Raising awareness of LAM</li>
+					<li>Supporting women living with LAM</li>
+				</ul>
 						<div class="buttons">
-							<div class="round-button"><a class="bgblue" href="<?php echo get_site_url(); ?>/join-us/">Join Us</a></div>
+							<div class="round-button"><a class="bgblue" href="<?php echo get_home_url(); ?>/about-lara/">About LARA</a></div>
 						</div>
 					</div>	
 				</div>
@@ -58,9 +62,9 @@
 				<div class="">
 					<div class="section">
 						<h2 class="orange">NEWS &amp; EVENTS</h2>
-						<p>LARA's new Patron, Dr Linda Friedland, is a highly-accomplished doctor, widely-read author, and dynamic public speaker. Dr Friedland travels the world speaking about health and well being.</p>
+						<p><strong>HELP US MARK WORLDWIDE LAM AWARENESS DAY 01 JUNE 2014.</strong> On both coasts of this vast continent, in Perth and Sydney, LAM Australasia is marking Worldwide LAM Awareness Day by STEPPING OUT FOR LAM RESEARCH on Sunday 01 June.</p>
 						<div class="buttons">
-							<div class="round-button"><a class="bgorange" href="<?php echo get_site_url(); ?>/category/news/">Read More</a></div>
+							<div class="round-button"><a class="bgorange" href="<?php echo get_home_url(); ?>/worldwide-lam-awareness-day/">Register Now</a></div>
 						</div>
 					</div>
 				</div>
@@ -78,8 +82,8 @@
 					<p class="larger">&ldquo;November 2010 is a month I will never forget. This was the month when I was rushed to hospital with severe back pain and came home diagnosed with lymphangioleiomyomatosis,
 					 a disease I'd never heard of before.&rdquo;</p>
 					 <div class="buttons">
-						 <div class="round-button"><a class="bgvlgrey" href="<?php echo get_site_url(); ?>/kate-wingraves-story/">Read More</a></div>
-						 <div class="round-button"><a class="bgblue" href="<?php echo get_site_url(); ?>/category/story/">More Stories</a></div>
+						 <div class="round-button"><a class="bgvlgrey" href="<?php echo get_home_url(); ?>/kate-wingraves-story/">Read More</a></div>
+						 <div class="round-button"><a class="bgblue" href="<?php echo get_home_url(); ?>/category/story/">More Stories</a></div>
 					</div>
 				</div>
 			</div>

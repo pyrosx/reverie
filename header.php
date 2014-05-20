@@ -12,8 +12,8 @@
 
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
 	
-	<meta name="keywords" content="Lymphangioleiomyomatosis, LAM, lung disease, lymph, asthma, Angiomyolipoma, Tuberous Sclerosis, cyst, AML, alveoli, dyspnea, pneumothorax, emphysema, TS, pregnancy" />
-	<meta name="description" content="LAM Australasia Research Alliance funds research into lymphangioleiomyomatosis, a rare and devastating lung disease striking women mostly in their 30s." />
+	<meta name="keywords" content="Lymphangioleiomyomatosis, LAM, lung disease, lymph, asthma, Angiomyolipoma, Tuberous Sclerosis, cyst, AML, alveoli, dyspnea, pneumothorax, emphysema, TS, pregnancy, LARA" />
+	<meta name="description" content="LAM Australasia Research Alliance (LARA) funds research into lymphangioleiomyomatosis, a rare and devastating lung disease striking women mostly in their 30s." />
 
 	<!-- Favicon and Feed -->
 	<link rel="shortcut icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
@@ -51,16 +51,16 @@
 
 <div class="bg bgwhite" id="header">
 	<div class="row hide-for-small">
-		<a href="<?php echo get_site_url(); ?>"><img id="logo" src="<?php echo get_template_directory_uri(); ?>/img/lara-header.png"/></a>
-		<a class="headerlink bgorange" href="<?php echo get_site_url(); ?>/join-us/">Join Us</a>
-		<a class="headerlink bgblue" href="<?php echo get_site_url(); ?>/donate-now/">Donate Today</a>
+		<a href="<?php echo get_home_url(); ?>"><img id="logo" src="<?php echo get_template_directory_uri(); ?>/img/lara-header.png"/></a>
+		<a class="headerlink bgorange" href="<?php echo get_home_url(); ?>/join-us/">Join Us</a>
+		<a class="headerlink bgblue" href="<?php echo get_home_url(); ?>/donate-now/">Donate Today</a>
 	</div>
 
 	<div class="hr hide-for-small"></div>
 
 	<div class="row nav">
-		<a class="headerlink bgorange hide-for-medium-up" href="<?php echo get_site_url(); ?>/join-us/">Join Us</a>
-		<a class="headerlink bgblue hide-for-medium-up" href="<?php echo get_site_url(); ?>/donate-now/">Donate</a>
+		<a class="headerlink bgorange hide-for-medium-up" href="<?php echo get_home_url(); ?>/join-us/">Join Us</a>
+		<a class="headerlink bgblue hide-for-medium-up" href="<?php echo get_home_url(); ?>/donate-now/">Donate</a>
 
 		<nav class="nav-collapse">
 		<?php

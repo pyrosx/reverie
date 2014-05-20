@@ -5108,8 +5108,7 @@ table tfoot tr td {
 }
 
 ul {
-  list-style-position: outside;
-  padding-left: 10%;
+  list-style-position: inside;
   padding-right: 10%;
 }
 
@@ -5326,14 +5325,15 @@ a:hover {
     padding-top: 0px;
   }
 }
-.content .row p, .content .row h1, .content .row h2, .content .row h3, .content .row form {
+.content .row p, .content .row h1, .content .row h2, .content .row h3, .content .row form, .content .row li {
   padding-left: 10%;
   padding-right: 10%;
   width: auto;
 }
 @media only screen and (min-width: 48em) {
-  .content .row p, .content .row h1, .content .row h2, .content .row h3, .content .row form {
-    padding: 0;
+  .content .row p, .content .row h1, .content .row h2, .content .row h3, .content .row form, .content .row li {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
