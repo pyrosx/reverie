@@ -57,6 +57,7 @@ add_action('after_setup_theme', 'reverie_theme_support'); /* end Reverie theme s
 $sidebars = array('Sidebar');
 foreach ($sidebars as $sidebar) {
 	register_sidebar(array('name'=> $sidebar,
+		'id' => 'reverie_sidebar_1',
 		'before_widget' => '<article id="%1$s" class="row widget %2$s"><div class="small-12 columns">',
 		'after_widget' => '</div></article>',
 		'before_title' => '<h6><strong>',
